@@ -37,9 +37,28 @@
             </div>
         </div>
 <!-- Slide -->
-<div class="slide">
-
-</div>
+  <div class="slide">
+    <img class="mySlides" src="./Images/img/img_raucuqua/slideshow/slideshow.jpg" style="width:100%">
+    <img class="mySlides" src="./Images/img/img_raucuqua/slideshow/slideshow2.jpg" style="width:100%">
+    <img class="mySlides" src="./Images/img/img_raucuqua/slideshow/slideshow3.jpg" style="width:100%">
+  </div>
+  
+  <script>
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000); // Change image every 2 seconds
+  }
+  </script>
 <!-- Product -->
           <div class="product">
             <!-- product category -->
@@ -130,7 +149,7 @@
                     <img src="./Images/img/img_raucuqua/sanpham/sanphamok/daubap.png" alt="">
                     <button>Rau Củ</button>
                     <p class="name">Đậu Bắp Organic 250gr</p>
-                    <p class="price">15.000đ<del>18.000đ</del></p>
+                    <p class="price">15.000đ <del>18.000đ</del></p>
                     <div class="product-box-btn">
                       <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
                     </div>
@@ -152,6 +171,56 @@
     <button>Khám Phá Ngay</button>
   </div>
 </div>
+<!-- Blog -->
+<!-- <h2 class="title">ABC</h2> -->
+<div class="blog">
+  <div class="blog-box">
+    <img src="./Images/img/img_raucuqua/blog/blog01.jpg" alt="">
+    <div class="blog-box-btn">
+      <div class="blog-box-btns">
+        <i>by</i>
+        <p class="name">Admin</p>
+      </div>
+      <div class="blog-box-btns">
+        <i>on</i>
+        <p class="name">03/11/2022</p>
+      </div>
+    </div>
+    <h3>Tiêu Đề</h3>
+    <p>Nội dung box</p>
+  </div>
+  <div class="blog-box">
+    <img src="./Images/img/img_raucuqua/blog/blog02.jpg" alt="">
+    <div class="blog-box-btn">
+      <div class="blog-box-btns">
+        <i>by</i>
+        <p class="name">Admin</p>
+      </div>
+      <div class="blog-box-btns">
+        <i>on</i>
+        <p class="name">03/11/2022</p>
+      </div>
+    </div>
+    <h3>Tiêu Đề</h3>
+    <p>Nội dung box</p>
+  </div>
+  <div class="blog-box">
+    <img src="./Images/img/img_raucuqua/blog/blog03.jpg" alt="">
+    <div class="blog-box-btn">
+      <div class="blog-box-btns">
+        <i>by</i>
+        <p class="name">Admin</p>
+      </div>
+      <div class="blog-box-btns">
+        <i>on</i>
+        <p class="name">03/11/2022</p>
+      </div>
+    </div>
+    <h3>Tiêu Đề</h3>
+    <p>Nội dung box</p>
+  </div>
+</div>
+<!-- Sale -->
         
 <!-- Footer -->
           <div class="footer">
