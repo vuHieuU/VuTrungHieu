@@ -13,6 +13,11 @@
     margin: 0 auto;
 }
 .header{
+    /* position: fixed; */
+    /* top: 0; */
+    /* width: 100%; */
+    width: 1080px;
+    /* background-color: #57750b; */
     display: flex;
     /* line-height: 50px; */
 }
@@ -424,6 +429,9 @@
 /* Sale */
 /* footer */
 .footer{
+    opacity: .9;
+    padding: 20px 160px;
+    background-color: black;
     margin-top: 70px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -437,11 +445,16 @@
 .footer .contact img{
     width: 60%;
     height: 60%;
-    /* border-radius: 50%; */
+    background-color: #fff;
+    border-radius: 50%;
 }
 
 .address{
     text-align: justify;
+}
+
+.address p{
+    color: #fff;
 }
 
 .address ul{
@@ -455,7 +468,7 @@
 
 .address ul li a{
     text-decoration: none;
-    color: #000;
+    color: #fff;
 }
 
 .address>input,
@@ -474,7 +487,7 @@
 .footer .contact i{
     font-size: 20px;
     margin: 20px 10px;
-    color: var(--main-color);
+    color: #fff;
 }
 
 /* sale */
