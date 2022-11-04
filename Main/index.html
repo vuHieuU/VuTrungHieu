@@ -9,39 +9,40 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+  <div class="header">
+      <div class="logo"><img src="./Images/Logo/logo.png" alt=""></div>
+      <div class="menu">
+          <ul>
+              <li><a href="#">Vitanic</a></li>
+              <li>
+                  <div class="dropdown">
+                      <a class="dropbtn">Sản Phẩm</a>
+                      <div class="dropdown-content">
+                      <a href="#">Rau Củ</a>
+                      <a href="#">Hoa Quả Tươi</a>
+                      <a href="#">Hoa Quả Sấy</a>
+                      <a href="#">Ô Mai</a>
+                      <a href="#">Hoa Quả Đông Lạnh</a>
+                      <a href="#">Thêm..</a>
+                      </div>
+                    </div>
+              </li>
+              <li><a href="#">Liên hệ</a></li>
+              <li><a href="#">Liên hệ</a></li>
+              <li><a href="#">Liên hệ</a></li>
+          </ul>
+      </div>
+      <div class="user">
+        <ul>
+          <li><i class="fa-solid fa-user"></i><a href="#"> Đăng Nhập</a></li>
+          <li><i class="fa-solid fa-cart-shopping"></i><a href="#"> Giỏ Hàng</a></li>
+        </ul>
+      </div>
+  </div>
     <div class="container">
 <!-- Header -->
-        <div class="header">
-            <div class="logo"><img src="./Images/Logo/logo.png" alt=""></div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#">Vitanic</a></li>
-                    <li>
-                        <div class="dropdown">
-                            <a class="dropbtn">Sản Phẩm</a>
-                            <div class="dropdown-content">
-                            <a href="#">Rau Củ</a>
-                            <a href="#">Hoa Quả Tươi</a>
-                            <a href="#">Hoa Quả Sấy</a>
-                            <a href="#">Ô Mai</a>
-                            <a href="#">Hoa Quả Đông Lạnh</a>
-                            <a href="#">Thêm..</a>
-                            </div>
-                          </div>
-                    </li>
-                    <li><a href="#">Liên hệ</a></li>
-                    <li><a href="#">Đăng Nhập</a></li>
-                    <li><a href="#">Đăng Ký</a></li>
-                    
-                </ul>
-            </div>
-        </div>
 <!-- Slide -->
-  <div class="slide">
-    <img class="mySlides" src="./Images/img/img_raucuqua/slideshow/slideshow.jpg" style="width:100%">
-    <img class="mySlides" src="./Images/img/img_raucuqua/slideshow/slideshow2.jpg" style="width:100%">
-    <img class="mySlides" src="./Images/img/img_raucuqua/slideshow/slideshow3.jpg" style="width:100%">
-  </div>
+
   <script>
   var myIndex = 0;
   carousel();
@@ -58,6 +59,11 @@
     setTimeout(carousel, 3000); // Change image every 2 seconds
   }
   </script>
+    <div class="slide">
+      <img class="mySlides" src="./Images/img/img_raucuqua/slideshow/slideshow.jpg" style="width:100%">
+      <img class="mySlides" src="./Images/img/img_raucuqua/slideshow/slideshow2.jpg" style="width:100%">
+      <img class="mySlides" src="./Images/img/img_raucuqua/slideshow/slideshow3.jpg" style="width:100%">
+    </div>
 <!-- Product -->
           <div class="product">
             <!-- product category -->
@@ -135,7 +141,7 @@
                       <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
                     </div>
                 </div>
-                <div class="product-box">
+                <!-- <div class="product-box">
                     <img src="./Images/img/img_raucuqua/sanpham/sanphamok/cucaitrang.png" alt="">
                     <button>Rau Củ</button>
                     <p class="name">Củ cải trắng Organic 500gr</p>
@@ -152,7 +158,7 @@
                     <div class="product-box-btn">
                       <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
 <!-- intro -->
@@ -220,8 +226,30 @@
   </div>
 </div>
 <!-- Sale -->
-        
+<div class="class-helo">
+  <div id="backTop">
+      <i class="fas fa-chevron-up animate__animated animate__fadeInUp  animate__infinite"></i>
+  </div>
+</div>
 <!-- Footer -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop()) {
+                $('#backTop').fadeIn();
+            } else {
+                $('#backTop').fadeOut();
+
+            }
+        });
+        $("#backTop").click(function() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 1000);
+        })
+    });
+    </script>
 </div>
   <div class="footer">
     <!-- <img src="./Images/img/img_raucuqua/Footer/variety-fresh-tasty-vegetables-dark.jpg" alt=""> -->
