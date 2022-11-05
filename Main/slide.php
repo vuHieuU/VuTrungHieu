@@ -1,8 +1,7 @@
 <div class="container">
-<!-- Header -->
 <!-- Slide -->
 
-  <script>
+<script>
   var myIndex = 0;
   carousel();
   

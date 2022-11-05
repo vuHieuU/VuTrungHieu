@@ -4,21 +4,25 @@
   <div class="footer">
     <!-- <img src="./Images/img/img_raucuqua/Footer/variety-fresh-tasty-vegetables-dark.jpg" alt=""> -->
     <div class="footer-box contact">
-      <img src="./Images/Logo/logo.png" alt=""><br>
+      <img src="./Images/img/img_raucuqua/logo/logo2.jpg" alt=""><br>
       <i class="fa-brands fa-facebook"></i>
       <i class="fa-brands fa-instagram"></i>
       <i class="fa-solid fa-envelope"></i>
       <i class="fa-brands fa-google"></i>
     </div>
     <div class="footer-box address">
-      <ul>
-        <li><a href="#">Đặt Hàng</a></li>
-        <li><a href="#">Góp Ý</a></li>
-        <li><a href="#">Đánh Giá</a></li>
-        <li><a href="#">Nhận Ưu Đãi</a></li>
-      </ul>
+    <h3 style="color: #fff;">CHÍNH SÁCH</h3>
+        <ul>
+          <li><a href="#">Hướng dẫn mua hàng</a></li>
+          <li><a href="#">Hướng dẫn thanh toán</a></li>
+          <li><a href="#">Hướng dẫn giao nhận</a></li>
+          <li><a href="#">Điều khoản dịch vụ</a></li>
+          <li><a href="#">Chính sách nhận và hoàn trả hàng hóa</a></li>
+          <li><a href="#">Giới thiệu về Trang trại G27</a></li>
+        </ul>
     </div>
     <div class="footer-box address">
+    <h3 style="color: #fff;">HỖ TRỢ KHÁCH</h3> 
       <ul>
         <li><a href="#">Hợp Tác</a></li>
         <li><a href="#">Đăng Kí Thành Viên</a></li>

@@ -1,4 +1,4 @@
-<!-- Product -->
+<?php include "header.php"?>
 <div class="product">
             <!-- product category -->
             <div class="product-category">
@@ -95,3 +95,4 @@
                 </div>
             </div>
         </div>
+        <?php include "footer.php"?>

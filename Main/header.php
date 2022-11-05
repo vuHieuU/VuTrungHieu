@@ -10,13 +10,13 @@
 </head>
 <body>
   <div class="header">
-      <a href="index.php"><div class="logo"><img src="./Images/Logo/logo.png" alt=""></div></a>
+      <a href="index.php"><div class="logo"><img src="./Images/img/img_raucuqua/logo/logo2.jpg"></div></a>
       <div class="menu">
           <ul>
-              <li><a href="#">Vitanic</a></li>
+              <li><a href="gioithieu.php">Vitanic</a></li>
               <li>
                   <div class="dropdown">
-                      <a class="dropbtn">Sản Phẩm</a>
+                      <a href="sanpham.php" class="dropbtn">Sản Phẩm</a>
                       <div class="dropdown-content">
                       <a href="#">Rau Củ</a>
                       <a href="#">Hoa Quả Tươi</a>
