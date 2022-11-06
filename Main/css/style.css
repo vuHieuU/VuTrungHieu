@@ -594,8 +594,8 @@
 #iplg{
     color: #86B70B;
 }
-.flex{
-    display: flex;
+.flex input[type=submit]{
+    width: 100%;
 }
 .text{
     margin-top: 20px;
@@ -604,24 +604,19 @@
     width: 500px;
     margin: 0 auto;
 }
-body{
-    background-image: url(./anh-phong-canh-nui-rung-xanh-tham_58152.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
+
 .title{
   text-align: center;
     overflow: hidden;
     position: relative;
 }
 #nav{
-    opacity: 0.8;
     width: 600px;
     background-color: white;
     padding: 30px;
     margin: 0 auto;
     border-radius: 5px;
-    box-shadow: 3px 3px 3px 1px rgb(223, 223, 223);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     overflow: hidden;
     position: absolute;
     transform: translatey(-700px);

@@ -44,7 +44,6 @@
                 <input type="button" onclick="dangnhap1()" value="LOGIN" id="iplg">|
                 <input type="button" value="REGISTER" onclick="dangki()" id="iprg">
                 <i class="fa-solid fa-x" onclick="out()"></i>
-            
             </div>
             <div class="gach" id="gach"></div> 
             <form action="" id="dangnhap" class="">
@@ -62,7 +61,6 @@
                 </div>
                 <div class="flex">
                     <input type="submit" value="Login" class="login">
-                    <input type="reset" value="Delete" class="login">
                 </div>
                 <div class="forgot">
                     <a href="" class="forgot">Quên tài khoản ?</a>
@@ -92,7 +90,6 @@
                 </div>
                 <div class="flex">
                     <input type="submit" id="ipdangki" value="Register" class="login ">
-                    <input type="reset" value="Delete" class="login">
                 </div>
             </form>
         </div>
@@ -107,9 +104,9 @@
                 // dangky.style.display="block"
                 // dangnhap.style.display="none"
                 iplg.style.color="black"
-                iplg.style.transition="1s"
+                iplg.style.transition=".5s"
                 ipdk.style.color="#86B70B"
-                ipdk.style.transition="1s"
+                ipdk.style.transition=".5s"
                 dangky.style.position="relative"
                 dangky.style.left="0%"
                 dangky.style.transform="translateX(-100px)"
@@ -121,8 +118,8 @@
                 dangnhap.style.transition="1s"
                 gach.style.left="280px"
                 gach.style.width="125px"
-                gach.style.transition="1s"
-                nav.style.transition="1s"
+                gach.style.transition=".5s"
+                nav.style.transition=".5s"
                 nav.style.height="500px"
             }
             function dangnhap1(){
