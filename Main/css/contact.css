@@ -3,12 +3,11 @@
     padding: 0;
 }
 
-body {
-    background-image: url('../Images/img/img_raucuqua/Footer/');
-}
+body {}
 
 .contacts {
-    background-color: rgb(128, 209, 48);
+    background: rgb(253,29,29);
+background: linear-gradient(90deg, rgba(253,29,29,1) 0%, rgba(180,148,58,1) 52%, rgba(69,252,130,1) 90%);
     background-size: 300px;
     height: 600px;
 }
