@@ -635,7 +635,7 @@
 }
 .gach{
     border-top: 3px #86B70B solid;
-    width: 80px;
+    width: 115px;
     position: absolute;
     left: 195px;
 }
@@ -663,16 +663,15 @@
     margin-right:5px;
 }
 .login{
-    width: 300px;
-    margin: 0 auto;
     margin-top: 20px;
     border: none;
     background-color:  #86B70B;
     color: white;
-    padding: 5px 0;
+    padding: 10px 0;
+    text-transform: uppercase;
     border-radius: 5px;
-    height: 30px;
-    margin-left: 5px;
+    font-weight: 600;
+    font-size: 15px;
 }
 .checkbox{
     align-items: center;

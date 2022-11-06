@@ -41,8 +41,8 @@
        <!--  ********** -->
        <div class="nav" id="nav">
             <div class="title">
-                <input type="button" onclick="dangnhap1()" value="LOGIN" id="iplg">|
-                <input type="button" value="REGISTER" onclick="dangki()" id="iprg">
+                <input type="button" onclick="dangnhap1()" value="Đăng Nhập" id="iplg">|
+                <input type="button" value="Đăng Kí" onclick="dangki()" id="iprg">
                 <i class="fa-solid fa-x" onclick="out()"></i>
             </div>
             <div class="gach" id="gach"></div> 
@@ -60,7 +60,7 @@
                     <label for="">Ghi nhớ tài khoản</label>
                 </div>
                 <div class="flex">
-                    <input type="submit" value="Login" class="login">
+                    <input type="submit" value="Đăng Nhập" class="login">
                 </div>
                 <div class="forgot">
                     <a href="" class="forgot">Quên tài khoản ?</a>
@@ -89,7 +89,7 @@
                     <input type="password" id="password2" required placeholder="Nhập lại mật khẩu">
                 </div>
                 <div class="flex">
-                    <input type="submit" id="ipdangki" value="Register" class="login ">
+                    <input type="submit" id="ipdangki" value="Đăng Kí" class="login ">
                 </div>
             </form>
         </div>
@@ -116,8 +116,8 @@
                 dangnhap.style.right="40%"
                 dangnhap.style.transform="translateX(-600px)"
                 dangnhap.style.transition="1s"
-                gach.style.left="280px"
-                gach.style.width="125px"
+                gach.style.left="315px"
+                gach.style.width="90px"
                 gach.style.transition=".5s"
                 nav.style.transition=".5s"
                 nav.style.height="500px"
@@ -137,7 +137,7 @@
                 dangnhap.style.transform="translateX(0px)"
                 dangky.style.transition="1s"
                 gach.style.left="195px"
-                gach.style.width="80px"
+                gach.style.width="115px"
                 gach.style.transition="1s"
                 nav.style.transition="1s"
                 nav.style.height="360px"
@@ -158,7 +158,7 @@
                 dangnhap.style.transform="translateX(0px)"
                 dangky.style.transition="1s"
                 gach.style.left="195px"
-                gach.style.width="80px"
+                gach.style.width="115px"
                 gach.style.transition="1s"
                 nav.style.transition="1s"
                 nav.style.height="360px"
