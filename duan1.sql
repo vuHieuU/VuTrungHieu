@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 06, 2022 lúc 05:22 PM
+-- Thời gian đã tạo: Th10 07, 2022 lúc 02:59 PM
 -- Phiên bản máy phục vụ: 10.4.24-MariaDB
 -- Phiên bản PHP: 8.1.6
 
@@ -24,101 +24,137 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `binhluan`
+-- Cấu trúc bảng cho bảng `category`
 --
 
-CREATE TABLE `binhluan` (
-  `id` int(11) NOT NULL,
-  `noidung` text NOT NULL,
-  `id_user` int(11) NOT NULL,
-  `id_pro` int(11) NOT NULL,
-  `time` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `blog`
---
-
-CREATE TABLE `blog` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `time` date NOT NULL,
-  `noidung` text NOT NULL,
-  `img` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `danhmuc`
---
-
-CREATE TABLE `danhmuc` (
+CREATE TABLE `category` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Đang đổ dữ liệu cho bảng `danhmuc`
---
-
-INSERT INTO `danhmuc` (`id`, `name`) VALUES
-(5, 'Trái cây'),
-(6, 'Quả'),
-(7, 'Rau'),
-(9, 'Rau quả'),
-(10, 'Củ');
-
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sanpham`
+-- Cấu trúc bảng cho bảng `comment`
 --
 
-CREATE TABLE `sanpham` (
+CREATE TABLE `comment` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `img` text NOT NULL,
-  `price` float NOT NULL,
-  `soluong` text NOT NULL,
-  `mota` text NOT NULL,
-  `id_dm` int(11) NOT NULL
+  `content` text NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
 --
--- Đang đổ dữ liệu cho bảng `sanpham`
+-- Cấu trúc bảng cho bảng `orders`
 --
 
-INSERT INTO `sanpham` (`id`, `name`, `img`, `price`, `soluong`, `mota`, `id_dm`) VALUES
-(3, 'Táo envy size 70', 'apple.png', 199000, '', 'Vì mỗi ngày một quả táo sẽ giúp “ tránh xa bác sĩ”. Nên Organic Mart tích cực đưa táo về phục vụ cả nhà - Hàng mới đáp, cập bến kho Organic Mart. - Trái vừa, thơm giòn, ngọt đậm đà. - Táo Envy đang là một trong những loại táo được ưu chuộng nhất tại Việt Nam. Táo Envy chứa nhiều chất khoáng cần thiết', 5),
-(4, 'Dưa leo baby Organic 300g', 'dualeo.png', 17000, '', 'Dưa chuột có vị ngọt, tính mát, hương vị giòn ngon hấp dẫn và đặc biệt chứa rất nhiều nước, chính vì vậy từ lâu nó đã trở thành thực phẩm quen thuộc trong tủ lạnh của nhiều gia đình với công dụng làm đẹp và là nguyên liệu giúp chị em phụ nữ chế biến nên những món ăn thơm ngon trong bữa cơm hàng ngày', 5),
-(5, 'Bí đỏ Organic 500g', 'bido.png', 24000, '', 'Trong Bí đỏ có hàm lượng sắt cao, các chất muối khoáng, giàu vitamin và các axít hữu cơ tốt cho cơ thể. Bí đỏ không chỉ là đồ ăn bổ dưỡng tác dụng của bí đỏ giúp ngăn ngừa tim mạch,ngăn ngừa ung thư,hỗ trợ giảm cân ,chống lão hóa da ,tốt cho hệ tiêu hóa ,tốt cho hệ thống xương khớp. Bí đỏ cũng rất giàu dinh dưỡng', 6),
-(6, 'Rau muống Organic 300gr', 'raumuong.png', 18000, '', 'Mùa rau muống là cơ hội cho bạn thỏa sức chế biến những món ăn ngon, mát lành, bổ dưỡng. Dưới đây là vài món cho bạn tham khảo. 1. Ốc móng tay xào rau muống. Nguyên liệu: Rau muống, ốc móng tay, tỏi, gia vị. Ốc mua về ngâm nước cho ít muối và ớt. Sau đó lấy ốc ra trụng sơ với nước sôi để bỏ vỏ.', 7),
-(7, 'Bí ngòi Organic 300gr', 'bingoi.png', 21600, '', 'Bí ngòi không xa lạ gì đối với chúng ta. Bí ngòi được các nhà dinh dưỡng học cho vào “sách đỏ” vì có giá trị dinh dưỡng cao và mang lại nhiều lợi ích cho sức khỏe. 1 Ngừa ung thư:   Lượng chất xơ dồi dào trong bí ngòi có tác dụng ngăn ngừa các độc tố gây bệnh ung thư ruột kết cũng như', 6),
-(8, 'Rau cần tây Organic 500g', 'raucantay.png', 42500, '', 'Cần tây mang lại rất nhiều dưỡng chất thiết yếu cho cơ thể nên có khả năng phòng chống một số bệnh nguy hiểm, đặc biệt là chứng huyết áp cao. Không chỉ là nguyên liệu dùng để chế biến nhiều món ăn ngon, cần tây còn mang lại rất nhiều dưỡng chất thiết yếu cho cơ thể nên có khả năng phòng chống một số', 7),
-(9, 'Bắp cải tim Organic 500g', 'catim.png', 30000, '', 'Công dụng  Kháng viêm, hỗ trợ tiêu hóa. Điều trị loét dạ dày Duy trì sức khỏe xương khớp. Giảm nguy cơ mắc bệnh tim mạch. Hỗ trợ giảm cân. Cải thiện thị lực. Bảo vệ tế bào thần kinh, điều trị bệnh Alzheimer. Làm đẹp da và điều trị các bệnh rối loạn về da. Cách sử dụng Ăn số', 7),
-(10, 'Củ cải trắng Organic 500gr', 'cucaitrang.png', 39000, '', 'Củ cải trắng không chỉ là một món ăn phổ biến, mà còn được biết tới như loại thần dược có công năng không thua kém gì nhân sâm, củ cải trắng giúp trị đờm, thanh nhiệt, dưỡng da, chống ung thư, phòng tránh thiếu máu và giúp cho cơ thể đủ nước... Cách chế biến và ăn củ cải sống: * Củ cải chấm tương ', 10),
-(11, 'Hoa Chuối Organic 1kg', 'hoachuoi.png', 35000, '', 'Nộm hoa chuối là một món ăn quen thuộc tại Việt Nam. Món ăn này được gọi là nộm bắp chuối ở miền Bắc Việt Nam, còn tại miền Nam được gọi là gỏi bắp chuối. Nó là một trong những món ăn quê dân giã mang đậm hương vị thôn quê và phổ biến ở cả ba miền Bắc, Trung, Nam', 9),
-(12, 'Đậu Bắp Organic 250gr', 'daubap.png', 15000, '', 'Cà tím là loại thực phẩm rất phổ biến ở Việt Nam. Nó không chỉ có màu sắc bắt mắt mà còn rất bổ dưỡng cho sức khỏe. Theo Medicalnewstoday, một trái cà tím cỡ vừa có chứa 20 kalo, 0,8g protein, 4,82g carbonhydrate, 0,15g chất béo và 2,5g chất xơ. Một phần ăn tương đương có thể đáp ứng 10% nhu cầu chất xơ hàng ngày, 5% kali, 3% vitamin C, 5% vitamin B6, 1% sắt và 2% magie. Chính vì những dưỡng chất tuyệt vời đó, cà tím luôn là sự lựa chọn của các chị em nội trợ. Sau đây, bài viết sẽ giới thiệu một số cách chế biến món ngon từ cà tím làm cơ sở tham khảo cho bữa ăn gia đình.', 10),
-(13, 'Cà Tím Organic 250gr', 'catim.png', 15000, '', 'Cà tím là loại thực phẩm rất phổ biến ở Việt Nam. Nó không chỉ có màu sắc bắt mắt mà còn rất bổ dưỡng cho sức khỏe. Theo Medicalnewstoday, một trái cà tím cỡ vừa có chứa 20 kalo, 0,8g protein, 4,82g carbonhydrate, 0,15g chất béo và 2,5g chất xơ. Một phần ăn tương đương có thể đáp ứng 10% nhu cầu chất xơ hàng ngày, 5% kali, 3% vitamin C, 5% vitamin B6, 1% sắt và 2% magie. Chính vì những dưỡng chất tuyệt vời đó, cà tím luôn là sự lựa chọn của các chị em nội trợ. Sau đây, bài viết sẽ giới thiệu một số cách chế biến món ngon từ cà tím làm cơ sở tham khảo cho bữa ăn gia đình.', 6),
-(14, 'Rau má Organic 250gr', 'rauma.png', 17000, '', 'Cà tím là loại thực phẩm rất phổ biến ở Việt Nam. Nó không chỉ có màu sắc bắt mắt mà còn rất bổ dưỡng cho sức khỏe. Theo Medicalnewstoday, một trái cà tím cỡ vừa có chứa 20 kalo, 0,8g protein, 4,82g carbonhydrate, 0,15g chất béo và 2,5g chất xơ. Một phần ăn tương đương có thể đáp ứng 10% nhu cầu chất xơ hàng ngày, 5% kali, 3% vitamin C, 5% vitamin B6, 1% sắt và 2% magie. Chính vì những dưỡng chất tuyệt vời đó, cà tím luôn là sự lựa chọn của các chị em nội trợ. Sau đây, bài viết sẽ giới thiệu một số cách chế biến món ngon từ cà tím làm cơ sở tham khảo cho bữa ăn gia đình.', 7);
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `price` float NOT NULL,
+  `product_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `taikhoan`
+-- Cấu trúc bảng cho bảng `orders_datails`
 --
 
-CREATE TABLE `taikhoan` (
+CREATE TABLE `orders_datails` (
   `id` int(11) NOT NULL,
-  `user` text NOT NULL,
-  `pass` text NOT NULL,
-  `email` text NOT NULL,
-  `address` text NOT NULL,
-  `tel` int(11) NOT NULL,
-  `role` int(11) NOT NULL
+  `product_id` int(11) NOT NULL,
+  `orders_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `products`
+--
+
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `price` float NOT NULL,
+  `weight` int(11) NOT NULL,
+  `image` text NOT NULL,
+  `comment` varchar(255) NOT NULL,
+  `content` varchar(255) NOT NULL,
+  `voucher` varchar(255) NOT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `amount` int(11) NOT NULL,
+  `cate_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `product_img`
+--
+
+CREATE TABLE `product_img` (
+  `id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `roles`
+--
+
+CREATE TABLE `roles` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `function` varchar(255) NOT NULL,
+  `user_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL,
+  `role` tinyint(4) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `vouchers`
+--
+
+CREATE TABLE `vouchers` (
+  `id` int(11) NOT NULL,
+  `content` varchar(255) NOT NULL,
+  `info` varchar(255) NOT NULL,
+  `condition` varchar(255) NOT NULL,
+  `user_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `weight`
+--
+
+CREATE TABLE `weight` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `content` varchar(255) NOT NULL,
+  `product_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -126,68 +162,137 @@ CREATE TABLE `taikhoan` (
 --
 
 --
--- Chỉ mục cho bảng `binhluan`
+-- Chỉ mục cho bảng `category`
 --
-ALTER TABLE `binhluan`
+ALTER TABLE `category`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `blog`
+-- Chỉ mục cho bảng `comment`
 --
-ALTER TABLE `blog`
-  ADD PRIMARY KEY (`id`);
-
---
--- Chỉ mục cho bảng `danhmuc`
---
-ALTER TABLE `danhmuc`
-  ADD PRIMARY KEY (`id`);
-
---
--- Chỉ mục cho bảng `sanpham`
---
-ALTER TABLE `sanpham`
+ALTER TABLE `comment`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `lk_sanpham_danhmuc` (`id_dm`);
+  ADD KEY `lk_comment_products` (`product_id`),
+  ADD KEY `lk_comment_user` (`user_id`);
 
 --
--- Chỉ mục cho bảng `taikhoan`
+-- Chỉ mục cho bảng `orders`
 --
-ALTER TABLE `taikhoan`
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `lk_orders_products` (`product_id`);
+
+--
+-- Chỉ mục cho bảng `orders_datails`
+--
+ALTER TABLE `orders_datails`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `lk_datails_products` (`product_id`),
+  ADD KEY `lk_datails_orders` (`orders_id`);
+
+--
+-- Chỉ mục cho bảng `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `lk_products_category` (`cate_id`);
+
+--
+-- Chỉ mục cho bảng `product_img`
+--
+ALTER TABLE `product_img`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `product_id` (`product_id`);
+
+--
+-- Chỉ mục cho bảng `roles`
+--
+ALTER TABLE `roles`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `lk_role_user` (`user_id`);
+
+--
+-- Chỉ mục cho bảng `user`
+--
+ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `vouchers`
+--
+ALTER TABLE `vouchers`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `lk_vouchers_user` (`user_id`);
+
+--
+-- Chỉ mục cho bảng `weight`
+--
+ALTER TABLE `weight`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `lk_weight_products` (`product_id`);
 
 --
 -- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT cho bảng `binhluan`
+-- AUTO_INCREMENT cho bảng `category`
 --
-ALTER TABLE `binhluan`
+ALTER TABLE `category`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT cho bảng `comment`
+--
+ALTER TABLE `comment`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `blog`
+-- AUTO_INCREMENT cho bảng `orders`
 --
-ALTER TABLE `blog`
+ALTER TABLE `orders`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `danhmuc`
+-- AUTO_INCREMENT cho bảng `orders_datails`
 --
-ALTER TABLE `danhmuc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+ALTER TABLE `orders_datails`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `sanpham`
+-- AUTO_INCREMENT cho bảng `products`
 --
-ALTER TABLE `sanpham`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+ALTER TABLE `products`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `taikhoan`
+-- AUTO_INCREMENT cho bảng `product_img`
 --
-ALTER TABLE `taikhoan`
+ALTER TABLE `product_img`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT cho bảng `roles`
+--
+ALTER TABLE `roles`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT cho bảng `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT cho bảng `vouchers`
+--
+ALTER TABLE `vouchers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT cho bảng `weight`
+--
+ALTER TABLE `weight`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -195,10 +300,54 @@ ALTER TABLE `taikhoan`
 --
 
 --
--- Các ràng buộc cho bảng `sanpham`
+-- Các ràng buộc cho bảng `comment`
 --
-ALTER TABLE `sanpham`
-  ADD CONSTRAINT `lk_sanpham_danhmuc` FOREIGN KEY (`id_dm`) REFERENCES `danhmuc` (`id`);
+ALTER TABLE `comment`
+  ADD CONSTRAINT `lk_comment_products` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
+  ADD CONSTRAINT `lk_comment_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
+
+--
+-- Các ràng buộc cho bảng `orders`
+--
+ALTER TABLE `orders`
+  ADD CONSTRAINT `lk_orders_products` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
+
+--
+-- Các ràng buộc cho bảng `orders_datails`
+--
+ALTER TABLE `orders_datails`
+  ADD CONSTRAINT `lk_datails_orders` FOREIGN KEY (`orders_id`) REFERENCES `orders` (`id`),
+  ADD CONSTRAINT `lk_datails_products` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
+
+--
+-- Các ràng buộc cho bảng `products`
+--
+ALTER TABLE `products`
+  ADD CONSTRAINT `lk_products_category` FOREIGN KEY (`cate_id`) REFERENCES `category` (`id`);
+
+--
+-- Các ràng buộc cho bảng `product_img`
+--
+ALTER TABLE `product_img`
+  ADD CONSTRAINT `product_img_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
+
+--
+-- Các ràng buộc cho bảng `roles`
+--
+ALTER TABLE `roles`
+  ADD CONSTRAINT `lk_role_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
+
+--
+-- Các ràng buộc cho bảng `vouchers`
+--
+ALTER TABLE `vouchers`
+  ADD CONSTRAINT `lk_vouchers_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
+
+--
+-- Các ràng buộc cho bảng `weight`
+--
+ALTER TABLE `weight`
+  ADD CONSTRAINT `lk_weight_products` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
