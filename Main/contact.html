@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+    <?php 
+    include "header.php";
+    ?>
+    <div class="contacts">
+        <div class="banner_details">
+            <label class="text_banner" for="">Contact </label>
+            <img src="Images/img/img_raucuqua/banner/banner3.jpg" alt="">
+        </div>
+        <div class="contact_details">
+
+            <form id="contact" action="https://formbold.com/s/FORM_ID" method="POST">
+                <div class="formbold-mb-5">
+                    <label for="name" class="formbold-form-label"> Full Name </label>
+                    <i class="fa-regular fa-user iconcs"></i>
+                    <input type="text" name="name" id="name" placeholder="Full Name" class="formbold-form-input" />
+                </div>
+
+                <div class="formbold-mb-5">
+                    <label for="email" class="formbold-form-label"> Email Address </label>
+                    <i class="fa-regular fa-envelope iconcs"></i>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" class="formbold-form-input" />
+                </div>
+
+                <div class="formbold-mb-5">
+                    <label for="subject" class="formbold-form-label"> Subject </label>
+                    <FontAwesomeIcon icon="fa-regular fa-message-question" />
+                    <input type="text" name="subject" id="subject" placeholder="Enter your subject" class="formbold-form-input" />
+                </div>
+
+                <div class="formbold-mb-5">
+                    <label for="message" class="formbold-form-label"> Message </label>
+                    <i class="fa-regular fa-message iconcs"></i>
+                    <textarea rows="6" name="message" id="message" placeholder="Type your message" class="formbold-form-input"></textarea>
+                </div>
+
+                <div>
+                    <button class="formbold-btn">Submit</button>
+                </div>
+
+            </form>
+
+        </div>
+        <div class="ggmap">
+
+
+
+        </div>
+        <div class="text_map">
+
+
+        </div>
+
+
+
+    </div>
+    <?php
+
+include "footer.php ";
+?>
+</body>
+
+</html>
