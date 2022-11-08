@@ -6,41 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Product Card/Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./css/chitiet.css">
+  <link rel="stylesheet" href="./css/details.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 </head>
 
 <body>
-  <div class="header">
-    <div class="logo"><img src="./Images/img/img_raucuqua/logo/logo2.jpg" alt=""></div>
-    <div class="menu">
-      <ul>
-        <li><a href="#">Vitanic</a></li>
-        <li>
-          <div class="dropdown">
-            <a class="dropbtn">Sản Phẩm</a>
-            <div class="dropdown-content">
-              <a href="#">Rau Củ</a>
-              <a href="#">Hoa Quả Tươi</a>
-              <a href="#">Hoa Quả Sấy</a>
-              <a href="#">Ô Mai</a>
-              <a href="#">Hoa Quả Đông Lạnh</a>
-              <a href="#">Thêm..</a>
-            </div>
-          </div>
-        </li>
-        <li><a href="#">Tin Tức</a></li>
-        <li><a href="#">Khuyến Mãi</a></li>
-        <li><a href="#">Liên hệ</a></li>
-      </ul>
-    </div>
-    <div class="user">
-      <ul>
-        <li><i class="fa-solid fa-user"></i><a href="#"> Đăng Nhập</a></li>
-        <li><i class="fa-solid fa-cart-shopping"></i><a href="#"> Giỏ Hàng</a></li>
-      </ul>
-    </div>
-  </div>
+<?php
+  include "header.php"
+?>
   <div class="card-wrapper">
     <div class="card">
       <!-- card left -->
@@ -154,37 +127,9 @@
   <!--Hiển thị bình luận-->
   <div class="hienthi">
   </div>
-  <div class="footer">
-    <!-- <img src="./Images/img/img_raucuqua/Footer/variety-fresh-tasty-vegetables-dark.jpg" alt=""> -->
-    <div class="footer-box contact">
-      <img src="./Images/img/img_raucuqua/logo/logo2.jpg" alt=""><br>
-      <i class="fa-brands fa-facebook"></i>
-      <i class="fa-brands fa-instagram"></i>
-      <i class="fa-solid fa-envelope"></i>
-      <i class="fa-brands fa-google"></i>
-    </div>
-    <div class="footer-box address">
-      <ul>
-        <li><a href="#">Đặt Hàng</a></li>
-        <li><a href="#">Góp Ý</a></li>
-        <li><a href="#">Đánh Giá</a></li>
-        <li><a href="#">Nhận Ưu Đãi</a></li>
-      </ul>
-    </div>
-    <div class="footer-box address">
-      <ul>
-        <li><a href="#">Hợp Tác</a></li>
-        <li><a href="#">Đăng Kí Thành Viên</a></li>
-        <li><a href="#">Menu</a></li>
-        <li><a href="#">Thanh Toán</a></li>
-      </ul>
-    </div>
-    <div class="footer-box address">
-      <p><i class="fa-solid fa-envelope-circle-check"></i> Đăng kí thành viên để nhận nhiều ưu đãi từ chúng tôi !</p>
-      <input type="email" placeholder="Email..">
-      <button>SIGN UP</button>
-    </div>
-  </div>
+<?php
+include "footer.php"
+?>
 
   <script src="./chitiet.js"></script>
 </body>
