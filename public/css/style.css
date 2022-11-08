@@ -1,0 +1,147 @@
+* {
+    margin:0px ;
+    padding: 0px;
+    color: black;
+   
+}
+.admin h1{
+    margin: 30px 0 30px 10px;
+}
+.left{
+    padding: 5px 10px;
+    background-color: #86B70B;
+    opacity: 0.95;
+    width: 15%;
+    border-radius: 10px;
+    position: fixed;
+}
+nav ul{
+    display: flex;
+    flex-direction:column;
+}
+nav ul a:hover{
+    border-radius: 10px;
+}
+nav ul a{
+    text-decoration: none;
+    color: black;
+    padding: 20px 25px;
+    font-size: 20px;
+    transition: 1s;
+    font-weight: 500;
+}
+.logout{
+    margin-top: 175px;
+}
+.active{
+    background-color: #86B70B;
+}
+header{
+    display: flex;
+}
+.right{
+    width: 85%;
+    background-color: rgb(249, 243, 243);
+    padding-left: 16%;
+}
+.text1{
+    width: 90%;
+    margin: 10px auto;
+    align-items: center;
+}
+.text1 h1{
+    color: #6b9307;
+}
+table tr td{
+   border-top: none;
+    padding: 15px 20px;
+}
+table tr th{
+    border:1px solid black;
+    padding: 15px 30px;
+}
+table{
+    border-collapse:collapse;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+.tbn{
+    width: 90%;
+    margin: 10px auto;
+}
+.click{
+    background-color: #86B70B;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
+}
+.edit{
+    align-items: center;
+}
+.edit a{
+    font-size: 16px;
+}
+.textadd h1{
+    color: black;
+    margin-bottom: 20px;
+}
+.formadd{
+    background-color: #ffffff;
+    color: white;
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 50px;
+    border-radius: 10px;
+}
+.hidden{
+    display: none;
+}
+.iteminputadd label{
+    color: black;
+    font-size: 20px;
+}
+.iteminputadd input{
+    width: 100%;
+    height: 30px;
+    margin: 5px 0 20px 0;
+    border-radius: 5px;
+  
+}
+.tbn{
+    color: white;
+  
+}
+.welcome{
+    width: 89%;
+    margin: 20px auto;
+}
+.welcome h2{
+    font-size: 30px;
+}
+.welcome h1{
+    font-size: 45px;
+}
+#mau{
+    background-color: #ffffff;
+    width: 230px;
+    height: 60px;
+    border-radius: 5px;
+    position: absolute;
+    transform: translateY(0px);
+    transition: 1s;
+}
+nav ul{
+    overflow: hidden;
+    position: relative;
+}
+.nav_click{
+    position: relative;
+    background: transparent;
+}
+
+#sk3:hover #mau{
+    transform: translateY(200px);
+    transition: 1s;
+} 
