@@ -52,7 +52,7 @@
       <!-- card right -->
       <div class="product-content">
         <h2 class="product-title">Bắp cải tím</h2>
-        <a href="./index.html" class="product-link">Cửa hàng</a>
+        <a href="./index.php" class="product-link">Cửa hàng</a>
         <div class="product-rating">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
