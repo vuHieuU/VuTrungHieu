@@ -1,5 +1,6 @@
 <?php
     include "header.php";
+
     include "slide.php";
 
     include "../model/pdo.php";
