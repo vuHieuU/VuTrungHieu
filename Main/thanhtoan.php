@@ -110,7 +110,6 @@
         </div>
     </div>
     <?php
-        include "sale.php";
         include "footer.php"
     ?>
     <style>

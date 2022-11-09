@@ -28,12 +28,22 @@
             <div class="product-category">
               <h3>Danh Mục Sản Phẩm</h3>
               <ul>
-                <li><i class="fa-solid fa-carrot"></i><a href="#">Rau Củ</a><i class="fa-solid fa-circle-chevron-right"></i></li>
-                <li><i class="fa-solid fa-pepper-hot"></i></i><a href="#">Hoa Quả Tươi</a><i class="fa-solid fa-circle-chevron-right"></i></li>
-                <li><i class="fa-solid fa-cloud-sun"></i><a href="#">Hoa Quả Sấy</a><i class="fa-solid fa-circle-chevron-right"></i></li>
-                <li><i class="fa-solid fa-apple-whole"></i><a href="#">Ô Mai</a><i class="fa-solid fa-circle-chevron-right"></i></li>
-                <li><i class="fa-solid fa-temperature-arrow-down"></i><a href="#">Hoa Quả Đông Lạnh</a><i class="fa-solid fa-circle-chevron-right"></i></li>
-                <li><i class="fa-solid fa-angles-right"></i><a style="font-weight: bold;" href="#">Xem Tất Cả</a></li>
+                <?php
+                  foreach($listdm as $dm){
+                    extract($dm);
+                    echo '
+                    <li><i class="fa-solid fa-carrot"></i><a href="#">'.$name.'</a><i class="fa-solid fa-circle-chevron-right"></i></li>
+                   
+                    ';
+                  }
+
+                ?>
+               <!-- <li><i class="fa-solid fa-pepper-hot"></i></i><a href="#">'.$name.'</a><i class="fa-solid fa-circle-chevron-right"></i></li>
+                    <li><i class="fa-solid fa-cloud-sun"></i><a href="#">Hoa Quả Sấy</a><i class="fa-solid fa-circle-chevron-right"></i></li>
+                    <li><i class="fa-solid fa-apple-whole"></i><a href="#">Ô Mai</a><i class="fa-solid fa-circle-chevron-right"></i></li>
+                    <li><i class="fa-solid fa-temperature-arrow-down"></i><a href="#">Hoa Quả Đông Lạnh</a><i class="fa-solid fa-circle-chevron-right"></i></li>
+                    <li><i class="fa-solid fa-angles-right"></i><a style="font-weight: bold;" href="#">Xem Tất Cả</a></li> -->
+                   
                 <div class="search">
                   <input type="text" name="" id="">
                   <button><i class="fa-solid fa-magnifying-glass"></i></button>
