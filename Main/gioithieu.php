@@ -95,9 +95,6 @@
       </div>
   </div>
 </div>
-
-  <?php include "intro.php"?>
-  <?php //  include "blog.php"?>
   <?php include "footer.php"?>
 </div>
   </body>
