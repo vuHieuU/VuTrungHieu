@@ -5,6 +5,11 @@
    $listsp = pdo_query($sql);
    return $listsp;
    }
+   function loadsp_home(){
+   $sql="select * from products where 1 order by name desc limit 0,8";
+   $listsp = pdo_query($sql);
+   return $listsp;
+   }
    function insert_sanpham($name,$price,$hinh,$weight,$mota,$soluong,$id_dm){
       $sql = "insert into products(name,price,image,weight,content,amount,cate_id) values('$name','$price','$hinh','$weight','$mota','$soluong','$id_dm')";
       pdo_execute($sql);
