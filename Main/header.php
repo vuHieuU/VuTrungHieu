@@ -29,7 +29,7 @@
               </li>
               <li><a href="#">Tin Tức</a></li>
               <li><a href="#">Khuyến Mãi</a></li>
-              <li><a href="#">Liên hệ</a></li>
+              <li><a href="contact.php">Liên hệ</a></li>
           </ul>
       </div>
       <div class="user">
