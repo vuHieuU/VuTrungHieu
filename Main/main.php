@@ -66,7 +66,7 @@
                 <img src="'.$img.'" alt="">
                 <button>'.$name_cate.'</button>
                 <p class="name">'.$name.'</p>
-                <p class="price">'.$price.'đ <del>45.000đ</del></p>
+                <p class="price">'.$price.'đ <del>'.$del.'đ</del></p>
                 <div class="product-box-btn">
                   <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
                 </div>
