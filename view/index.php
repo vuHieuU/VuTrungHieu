@@ -2,15 +2,19 @@
     include "header.php";
 
     include "slide.php";
-
+    include "../model/sanpham.php";
     include "../model/pdo.php";
     include "../model/danhmuc.php";
-    // include "global.php";
-    $listdm = loadall_dm();
+    include "global.php";
+
+    $spnew = loadAll_sanpham_home();
+
     if((isset($_GET['act']))&&($_GET['act'])){
         $act=$_GET['act'];
         switch ($act) {
-           
+            case 'sanpham':
+                include 'product.php'; 
+                break;
  
             default:
                 include "main.php";
@@ -19,8 +23,6 @@
     }else{
         include "main.php";
     }
-    include "intro.php";
-    include "blog.php";
-    include "sale.php";
-    include "footer.php";
+    
+    include "../Main/footer.php";
 ?>
