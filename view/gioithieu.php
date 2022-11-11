@@ -95,11 +95,6 @@
       </div>
   </div>
 </div>
-<<<<<<< HEAD:view/gioithieu.php
-
-  <?php //  include "blog.php"?>
-=======
->>>>>>> 4c84c7621dccb60b83d71b3674a790d23876fbf5:Main/gioithieu.php
   <?php include "footer.php"?>
 </div>
   </body>

@@ -59,7 +59,6 @@
 
             <div class="product-main">
 
-<<<<<<< HEAD:view/main.php
                   <!-- <?php 
                     foreach ($spnew as $sp) {
                       extract($sp); // để lấy tên cột và tên biến để show ra màn hình
@@ -146,7 +145,6 @@
                     <div class="product-box-btn">
                       <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
                     </div>
-=======
                <?php
                foreach($sphome as $sp){
                 extract($sp);
@@ -159,7 +157,6 @@
                 <p class="price">'.$price.'đ <del>'.$del.'đ</del></p>
                 <div class="product-box-btn">
                   <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
->>>>>>> 4c84c7621dccb60b83d71b3674a790d23876fbf5:Main/main.php
                 </div>
             </div>
                 ';

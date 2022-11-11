@@ -5,15 +5,13 @@
    $listsp = pdo_query($sql);
    return $listsp;
    }
-<<<<<<< HEAD
-   
-=======
+
    function loadsp_home(){
    $sql="select * from products inner join category on products.cate_id=category.id_cate where 1 order by name desc limit 0,8";
    $listsp = pdo_query($sql);
    return $listsp;
    }
->>>>>>> 4c84c7621dccb60b83d71b3674a790d23876fbf5
+
    function insert_sanpham($name,$price,$hinh,$weight,$mota,$soluong,$id_dm){
       $sql = "insert into products(name,price,image,weight,content,amount,cate_id) values('$name','$price','$hinh','$weight','$mota','$soluong','$id_dm')";
       pdo_execute($sql);
