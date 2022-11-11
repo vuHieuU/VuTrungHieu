@@ -1,0 +1,84 @@
+:root {
+	--primary-color: #0f9d58;
+}
+
+* {
+	padding: 0;
+	margin: 0 auto;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+.wrapper {
+	position: relative;
+	text-align: center;
+	color: black;
+	
+}
+.text_banner {
+	transform: translateY(160px);
+	text-align: center;
+	
+}
+.text_banner>form>input {
+	width: 600px;
+	height: 35px;
+	border: none;
+	margin-top: 10px;
+	border-radius: 5px;
+	outline: none;
+}
+
+.text_banner>form>button>i {
+	margin-left: -40px;
+	font-size: 16px;
+	border: none;
+}
+
+.container {
+	border-radius: 20px;
+	padding: 20px;
+	background-color: #e2f3e2;
+	margin: 100px auto;
+    margin-bottom: auto;
+	width: 1200px;
+	text-align: center;
+}
+
+.food-menu {
+	margin-bottom: 40px;
+}
+
+.food-menu button {
+	color: var(--primary-color);
+	border: 1px solid var(--primary-color);
+	padding: 10px 40px;
+	border-radius: 50px;
+	font-weight: 600;
+	transition: 0.25s;
+	cursor: pointer;
+	background-color: #fff;
+	margin: 5px;
+}
+
+.food-menu button:hover,
+.food-menu button.active {
+	color: #fff;
+	background-color: var(--primary-color);
+}
+
+.name {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.price {
+	color: red;
+	font-size: 18px;
+}
+
+.price del {
+	color: gray;
+	font-size: 18px;
+
+}
+

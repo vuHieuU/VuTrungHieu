@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    --main-color: #57750b;
+    --main-color: #0f9d58;
     --color-text: rgb(12, 70, 7);
     font-family: 'Times New Roman', Times, serif;
     /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
@@ -10,7 +10,11 @@
 
 
 .container{
+<<<<<<< HEAD
+    width: 1200px;
+=======
     width: 85vw;
+>>>>>>> 4c84c7621dccb60b83d71b3674a790d23876fbf5
     margin: 0 auto;
 }
 .header{
