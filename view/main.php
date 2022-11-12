@@ -30,20 +30,20 @@
               <h3>Danh Mục Sản Phẩm</h3>
               <ul>
                 <?php
-                  // foreach($listdm as $dm){
-                  //   extract($dm);
-                  //   $loadsp = "index.php?act=main&cate_id=".$id_cate;
-                  //   echo '
-                  //   <li><i class="fa-solid fa-carrot"></i><a href="'.$loadsp.'">'.$name_cate.'</a><i class="fa-solid fa-circle-chevron-right"></i></li>
+                  foreach($listdm as $dm){
+                    extract($dm);
+                    $loadsp = "index.php?act=main&cate_id=".$id_cate;
+                    echo '
+                    <li><i class="fa-solid fa-carrot"></i><a href="'.$loadsp.'">'.$name_cate.'</a><i class="fa-solid fa-circle-chevron-right"></i></li>
                    
-                  //   ';
-                  // }
+                    ';
+                  }
                   ?>
+                  <!-- <li><i class="fa-solid fa-carrot"></i><a href="">'.$name_cate.'</a><i class="fa-solid fa-circle-chevron-right"></i></li>
                   <li><i class="fa-solid fa-carrot"></i><a href="">'.$name_cate.'</a><i class="fa-solid fa-circle-chevron-right"></i></li>
                   <li><i class="fa-solid fa-carrot"></i><a href="">'.$name_cate.'</a><i class="fa-solid fa-circle-chevron-right"></i></li>
                   <li><i class="fa-solid fa-carrot"></i><a href="">'.$name_cate.'</a><i class="fa-solid fa-circle-chevron-right"></i></li>
-                  <li><i class="fa-solid fa-carrot"></i><a href="">'.$name_cate.'</a><i class="fa-solid fa-circle-chevron-right"></i></li>
-                  <li><i class="fa-solid fa-carrot"></i><a href="">'.$name_cate.'</a><i class="fa-solid fa-circle-chevron-right"></i></li>
+                  <li><i class="fa-solid fa-carrot"></i><a href="">'.$name_cate.'</a><i class="fa-solid fa-circle-chevron-right"></i></li> -->
 
                    
                 <form action="index.php?act=sanpham">
@@ -59,110 +59,33 @@
           </div>
           <!-- product box -->
             <div class="product-main">
-                  <?php 
-                    // foreach ($spnew as $sp) {
-                    //   extract($sp); // để lấy tên cột và tên biến để show ra màn hình
-                    //   $hinh = $img_path.$image;
-                    //   echo '<div class="product-box">
-                     
-                    //   <img src="'.$hinh.'" alt="">
-                    //   <button>Rau Xanh</button>
-                    //   <p class="name">'.$name.'</p>
-                    //   <p class="price">'.$price.'<del>45.000đ</del></p>
-                    //   <div class="product-box-btn">
-                    //     <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
-                    //   </div>';
-                    // }
-                ?>
-                <div class="product-box">
-                    <img src="../Images/sanpham/bapcaitim.jpg" alt="">
-                    <button>Rau Xanh</button>
-                    <p class="name">Bắp cải tim Organic 500g</p>
-                    <p class="price">30.000đ <del>45.000đ</del></p>
-                    <div class="product-box-btn">
-                      <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
-                    </div>
-                </div>
-                <div class="product-box">
-                    <img src="../Images/sanpham/bapcaitim.jpg" alt="">
-                    <button>Rau Xanh</button>
-                    <p class="name">Bắp cải tim Organic 500g</p>
-                    <p class="price">30.000đ <del>45.000đ</del></p>
-                    <div class="product-box-btn">
-                      <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
-                    </div>
-                </div>
-                <div class="product-box">
-                    <img src="../Images/sanpham/bapcaitim.jpg" alt="">
-                    <button>Rau Xanh</button>
-                    <p class="name">Bắp cải tim Organic 500g</p>
-                    <p class="price">30.000đ <del>45.000đ</del></p>
-                    <div class="product-box-btn">
-                      <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
-                    </div>
-                </div>
-                <div class="product-box">
-                    <img src="../Images/sanpham/bapcaitim.jpg" alt="">
-                    <button>Rau Xanh</button>
-                    <p class="name">Bắp cải tim Organic 500g</p>
-                    <p class="price">30.000đ <del>45.000đ</del></p>
-                    <div class="product-box-btn">
-                      <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
-                    </div>
-                </div>
-                <div class="product-box">
-                    <img src="../Images/sanpham/bapcaitim.jpg" alt="">
-                    <button>Rau Xanh</button>
-                    <p class="name">Bắp cải tim Organic 500g</p>
-                    <p class="price">30.000đ <del>45.000đ</del></p>
-                    <div class="product-box-btn">
-                      <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
-                    </div>
-                </div>
-                <div class="product-box">
-                    <img src="../Images/sanpham/bapcaitim.jpg" alt="">
-                    <button>Rau Xanh</button>
-                    <p class="name">Bắp cải tim Organic 500g</p>
-                    <p class="price">30.000đ <del>45.000đ</del></p>
-                    <div class="product-box-btn">
-                      <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
-                    </div>
-                </div>
-                <div class="product-box">
-                    <img src="../Images/sanpham/bapcaitim.jpg" alt="">
-                    <button>Rau Xanh</button>
-                    <p class="name">Bắp cải tim Organic 500g</p>
-                    <p class="price">30.000đ <del>45.000đ</del></p>
-                    <div class="product-box-btn">
-                      <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
-                    </div>
-                </div>
-                <div class="product-box">
-                    <img src="../Images/sanpham/bapcaitim.jpg" alt="">
-                    <button>Rau Xanh</button>
-                    <p class="name">Bắp cải tim Organic 500g</p>
-                    <p class="price">30.000đ <del>45.000đ</del></p>
-                    <div class="product-box-btn">
-                      <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
-                    </div>
-                </div>
                 
+                <!-- <div class="product-box">
+                    <img src="../Images/sanpham/bapcaitim.jpg" alt="">
+                    <button>Rau Xanh</button>
+                    <p class="name">Bắp cải tim Organic 500g</p>
+                    <p class="price">30.000đ <del>45.000đ</del></p>
+                    <div class="product-box-btn">
+                      <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                    </div> -->
+                <!-- </div> -->
+           
                <?php
-            //    foreach($sphome as $sp){
-            //     extract($sp);
-            //     $img = $img_path.$image;
-            //     echo '
-            //     <div class="product-box">
-            //     <img src="'.$img.'" alt="">
-            //     <button>'.$name_cate.'</button>
-            //     <p class="name">'.$name.'</p>
-            //     <p class="price">'.$price.'đ <del>'.$del.'đ</del></p>
-            //     <div class="product-box-btn">
-            //       <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
-            //     </div>
-            // </div>
-            //     ';
-            //    }
+               foreach($sphome as $sp){
+                extract($sp);
+                $img = $img_path.$image;
+                echo '
+                <div class="product-box">
+                <img src="'.$img.'" alt="">
+                <button>'.$name_cate.'</button>
+                <p class="name">'.$name.'</p>
+                <p class="price">'.$price.'đ <del>'.$amount.'đ</del></p>
+                <div class="product-box-btn">
+                  <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                </div>
+            </div>
+                ';
+               }
                ?>
             </div>
         </div>

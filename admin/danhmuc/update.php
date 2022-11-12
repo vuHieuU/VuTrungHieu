@@ -26,10 +26,10 @@
                         </div>
                         <div class="iteminputadd">
                             <label for="">Danh mục:</label> <br>
-                            <input type="text" name="name" value="<?php echo $name?>">
+                            <input type="text" name="name" value="<?php echo $name_cate?>">
                         </div>
                         <div class="tbn">
-                            <input type="hidden" name="id" value="<?php if(isset($id)&&($id>0)) echo $id ?>">
+                            <input type="hidden" name="id" value="<?php if(isset($id_cate)&&($id_cate>0)) echo $id_cate ?>">
                                 <input class="click" type="submit" name="update" value="Update">
                         </div>
                 </form>

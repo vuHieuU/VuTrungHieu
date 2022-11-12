@@ -4,7 +4,7 @@ include "../model/danhmuc.php";
 include "../model/sanpham.php";
 include "../model/taikhoan.php";
 include "../model/thongbao.php";
-include "../global.php";
+include "../view/global.php";
 include "header.php";
      if(isset($_GET['act'])){
       $act = $_GET['act'];

@@ -21,7 +21,7 @@
                         <?php
                             foreach($listdanhmuc as $danhmuc){
                                 extract($danhmuc);
-                                echo '<option value="'.$id.'">'.$name.'</option>';
+                                echo '<option value="'.$id_cate.'">'.$name_cate.'</option>';
                             }
                         ?>
                         </select>

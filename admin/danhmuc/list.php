@@ -32,13 +32,13 @@
                                     <?php
                                         foreach($listdm as $dm){
                                             extract($dm);
-                                            $suadm="index.php?act=suadm&id=".$id;
-                                            $xoadm="index.php?act=xoadm&id=".$id;
+                                            $suadm="index.php?act=suadm&id=".$id_cate;
+                                            $xoadm="index.php?act=xoadm&id=".$id_cate;
                                             echo '
                                                 <tr>
                                                         <td><input type="checkbox" name="" id=""></td>
-                                                        <td>'.$id.'</td>
-                                                        <td>'.$name.'</td>
+                                                        <td>'.$id_cate.'</td>
+                                                        <td>'.$name_cate.'</td>
                                                         <td class="edit">
                                                             <a href="'.$suadm.'"><i class="fa-regular fa-pen-to-square sua"></i></a>
                                                             <a href="'.$xoadm.'"><i class="fa-solid fa-trash xoa"></i></a>
