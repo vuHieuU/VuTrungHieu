@@ -181,55 +181,7 @@
     <button>Khám Phá Ngay</button>
   </div>
 </div>
-<!-- Blog -->
-<!-- <h2 class="title">ABC</h2> -->
-<div class="blog">
-  <div class="blog-box">
-    <img src="../Images/blog/blog01.jpg" alt="">
-    <div class="blog-box-btn">
-      <div class="blog-box-btns">
-        <i>by</i>
-        <p class="name">Admin</p>
-      </div>
-      <div class="blog-box-btns">
-        <i>on</i>
-        <p class="name">03/11/2022</p>
-      </div>
-    </div>
-    <h3>Tiêu Đề</h3>
-    <p>Nội dung box</p>
-  </div>
-  <div class="blog-box">
-    <img src="../Images/blog/blog01.jpg" alt="">
-    <div class="blog-box-btn">
-      <div class="blog-box-btns">
-        <i>by</i>
-        <p class="name">Admin</p>
-      </div>
-      <div class="blog-box-btns">
-        <i>on</i>
-        <p class="name">03/11/2022</p>
-      </div>
-    </div>
-    <h3>Tiêu Đề</h3>
-    <p>Nội dung box</p>
-  </div>
-  <div class="blog-box">
-    <img src="../Images/blog/blog01.jpg" alt="">
-    <div class="blog-box-btn">
-      <div class="blog-box-btns">
-        <i>by</i>
-        <p class="name">Admin</p>
-      </div>
-      <div class="blog-box-btns">
-        <i>on</i>
-        <p class="name">03/11/2022</p>
-      </div>
-    </div>
-    <h3>Tiêu Đề</h3>
-    <p>Nội dung box</p>
-  </div>
-</div>
+
 <!-- Sale -->
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script>

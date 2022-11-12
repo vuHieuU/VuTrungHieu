@@ -18,5 +18,6 @@
     }else{
     }
     include "main.php";
+    include "blog.php";
     include "footer.php";
 ?>
