@@ -27,7 +27,7 @@
                       </div>
                     </div>
               </li>
-              <li><a href="#">Tin Tức</a></li>
+              <li><a href="tintuc.php">Tin Tức</a></li>
               <li><a href="#">Khuyến Mãi</a></li>
               <li><a href="contact.php">Liên hệ</a></li>
           </ul>
