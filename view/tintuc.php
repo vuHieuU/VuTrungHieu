@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/tintuc.css">
+    <link rel="stylesheet" href="../Main/css/tintuc.css">
 </head>
 <body>
   <?php include "header.php"?>
@@ -21,56 +21,56 @@
       <div class="tintuc-left1">
       <div class="list-blog-box">
           <div class="tintuc-img">
-            <img src="./Images/img/img_raucuqua/tintuc/tintuc03.jpg" alt="">
+            <img src="../Images/tintuc/tintuc.jpg" alt="">
           </div>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident nemo a sint maxime, dolor soluta corporis velit voluptas maiores debitis numquam dolorum. Blanditiis quo doloremque repudiandae iusto optio, ullam consequuntur!</p>
       </div>
       
        <div class="list-blog-box">
           <div class="tintuc-img">
-            <img src="./Images/img/img_raucuqua/tintuc/tintuc03.jpg" alt="">
+            <img src="../Images/tintuc/tintuc.jpg" alt="">
           </div>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident nemo a sint maxime, dolor soluta corporis velit voluptas maiores debitis numquam dolorum. Blanditiis quo doloremque repudiandae iusto optio, ullam consequuntur!</p>
       </div>
       <div class="list-blog-box">
           <div class="tintuc-img">
-            <img src="./Images/img/img_raucuqua/tintuc/tintuc03.jpg" alt="">
+            <img src="../Images/tintuc/tintuc.jpg" alt="">
           </div>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident nemo a sint maxime, dolor soluta corporis velit voluptas maiores debitis numquam dolorum. Blanditiis quo doloremque repudiandae iusto optio, ullam consequuntur!</p>
       </div>
       <div class="list-blog-box">
           <div class="tintuc-img">
-            <img src="./Images/img/img_raucuqua/tintuc/tintuc03.jpg" alt="">
+            <img src="../Images/tintuc/tintuc.jpg" alt="">
           </div>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident nemo a sint maxime, dolor soluta corporis velit voluptas maiores debitis numquam dolorum. Blanditiis quo doloremque repudiandae iusto optio, ullam consequuntur!</p>
       </div>
       <div class="list-blog-box">
           <div class="tintuc-img">
-            <img src="./Images/img/img_raucuqua/tintuc/tintuc03.jpg" alt="">
+            <img src="../Images/tintuc/tintuc.jpg" alt="">
           </div>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident nemo a sint maxime, dolor soluta corporis velit voluptas maiores debitis numquam dolorum. Blanditiis quo doloremque repudiandae iusto optio, ullam consequuntur!</p>
       </div>
       <div class="list-blog-box">
           <div class="tintuc-img">
-            <img src="./Images/img/img_raucuqua/tintuc/tintuc03.jpg" alt="">
+            <img src="../Images/tintuc/tintuc.jpg" alt="">
           </div>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident nemo a sint maxime, dolor soluta corporis velit voluptas maiores debitis numquam dolorum. Blanditiis quo doloremque repudiandae iusto optio, ullam consequuntur!</p>
       </div>
       <div class="list-blog-box">
           <div class="tintuc-img">
-            <img src="./Images/img/img_raucuqua/tintuc/tintuc03.jpg" alt="">
+            <img src="../Images/tintuc/tintuc.jpg" alt="">
           </div>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident nemo a sint maxime, dolor soluta corporis velit voluptas maiores debitis numquam dolorum. Blanditiis quo doloremque repudiandae iusto optio, ullam consequuntur!</p>
       </div>
       <div class="list-blog-box">
           <div class="tintuc-img">
-            <img src="./Images/img/img_raucuqua/tintuc/tintuc03.jpg" alt="">
+            <img src="../Images/tintuc/tintuc.jpg" alt="">
           </div>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident nemo a sint maxime, dolor soluta corporis velit voluptas maiores debitis numquam dolorum. Blanditiis quo doloremque repudiandae iusto optio, ullam consequuntur!</p>
       </div>
       <div class="list-blog-box">
           <div class="tintuc-img">
-            <img src="./Images/img/img_raucuqua/tintuc/tintuc03.jpg" alt="">
+            <img src="../Images/tintuc/tintuc.jpg" alt="">
           </div>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident nemo a sint maxime, dolor soluta corporis velit voluptas maiores debitis numquam dolorum. Blanditiis quo doloremque repudiandae iusto optio, ullam consequuntur!</p>
       </div>
@@ -122,8 +122,6 @@
           
           
 </div>
-
-  <?php include "intro.php"?>
   <?php //  include "blog.php"?>
   <?php include "footer.php"?>
 </div>
