@@ -32,7 +32,7 @@
                 <?php
                   foreach($listdm as $dm){
                     extract($dm);
-                    $loadsp = "index.php?act=main&cate_id=".$id_cate;
+                    $loadsp = "index.php?act=listsp&cate_id=".$id_cate;
                     echo '
                     <li><i class="fa-solid fa-carrot"></i><a href="'.$loadsp.'">'.$name_cate.'</a><i class="fa-solid fa-circle-chevron-right"></i></li>
                    
@@ -46,10 +46,10 @@
                   <li><i class="fa-solid fa-carrot"></i><a href="">'.$name_cate.'</a><i class="fa-solid fa-circle-chevron-right"></i></li> -->
 
                    
-                <form action="index.php?act=sanpham">
+                <form action="index.php?act=listsp" method="POST">
                 <div class="search">
-                  <input type="text" name="search">
-                  <button name="timkiem"><i class="fa-solid fa-magnifying-glass"></i></button>
+                  <input type="text" name="kyw">
+                  <button type="submit" name="timkiem"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
                 </form>
               </ul>

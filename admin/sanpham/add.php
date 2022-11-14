@@ -19,7 +19,7 @@
                       <label for="">Mã sản phẩm:</label> <br>
                         <select name="id_dm" id="">
                         <?php
-                            foreach($listdanhmuc as $danhmuc){
+                            foreach($listdm as $danhmuc){
                                 extract($danhmuc);
                                 echo '<option value="'.$id_cate.'">'.$name_cate.'</option>';
                             }

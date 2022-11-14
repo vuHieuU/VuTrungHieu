@@ -22,7 +22,6 @@ include "header.php";
       <?php
          switch ($act) {
                   case 'dm':
-
                      $listdm = loadall_dm();
                         include "danhmuc/list.php";
                            break;
@@ -81,6 +80,7 @@ include "header.php";
                         break;
                   case 'sp':
                         $listsp = loadall_sp();
+                        $listdm = loadall_dm();
                         include "sanpham/list.php";
                         break;
 
@@ -102,14 +102,14 @@ include "header.php";
                         }
                   insert_sanpham($name,$price,$hinh,$weight,$mota,$soluong,$id_dm);
                }
-               $listdanhmuc=loadall_dm();
+               $listdm=loadall_dm();
                         include "sanpham/add.php";
                            break;
                   case 'suasp':
                      if(isset($_GET['id'])&&($_GET['id']>0)){
                         $id = $_GET['id'];
                         $sp = loadone_sp($id);
-                        $listdanhmuc=loadall_dm();
+                        $listdm=loadall_dm();
                         }
                      include 'sanpham/update.php';
                      break;
@@ -143,6 +143,18 @@ include "header.php";
                         $listsp = loadall_sp();
                         include "sanpham/list.php";
                         break;
+                  case 'listdm':
+                           if(isset($_POST['listok'])&&($_POST['listok'])){
+                                 $kyw=$_POST['kyw'];
+                                 $iddm=$_POST['cate_id'];
+                           }else{
+                                 $kyw="";
+                                 $iddm=0;
+                           }
+                           $listdm = loadall_dm();
+                           $listsp = loadAll_sanpham($kyw,$iddm);
+                           include "sanpham/list.php";
+                           break;
                   case 'tk':
                      $listtk = loadall_tk();
                         include "taikhoan/list.php";

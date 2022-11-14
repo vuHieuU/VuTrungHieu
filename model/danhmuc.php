@@ -1,6 +1,6 @@
 <?php
    function loadall_dm(){
-    $sql = "select * from category";
+    $sql = "select * from category order by id_cate";
     $listdm = pdo_query($sql);
     return $listdm; 
    }

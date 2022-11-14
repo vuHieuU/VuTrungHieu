@@ -58,7 +58,7 @@
                         </div>
                         <select name="id_dm" id="">
                         <?php
-                            foreach($listdanhmuc as $danhmuc){
+                            foreach($listdm as $danhmuc){
                                 extract($danhmuc);
                                 echo '<option value="'.$id_cate.'">'.$name_cate.'</option>';
                                 

@@ -13,10 +13,22 @@
         <div class="text1">
            <h1>Danh Sách Sản Phẩm</h1>
         </div>
-              
+        <form action="index.php?act=listdm" method="POST">
+        <input type="text" name="kyw"  id="">
+           <select name="cate_id" id="">
+              <option value="0" selected>Tất cả</option>
+                        <?php
+                            foreach($listdm as $danhmuc){
+                                extract($danhmuc);
+                                echo '<option value="'.$id_cate.'">'.$name_cate.'</option>';
+                                
+                            }
+                        ?>
+                        </select>
+                        <input type="submit" name="listok" value="Search">
+
+                    </form>
                     <form action="index.php?act=addsp" method="POST">
-
-
                             <table border="1">
                                     
                                     
