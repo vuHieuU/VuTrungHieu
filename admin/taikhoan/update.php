@@ -53,7 +53,7 @@
             <a href="index.php?act=tk"><input type="button" value="Danh Mục"></a>
             <input type="reset" value="Nhập Lại">
             <input type="hidden" name="id" value="<?=$id?>">
-            <a href="index.php?act=updatedm"><input type="button" value="Cập Nhật"></a>
+            <input type="submit" name="update" value="Cập Nhật"></a>
         </div>
     </form>
     </div>

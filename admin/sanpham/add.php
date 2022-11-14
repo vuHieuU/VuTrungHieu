@@ -10,55 +10,6 @@
 </head>
 
 <body>
-    <!-- <div class="borderlist">
-
-
-        <form action="index.php?act=addsp" method="POST" class="formadd" enctype="multipart/form-data">
-            <div class="textadd">
-                <h1>Thêm Mới SẢN PHẨM</h1>
-            </div>
-            <div class="iteminputadd">
-                <label for="">Mã sản phẩm:</label> <br>
-                <select name="id_dm" id="">
-                    <?php
-                    // foreach ($listdm as $danhmuc) {
-                    //     extract($danhmuc);
-                    //     echo '<option value="' . $id_cate . '">' . $name_cate . '</option>';
-                    // }
-                    ?>
-                </select>
-            </div>
-            <div class="iteminputadd hidden">
-                <label for="">Mã sản phẩm:</label> <br>
-                <input type="text" disabled>
-            </div>
-            <div class="iteminputadd">
-                <label for="">Tên sản phẩm:</label> <br>
-                <input type="text" name="name">
-            </div>
-            <div class="iteminputadd">
-                <label for="">Ảnh:</label> <br>
-                <input type="file" name="image">
-            </div>
-            <div class="iteminputadd">
-                <label for="">Giá:</label> <br>
-                <input type="text" name="price">
-            </div>
-            <div class="iteminputadd">
-                <label for="">Giá Cũ</label> <br>
-                <input type="text" name="weight">
-            </div>
-            <div class="iteminputadd">
-                <label for="">Mô tả:</label> <br>
-                <textarea name="mota" id="" cols="30" rows="10"></textarea>
-            </div>
-
-            <div class="tbn">
-                <input class="click" type="submit" name="them" value="Thêm Sản Phẩm Mới">
-            </div>
-        </form>
-    </div> -->
-    <!--  -->
     <h3 style="margin-top: 10px;">Thêm Sản Phẩm</h3>
     <form action="index.php?act=addsp" method="POST" class="formadd" enctype="multipart/form-data">
         <table class="add">
@@ -87,23 +38,30 @@
                 </td>
             </tr>
             <tr>
+                <td>Giá Cũ</td>
+                <td>
+                    <input type="text" value="" name="soluong" />
+                </td>
+            </tr>
+            <tr>
                 <td>Mô Tả</td>
                 <td>
-                    <textarea cols="30" rows="10" name="mota"></textarea>
+                    <textarea cols="30" rows="10" name="content"></textarea>
                 </td>
             </tr>
             <tr>
                 <td>Danh Mục</td>
                 <td>
                     <input list="browsers" name="browser">
-                    <datalist id="browsers">
-                        <option value="Rau Củ" disabled>
-                            <?php
-                            foreach ($listdm as $danhmuc) {
+                    <datalist id="browsers" name="">
+                    <select name="id_dm" id="">
+                        <?php
+                            foreach($listdm as $danhmuc){
                                 extract($danhmuc);
-                                echo '<option value="' . $id_cate . '">' . $name_cate . '</option>';
+                                echo '<option value="'.$id_cate.'">'.$name_cate.'</option>';
                             }
-                            ?>
+                        ?>
+                        </select>
                     </datalist>
                 </td>
             </tr>
@@ -113,7 +71,7 @@
         <div class="table-btn">
             <a href="index.php?act=sp"><input type="button" value="Danh Mục"></a>
             <input type="reset" value="Nhập Lại">
-            <input type="button" value="Thêm Mới">
+            <input type="submit" name="them" value="Thêm Mới">
         </div>
     </form>
     </div>

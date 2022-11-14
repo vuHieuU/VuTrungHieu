@@ -8,6 +8,7 @@
 }
 
 .table-btn input[type=button],
+.table-btn input[type=submit],
 .table-btn input[type=reset]
 {
     border: none;

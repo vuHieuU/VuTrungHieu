@@ -37,7 +37,7 @@
                                         <a style="text-decoration: none;" href="' . $suadm . '">
                                             <input type="button" class="edit" value="Sửa">
                                         </a>
-                                        <a style="text-decoration: none;" href="' . $xoadm . '">
+                                        <a style="text-decoration: none;" href="' . $xoadm . '" onclick="Delete()">
                                             <input type="button" class="delete" value="Xóa">
                                         </a>
 
@@ -57,6 +57,15 @@
         </form>
     </div>
     </div>
+    <script>
+        function Delete(){
+                var remove = confirm("Bạn có muốn xóa không?");
+                if (remove)
+                    return true;
+                else
+                    return false;
+                }
+    </script>
 </body>
 
 </html>

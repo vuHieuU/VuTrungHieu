@@ -21,13 +21,13 @@ if (is_array($dm)) {
             <tr>
                 <td>Mã Danh Mục</td>
                 <td>
-                    <input type="text" value="<?php echo $id_cate ?>" name="name" disabled />
+                    <input type="text" value="<?php echo $id_cate ?>" name="is" disabled />
                 </td>
             </tr>
             <tr>
                 <td>Tên Danh Mục</td>
                 <td>
-                    <input type="text" value="<?php echo $name_cate ?>" name="email" />
+                    <input type="text" value="<?php echo $name_cate ?>" name="name" />
                 </td>
             </tr>
 
@@ -37,31 +37,9 @@ if (is_array($dm)) {
             <a href="index.php?act=dm"><input type="button" value="Danh Mục"></a>
             <input type="reset" value="Nhập Lại">
             <input type="hidden" name="id" value="<?php if (isset($id_cate) && ($id_cate > 0)) echo $id_cate ?>">
-            <a href="index.php?act=updatedm"><input type="button" value="Cập Nhật"></a>
+            <input type="submit" name="update" value="Cập Nhật">
         </div>
     </form>
-    <!--  -->
-    <!-- <div class="borderlist">
-
-
-        <form action="index.php?act=updatedm" method="POST" class="formadd">
-            <div class="textadd">
-                <h1>Thêm Mới Danh Mục</h1>
-            </div>
-            <div class="iteminputadd hidden">
-                <label for="">Mã danh mục:</label> <br>
-                <input type="text" disabled>
-            </div>
-            <div class="iteminputadd">
-                <label for="">Danh mục:</label> <br>
-                <input type="text" name="name" value="<?php echo $name_cate ?>">
-            </div>
-            <div class="tbn">
-                <input type="hidden" name="id" value="<?php if (isset($id_cate) && ($id_cate > 0)) echo $id_cate ?>">
-                <input class="click" type="submit" name="update" value="Update">
-            </div>
-        </form>
-    </div> -->
     </div>
 </body>
 

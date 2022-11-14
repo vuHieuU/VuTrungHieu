@@ -56,6 +56,12 @@ if (is_file($hinhpath)) {
                 </td>
             </tr>
             <tr>
+                <td>Giá Cũ</td>
+                <td>
+                    <input type="text" value="<?php echo $amount ?>" name="soluong" />
+                </td>
+            </tr>
+            <tr>
                 <td>Mô Tả</td>
                 <td>
                     <textarea cols="30" rows="10" name="mota"><?php echo $content ?></textarea>
@@ -91,7 +97,7 @@ if (is_file($hinhpath)) {
             <input type="hidden" name="id" value="<?php extract($sp); echo $id ?>">
             <a href="index.php?act=sp"><input type="button" value="Danh Mục"></a>
             <input type="reset" value="Nhập Lại">
-            <input type="button" value="Cập Nhật">
+            <input type="submit" name="update" value="Cập Nhật">
         </div>
     </form>
     </div>

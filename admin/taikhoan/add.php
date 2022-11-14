@@ -66,7 +66,7 @@
             <div class="table-btn">
                 <a href="index.php?act=tk"><input type="button" value="Danh Mục"></a>
                 <input type="reset" value="Nhập Lại">
-                <a href="index.php?act=updatedm"><input type="button" value="Thêm Mới"></a>
+                <input type="submit" name="them" value="Thêm Mới">
             </div>
         </form>
         </div>
