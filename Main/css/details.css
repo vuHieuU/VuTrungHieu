@@ -329,4 +329,74 @@ img {
 }
 
 
-/*Kết thúc bình luận*/
+/* form bình luận */
+.anh img{
+    width: 4%;
+    border-radius: 50%;
+}
+
+.soluong-comment{
+    font-size: x-large;
+    margin-bottom: 20px;
+}
+
+.name-comment{
+    font-family: arial;
+    margin-left: 58px;
+    margin-top: -55px;
+    font-weight: bold;
+}
+
+.nd{
+    margin-left: 58px;
+}
+
+.like-comment{
+    margin-left: 60px;
+    margin-top: 10px;
+}
+
+.mgl{
+    margin-left: 10px;
+}
+
+.traloi{
+    margin-left: 70px;
+    margin-top: -20px;
+}
+
+.one-comment{
+    margin-top: 20px;
+}
+
+.form-comment hr{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.add-comment{
+    display: block;
+    border: none;
+    width: 85%;
+    height: 30px;
+    margin-left: 70px;
+    margin-top: -40px;
+}
+
+.chucnang-cmt{
+    margin-left: 900px;
+}
+
+input[type="submit"] {
+    background-color: white;
+   
+  }
+
+
+
+
+
+
+
+
+
