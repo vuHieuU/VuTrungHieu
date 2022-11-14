@@ -113,15 +113,81 @@
             <h2>Đánh giá</h2>
             <form action="" method="POST">
                 <div class="formbold-mb-3">
-                    <textarea rows="6" name="message" id="message" class="formbold-form-input"></textarea>
-                </div>
+                    
 
-                <div>
-                    <label for="email" class="formbold-form-label"> Email <span>(Giúp chúng tôi có thể liên hệ với bạn)</span> </label>
-                    <input type="email" name="email" id="email" class="formbold-form-input" />
-                </div>
+                <div class="form-comment">
+                    <div class="soluong-comment">32 Comment</div>
 
-                <button class="formbold-btn">Gửi đánh giá</button>
+                    <div class="form-addcmt">
+                    <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
+                    <div><input class="add-comment" type="text" name="" id="" placeholder="Nhập bình luận...">
+                    <hr>
+                    <div class="chucnang-cmt">
+                    <input class="xoa" type="submit" value="Cancel">
+                    <input type="submit" value="Comment">
+                    </div>
+                </div>
+                    </div>
+
+                    
+                    
+                    <div class="ome-comment">
+                    <div class="nd-comment">
+                        <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
+                        <div class="name-comment"><p>Phạm Anh Dũng xau trai</p></div>
+                        <p class="nd">Bạn coder tên Phạm Hùng đẹp trai quá <3</p>
+                    </div>
+
+                    <div class="like-comment">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <i class="fa-solid fa-thumbs-down mgl"></i>
+                    <p class="traloi">Trả lời</p>
+                    </div>
+                    </div>
+                    
+
+                    <div class="one-comment">
+                    <div class="nd-comment">
+                        <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
+                        <div class="name-comment"><p>Phạm Anh Dũng xau trai</p></div>
+                        <p class="nd">Bạn coder tên Phạm Hùng đẹp trai quá <3</p>
+                    </div>
+
+                    <div class="like-comment">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <i class="fa-solid fa-thumbs-down mgl"></i>
+                    <p class="traloi">Trả lời</p>
+                    </div>
+                    </div>
+
+                    <div class="one-comment">
+                    <div class="nd-comment">
+                        <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
+                        <div class="name-comment"><p>Phạm Anh Dũng xau trai</p></div>
+                        <p class="nd">Bạn coder tên Phạm Hùng đẹp trai quá <3</p>
+                    </div>
+
+                    <div class="like-comment">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <i class="fa-solid fa-thumbs-down mgl"></i>
+                    <p class="traloi">Trả lời</p>
+                    </div>
+                    </div>
+
+                    <div class="one-comment">
+                    <div class="nd-comment">
+                    <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
+                    <div class="name-comment"><p>Phạm Anh Dũng xau trai</p></div>
+                    <p class="nd">Bạn coder tên Phạm Hùng đẹp trai quá <3</p>
+                    </div>
+
+                    <div class="like-comment">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <i class="fa-solid fa-thumbs-down mgl"></i>
+                    <p class="traloi">Trả lời</p>
+                    </div>
+                    </div>
+                </div>
             </form>
         </div>
 
