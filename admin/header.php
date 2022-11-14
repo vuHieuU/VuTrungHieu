@@ -46,7 +46,7 @@
                     <p>Người Dùng</p>
                 </div>
             </a>
-            <a href="#">
+            <a href="index.php?act=bl">
                 <div class="box-left-content">
                     <i class="fa-solid fa-comments"></i>
                     <p>Bình Luận</p>

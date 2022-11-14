@@ -3,6 +3,7 @@ include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
 include "../model/taikhoan.php";
+include "../model/binhluan.php";
 include "../model/thongbao.php";
 include "../view/global.php";
 include "header.php";
@@ -169,6 +170,24 @@ include "header.php";
                      $listtk = loadall_tk();
                      include "taikhoan/list.php";
                      break;
+                  // case 'bl';
+                  //       $listsp = loadall_sp();
+                  //       $listdm = loadall_dm();
+                  //       include "binhluan/listsp.php";
+                  //       break;
+                  case 'bl':
+                        $listbl = loadall_bl();
+                        include "binhluan/listbl.php";
+                           break;
+                  case 'xoabl':
+                        if(isset($_GET['id'])&&($_GET['id'])){
+                           $id = $_GET['id'];
+                           delete_bl($id);
+                        }
+                        $listbl = loadall_bl();
+                        include "binhluan/listbl.php";
+                        break;
+                        
             default:
                      ?><script>
                         var mau = document.getElementById("mau")
