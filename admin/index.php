@@ -10,15 +10,6 @@ include "header.php";
       $act = $_GET['act'];
       ?>
       <input type="hidden" value="<?=$act?>" id="note">
-      <!-- <script>
-         var mau = document.getElementById("mau")
-         var note = document.getElementById("note")
-         if(note.value=="dm"||note.value="adddm"||note.value="suadm"||note.value="updatedm"){
-               mau.style.transform="translateY(60px)"
-               mau.style.transition="0.2s"
-         }
-
-      </script> -->
       <?php
          switch ($act) {
                   case 'dm':

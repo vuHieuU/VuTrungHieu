@@ -11,14 +11,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
         <div class="box-left">
             <div class="box-left-img">
-                <img src="../Images/logo/logo2.jpg" alt="">
+                <img src="logo2.jpg" alt="">
             </div>
             <p style="margin-bottom: 4px;">Admin tools</p>
             <a href="#">
@@ -80,3 +80,52 @@
             </div>
 
             <div class="content">
+                <h3 style="margin-top: 10px;">Sản Phẩm</h3>
+                <form class="search">
+                    <input type="text" placeholder="Tìm kiếm.." required>
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Mã Sản Phẩm</th>
+                            <th>Tên Sản Phẩm</th>
+                            <th>Hình</th>
+                            <th>Giá</th>
+                            <th>Lượt Xem</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center;"><input type="checkbox" name="" id=""></td>
+                            <td>001</td>
+                            <td>Táo</td>
+                            <td><img src="apple.png" alt=""></td>
+                            <td>179.000đ</td>
+                            <td>342</td>
+                            <td style="text-align: center;">
+                                <a style="text-decoration: none;" href="edit.html">
+                                    <input type="button" class="edit" value="Sửa">
+                                </a>
+                                <a href="">
+                                    <type="button" class="delete" value="Xóa">
+                                </a>
+                                <!--  -->
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="table-btn">
+                    <input type="button" value="Chọn Tất Cả">
+                    <input type="button" value="Bỏ Chọn Tất Cả">
+                    <input type="button" value="Xóa Các Mục Đã Chọn">
+                    <a href="index.php?act=adddm"><input type="button" value="Nhập Thêm"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

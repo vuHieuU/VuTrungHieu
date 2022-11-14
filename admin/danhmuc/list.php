@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,57 +8,55 @@
     <title>Document</title>
     <link rel="stylesheet" href="../public/css/style.css">
 </head>
+
 <body>
-   
-         <div class="borderlist">
-            
-        <div class="text1">
-           <h1>Danh Sách Danh Mục</h1>
+
+<h3 style="margin-top: 10px;">Danh Sách Danh Mục</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Mã Loại</th>
+                    <th>Tên Danh Mục</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach ($listdm as $dm) {
+                    extract($dm);
+                    $suadm = "index.php?act=suadm&id=" . $id_cate;
+                    $xoadm = "index.php?act=xoadm&id=" . $id_cate;
+                    echo '
+                            <tr>
+                                    <td><input type="checkbox" name="" id=""></td>
+                                    <td>' . $id_cate . '</td>
+                                    <td>' . $name_cate . '</td>
+                                    <td style="text-align: center;">
+                                        <a style="text-decoration: none;" href="' . $suadm . '">
+                                            <input type="button" class="edit" value="Sửa">
+                                        </a>
+                                        <a style="text-decoration: none;" href="' . $xoadm . '">
+                                            <input type="button" class="delete" value="Xóa">
+                                        </a>
+
+                                    </td>
+                            </tr>   
+                        ';
+                }
+                ?>
+            </tbody>
+        </table>
+        <div class="table-btn">
+            <input type="button" value="Chọn Tất Cả">
+            <input type="button" value="Bỏ Chọn Tất Cả">
+            <input type="button" value="Xóa Các Mục Đã Chọn">
+            <a href="index.php?act=adddm"><input type="button" value="Nhập Thêm"></a>
         </div>
-              
-                    <form action="index.php?act=adddm" method="POST">
-
-
-                            <table border="1">
-                                    
-                                    
-                                
-                                    <tr>
-                                        <th></th>
-                                        <th>Mã Loại</th>
-                                        <th>Tên Danh Mục</th>
-                                        <th><i class="fa-solid fa-gear"></i></th>
-                                    </tr>
-
-                                    <?php
-                                        foreach($listdm as $dm){
-                                            extract($dm);
-                                            $suadm="index.php?act=suadm&id=".$id_cate;
-                                            $xoadm="index.php?act=xoadm&id=".$id_cate;
-                                            echo '
-                                                <tr>
-                                                        <td><input type="checkbox" name="" id=""></td>
-                                                        <td>'.$id_cate.'</td>
-                                                        <td>'.$name_cate.'</td>
-                                                        <td class="edit">
-                                                            <a href="'.$suadm.'"><i class="fa-regular fa-pen-to-square sua"></i></a>
-                                                            <a href="'.$xoadm.'"><i class="fa-solid fa-trash xoa"></i></a>
-                                                        </td>
-                                                </tr>   
-                                            ';
-                                        }
-                                    ?>
-                                
-                            </table>
-                   
-                 <div class="tbn">
-                        <input class="click" type="submit" value="Chọn Tất Cả">
-                        <input class="click" type="submit" value="Bỏ Chọn Tất Cả">
-                        <input class="click" type="submit" value="Xóa Các Mục Đã Chọn">
-                        <input class="click" type="submit" name="adddm" value="Thêm Danh Mục Mới">
-                 </div>
-                 </form>
-         </div>
-     </div>
+        </form>
+    </div>
+    </div>
 </body>
+
 </html>

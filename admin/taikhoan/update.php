@@ -13,43 +13,49 @@
     <link rel="stylesheet" href="../public/css/style.css">
 </head>
 <body>
-        <div class="borderlist">
-            
+        <!-- Sửa Tài khoản -->
+        <h3 style="margin-top: 10px;">Sửa Tài Khoản</h3>
+    <form method="POST" class="formadd" action="index.php?act=updatetk">
+        <table class="add">
+            <tr>
+                <td>UserName</td>
+                <td>
+                    <input type="text" value="<?=$name?>" name="name" disabled />
+                </td>
+            </tr>
+            <tr>
+                <td>Passwrord</td>
+                <td>
+                    <input type="pass" value="<?=$password?>" name="password" />
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input type="email" name="email" value="<?=$email?>" />
+                </td>
+            </tr>
+            <tr>
+                <td>Địa Chỉ</td>
+                <td>
+                    <input type="text" name="status" value="<?=$status?>">
+                </td>
+            </tr>
+            <tr>
+                <td>Vai Trò</td>
+                <td>
+                <input type="number" min="0" max="1" name="role" value="<?=$role?>">
+                </td>
+            </tr>
 
-                    <form action="index.php?act=updatetk" method="POST" class="formadd"  enctype="multipart/form-data">
-                        <div class="textadd">
-                            <h1>Thêm Mới SẢN PHẨM</h1>
-                        </div>
-                        <div class="iteminputadd">
-                            <label for="">User:</label> <br>
-                            <input type="text" name="name" value="<?=$name?>">
-                        </div>
-                        <div class="iteminputadd">
-                            <label for="">Password:</label> <br>
-                            <input type="text" name="password" value="<?=$password?>">
-                        </div>
-                        <div class="iteminputadd">
-                            <label for="">Email:</label> <br>
-                            <input type="email" name="email" value="<?=$email?>">
-                        </div>
-                        <div class="iteminputadd">
-                            <label for="">Addresss</label> <br>
-                            <input type="text" name="status" value="<?=$status?>">
-                        </div>
-                        <!-- <div class="iteminputadd">
-                            <label for="">Tel</label> <br>
-                            <input type="text" name="tel" value="<?=$tel?>">
-                        </div> -->
-                        <div class="iteminputadd">
-                            <label for="">ROLE</label> <br>
-                            <input type="number" min="0" max="1" name="role" value="<?=$role?>">
-                        </div>
-                        <div class="tbn">
-                            <input type="hidden" name="id" value="<?=$id?>">
-                                <input class="click" type="submit" name="update" value="Cập Nhật">
-                        </div>
-                </form>
+        </table>
+        <div class="table-btn">
+            <a href="index.php?act=tk"><input type="button" value="Danh Mục"></a>
+            <input type="reset" value="Nhập Lại">
+            <input type="hidden" name="id" value="<?=$id?>">
+            <a href="index.php?act=updatedm"><input type="button" value="Cập Nhật"></a>
         </div>
+    </form>
     </div>
 </body>
 </html>

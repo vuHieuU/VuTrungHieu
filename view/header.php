@@ -35,7 +35,7 @@
       <div class="user">
         <ul>
         <li><i class="fa-solid fa-user"></i><a onclick="show()" href="#"> Đăng Nhập</a></li>
-          <li><i class="fa-solid fa-cart-shopping"></i><a href="giohang.php"> Giỏ Hàng</a></li>
+          <li><i class="fa-solid fa-cart-shopping"></i><a href="thanhtoan.php"> Giỏ Hàng</a></li>
         </ul>
       </div>
        <!--  ********** -->

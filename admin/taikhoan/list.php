@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,63 +8,65 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-         <div class="borderlist">
-            
-        <div class="text1">
-           <h1>Danh Sách Danh Mục</h1>
-        </div>
-              
-                    <form action="index.php?act=addtk" method="POST">
+    <div class="borderlist">
+
+    <h3 style="margin-top: 10px;">Danh Sách Thành Viên</h3>
 
 
-                            <table border="1">
-                                    
-                                    
-                                
-                                    <tr>
-                                        <th></th>
-                                        <th>Mã user</th>
-                                        <th>Tên Người Dùng</th>
-                                        <th>password</th>
-                                        <th>Email</th>
-                                        <th>status</th>
-                                        <th>Role</th>
-                                        <th><i class="fa-solid fa-gear"></i></th>
-                                    </tr>
-                                    <?php
-                                        foreach($listtk as $tk){
-                                            extract($tk);
-                                            $suatk="index.php?act=suatk&id=".$id;
-                                            $xoatk="index.php?act=xoatk&id=".$id;
-                                            echo '
+        <form action="index.php?act=addtk" method="POST">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Mã user</th>
+                        <th>Tên Người Dùng</th>
+                        <th>password</th>
+                        <th>Email</th>
+                        <th>status</th>
+                        <th>Role</th>
+                        <th><i class="fa-solid fa-gear"></i></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    foreach ($listtk as $tk) {
+                        extract($tk);
+                        $suatk = "index.php?act=suatk&id=" . $id;
+                        $xoatk = "index.php?act=xoatk&id=" . $id;
+                        echo '
                                             <tr>
                                             <td><input type="checkbox" name="" id=""></td>
-                                            <td>'.$id.'</td>
-                                            <td>'.$name.'</td>
-                                            <td>'.$password.'</td>
-                                            <td>'.$email.'</td>
-                                            <td>'.$status.'</td>
-                                            <td>'.$role.'</td>
-                                            <td class="edit">
-                                                <a href="'.$suatk.'"><i class="fa-regular fa-pen-to-square sua"></i></a>
-                                                <a href="'.$xoatk.'"><i class="fa-solid fa-trash xoa"></i></a>
+                                            <td>' . $id . '</td>
+                                            <td>' . $name . '</td>
+                                            <td>' . $password . '</td>
+                                            <td>' . $email . '</td>
+                                            <td>' . $status . '</td>
+                                            <td>' . $role . '</td>
+                                            <td style="text-align: center;">
+                                                <a style="text-decoration: none;" href="' . $suatk . '">
+                                                    <input type="button" class="edit" value="Sửa">
+                                                </a>
+                                                <a style="text-decoration: none;" href="' . $xoatk . '">
+                                                    <input type="button" class="delete" value="Xóa">
+                                                </a>
                                             </td>
                                     </tr>  
                                             ';
-                                        }
-                                    ?>
- 
-                            </table>
-                   
-                 <div class="tbn">
-                        <input class="click" type="submit" value="Chọn Tất Cả">
-                        <input class="click" type="submit" value="Bỏ Chọn Tất Cả">
-                        <input class="click" type="submit" value="Xóa Các Mục Đã Chọn">
-                        <input class="click" name="addtk" type="submit" value="Thêm người Mới">
-                 </div>
-                 </form>
-         </div>
-     </div>
+                    }
+                    ?>
+                </tbody>
+            </table>
+            <div class="table-btn">
+                <input type="button" value="Chọn Tất Cả">
+                <input type="button" value="Bỏ Chọn Tất Cả">
+                <input type="button" value="Xóa Các Mục Đã Chọn">
+                <a href="index.php?act=addtk"><input type="button" value="Nhập Thêm"></a>
+            </div>
+        </form>
+    </div>
+    </div>
 </body>
+
 </html>
