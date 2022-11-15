@@ -47,7 +47,7 @@
                 $dsdm = loadall_dm();
                 foreach ($dsdm as $key => $value) {
             ?>
-                <button class="button_name"><a href="index.php?act=danhmucsanpham&madanhmuc=<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a></button>
+                <button class="button_name"><a href="index.php?act=danhmucsanpham&madanhmuc=<?php echo $value['id_cate'] ?>"><?php echo $value['name_cate'] ?></a></button>
             <?php
             }
             ?>
