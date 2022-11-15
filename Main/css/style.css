@@ -296,6 +296,9 @@
     margin-left: 10px;
 }
 
+.product-box a{
+    text-decoration: none;
+}
 .product-box p{
     margin: 6% 0px 0px 10%;
 }

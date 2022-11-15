@@ -20,13 +20,16 @@
                 <div class="product-imgs">
                     <div class="img-display">
                         <div class="img-showcase">
-                            <img src="./Images/img/img_raucuqua/sanpham/bapcaitim.jpg" alt="organic-food">
-                            <img src="./Images/img/img_raucuqua/sanpham/bapchuoi.jpg" alt="organic-food">
+                        <?php
+                          $img = $img_path.$image;
+                   echo '
+                            <img src="'.$img.'" alt="organic-food">
+                            <!-- <img src="./Images/img/img_raucuqua/sanpham/bapchuoi.jpg" alt="organic-food">
                             <img src="./Images/img/img_raucuqua/sanpham/bi-do.jpg" alt="organic-food">
-                            <img src="./Images/img/img_raucuqua/sanpham/bingoi.jpg" alt="organic-food">
+                            <img src="./Images/img/img_raucuqua/sanpham/bingoi.jpg" alt="organic-food"> -->
                         </div>
                     </div>
-                    <div class="img-select">
+                    <!-- <div class="img-select">
                         <div class="img-item">
                             <a href="#" data-id="1">
                                 <img src="./Images/img/img_raucuqua/sanpham/bapcaitim.jpg" alt="organic-food">
@@ -47,11 +50,12 @@
                                 <img src="./Images/img/img_raucuqua/sanpham/bingoi.jpg" alt="organic-food">
                             </a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- card right -->
                 <div class="product-content">
-                    <h2 class="product-title">Bắp cải tím</h2>
+                 
+                    <h2 class="product-title">'.$name.'</h2>
                     <a href="./index.php" class="product-link">Cửa hàng</a>
                     <div class="product-rating">
                         <i class="fas fa-star"></i>
@@ -63,18 +67,16 @@
                     </div>
 
                     <div class="product-price">
-                        <p class="last-price">Giá cũ: <span>$257.00</span></p>
-                        <p class="new-price">Giá mới: <span>$249.00 (-5%)</span></p>
+                        <p class="last-price">Giá cũ: <span>$'.$amount.'</span></p>
+                        <p class="new-price">Giá mới: <span>$'.$price.'</span></p>
                     </div>
 
                     <div class="product-detail">
                         <h2>Thông tin sản phẩm: </h2>
-                        <p>Là một loại thực phẩm vô cùng quen thuộc, có màu sắc vô cùng bắt mắt, rất dễ mua và chế biến thành nhiều món ăn đa dạng khác nhau trong bữa cơm hằng ngày. Bắp cải tím đặc biệt mang đến lợi ích trong việc hỗ trợ phòng chống ung
-                            thư, giúp cơ thể khỏe mạnh toàn diện.</p>
-                        <p>Mọi người dường như đã quá quen thuộc với những quả bắp cải xanh nhưng ít người biết rằng, bắp cải còn có loại màu tím bắt mắt. </p>
+                        <p>'.$content.'</p>
                         <ul>
                             <li>Tình trạng: <span>Còn hàng</span></li>
-                            <li>Phân loại <span>Rau-củ-quả</span></li>
+                            <li>Phân loại <span>'.$name_cate.'</span></li>
                             <li>Khu vực vận chuyển: <span>Nội thành</span></li>
                             <li>Giá vận chuyển: <span>Free</span></li>
                         </ul>
@@ -86,7 +88,8 @@
             Add to Cart <i class="fas fa-shopping-cart"></i>
           </button>
                     </div>
-
+                    ';
+?>
                     <div class="social-links">
                         <p>Share At: </p>
                         <a href="#">
@@ -194,9 +197,7 @@
         <!--Hiển thị bình luận-->
         <div class="hienthi">
         </div>
-        <?php
-include "footer.php"
-?>
+
 
             <script src="./chitiet.js"></script>
 </body>

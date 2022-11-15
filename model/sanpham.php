@@ -48,7 +48,7 @@
    }
 
    function loadone_sp($id){
-      $sql = "select * from products where id=".$id;
+      $sql = "select * from products inner join category on products.cate_id=category.id_cate where id=".$id;
       $listsp = pdo_query_one($sql);
    return $listsp;
    }

@@ -10,7 +10,7 @@
     if((isset($_GET['act']))&&($_GET['act'])){
         $act=$_GET['act'];
         switch ($act) {
-            case 'listsp':
+          case 'listsp':
                 if(isset($_POST['kyw'])&&($_POST['kyw']!="")){
                       $kyw=$_POST['kyw'];
                 }else{
@@ -25,7 +25,15 @@
                 $tendm = load_ten_dm($cate_id);
                 include "main.php";
                 break;
+          case 'detail':
+            if(isset($_GET['id'])&&($_GET['id']>0)){
+                $onesp=loadone_sp($_GET['id']);
+                extract($onesp);
+                include "details.php";
+            }else{
+                include "main.php";
             }
+        }
     }else{
         include "main.php";
     }

@@ -73,13 +73,18 @@
                <?php
                foreach($sphome as $sp){
                 extract($sp);
+                $link = "index.php?act=detail&id=".$id;
                 $img = $img_path.$image;
                 echo '
                 <div class="product-box">
+                <a href="'.$link.'">
                 <img src="'.$img.'" alt="">
+                </a>
                 <button>'.$name_cate.'</button>
+                <a href="'.$link.'">
                 <p class="name">'.$name.'</p>
                 <p class="price">'.$price.'đ <del>'.$amount.'đ</del></p>
+                </a>
                 <div class="product-box-btn">
                   <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
                 </div>
