@@ -64,7 +64,7 @@
 
             </table>
             <div class="table-btn">
-                <a href="index.php?act=tk"><input type="button" value="Danh Mục"></a>
+                <a href="index.php?act=tk"><input type="button" value="Danh Sách Tài Khoản"></a>
                 <input type="reset" value="Nhập Lại">
                 <input type="submit" name="them" value="Thêm Mới">
             </div>

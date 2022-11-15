@@ -16,7 +16,7 @@
               <li><a href="gioithieu.php">Vitanic</a></li>
               <li>
                   <div class="dropdown">
-                      <a href="sanpham.php" class="dropbtn">Sản Phẩm</a>
+                      <a href="product.php" class="dropbtn">Sản Phẩm</a>
                       <div class="dropdown-content">
                       <a href="#">Rau Củ</a>
                       <a href="#">Hoa Quả Tươi</a>
