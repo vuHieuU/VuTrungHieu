@@ -67,7 +67,10 @@
                 <tr>
                     <td>Vai Trò</td>
                     <td>
-                        <input type="number" min="0" max="1" name="role" id="role">
+                        <select class="role" name="role" id="">
+                            <option value="0">User</option>
+                            <option value="1">Admin</option>
+                        </select>
                         <span class="loi" id="role_error"></span>
                     </td>
                 </tr>
