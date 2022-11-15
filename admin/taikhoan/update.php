@@ -20,7 +20,7 @@
             <tr>
                 <td>UserName</td>
                 <td>
-                    <input type="text" value="<?=$name?>" name="name"/>
+                    <input type="text" value="<?=$name?>" name="name" disabled />
                 </td>
             </tr>
             <tr>
