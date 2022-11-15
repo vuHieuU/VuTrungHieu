@@ -4,7 +4,6 @@
 
 * {
 	padding: 0;
-	margin: 0 auto;
 	box-sizing: border-box;
 	font-family: sans-serif;
 }
@@ -132,15 +131,16 @@
 }
 
 .food-list {
+    width: 70%;
 	display: flex;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
 	align-items: center;
-	justify-content: center;
 	flex-wrap: wrap;
+    padding-left: 79px;
 }
 
 .food-item {
-	width: 19%;
+	width: 29%;
 	height: 450px;
 	margin: 10px;
 	border-radius: 20px;
@@ -150,7 +150,7 @@
 }
 
 .food-item img {
-	width: 100%;
+	width: 90%;
 }
 
 .food-item:hover {
@@ -175,4 +175,94 @@
 .price>a {
 	color: red;
 	text-decoration: none;
+}
+
+.khuyenmai {
+    display: flex;
+}
+
+.boxright {
+    width: 30%;
+}
+
+.product_like {
+	padding-left: 20px;
+}
+
+.product_like h3 {
+    color: #fff;
+    background-color: #0f9d58;
+    padding: 10px;
+    width: 54%;
+}
+
+.product_like ul li {
+    list-style: none;
+    padding:  10px 0;
+    border: .8px solid gray;
+    width: 54%;
+}
+
+.product_like ul li a {
+    text-decoration: none;
+    
+}
+
+.top_blog {
+    padding-top: 20px;
+}
+
+.top_blog h3 {
+	padding: 16px 0 16px 0;
+	width: 55%;
+}
+
+.blog_anh, .blog_anh1, .blog_anh2, .blog_anh3 {
+    display: flex;
+}
+
+.blog_anh img {
+    border: 1ps solid gray;
+	background-color: azure;
+}
+
+.blog_anh1 img {
+    border: 1ps solid gray;
+	background-color: azure;
+	margin-top: 20px;
+}
+
+.blog_anh2 img {
+    border: 1ps solid gray;
+	background-color: azure;
+	margin-top: 20px;
+}
+
+.blog_anh3 img {
+    border: 1ps solid gray;
+	background-color: azure;
+	margin-top: 20px;
+}
+
+.blog_content {
+    padding-top: 20px;
+    width: 35%;
+}
+
+/*Sale*/
+
+.sale {
+	transform:  translateX(-117px);
+}
+
+.sale p {
+	color: #fff;
+	margin-top: -44px;
+	padding-left: 6px;
+	display: block;
+}
+
+.iii>i {
+	color: red;
+	font-size: 70px;
 }

@@ -25,6 +25,7 @@
                 $tendm = load_ten_dm($cate_id);
                 include "main.php";
                 break;
+            
           case 'detail':
             if(isset($_GET['id'])&&($_GET['id']>0)){
                 $onesp=loadone_sp($_GET['id']);
@@ -32,7 +33,19 @@
                 include "details.php";
             }else{
                 include "main.php";
+           
             }
+            break;
+            case 'sanpham':
+                include "product.php";
+                break;
+            case 'danhmucsanpham':
+                include "danhmucsanpham.php";
+                break;
+            case 'khuyenmai':
+                include "khuyenmai.php";
+                break;
+        
         }
     }else{
         include "main.php";
