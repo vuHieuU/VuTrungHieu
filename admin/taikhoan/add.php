@@ -67,14 +67,17 @@
                 <tr>
                     <td>Vai Trò</td>
                     <td>
-                        <input type="number" min="0" max="1" name="role" id="role">
+                        <select class="role" name="role" id="">
+                            <option value="0">User</option>
+                            <option value="1">Admin</option>
+                        </select>
                         <span class="loi" id="role_error"></span>
                     </td>
                 </tr>
 
             </table>
             <div class="table-btn">
-                <a href="index.php?act=tk"><input type="button" value="Danh Mục"></a>
+                <a href="index.php?act=tk"><input type="button" value="Danh Sách Tài Khoản"></a>
                 <input type="reset" value="Nhập Lại">
                 <input type="submit" name="them" value="Thêm Mới">
             </div>

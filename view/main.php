@@ -27,7 +27,7 @@
 <div class="product">
             <!-- product category -->
             <div class="product-category">
-              <h3>Danh Mục Sản Phẩm</h3>
+              <a style="text-decoration: none;" href="index.php"><h3>Danh Mục Sản Phẩm</h3></a>
               <ul>
                 <?php
                   foreach($listdm as $dm){
@@ -54,7 +54,7 @@
                 </form>
               </ul>
               <div class="slide-category">
-                <img src="../Main/Images/img/img_raucuqua/banner/banner1.jpg" alt="">
+                <img src="../Images/banner/banner1.jpg" alt="">
               </div>
           </div>
           <!-- product box -->
@@ -69,18 +69,18 @@
                       <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
                     </div> -->
                 <!-- </div> -->
-           
                <?php
                foreach($sphome as $sp){
                 extract($sp);
                 $link = "index.php?act=detail&id=".$id;
+                $loadsp = "index.php?act=listsp&cate_id=".$id_cate;
                 $img = $img_path.$image;
                 echo '
                 <div class="product-box">
                 <a href="'.$link.'">
                 <img src="'.$img.'" alt="">
                 </a>
-                <button>'.$name_cate.'</button>
+                <a style="text-decoration: none;" href="'.$loadsp.'"><button>'.$name_cate.'</button></a>
                 <a href="'.$link.'">
                 <p class="name">'.$name.'</p>
                 <p class="price">'.$price.'đ <del>'.$amount.'đ</del></p>

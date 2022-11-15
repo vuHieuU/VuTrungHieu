@@ -67,7 +67,7 @@
                     <p>Thông Tin</p>
                 </div>
             </a>
-            <a href="" class="logout">
+            <a href="index.php?act=logout" class="logout">
                 <div class="box-left-content">
                     <i class="fa-solid fa-right-to-bracket"></i>
                     <p>Đăng Xuất</p>
