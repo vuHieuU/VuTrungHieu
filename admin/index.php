@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
@@ -187,6 +188,11 @@ include "header.php";
                         $listbl = loadall_bl();
                         include "binhluan/listbl.php";
                         break;
+                  case 'logout':
+                     session_unset();
+                     include '../view/main.php';  
+
+                     break;
                         
             default:
                      ?><script>
