@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +17,7 @@
             margin: 0 auto;
             margin-top: 5px;
         }
+
         h1 {
             padding: 10px;
         }
@@ -43,8 +43,8 @@
         <div class="food-menu">
             <button class="button_name"><a href="index.php?act=sanpham">Tất cả</a></button>
             <?php
-                $dsdm = loadall_dm();
-                foreach ($dsdm as $key => $value) {
+            $dsdm = loadall_dm();
+            foreach ($dsdm as $key => $value) {
             ?>
                 <button class="button_name"><a href="index.php?act=danhmucsanpham&madanhmuc=<?php echo $value['id_cate'] ?>"><?php echo $value['name_cate'] ?></a></button>
             <?php
@@ -138,7 +138,7 @@
         if (isset($_POST['btn_search'])) {
             $keyword = $_POST['search'];
             $sqlsearch = "SELECT * FROM products WHERE name LIKE '%$keyword%'";
-           
+
         ?>
             <h1>Sản phẩm tìm kiếm được</h1>
             <div class="food-list">
@@ -165,23 +165,23 @@
                 <h1>Sản phẩm nổi bật</h1>
                 <div class="food-list">
                     <?php
-                    $allsp = loadAll_sanpham_home();
-                    foreach ($allsp as $key => $value) {
+                        $allsp = loadAll_sanpham_home();
+                        foreach ($allsp as $key => $value) {
 
-                    ?>
-                        <div class="food-item">
-                            <a href="<?php echo $value['id'] ?>">
-                                <img width="200px" src="../Images/sanpham/sanphamok/<?php echo $value['image'] ?>" alt="">
-                            </a>
+                        ?>
+                            <div class="food-item">
+                                <a href="<?php echo $value['id'] ?>">
+                                    <img width="200px" src="../Images/sanpham/sanphamok/<?php echo $value['image'] ?>" alt="">
+                                </a>
 
-                            <span class="name" ><a href="<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a></span><br>
-                            <span class="price"><a href="<?php echo $value['id'] ?>"><?php echo $value['price'] ?></a></span><br>
-                            <div class="product-box-btn">
-                                <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                                <span class="name"><a href="<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a></span><br>
+                                <span class="price"><a href="<?php echo $value['id'] ?>"><?php echo $value['price'] ?></a></span><br>
+                                <div class="product-box-btn">
+                                    <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                                </div>
+
                             </div>
-
-                        </div>
-                <?php
+                    <?php
                     }
                 }
                 ?>

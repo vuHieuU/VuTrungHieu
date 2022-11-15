@@ -4,10 +4,15 @@
     box-sizing: border-box;
     --main-color: #0f9d58;
     --color-text: rgb(12, 70, 7);
-    font-family: 'Times New Roman', Times, serif;
+
+    font-family: font;
     /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
 }
 
+@font-face {
+    font-family: font;
+    src: url(../../admin/font/LexendDeca-VariableFont_wght.ttf);
+}
 
 .container{
     width: 1200px;
@@ -218,11 +223,13 @@
     margin-top: 30px;
     /* border-radius: 20px 0px 0px 0px; */
     overflow: hidden;
+    overflow: hidden;
     /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
 }
 .slide-category img{
     width: 100%;
     height: 100%;
+    border-radius: 4px;
     
 }
 
@@ -285,26 +292,35 @@
     border-radius: 8px;
 }
 
-.product-box>button{
-    border: .1px solid #000;
+.product-box>a>button{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    border: none;
     opacity: .7;
+    background-color: unset;
+    /* border-left: 3px solid var(--main-color); */
+    /* border-right: 1px solid var(--main-color); */
+    text-align: center;
     /* background-color: var(--main-color); */
-    border-radius: 12px;
-    padding: 8px;
-    width: 50%;
+    border-radius: 4px;
+    /* padding: 2px; */
+    /* width: 50%; */
+    width: 90%;
     height: 30px;
-    margin-left: 10px;
+    margin: 0px 10px;
 }
 
 .product-box a{
     text-decoration: none;
 }
 .product-box p{
-    margin: 6% 0px 0px 10%;
+    margin: 6% 6% 2% 6%;
+
+    /* padding: 2%; */
 }
 
 .product-box .name{
-    font-weight: 550;
+    height: 30px;
+    font-weight: 600;
     color: var(--color-text);
 }
 
@@ -312,16 +328,21 @@
     /* color: red; */
     opacity: .8;
     color: red;
+    font-size: 15px;
+    /* text-align: center; */
 }
 .product-box .price del{
     /* color: red; */
     /* opacity: .8; */
     color: gray;
+    font-size: 11px;
 }
 
 .product-box-btn{
+    height: 60px;
     display: flex;
     margin-top: 4px;
+    bottom: 2px;
 }
 
 .product-box-btn i{
