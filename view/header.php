@@ -34,7 +34,38 @@
       </div>
       <div class="user">
         <ul>
-        <li><i class="fa-solid fa-user"></i><a onclick="show()" href="#"> Đăng Nhập</a></li>
+
+            <?php
+                if(isset($_SESSION['name'])){
+                    extract($_SESSION['name']);
+                    ?>
+                    <li>
+                        Xin chào, <?=$name?>
+                    </li>
+                    <?php
+                        if($role == 1){
+                            echo'
+                        <li>
+                            <a href="">Đăng nhập trang admin</a>
+                        </li>
+                            ';
+                        }
+                    ?>
+                    <li>
+                        <a href="">Cập Nhật Tài Khoản</a>
+                    </li>
+                    <li>
+                        <a href="index.php?act=logout">Thoát</a>
+                    </li>
+                    <?php
+                }else{
+                    ?>
+                        <li><i class="fa-solid fa-user"></i><a onclick="show()" href="#"> Đăng Nhập</a></li>
+                    <?php
+                    
+                }
+            ?>
+          
           <li><i class="fa-solid fa-cart-shopping"></i><a href="thanhtoan.php"> Giỏ Hàng</a></li>
         </ul>
       </div>
@@ -46,53 +77,53 @@
                 <i class="fa-solid fa-x" onclick="out()"></i>
             </div>
             <div class="gach" id="gach"></div> 
-            <form action="" id="dangnhap" class="">
+            <form action="index.php?act=dangnhap" method="POST" id="dangnhap" class=""> 
                 <div class="text">
                     <i class="fa-solid fa-user"></i>
-                    <input type="text" placeholder="Tên đăng nhập" required>
+                    <input type="text" placeholder="Tên đăng nhập" name="name" required>
                 </div>
                 <div class="text">
                     <i class="fa-solid fa-key"></i>
-                    <input type="password" placeholder="Mật khẩu" required>
+                    <input type="password" placeholder="Mật khẩu" name="password" required>
                 </div>
                 <div class="checkbox">
                     <input type="checkbox">
                     <label for="">Ghi nhớ tài khoản</label>
                 </div>
                 <div class="flex">
-                    <input type="submit" value="Đăng Nhập" class="login">
+                    <input type="submit" value="Đăng Nhập" class="login" name="dangnhap">
                 </div>
                 <div class="forgot">
-                    <a href="" class="forgot">Quên tài khoản ?</a>
+                    <a href="" class="forgot">Quên mật khẩu ?</a>
                 </div>
                 
             </form>
-            <form action="" id="dangki" class="" >
+            <form action="index.php?act=dangki" method="POST" id="dangki" class="" >
                 <div class="text">
                     <i class="fa-solid fa-user"></i>
-                    <input type="text" id="user" required placeholder="Tên đăng nhập">
+                    <input type="text" id="user" required placeholder="Tên đăng nhập" name="user">
                 </div>
                 <div class="text">
                     <i class="fa-solid fa-envelope"></i>
-                    <input type="email" placeholder="Email" id="email" required>
+                    <input type="email" placeholder="Email" id="email" name="email" required>
                 </div>
                 <div class="text">
                     <i class="fa-solid fa-phone"></i>
-                    <input type="text" id="phone" placeholder="Số điện thoại" required >
+                    <input type="text" id="phone" placeholder="Số điện thoại" required name="status" >
                 </div>
                 <div class="text">
                     <i class="fa-solid fa-key"></i>
-                    <input type="password" id="password1" required placeholder="Mật khẩu">
+                    <input type="password" id="password1" required placeholder="Mật khẩu" name="password_check">
                 </div>
                 <div class="text">
                     <i class="fa-solid fa-unlock-keyhole"></i>
-                    <input type="password" id="password2" required placeholder="Nhập lại mật khẩu">
+                    <input type="password" id="password2" required placeholder="Nhập lại mật khẩu" name="re_password">
                 </div>
                 <div class="flex">
-                    <input type="submit" id="ipdangki" value="Đăng Kí" class="login ">
+                    <input type="submit" id="ipdangki" value="Đăng Kí" class="login " name="dangki">
                 </div>
             </form>
-        </div>
+</div>
         <script>
             var dangky = document.getElementById("dangki")
             var dangnhap = document.getElementById("dangnhap")
