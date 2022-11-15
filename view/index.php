@@ -77,6 +77,17 @@
             default:
                 include "main.php";
                 break;
+            
+            case 'sanpham':
+                include "product.php";
+                break;
+            case 'danhmucsanpham':
+                include "danhmucsanpham.php";
+                break;
+            case 'khuyenmai':
+                include "khuyenmai.php";
+                break;
+        
         }
     }else{
         include "main.php";

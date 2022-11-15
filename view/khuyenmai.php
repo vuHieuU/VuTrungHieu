@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Main/css/product.css">
+    <link rel="stylesheet" href="../Main/css/khuyenmai.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Document</title>
     <style>
@@ -18,6 +17,7 @@
             margin: 0 auto;
             margin-top: 5px;
         }
+
         h1 {
             padding: 10px;
         }
@@ -26,12 +26,10 @@
 
 <body>
 
-    <?php include "header.php" ?>
-
     <div class="wrapper">
         <div id="banner">
             <div class="text_banner">
-                <h1>Tìm kiếm sản phẩm</h1>
+                <h1>Giảm giá cực sốc</h1>
                 <form action="" method="POST">
                     <input type="text" name="search" placeholder="Tìm kiếm sản phẩm ...">
                     <button type="submit" name="btn_search" style="border: none;"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -43,8 +41,8 @@
         <div class="food-menu">
             <button class="button_name"><a href="index.php?act=sanpham">Tất cả</a></button>
             <?php
-                $dsdm = loadall_dm();
-                foreach ($dsdm as $key => $value) {
+            $dsdm = loadall_dm();
+            foreach ($dsdm as $key => $value) {
             ?>
                 <button class="button_name"><a href="index.php?act=danhmucsanpham&madanhmuc=<?php echo $value['id_cate'] ?>"><?php echo $value['name_cate'] ?></a></button>
             <?php
@@ -133,20 +131,25 @@
         <!--********* END HTML  *************-->
 
 
-        <!--Sản phẩm tìm kiếm-->
+        <!--Sản phẩm khuyễn mãi-->
         <?php
-        if (isset($_POST['btn_search'])) {
-            $keyword = $_POST['search'];
-            $sqlsearch = "SELECT * FROM products WHERE name LIKE '%$keyword%'";
-           
+
         ?>
-            <h1>Sản phẩm tìm kiếm được</h1>
+        <h1>Sản phẩm khuyễn mãi</h1>
+        <div class="khuyenmai">
             <div class="food-list">
                 <?php
-                foreach ($kqsearch as $key => $value) {
+                $allsp = loadAll_product();
+                foreach ($allsp as $key => $value) {
 
                 ?>
                     <div class="food-item">
+                        <div class="sale">
+                            <div class="iii">
+                                <i width=" 40px" class="fas fa-bookmark"></i>
+                            </div>
+                            <p>10%</p>
+                        </div>
                         <a href="<?php echo $value['id'] ?>">
                             <img src="../Images/sanpham/sanphamok/<?php echo $value['image'] ?>" alt="">
                         </a>
@@ -156,38 +159,61 @@
                         <div class="product-box-btn">
                             <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
                         </div>
+
                     </div>
                 <?php
 
                 }
-            } else {
+
                 ?>
-                <h1>Sản phẩm nổi bật</h1>
-                <div class="food-list">
-                    <?php
-                    $allsp = loadAll_sanpham_home();
-                    foreach ($allsp as $key => $value) {
-
-                    ?>
-                        <div class="food-item">
-                            <a href="<?php echo $value['id'] ?>">
-                                <img width="200px" src="../Images/sanpham/sanphamok/<?php echo $value['image'] ?>" alt="">
-                            </a>
-
-                            <span class="name" ><a href="<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a></span><br>
-                            <span class="price"><a href="<?php echo $value['id'] ?>"><?php echo $value['price'] ?></a></span><br>
-                            <div class="product-box-btn">
-                                <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
-                            </div>
-
-                        </div>
-                <?php
-                    }
-                }
-                ?>
-                </div>
-
             </div>
+
+            <div class="boxright">
+                <div class="product_like">
+                    <h3>Top 5 sản phẩm yêu thích</h3>
+                    <ul>
+                        <li><a href="">Đậu bắp</a></li>
+                        <li><a href="">Củ cải trắng</a></li>
+                        <li><a href="">Cần tây</a></li>
+                        <li><a href="">Táo tàu</a></li>
+                        <li><a href="">Ớt chuông</a></li>
+                    </ul>
+                </div>
+                <div class="top_blog">
+                    <h3>Bài viết gần đây</h3>
+                    <div class="blog_anh">
+                        <img width="25%" src="../Images/sanpham/sanphamok/bido.png" alt="">
+                        <div class="blog_content">
+                            <span>19/11/2020 &emsp; <i class="far fa-comment-alt"></i> 3</span>
+                            <p>Toàn năng cũng không kiểm soát được các văn bản mù quáng</p>
+                        </div>
+                    </div>
+                    <div class="blog_anh1">
+                        <img width="25%" src="../Images/sanpham/sanphamok/catim.png" alt="">
+                        <div class="blog_content">
+                            <span>19/11/2020 &emsp; <i class="far fa-comment-alt"></i> 3</span>
+                            <p>Toàn năng cũng không kiểm soát được các văn bản mù quáng</p>
+                        </div>
+                    </div>
+                    <div class="blog_anh2">
+                        <img width="25%" src="../Images/sanpham/sanphamok/daubap.png" alt="">
+                        <div class="blog_content">
+                            <span>19/11/2020 &emsp; <i class="far fa-comment-alt"></i> 3</span>
+                            <p>Toàn năng cũng không kiểm soát được các văn bản mù quáng</p>
+                        </div>
+                    </div>
+                    <div class="blog_anh3">
+                        <img width="25%" src="../Images/sanpham/sanphamok/rauma.png" alt="">
+                        <div class="blog_content">
+                            <span>19/11/2020 &emsp; <i class="far fa-comment-alt"></i> 3</span>
+                            <p>Toàn năng cũng không kiểm soát được các văn bản mù quáng</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     </div>
     <!-- <script>

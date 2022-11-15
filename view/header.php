@@ -16,7 +16,7 @@
               <li><a href="gioithieu.php">Vitanic</a></li>
               <li>
                   <div class="dropdown">
-                      <a href="sanpham.php" class="dropbtn">Sản Phẩm</a>
+                      <a href="index.php?act=sanpham" class="dropbtn">Sản Phẩm</a>
                       <div class="dropdown-content">
                       <a href="#">Rau Củ</a>
                       <a href="#">Hoa Quả Tươi</a>
@@ -28,7 +28,7 @@
                     </div>
               </li>
               <li><a href="tintuc.php">Tin Tức</a></li>
-              <li><a href="#">Khuyến Mãi</a></li>
+              <li><a href="index.php?act=khuyenmai">Khuyến Mãi</a></li>
               <li><a href="contact.php">Liên hệ</a></li>
           </ul>
       </div>
