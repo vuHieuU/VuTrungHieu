@@ -63,3 +63,8 @@
       $sql = "delete from products where id=" .$id;
       pdo_execute($sql);
    }
+   function loadAll_product() {
+      $sql = "select * from products where 1 order by id desc limit 0,6"; 
+      $listsanpham = pdo_query($sql);
+      return $listsanpham;
+   }
