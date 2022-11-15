@@ -46,7 +46,7 @@
                         if($role == 1){
                             echo'
                         <li>
-                            <a href="">Đăng nhập trang admin</a>
+                            <a href="../admin">Đăng nhập trang admin</a>
                         </li>
                             ';
                         }

@@ -112,6 +112,11 @@ table input.edit {
 table input.delete {
     background-color: #B22222;
 }
+.role{
+    width: 100%;
+    border: 1px solid black;
+    height: 40px;
+}
 
 /* Ảnh trong bảng */
 table img{
