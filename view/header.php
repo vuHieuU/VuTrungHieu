@@ -18,7 +18,7 @@
                   <div class="dropdown">
                     <style>
                         .dropdown i{
-                            transition: 2s;
+                            transition: .3s;
                         }
                         .dropdown a:hover i{
                             transform: rotate(90deg);
