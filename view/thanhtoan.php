@@ -10,9 +10,6 @@
 </head>
 
 <body>
-    <?php
-    include "header.php"
-    ?>
     <div class="cart">
         <!-- <div class="cart-box"> -->
         <div class="cart-left">
@@ -166,9 +163,6 @@
         <!-- </div> -->
     </div>
     </div>
-    <?php
-    include "footer.php"
-    ?>
     <style>
 
     </style>

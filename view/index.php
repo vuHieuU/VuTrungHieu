@@ -1,6 +1,7 @@
 <?php
-    include "header.php";
     session_start();
+    include "header.php";
+
     include "../model/pdo.php";
     include "../model/danhmuc.php";
     include "../model/sanpham.php";
@@ -74,9 +75,7 @@
                     include "main.php";
                 }
                 break;
-            default:
-                include "main.php";
-                break;
+
             
             case 'sanpham':
                 include "product.php";
@@ -87,7 +86,22 @@
             case 'khuyenmai':
                 include "khuyenmai.php";
                 break;
-        
+            case 'giohang':
+                include "thanhtoan.php";
+                break;
+            case 'tintuc':
+                include "tintuc.php";
+                break;
+            case "contact":
+                include "contact.php";
+                break;
+            case "gioithieu":
+                include "gioithieu.php";
+                break;
+
+                default:
+                include "main.php";
+                break;
         }
     }else{
         include "main.php";

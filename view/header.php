@@ -13,7 +13,7 @@
       <a href="index.php"><div class="logo"><img src="../Images/logo/logo2.jpg"></div></a>
       <div class="menu">
           <ul>
-              <li><a href="gioithieu.php">Vitanic</a></li>
+              <li><a href="index.php?act=gioithieu">Vitanic</a></li>
               <li>
                   <div class="dropdown">
                     <style>
@@ -35,9 +35,9 @@
                       </div>
                     </div>
               </li>
-              <li><a href="tintuc.php">Tin Tức</a></li>
+              <li><a href="index.php?act=tintuc">Tin Tức</a></li>
               <li><a href="index.php?act=khuyenmai">Khuyến Mãi</a></li>
-              <li><a href="contact.php">Liên hệ</a></li>
+              <li><a href="index.php?act=contact">Liên hệ</a></li>
           </ul>
       </div>
       <div class="user">
@@ -76,7 +76,7 @@
                                 ';
                             }
                         ?>
-                        <a href="thanhtoan.php">Giỏ Hàng</a>
+                        <a href="index.php?act=giohang">Giỏ Hàng</a>
                         <a href="#">Cập Nhật Tài Khoản</a>
                         <a href="index.php?act=logout">Thoát</a>
                     </div>
