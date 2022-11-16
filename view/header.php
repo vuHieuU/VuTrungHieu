@@ -16,7 +16,15 @@
               <li><a href="gioithieu.php">Vitanic</a></li>
               <li>
                   <div class="dropdown">
-                      <a href="index.php?act=sanpham" class="dropbtn">Sản Phẩm</a>
+                    <style>
+                        .dropdown i{
+                            transition: 2s;
+                        }
+                        .dropdown a:hover i{
+                            transform: rotate(90deg);
+                        }
+                    </style>
+                      <a href="index.php?act=sanpham" class="dropbtn">Sản Phẩm <i class="fa-solid fa-caret-right"></i></i></a>
                       <div class="dropdown-content">
                       <a href="#">Rau Củ</a>
                       <a href="#">Hoa Quả Tươi</a>
@@ -39,17 +47,17 @@
                 if(isset($_SESSION['name'])){
                     extract($_SESSION['name']);
                     ?>
-                    <li>
+                    <!-- <li>
                         Xin chào, <?=$name?>
                     </li>
                     <?php
-                        if($role == 1){
-                            echo'
-                        <li>
-                            <a href="../admin">Đăng nhập trang admin</a>
-                        </li>
-                            ';
-                        }
+                        // if($role == 1){
+                        //     echo'
+                        // <li>
+                        //     <a href="../admin">Đăng nhập trang admin</a>
+                        // </li>
+                        //     ';
+                        // }
                     ?>
                     <li>
                         <a href="">Cập Nhật Tài Khoản</a>
@@ -57,16 +65,33 @@
                     <li>
                         <a href="index.php?act=logout">Thoát</a>
                     </li>
+                    <li> -->
+                    <div class="dropdown">
+                      <a href="index.php?act=sanpham" style="text-decoration: none; color: var(--color-main);" class="dropbtn">Xin chào, <b style="color: #0f9d58;"><?=$name?> </b><i style="transform: rotate(90deg); " class="fa-solid fa-angles-right"></i></a>
+                      <div class="dropdown-content">
+                      <?php
+                            if($role == 1){
+                                echo'
+                                <a href="../admin">Đăng nhập ADMIN</a>
+                                ';
+                            }
+                        ?>
+                        <a href="thanhtoan.php">Giỏ Hàng</a>
+                        <a href="#">Cập Nhật Tài Khoản</a>
+                        <a href="index.php?act=logout">Thoát</a>
+                    </div>
+                    </div>
+              <!-- </li> -->
                     <?php
                 }else{
                     ?>
                         <li><i class="fa-solid fa-user"></i><a onclick="show()" href="#"> Đăng Nhập</a></li>
+                        <li><i class="fa-solid fa-cart-shopping"></i><a href="thanhtoan.php"> Giỏ Hàng</a></li>
                     <?php
                     
                 }
             ?>
           
-          <li><i class="fa-solid fa-cart-shopping"></i><a href="thanhtoan.php"> Giỏ Hàng</a></li>
         </ul>
       </div>
        <!--  ********** -->

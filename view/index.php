@@ -35,7 +35,7 @@
                     $checkuser = check_user($name,$password);
                     if(is_array($checkuser)){
                         $_SESSION['name']=$checkuser;
-                        header("Location: header.php");
+                        // header("Location: header.php");
                     }   
                     else{
                         login_false();
@@ -46,7 +46,7 @@
                 break;
             case 'logout':
                 session_unset();
-                header("Location: header.php");
+                // header("Location: header.php");
                 include 'header.php';
                 include 'main.php';                
                 break;
