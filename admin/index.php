@@ -189,9 +189,8 @@ include "header.php";
                         include "binhluan/listbl.php";
                         break;
                   case 'logout':
-                     session_unset();
-                     include '../view/main.php';  
-
+                     session_unset(); 
+                     header("location: ../view");
                      break;
                         
             default:
