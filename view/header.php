@@ -26,12 +26,21 @@
                     </style>
                       <a href="index.php?act=sanpham" class="dropbtn">Sản Phẩm <i class="fa-solid fa-caret-right"></i></i></a>
                       <div class="dropdown-content">
-                      <a href="#">Rau Củ</a>
+                        <?php
+                            foreach($listdm as $dm){
+                                extract($dm);
+                                $loadsp = "index.php?act=danhmucsanpham&madanhmuc=".$id_cate;
+                                echo'
+                                    <a href="'.$loadsp.'">'.$name_cate.'</a>
+                                ';
+                            }
+                        ?>
+                      <!-- <a href="#">Rau Củ</a>
                       <a href="#">Hoa Quả Tươi</a>
                       <a href="#">Hoa Quả Sấy</a>
                       <a href="#">Ô Mai</a>
                       <a href="#">Hoa Quả Đông Lạnh</a>
-                      <a href="#">Thêm..</a>
+                      <a href="#">Thêm..</a> -->
                       </div>
                     </div>
               </li>

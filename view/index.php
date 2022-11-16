@@ -1,15 +1,16 @@
 <?php
-    session_start();
-    include "header.php";
 
     include "../model/pdo.php";
     include "../model/danhmuc.php";
     include "../model/sanpham.php";
     include "../model/thongbao.php";
     include "../model/taikhoan.php";
-    include "global.php";
     $sphome = loadsp_home();
     $listdm = loadall_dm();
+    session_start();
+    include "header.php";
+    include "global.php";
+
     if((isset($_GET['act']))&&($_GET['act'])){
         $act=$_GET['act'];
         switch ($act) {
