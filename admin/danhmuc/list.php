@@ -31,14 +31,15 @@
                     echo '
                             <tr>
                                     <td><input type="checkbox" name="" id=""></td>
-                                    <td>' . $id_cate . '</td>
+                                    <td>' . $id_cate .  '</td>
                                     <td>' . $name_cate . '</td>
                                     <td style="text-align: center;">
                                         <a style="text-decoration: none;" href="' . $suadm . '">
                                             <input type="button" class="edit" value="Sửa">
                                         </a>
-                                        <a style="text-decoration: none;" href="' . $xoadm . '" onclick="Delete()">
-                                            <input type="button" class="delete" value="Xóa">
+                                        <a style="text-decoration: none;" href="' . $xoadm . '" >
+                                            <input onclick="Delete()" type="button" class="delete" value="Xóa">
+                                            
                                         </a>
 
                                     </td>
@@ -60,10 +61,14 @@
     <script>
         function Delete(){
                 var remove = confirm("Bạn có muốn xóa không?");
-                if (remove)
+                if(remove){ 
                     return true;
-                else
+                    console.log="oke"
+                }
+                else{
                     return false;
+                    console.log="khong"
+                }   
                 }
     </script>
 </body>

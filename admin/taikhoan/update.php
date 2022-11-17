@@ -1,6 +1,7 @@
 <?php
     if(is_array($tk)){
         extract($tk);
+        $name_not_fix = $name;
     }
 ?>
 <!DOCTYPE html>
@@ -20,7 +21,8 @@
             <tr>
                 <td>UserName</td>
                 <td>
-                    <input type="text" value="<?=$name?>" name="name" disabled />
+                    <input type="hidden" value="<?=$name?>" name="name">
+                    <input type="text" value="<?=$name_not_fix?>" name="namenotfix" disabled />
                 </td>
             </tr>
             <tr>
