@@ -2,23 +2,15 @@
 	--primary-color: #0f9d58;
 }
 
-* {
-	padding: 0;
-	margin: 0 auto;
-	box-sizing: border-box;
-	font-family: sans-serif;
+.wrapper{
+	margin-top: 100px;
 }
-.wrapper {
-	position: relative;
-	text-align: center;
-	color: black;
-	
-}
+
 .text_banner {
-	transform: translateY(160px);
+	transform: translateY(100%);
 	text-align: center;
-	
 }
+
 .text_banner>form>input {
 	width: 600px;
 	height: 35px;
@@ -27,152 +19,96 @@
 	outline: none;
 	padding: 24px;
 	font-size: 18px;
+	border: none;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .text_banner>form>button>i {
-	margin-left: -40px;
-	font-size: 16px;
+	margin-left: -60px;
+	font-size: 20px;
 	border: none;
 	cursor: pointer;
+	/* background-color: #000; */
 }
 
-.container {
+.food-menu{
+	width: 90vw;
+	margin: 5px auto;
 	border-radius: 20px;
-	padding: 20px;
-	background-color: #e2f3e2;
-	margin: 100px auto;
-    margin-bottom: auto;
-	width: 1200px;
+	/* margin-top: 20px; */
 	text-align: center;
+	background-color: #000;
+	background-image: linear-gradient(to left,  rgb(225, 222, 49),#0f9d58);
+	padding: 10px;
 }
 
-.food-menu {
-	margin-bottom: 40px;
-}
-
-.food-menu button {
-	color: var(--primary-color);
-	border: 1px solid var(--primary-color);
-	padding: 10px 40px;
-	border-radius: 50px;
-	font-weight: 600;
-	transition: 0.25s;
-	cursor: pointer;
-	background-color: #fff;
-	margin: 5px;
-}
-
-.button_name>a {
-	text-decoration: none;
-	color:var(--primary-color) ;
-}
-
-.button_name:hover {
-	
-	background-color: #fff;
-}
-
-.button_name>a:hover,
-.button_name>a.active {
-	color: #fff;
-	background-color: var(--primary-color);
-	text-decoration: none;
-}
-
-.name {
-	font-size: 20px;
-	font-weight: bold;
-}
-
-.price {
-	color: red;
-	font-size: 18px;
-}
-
-.price del {
-	color: gray;
-	font-size: 18px;
-
-}
-
-:root {
-	--primary-color: #0f9d58;
-}
-
-.wrapper {
+.food-menu button{
+	margin: 4px 10px;
+	padding: 12px;
+	min-width: 150px;
 	border-radius: 20px;
-	padding: 20px;
-	background-color: #fff;
-	margin: 100px auto;
-	margin-bottom: auto;
-	text-align: center;
+	border: none;
+	transition: .3s;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.food-menu {
-	margin-bottom: 30px;
-	margin-top: 30px;
+.food-menu button:hover{
+	transform: scale(1.05,1.05);
+	/* background-color: #61d29b; */
 }
 
-.food-menu button {
-	color: var(--primary-color);
-	border: 1px solid var(--primary-color);
-	padding: 10px 40px;
-	border-radius: 50px;
-	font-weight: 600;
-	transition: 0.25s;
-	cursor: pointer;
-	background-color: #fff;
-	margin: 5px;
-}
-
-.food-menu button:hover,
-.food-menu button.active {
-	color: #fff;
-	background-color: var(--primary-color);
-}
-
-.food-list {
-	display: flex;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-}
-
-.food-item {
-	width: 19%;
-	height: 450px;
-	margin: 10px;
-	border-radius: 20px;
-	overflow: hidden;
-	transition: .2s;
-	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-.food-item img {
-	width: 100%;
-}
-
-.food-item:hover {
-	transform: scale(1.05, 1.05);
-	cursor: pointer;
-}
-
-.hide {
-	display: none;
-}
-
-.name>a {
+.food-menu button a{
+	text-decoration: none;
+	/* color: #0f9d58; */
 	color: #000;
-	text-decoration: none;
 }
 
-.price {
-	padding: 5px;
-	font-size: 18px;
+.food-menu i{
+	margin-right: 2px;
 }
 
-.price>a {
-	color: red;
-	text-decoration: none;
+h1{
+	font-size: 20px;
+	padding: 6px;
+	border-radius: 10px 0px 10px 0px;
+	width: 80vw;
+	color: #fff;
+	margin: 20px auto;
+	background-color: #0f9d58;
 }
+
+.food-list{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 20px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.food-item{
+	border-radius: 12px;
+	overflow: hidden;
+	display: grid;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.food-item img{
+	width: 100%;
+	background-color: antiquewhite;
+}
+
+.food-item span{
+	margin: 4px 10px;
+	/* min-height: 30px; */
+}
+
+.food-item span a{
+	text-decoration: none;
+	/* font-size: 20px; */
+	color: #000;
+}
+
+
+
+
+
