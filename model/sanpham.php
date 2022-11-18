@@ -51,6 +51,12 @@
    }
    }
 
+   function loadAll_product() {
+      $sql = "select * from products where 1 order by id desc limit 0,6"; 
+      $listsanpham = pdo_query($sql);
+      return $listsanpham;
+   }
+
    function loadone_sp($id){
       $sql = "select * from products inner join category on products.cate_id=category.id_cate where id=".$id;
       $listsp = pdo_query_one($sql);
