@@ -15,6 +15,7 @@
     <h3 style="margin-top: 10px;">Danh Sách Sản Phẩm</h3>
 
         <form class="search" action="index.php?act=listdm" method="POST">
+        <input type="text" name="kyw">
             <select name="cate_id" id="">
                 <option value="0" selected>Tất cả</option>
                 <?php
@@ -23,11 +24,15 @@
                     echo '<option value="' . $id_cate . '">' . $name_cate . '</option>';
                 }
                 ?>
-                <input type="text" name="kyw" id="">
-                <button name="listok"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </select>
+                </select>
+                <input type="submit" name="listok">
+                
+                <!-- <input type="submit" name="listok"><i class="fa-solid fa-magnifying-glass"></i> -->
+            
 
         </form>
+
+      
         <style>
 
         </style>

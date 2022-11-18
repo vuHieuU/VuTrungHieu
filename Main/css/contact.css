@@ -1,133 +1,74 @@
-.contact{
-    display: flex;
-    margin-top: 100px;
-    padding: 40px;
-}
-
-.contact iframe{
-    width: 50%;
-    height: auto;
-    padding: 20px;
-}
-
-.contact .left-col-content{
-    width: 50%;
-    padding: 40px;
-    display: grid;
-}
-
-.contact .left-col-content h1{
-    color: var(--main-color);
-    font-size: 60px;
-    opacity: .7;
-    font-style: italic;
-    text-align: center;
-}
-
-.contact-form label, .contact-form input{
-    /* display: grid;    */
-    width: 100%;
-}
-
-/*  */
-:root {
-    --primary-color: #010712;
-    --secondary-color: #818386;
-    --bg-color: #FCFDFD;
-    --button-color: #3B3636;
-    --h1-color: #3F444C;
+* {
+    margin: 0;
+    padding: 0;
 }
 
 
+/* contact */
 
+.contacts {
+    width: 1400px;
+    margin: 0 auto;
+    margin-top: 150px;
+}
 
-h1,
-label,
-button,
-.description {
-    font-family: 'Jost', sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.1rem;
+@font-face {
+    font-family: oganic;
+    src: url(font/organique\ DEMO.otf);
 }
 
 h1 {
-    color: var(--h1-color);
-    text-transform: uppercase;
-    font-size: 2.5rem;
-    letter-spacing: 0.5rem;
-    font-weight: 300;
+    text-shadow: .1em .1em rgba(0, 0, 0, 0.3);
     font-family: oganic;
-    font-size: 60px;
+    font-size: 40px;
 }
 
 p {
-    color: var(--secondary-color);
-    font-size: 0.9rem;
-    letter-spacing: 0.01rem;
-    width: 40vw;
-    margin: 0.25rem 0;
+    font-size: 13px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-label,
-.description {
-    color: var(--secondary-color);
-    text-transform: uppercase;
-    font-size: 0.625rem;
+
+/* contact-detail  */
+
+.contact-detail {
+    display: flex;
+    background-color: ;
+    height: 450px;
 }
 
-form {
-    width: 31.25rem;
-    position: relative;
-    margin-top: 2rem;
-    padding: 1rem 0;
+
+/* contact-right */
+
+.contact-right {
+    display: grid;
+    width: 500px;
+    margin-left: 3pc;
 }
 
-input,
-textarea,
-label {
-    /* width: 40vw; */
-    width: 100%;
-    /* display: block; */
-}
 
-p,
-input,
-textarea {
-    font-family: 'Helvetica Neue', sans-serif;
-}
+/* input */
 
-input::placeholder,
-textarea::placeholder {
-    color: var(--primary-color);
-}
-
-input,
-textarea {
-    color: var(--primary-color);
-    font-weight: 500;
-    background: var(--bg-color);
+input {
+    height: 30px;
     border: none;
-    border-bottom: 1px solid var(--secondary-color);
-    padding: 0.5rem 0;
+    border-bottom: 1px solid gray;
+    padding: 0;
     margin-bottom: 1rem;
     outline: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-textarea {
-    resize: none;
+#User {
+    margin-top: 40px;
 }
 
-button {
-    text-transform: uppercase;
-    font-weight: 300;
-    background: var(--button-color);
-    color: var(--bg-color);
-    width: 10rem;
-    height: 2.25rem;
-    border: none;
-    border-radius: 2px;
-    outline: none;
-    cursor: pointer;
+#email {
+    margin-bottom: 50px;
+}
+
+input::placeholder {
+    color: black;
 }
 
 input:hover,
@@ -136,36 +77,80 @@ button:hover {
     opacity: 0.5;
 }
 
-button:active {
-    opacity: 0.8;
+
+/* button */
+
+
+/* button {
+        height: 30px;
+        width: 120px;
+        background-color: rgb(120, 190, 50);
+        box-shadow: /* The top layer shadow */
+
+0 -1px 1px rgba(0, 0, 0, 0.15),
+
+/* The second layer */
+
+0 -10px 0 -5px #eee,
+
+/* The second layer shadow */
+
+0 -10px 1px -4px rgba(0, 0, 0, 0.15),
+
+/* The third layer */
+
+0 -20px 0 -10px #eee,
+
+/* The third layer shadow */
+
+0 -20px 1px -9px rgba(0, 0, 0, 0.15);
+
+/* Padding for demo purposes */
+
+margin: 0 auto;
+border-radius: 5px 0px 5px 0px;
+font-family: system-ui,
+-apple-system,
+BlinkMacSystemFont,
+'Segoe UI',
+Roboto,
+Oxygen,
+Ubuntu,
+Cantarell,
+'Open Sans',
+'Helvetica Neue',
+sans-serif;
+
 }
+*/
+/*     
+    button:active {
+        background-color: darkgreen;
+    } */
+input:hover {}
 
-
-@font-face {
-    font-family: oganic;
-    src: url(font/organique\ DEMO.otf);
-}
-
-
-
-/* gg_map */
-
-.map-gg {
+/* contact-blog */
+.contact-blog {
+    height: 50px;
+    width: 800px;
+    position: relative;
+    bottom: 50px;
     display: flex;
-    width: 100%;
-    position: absolute;
-    top: 54pc;
-    left: 5pc;
+    background-color: darkgray;
+}
+.contact-blog i {
+    margin: 18px;
 }
 
-.text_map {
-    margin: 40px;
-}
-
-h2 {
+/* textarea */
+textarea {
+    border: none;
+    border-bottom: 1px solid gray;
+    height: 25px;
+    outline: none;
+    margin-bottom: 50px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
-
-
-
+textarea::placeholder {
+    color: black;
+}

@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <?php include "header.php"?>
     <div class="cart">
         <!-- <div class="cart-box"> -->
         <div class="cart-left">
@@ -26,7 +27,7 @@
                 <tr>
                     <td>
                         <div class="cart-product-img">
-                            <img src="./Images/img/img_raucuqua/sanpham/bapchuoi.jpg" alt="">
+                            <img src="../Images/sanpham/sanphamok/bapcai.png" alt="">
                         </div>
                     </td>
                     <td>Hoa Chuối</td>
@@ -42,7 +43,8 @@
                 <tr>
                     <td>
                         <div class="cart-product-img">
-                            <img src="./Images/img/img_raucuqua/sanpham/bapchuoi.jpg" alt="">
+                        <img src="../Images/sanpham/sanphamok/bapcai.png" alt="">
+
                         </div>
                     </td>
                     <td>Hoa Chuối</td>
@@ -54,7 +56,8 @@
                 <tr>
                     <td>
                         <div class="cart-product-img">
-                            <img src="./Images/img/img_raucuqua/sanpham/bapchuoi.jpg" alt="">
+                        <img src="../Images/sanpham/sanphamok/bapcai.png" alt="">
+
                         </div>
                     </td>
                     <td>Hoa Chuối</td>
@@ -66,7 +69,8 @@
                 <tr>
                     <td>
                         <div class="cart-product-img">
-                            <img src="./Images/img/img_raucuqua/sanpham/bapchuoi.jpg" alt="">
+                        <img src="../Images/sanpham/sanphamok/bapcai.png" alt="">
+
                         </div>
                     </td>
                     <td>Hoa Chuối</td>
@@ -92,15 +96,15 @@
                 <h3 class="cart-sum">Địa Chỉ Thanh Toán</h3>
                 <div class="diaChiGiaoHang-box">
                     <label for="">Tên</label>
-                    <input type="text" value="Name" placeholder="Tên của bạn.." disabled>
+                    <input type="text" value="" placeholder="Tên của bạn.." >
                 </div>
                 <div class="diaChiGiaoHang-box">
                     <label for="">Số điện thoại</label>
-                    <input type="text" value="Số điện thoại" placeholder="Số điện thoại.." disabled>
+                    <input type="text" value="" placeholder="Số điện thoại.." >
                 </div>
                 <div class="diaChiGiaoHang-box">
                     <label for="">Địa chỉ</label>
-                    <input type="text" value="Địa chỉ" placeholder="Địa chỉ của bạn.." disabled>
+                    <input type="text" value="" placeholder="Địa chỉ của bạn.." >
                 </div>
                 <div class="diaChiGiaoHang-box">
                     <label for="">Dự tính thời gian giao hàng: </label>
@@ -163,9 +167,7 @@
         <!-- </div> -->
     </div>
     </div>
-    <style>
-
-    </style>
+    <?php include "footer.php"?>
 </body>
 
 </html>
