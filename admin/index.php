@@ -1,76 +1,48 @@
 <?php
+session_start();
 include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
 include "../model/taikhoan.php";
+include "../model/binhluan.php";
 include "../model/thongbao.php";
 include "../view/global.php";
 include "header.php";
      if(isset($_GET['act'])){
       $act = $_GET['act'];
-      ?>
-      <input type="hidden" value="<?=$act?>" id="note">
-      <!-- <script>
-         var mau = document.getElementById("mau")
-         var note = document.getElementById("note")
-         if(note.value=="dm"||note.value="adddm"||note.value="suadm"||note.value="updatedm"){
-               mau.style.transform="translateY(60px)"
-               mau.style.transition="0.2s"
-         }
-
-      </script> -->
-      <?php
          switch ($act) {
                   case 'dm':
                      $listdm = loadall_dm();
                         include "danhmuc/list.php";
                            break;
                   case 'adddm':
-                     ?><script>
-                     var mau = document.getElementById("mau")
-                     mau.style.transform="translateY(60px)"
-                     mau.style.transition="0.2s"
-                  </script>
-                  <?php
                      if(isset($_POST['them'])&&($_POST['them'])){
-                        $tenloai = $_POST['name'];
+                        $tenloai = $_POST['name_cate'];
                         insert_danhmuc($tenloai);
+                        $listdm = loadall_dm();
+                       
                      }
                         include "danhmuc/add.php";
                            break;
                   case 'suadm':
-                     ?><script>
-                     var mau = document.getElementById("mau")
-                     mau.style.transform="translateY(60px)"
-                     mau.style.transition="0.2s"
-                  </script>
-                  <?php
                      if(isset($_GET['id'])&&($_GET['id']>0)){
                         $id = $_GET['id'];
                         $dm = loadone_dm($id);
+                     
                         }
+                        
                         include "danhmuc/update.php";
                         break;
                   case 'updatedm':
-                     ?><script>
-                     var mau = document.getElementById("mau")
-                     mau.style.transform="translateY(60px)"
-                     mau.style.transition="0.2s"
-                  </script>
-                  <?php
                      if(isset($_POST['update'])&&($_POST['update'])){
                         $id = $_POST['id'];
                         $name = $_POST['name'];
                         update_danhmuc($id,$name);
+                        $listdm = loadall_dm();
                      }
+                     include "danhmuc/list.php";
                      break;
                   case "xoadm":
-                     ?><script>
-                     var mau = document.getElementById("mau")
-                     mau.style.transform="translateY(60px)"
-                     mau.style.transition="0.2s"
-                  </script>
-                  <?php 
                      if(isset($_GET['id'])&&($_GET['id']>0)){
                         $id = $_GET['id'];
                         delete_danhmuc($id);
@@ -87,10 +59,9 @@ include "header.php";
                   case 'addsp':
                      if(isset($_POST['them'])&&($_POST['them'])){
                         $name = $_POST['name'];
-                        $weight = $_POST['weight'];
                         $soluong = $_POST['soluong'];
                         $price = $_POST['price'];
-                        $mota = $_POST['mota'];
+                        $mota = $_POST['content'];
                         $id_dm = $_POST['id_dm'];
                         $hinh=$_FILES['image']['name'];
                         $target_dir = "../public/img";
@@ -100,7 +71,7 @@ include "header.php";
                         }else{
                             //echo "Sorry, there was an error uploading your file.";
                         }
-                  insert_sanpham($name,$price,$hinh,$weight,$mota,$soluong,$id_dm);
+                  insert_sanpham($name,$price,$hinh,$mota,$soluong,$id_dm);
                }
                $listdm=loadall_dm();
                         include "sanpham/add.php";
@@ -117,9 +88,8 @@ include "header.php";
                      if(isset($_POST['update'])&&($_POST['update'])){
                         $id = $_POST['id'];
                         $name = $_POST['name'];
-                        $weight = $_POST['weight'];
-                        $soluong = $_POST['soluong'];
                         $price = $_POST['price'];
+                        $soluong = $_POST['soluong'];
                         $mota = $_POST['mota'];
                         $id_dm = $_POST['id_dm'];
                         $hinh=$_FILES['image']['name'];
@@ -130,7 +100,7 @@ include "header.php";
                         }else{
                             //echo "Sorry, there was an error uploading your file.";
                         }
-                        update_sp($id,$name,$price,$hinh,$weight,$mota,$soluong,$id_dm);
+                        update_sp($id,$name,$price,$hinh,$mota,$soluong,$id_dm);
                      }
                      $listsp = loadall_sp();
                      include "sanpham/list.php";
@@ -201,6 +171,28 @@ include "header.php";
                      $listtk = loadall_tk();
                      include "taikhoan/list.php";
                      break;
+                  // case 'bl';
+                  //       $listsp = loadall_sp();
+                  //       $listdm = loadall_dm();
+                  //       include "binhluan/listsp.php";
+                  //       break;
+                  case 'bl':
+                        $listbl = loadall_bl();
+                        include "binhluan/listbl.php";
+                           break;
+                  case 'xoabl':
+                        if(isset($_GET['id'])&&($_GET['id'])){
+                           $id = $_GET['id'];
+                           delete_bl($id);
+                        }
+                        $listbl = loadall_bl();
+                        include "binhluan/listbl.php";
+                        break;
+                  case 'logout':
+                     session_unset(); 
+                     header("location: ../view");
+                     break;
+                        
             default:
                      ?><script>
                         var mau = document.getElementById("mau")

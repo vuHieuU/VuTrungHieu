@@ -13,29 +13,94 @@
       <a href="index.php"><div class="logo"><img src="../Images/logo/logo2.jpg"></div></a>
       <div class="menu">
           <ul>
-              <li><a href="gioithieu.php">Vitanic</a></li>
+              <li><a href="index.php?act=gioithieu">Vitanic</a></li>
               <li>
                   <div class="dropdown">
-                      <a href="sanpham.php" class="dropbtn">Sản Phẩm</a>
+                    <style>
+                        .dropdown i{
+                            transition: .3s;
+                        }
+                        .dropdown a:hover i{
+                            transform: rotate(90deg);
+                        }
+                    </style>
+                      <a href="index.php?act=sanpham" class="dropbtn">Sản Phẩm <i class="fa-solid fa-caret-right"></i></i></a>
                       <div class="dropdown-content">
-                      <a href="#">Rau Củ</a>
+                        <?php
+                            foreach($listdm as $dm){
+                                extract($dm);
+                                $loadsp = "index.php?act=danhmucsanpham&madanhmuc=".$id_cate;
+                                echo'
+                                    <a href="'.$loadsp.'">'.$name_cate.'</a>
+                                ';
+                            }
+                        ?>
+                      <!-- <a href="#">Rau Củ</a>
                       <a href="#">Hoa Quả Tươi</a>
                       <a href="#">Hoa Quả Sấy</a>
                       <a href="#">Ô Mai</a>
                       <a href="#">Hoa Quả Đông Lạnh</a>
-                      <a href="#">Thêm..</a>
+                      <a href="#">Thêm..</a> -->
                       </div>
                     </div>
               </li>
-              <li><a href="tintuc.php">Tin Tức</a></li>
-              <li><a href="#">Khuyến Mãi</a></li>
-              <li><a href="contact.php">Liên hệ</a></li>
+              <li><a href="index.php?act=tintuc">Tin Tức</a></li>
+              <li><a href="index.php?act=khuyenmai">Khuyến Mãi</a></li>
+              <li><a href="index.php?act=contact">Liên hệ</a></li>
           </ul>
       </div>
       <div class="user">
         <ul>
-        <li><i class="fa-solid fa-user"></i><a onclick="show()" href="#"> Đăng Nhập</a></li>
-          <li><i class="fa-solid fa-cart-shopping"></i><a href="giohang.php"> Giỏ Hàng</a></li>
+
+            <?php
+                if(isset($_SESSION['name'])){
+                    extract($_SESSION['name']);
+                    ?>
+                    <!-- <li>
+                        Xin chào, <?=$name?>
+                    </li>
+                    <?php
+                        // if($role == 1){
+                        //     echo'
+                        // <li>
+                        //     <a href="../admin">Đăng nhập trang admin</a>
+                        // </li>
+                        //     ';
+                        // }
+                    ?>
+                    <li>
+                        <a href="">Cập Nhật Tài Khoản</a>
+                    </li>
+                    <li>
+                        <a href="index.php?act=logout">Thoát</a>
+                    </li>
+                    <li> -->
+                    <div class="dropdown">
+                      <a href="index.php?act=sanpham" style="text-decoration: none; color: var(--color-main);" class="dropbtn">Xin chào, <b style="color: #0f9d58;"><?=$name?> </b><i style="transform: rotate(90deg); " class="fa-solid fa-angles-right"></i></a>
+                      <div class="dropdown-content">
+                      <?php
+                            if($role == 1){
+                                echo'
+                                <a href="../admin">Đăng nhập ADMIN</a>
+                                ';
+                            }
+                        ?>
+                        <a href="index.php?act=giohang">Giỏ Hàng</a>
+                        <a href="#">Cập Nhật Tài Khoản</a>
+                        <a href="index.php?act=logout">Thoát</a>
+                    </div>
+                    </div>
+              <!-- </li> -->
+                    <?php
+                }else{
+                    ?>
+                        <li><i class="fa-solid fa-user"></i><a onclick="show()" href="#"> Đăng Nhập</a></li>
+                        <li><i class="fa-solid fa-cart-shopping"></i><a href="thanhtoan.php"> Giỏ Hàng</a></li>
+                    <?php
+                    
+                }
+            ?>
+          
         </ul>
       </div>
        <!--  ********** -->
@@ -46,53 +111,53 @@
                 <i class="fa-solid fa-x" onclick="out()"></i>
             </div>
             <div class="gach" id="gach"></div> 
-            <form action="" id="dangnhap" class="">
+            <form action="index.php?act=dangnhap" method="POST" id="dangnhap" class=""> 
                 <div class="text">
                     <i class="fa-solid fa-user"></i>
-                    <input type="text" placeholder="Tên đăng nhập" required>
+                    <input type="text" placeholder="Tên đăng nhập" name="name" required>
                 </div>
                 <div class="text">
                     <i class="fa-solid fa-key"></i>
-                    <input type="password" placeholder="Mật khẩu" required>
+                    <input type="password" placeholder="Mật khẩu" name="password" required>
                 </div>
                 <div class="checkbox">
                     <input type="checkbox">
                     <label for="">Ghi nhớ tài khoản</label>
                 </div>
                 <div class="flex">
-                    <input type="submit" value="Đăng Nhập" class="login">
+                    <input type="submit" value="Đăng Nhập" class="login" name="dangnhap">
                 </div>
                 <div class="forgot">
-                    <a href="" class="forgot">Quên tài khoản ?</a>
+                    <a href="" class="forgot">Quên mật khẩu ?</a>
                 </div>
                 
             </form>
-            <form action="" id="dangki" class="" >
+            <form action="index.php?act=dangki" method="POST" id="dangki" class="" >
                 <div class="text">
                     <i class="fa-solid fa-user"></i>
-                    <input type="text" id="user" required placeholder="Tên đăng nhập">
+                    <input type="text" id="user" required placeholder="Tên đăng nhập" name="user">
                 </div>
                 <div class="text">
                     <i class="fa-solid fa-envelope"></i>
-                    <input type="email" placeholder="Email" id="email" required>
+                    <input type="email" placeholder="Email" id="email" name="email" required>
                 </div>
                 <div class="text">
                     <i class="fa-solid fa-phone"></i>
-                    <input type="text" id="phone" placeholder="Số điện thoại" required >
+                    <input type="text" id="phone" placeholder="Số điện thoại" required name="status" >
                 </div>
                 <div class="text">
                     <i class="fa-solid fa-key"></i>
-                    <input type="password" id="password1" required placeholder="Mật khẩu">
+                    <input type="password" id="password1" required placeholder="Mật khẩu" name="password_check">
                 </div>
                 <div class="text">
                     <i class="fa-solid fa-unlock-keyhole"></i>
-                    <input type="password" id="password2" required placeholder="Nhập lại mật khẩu">
+                    <input type="password" id="password2" required placeholder="Nhập lại mật khẩu" name="re_password">
                 </div>
                 <div class="flex">
-                    <input type="submit" id="ipdangki" value="Đăng Kí" class="login ">
+                    <input type="submit" id="ipdangki" value="Đăng Kí" class="login " name="dangki">
                 </div>
             </form>
-        </div>
+</div>
         <script>
             var dangky = document.getElementById("dangki")
             var dangnhap = document.getElementById("dangnhap")
@@ -116,8 +181,8 @@
                 dangnhap.style.right="40%"
                 dangnhap.style.transform="translateX(-600px)"
                 dangnhap.style.transition="1s"
-                gach.style.left="315px"
-                gach.style.width="90px"
+                gach.style.left="325px"
+                gach.style.width="95px"
                 gach.style.transition=".5s"
                 nav.style.transition=".5s"
                 nav.style.height="500px"
@@ -136,8 +201,8 @@
                 dangnhap.style.left="-0%"
                 dangnhap.style.transform="translateX(0px)"
                 dangky.style.transition="1s"
-                gach.style.left="195px"
-                gach.style.width="115px"
+                gach.style.left="180px"
+                gach.style.width="140px"
                 gach.style.transition="1s"
                 nav.style.transition="1s"
                 nav.style.height="360px"

@@ -1,147 +1,228 @@
-* {
-    margin:0px ;
-    padding: 0px;
-    color: black;
-   
-}
-.admin h1{
-    margin: 30px 0 30px 10px;
-}
-.left{
-    padding: 5px 10px;
-    background-color: #86B70B;
-    opacity: 0.95;
-    width: 15%;
-    border-radius: 10px;
-    position: fixed;
-}
-nav ul{
-    display: flex;
-    flex-direction:column;
-}
-nav ul a:hover{
-    border-radius: 10px;
-}
-nav ul a{
-    text-decoration: none;
-    color: black;
-    padding: 20px 25px;
-    font-size: 20px;
-    transition: 1s;
-    font-weight: 500;
-}
-.logout{
-    margin-top: 175px;
-}
-.active{
-    background-color: #86B70B;
-}
-header{
-    display: flex;
-}
-.right{
-    width: 85%;
-    background-color: rgb(249, 243, 243);
-    padding-left: 16%;
-}
-.text1{
-    width: 90%;
-    margin: 10px auto;
-    align-items: center;
-}
-.text1 h1{
-    color: #6b9307;
-}
-table tr td{
-   border-top: none;
-    padding: 15px 20px;
-}
-table tr th{
-    border:1px solid black;
-    padding: 15px 30px;
-}
-table{
-    border-collapse:collapse;
-    width: 90%;
-    margin: 0 auto;
-    text-align: center;
-}
-.tbn{
-    width: 90%;
-    margin: 10px auto;
-}
-.click{
-    background-color: #86B70B;
-    color: white;
-    padding: 8px 20px;
-    border: none;
-    border-radius: 8px;
-}
-.edit{
-    align-items: center;
-}
-.edit a{
-    font-size: 16px;
-}
-.textadd h1{
-    color: black;
-    margin-bottom: 20px;
-}
-.formadd{
-    background-color: #ffffff;
-    color: white;
-    width: 90%;
-    margin: 0 auto;
-    padding: 10px 50px;
-    border-radius: 10px;
-}
-.hidden{
-    display: none;
-}
-.iteminputadd label{
-    color: black;
-    font-size: 20px;
-}
-.iteminputadd input{
+/* css button thêm, sửa, xóa */
+.table-btn{
     width: 100%;
-    height: 30px;
-    margin: 5px 0 20px 0;
-    border-radius: 5px;
-  
-}
-.tbn{
-    color: white;
-  
-}
-.welcome{
-    width: 89%;
-    margin: 20px auto;
-}
-.welcome h2{
-    font-size: 30px;
-}
-.welcome h1{
-    font-size: 45px;
-}
-#mau{
-    background-color: #ffffff;
-    width: 230px;
-    height: 60px;
-    border-radius: 5px;
-    position: absolute;
-    transform: translateY(0px);
-    transition: 1s;
-}
-nav ul{
-    overflow: hidden;
-    position: relative;
-}
-.nav_click{
-    position: relative;
-    background: transparent;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #333333;
 }
 
-#sk3:hover #mau{
-    transform: translateY(200px);
-    transition: 1s;
-} 
+.table-btn input[type=button],
+.table-btn input[type=submit],
+.table-btn input[type=reset]
+{
+    border: none;
+    padding: 10px;
+    margin: 0px 10px;
+    border-radius: 8px;
+    background-color: #ffff;
+}
+
+.table-btn input[type=button]:hover{
+    cursor: pointer;
+}
+/* css search */
+.search {
+    float: right;
+    /* margin-right: 20px; */
+    border-radius: 10px;
+    margin: 10px 10px;
+    padding: 4px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    width: 30%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.search i{
+    line-height: 40px;
+    width: 20%;
+    opacity: .6;
+}
+
+.search input {
+    width: 50%;
+    border: none;
+    /* float: right; */
+    margin-right: 20px;
+    padding: 10px 5px;
+    outline: none;
+}
+
+.search select{
+    width: 30%;
+}
+
+.search button, select{
+    border: none;
+    background-color: unset;
+    outline: none;
+}
+
+/* css table */
+table {
+    text-align: justify;
+    width: 100%;
+    margin-top: 20px;
+    
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.add input, textarea{
+    outline: none;
+    width: 100%;
+    padding: 8px 4px;
+}
+table thead th {
+    background-color: #339900;
+    padding: 10px;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+table tr td {
+    border-left: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    margin-bottom: 2px;
+    padding: 10px;
+}
+
+table input[type=button]{
+    margin: 4px 0px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+}
+
+table input[type=button]:hover {
+    cursor: pointer;
+}
+
+table input.edit {
+    background-color: #339900;
+}
+
+table input.delete {
+    background-color: #B22222;
+}
+.role{
+    width: 100%;
+    border: 1px solid black;
+    height: 40px;
+}
+
+/* Ảnh trong bảng */
+table img{
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+@font-face {
+    font-family: fontAdmin;
+    src: url(../../admin/font/LexendDeca-VariableFont_wght.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: fontAdmin;
+}
+
+.container {
+    color: #333333;
+    /* width: 100vw; */
+    /* margin: 0 auto; */
+    display: flex;
+    /* background-color: #eef1fd; */
+    opacity: .98;
+    color: #000;
+    /* height: 100vh; */
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.box-left {
+    width: 20%;
+    padding: 10px 20px;
+    border-right: .5px solid rgba(0, 0, 0, 0.08);
+}
+
+.box-left-img {
+    /* width: 100%; */
+    /* height: 50px; */
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.box-left-img img {
+    width: 100%;
+    height: 90%;
+}
+
+.box-right {
+    width: 78%;
+    padding: 40px;
+}
+
+.box-left-content {
+    /* border-top: 1px solid #339900; */
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    display: flex;
+    height: 50px;
+    justify-content: start;
+    border-radius: 12px;
+    line-height: 50px;
+    color: black;
+    transition: .1s;
+}
+
+i.fa-circle-arrow-right {
+    /* visibility: hidden; */
+    float: right;
+    justify-items: flex-end;
+}
+
+.box-left-content:hover .fa-circle-arrow-right {
+    visibility: unset;
+
+}
+
+.box-left-content:hover {
+    cursor: pointer;
+    background-color: #339900;
+    color: #fff;
+    transform: scale(1.05, 1.05);
+}
+
+.box-left-content i {
+    line-height: 50px;
+    margin: 0px 10px;
+}
+
+.info {
+    padding: 10px;
+    text-align: center;
+    max-width: 180px;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.content {
+    border-top: .5px solid rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
+}

@@ -1,92 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://kit.fontawesome.com/bd9a701ba3.js" crossorigin="anonymous"></script>
+    <!-- link font -->
+    <!-- link icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../public/css/style.css">
 </head>
+
 <body>
-    <header>
-        <div class="left">
-                <div class="admin">
-                    <h1>Admin Tools</h1>
+    <div class="container">
+        <div class="box-left">
+            <div class="box-left-img">
+                <img src="../Images/logo/logo2.jpg" alt="">
+            </div>
+            <p style="margin-bottom: 4px;">Admin tools</p>
+            <a href="#">
+                <div class="box-left-content" style="background-color: #339900; color: #fff;">
+                    <i class="fa-solid fa-chart-simple fa-bounce"
+                        style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; --fa-bounce-rebound: 0;"></i>
+                    <p>Thống Kê</p>
                 </div>
-                        <nav>
-                            <ul>
-                                    <div id="mau"></div>
-                                    <a href="index.php?act=home" class="nav_click active"  id="sk1" onmouseover="stt1()">
-                                        <i class="fa-solid fa-house"></i>
-                                        <span>Trang chủ</span>
-                                    </a>
-                                    <a href="index.php?act=dm" class="nav_click" id="sk2" onmouseover="stt2()" >
-                                        <i class="fa-solid fa-bars"></i>
-                                        <span>Danh Mục</span>
-                                    </a>
-                                    <a href="index.php?act=sp" class="nav_click" id="sk3" onmouseover="stt3()">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                        <span>Sản Phẩm</span>
-                                    </a>
-                                    <a href="index.php?act=tk" class="nav_click" id="sk4" onmouseover="stt4()">
-                                        <i class="fa-solid fa-users"></i>
-                                        <span>Người Dùng</span>
-                                    </a>
-                                    <a href="" class="nav_click" id="sk5" onmouseover="stt5()">
-                                        <i class="fa-solid fa-comment"></i>
-                                        <span>Bình Luận</span>
-                                    </a>
-                                    <a href="" class="nav_click" id="sk6" onmouseover="stt6()">
-                                        <i class="fa-solid fa-scale-unbalanced"></i>
-                                        <span>Thống Kê</span>
-                                    </a>
-                            </ul>
-                            <ul>
-                                <a href="" class="logout" id="7" onmouseover="stt7()"> 
-                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                                <span>Log Out</span>
-                            </a>
-                            </ul>
-                        </nav>
-                        <script>
-                            var mau = document.getElementById("mau")
+            </a>
+            <a href="index.php?act=dm">
+                <div class="box-left-content">
+                    <i class="fa-solid fa-list"></i>
+                    <p>Danh Mục</p>
+                </div>
+            </a>
+            <a href="index.php?act=sp">
+                <div class="box-left-content">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <p>Sản Phẩm</p>
+                </div>
+            </a>
+            <a href="index.php?act=tk">
+                <div class="box-left-content">
+                    <i class="fa-solid fa-users"></i>
+                    <p>Người Dùng</p>
+                </div>
+            </a>
+            <a href="index.php?act=bl">
+                <div class="box-left-content">
+                    <i class="fa-solid fa-comments"></i>
+                    <p>Bình Luận</p>
+                </div>
+            </a>
+            <a href="index.html">
+                <div class="box-left-content">
+                    <i class="fa-solid fa-dolly"></i>
+                    <p>Đơn Hàng</p>
+                </div>
+            </a>
 
-                            function stt1(){
-                                mau.style.transform="translateY(0px)"
-                                mau.style.transition="0.2s"
+            <!-- user -->
+            <p style="margin-bottom: 4px;">ADMIN</p>
+            <a href="">
+                <div class="box-left-content" style="background-color: #339900; color: #fff;">
+                    <i class="fa-solid fa-gear fa-spin" style="--fa-animation-duration: 15s;"></i>
+                    <p>Thông Tin</p>
+                </div>
+            </a>
+            <a href="index.php?act=logout" class="logout">
+                <div class="box-left-content">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    <p>Đăng Xuất</p>
+                </div>
+            </a>
+        </div>
+        <div class="box-right">
+            <div class="info">
+                <h3>Hello Admin <i class="fa-solid fa-hand"></i></h3>
+            </div>
 
-                            }
-                            function stt2(){
-                                mau.style.transform="translateY(60px)"
-                                mau.style.transition="0.2s"
-                                console.log("hello")
-                            }
-                            function stt3(){
-                                mau.style.transform="translateY(125px)"
-                                mau.style.transition="0.2s"
-                                console.log("hello")
-                            }
-                            function stt4(){
-                                mau.style.transform="translateY(187px)"
-                                mau.style.transition="0.2s"
-                                console.log("hello")
-                            }
-                            function stt5(){
-                                mau.style.transform="translateY(249px)"
-                                mau.style.transition="0.2s"
-                                console.log("hello")
-                            }
-                            function stt6(){
-                                mau.style.transform="translateY(313px)"
-                                mau.style.transition="0.2s"
-                                console.log("hello")
-                            }                           
-                        </script>
-           </div>
-                  <div class="right">
-                        <div class="welcome">
-                                    <h2>hi sueih,</h2>
-                                    <h1>Welcome back👋</h1>
-                        </div>
-                    
+            <div class="content">

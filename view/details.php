@@ -12,21 +12,24 @@
 
 <body>
     <?php
-  include "header.php"
-?>
-        <div class="card-wrapper">
-            <div class="card">
-                <!-- card left -->
-                <div class="product-imgs">
-                    <div class="img-display">
-                        <div class="img-showcase">
-                            <img src="./Images/img/img_raucuqua/sanpham/bapcaitim.jpg" alt="organic-food">
-                            <img src="./Images/img/img_raucuqua/sanpham/bapchuoi.jpg" alt="organic-food">
+    include "header.php"
+    ?>
+    <div class="card-wrapper">
+        <div class="card">
+            <!-- card left -->
+            <div class="product-imgs">
+                <div class="img-display">
+                    <div class="img-showcase">
+                        <?php
+                        $img = $img_path . $image;
+                        echo '
+                            <img src="' . $img . '" alt="organic-food">
+                            <!-- <img src="./Images/img/img_raucuqua/sanpham/bapchuoi.jpg" alt="organic-food">
                             <img src="./Images/img/img_raucuqua/sanpham/bi-do.jpg" alt="organic-food">
-                            <img src="./Images/img/img_raucuqua/sanpham/bingoi.jpg" alt="organic-food">
+                            <img src="./Images/img/img_raucuqua/sanpham/bingoi.jpg" alt="organic-food"> -->
                         </div>
                     </div>
-                    <div class="img-select">
+                    <!-- <div class="img-select">
                         <div class="img-item">
                             <a href="#" data-id="1">
                                 <img src="./Images/img/img_raucuqua/sanpham/bapcaitim.jpg" alt="organic-food">
@@ -47,11 +50,12 @@
                                 <img src="./Images/img/img_raucuqua/sanpham/bingoi.jpg" alt="organic-food">
                             </a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- card right -->
                 <div class="product-content">
-                    <h2 class="product-title">Bắp cải tím</h2>
+                 
+                    <h2 class="product-title">' . $name . '</h2>
                     <a href="./index.php" class="product-link">Cửa hàng</a>
                     <div class="product-rating">
                         <i class="fas fa-star"></i>
@@ -63,18 +67,16 @@
                     </div>
 
                     <div class="product-price">
-                        <p class="last-price">Giá cũ: <span>$257.00</span></p>
-                        <p class="new-price">Giá mới: <span>$249.00 (-5%)</span></p>
+                        <p class="last-price">Giá cũ: <span>$' . $amount . '</span></p>
+                        <p class="new-price">Giá mới: <span>$' . $price . '</span></p>
                     </div>
 
                     <div class="product-detail">
                         <h2>Thông tin sản phẩm: </h2>
-                        <p>Là một loại thực phẩm vô cùng quen thuộc, có màu sắc vô cùng bắt mắt, rất dễ mua và chế biến thành nhiều món ăn đa dạng khác nhau trong bữa cơm hằng ngày. Bắp cải tím đặc biệt mang đến lợi ích trong việc hỗ trợ phòng chống ung
-                            thư, giúp cơ thể khỏe mạnh toàn diện.</p>
-                        <p>Mọi người dường như đã quá quen thuộc với những quả bắp cải xanh nhưng ít người biết rằng, bắp cải còn có loại màu tím bắt mắt. </p>
+                        <p>' . $content . '</p>
                         <ul>
                             <li>Tình trạng: <span>Còn hàng</span></li>
-                            <li>Phân loại <span>Rau-củ-quả</span></li>
+                            <li>Phân loại <span>' . $name_cate . '</span></li>
                             <li>Khu vực vận chuyển: <span>Nội thành</span></li>
                             <li>Giá vận chuyển: <span>Free</span></li>
                         </ul>
@@ -86,117 +88,121 @@
             Add to Cart <i class="fas fa-shopping-cart"></i>
           </button>
                     </div>
-
-                    <div class="social-links">
-                        <p>Share At: </p>
-                        <a href="#">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fab fa-pinterest"></i>
-                        </a>
+                    ';
+                        ?>
+                        <div class="social-links">
+                            <p>Share At: </p>
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-pinterest"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!--Bình luận -->
-        <div class="cmt">
-            <h2>Đánh giá</h2>
-            <form action="" method="POST">
-                <div class="formbold-mb-3">
-                    
+            <!--Bình luận -->
+            <div class="cmt">
+                <h2>Đánh giá</h2>
+                <form action="" method="POST">
+                    <div class="formbold-mb-3">
 
-                <div class="form-comment">
-                    <div class="soluong-comment">32 Comment</div>
 
-                    <div class="form-addcmt">
-                    <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
-                    <div><input class="add-comment" type="text" name="" id="" placeholder="Nhập bình luận...">
-                    <hr>
-                    <div class="chucnang-cmt">
-                    <input class="xoa" type="submit" value="Cancel">
-                    <input type="submit" value="Comment">
-                    </div>
-                </div>
-                    </div>
+                        <div class="form-comment">
+                            <div class="soluong-comment">32 Comment</div>
 
-                    
-                    
-                    <div class="ome-comment">
-                    <div class="nd-comment">
-                        <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
-                        <div class="name-comment"><p>Phạm Anh Dũng xau trai</p></div>
-                        <p class="nd">Bạn coder tên Phạm Hùng đẹp trai quá <3</p>
-                    </div>
+                            <div class="form-addcmt">
+                                <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
+                                <div class="chucnang-cmt">
+                                    <input style="outline: none;" class="add-comment" type="text" name="" id="" placeholder="Nhập bình luận...">
+                                    <input type="submit" value="Comment">
+                                </div>
+                            </div>
 
-                    <div class="like-comment">
-                    <i class="fa-solid fa-thumbs-up"></i>
-                    <i class="fa-solid fa-thumbs-down mgl"></i>
-                    <p class="traloi">Trả lời</p>
-                    </div>
-                    </div>
-                    
 
-                    <div class="one-comment">
-                    <div class="nd-comment">
-                        <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
-                        <div class="name-comment"><p>Phạm Anh Dũng xau trai</p></div>
-                        <p class="nd">Bạn coder tên Phạm Hùng đẹp trai quá <3</p>
-                    </div>
 
-                    <div class="like-comment">
-                    <i class="fa-solid fa-thumbs-up"></i>
-                    <i class="fa-solid fa-thumbs-down mgl"></i>
-                    <p class="traloi">Trả lời</p>
-                    </div>
-                    </div>
+                            <div class="ome-comment">
+                                <div class="nd-comment">
+                                    <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
+                                    <div class="name-comment">
+                                        <p>Phạm Anh Dũng xau trai</p>
+                                    </div>
+                                    <p class="nd">Bạn coder tên Phạm Hùng đẹp trai quá <3< /p>
+                                </div>
 
-                    <div class="one-comment">
-                    <div class="nd-comment">
-                        <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
-                        <div class="name-comment"><p>Phạm Anh Dũng xau trai</p></div>
-                        <p class="nd">Bạn coder tên Phạm Hùng đẹp trai quá <3</p>
-                    </div>
+                                <div class="like-comment">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <i class="fa-solid fa-thumbs-down mgl"></i>
+                                    <p class="traloi">Trả lời</p>
+                                </div>
+                            </div>
 
-                    <div class="like-comment">
-                    <i class="fa-solid fa-thumbs-up"></i>
-                    <i class="fa-solid fa-thumbs-down mgl"></i>
-                    <p class="traloi">Trả lời</p>
-                    </div>
-                    </div>
 
-                    <div class="one-comment">
-                    <div class="nd-comment">
-                    <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
-                    <div class="name-comment"><p>Phạm Anh Dũng xau trai</p></div>
-                    <p class="nd">Bạn coder tên Phạm Hùng đẹp trai quá <3</p>
-                    </div>
+                            <div class="one-comment">
+                                <div class="nd-comment">
+                                    <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
+                                    <div class="name-comment">
+                                        <p>Phạm Anh Dũng xau trai</p>
+                                    </div>
+                                    <p class="nd">Bạn coder tên Phạm Hùng đẹp trai quá <3< /p>
+                                </div>
 
-                    <div class="like-comment">
-                    <i class="fa-solid fa-thumbs-up"></i>
-                    <i class="fa-solid fa-thumbs-down mgl"></i>
-                    <p class="traloi">Trả lời</p>
-                    </div>
-                    </div>
-                </div>
-            </form>
-        </div>
+                                <div class="like-comment">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <i class="fa-solid fa-thumbs-down mgl"></i>
+                                    <p class="traloi">Trả lời</p>
+                                </div>
+                            </div>
 
-        <!--Hiển thị bình luận-->
-        <div class="hienthi">
-        </div>
-        <?php
-include "footer.php"
-?>
+                            <div class="one-comment">
+                                <div class="nd-comment">
+                                    <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
+                                    <div class="name-comment">
+                                        <p>Phạm Anh Dũng xau trai</p>
+                                    </div>
+                                    <p class="nd">Bạn coder tên Phạm Hùng đẹp trai quá <3< /p>
+                                </div>
+
+                                <div class="like-comment">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <i class="fa-solid fa-thumbs-down mgl"></i>
+                                    <p class="traloi">Trả lời</p>
+                                </div>
+                            </div>
+
+                            <div class="one-comment">
+                                <div class="nd-comment">
+                                    <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
+                                    <div class="name-comment">
+                                        <p>Phạm Anh Dũng xau trai</p>
+                                    </div>
+                                    <p class="nd">Bạn coder tên Phạm Hùng đẹp trai quá <3< /p>
+                                </div>
+
+                                <div class="like-comment">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <i class="fa-solid fa-thumbs-down mgl"></i>
+                                    <p class="traloi">Trả lời</p>
+                                </div>
+                            </div>
+                        </div>
+                </form>
+            </div>
+
+            <!--Hiển thị bình luận-->
+            <div class="hienthi">
+            </div>
+
 
             <script src="./chitiet.js"></script>
 </body>

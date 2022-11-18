@@ -14,8 +14,7 @@
 
     <h3 style="margin-top: 10px;">Danh Sách Sản Phẩm</h3>
 
-        <form class="search" action="index.php?act=listdm" method="POST">
-        <input type="text" name="kyw">
+        <form class="search" action="index.php?act=listbl" method="POST">
             <select name="cate_id" id="">
                 <option value="0" selected>Tất cả</option>
                 <?php
@@ -24,19 +23,15 @@
                     echo '<option value="' . $id_cate . '">' . $name_cate . '</option>';
                 }
                 ?>
-                </select>
-                <input type="submit" name="listok">
-                
-                <!-- <input type="submit" name="listok"><i class="fa-solid fa-magnifying-glass"></i> -->
-            
+                <input type="text" name="kyw" id="">
+                <button name="listok"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </select>
 
         </form>
-
-      
         <style>
 
         </style>
-        <form action="index.php?act=addsp" method="POST">
+        <form action="" method="POST">
             <table>
                 <thead>
                     <tr>
@@ -44,20 +39,15 @@
                         <th>Mã Loại</th>
                         <th>Tên Sản Phẩm</th>
                         <th>Ảnh Sản Phẩm</th>
-                        <th>Giá</th>
-                        <th>Giá Cũ</th>
-                        <!-- <th>Cân nặng</th> -->
-                        <th>Mô Tả</th>
                         <th>Loại</th>
-                        <th><i class="fa-solid fa-gear"></i></th>
+                        <th></i></th>
                     </tr>
                 </thead>
                 <?php
                 foreach ($listsp as $sp) {
                     extract($sp);
-                    $suasp = "index.php?act=suasp&id=" . $id;
-                    $xoasp = "index.php?act=xoasp&id=" . $id;
                     $hinhpath = "../public/img" . $image;
+                    $link = "index.php?act=listbl&id=" . $id;
                     if (is_file($hinhpath)) {
                         $image = "<img src='" . $hinhpath . "' height='80'>";
                     } else {
@@ -69,18 +59,12 @@
                             <td>' . $id . '</td>
                             <td>' . $name . '</td>
                             <td>' . $image . '</td>
-                            <td>' . $price . '</td>
-                            <td>' . $amount . '</td>
-                            <td>' . $content . '</td>
                             <td>' . $name_cate . '</td>
                             <td style="text-align: center;">
-                            <a style="text-decoration: none;" href="' . $suasp . '">
-                                <input type="button" class="edit" value="Sửa">
+                            <a style="text-decoration: none;" href="'.$link.'">
+                                <input type="button" class="edit" value="Xem Bình Luận">
                             </a>
-                            <a style="text-decoration: none;" href="' . $xoasp . '">
-                                <input type="button" class="delete" value="Xóa">
-                            </a>
-
+                           
                         </td>
                     </tr>   
                     ';
@@ -88,13 +72,6 @@
 
                 ?>
             </table>
-
-            <div class="table-btn">
-                <input type="button" value="Chọn Tất Cả">
-                <input type="button" value="Bỏ Chọn Tất Cả">
-                <input type="button" value="Xóa Các Mục Đã Chọn">
-                <a href="index.php?act=addsp"><input type="button" value="Nhập Thêm"></a>
-            </div>
         </form>
     </div>
     </div>

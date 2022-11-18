@@ -1,7 +1,7 @@
 <?php
 
    function loadall_sp(){
-    $sql = "select * from products";
+    $sql = "select * from products inner join category on products.cate_id=category.id_cate";
    $listsp = pdo_query($sql);
    return $listsp;
    }
@@ -12,8 +12,8 @@
    return $listsp;
    }
 
-   function insert_sanpham($name,$price,$hinh,$weight,$mota,$soluong,$id_dm){
-      $sql = "insert into products(name,price,image,weight,content,amount,cate_id) values('$name','$price','$hinh','$weight','$mota','$soluong','$id_dm')";
+   function insert_sanpham($name,$price,$hinh,$mota,$soluong,$id_dm){
+      $sql = "insert into products(name,price,image,content,amount,cate_id) values('$name','$price','$hinh','$mota','$soluong','$id_dm')";
       pdo_execute($sql);
    }
 
@@ -35,7 +35,11 @@
       return $listsanpham;
    }
 
-
+   function loadAll_product() {
+      $sql = "select * from products where 1 order by id desc limit 0,6"; 
+      $listsanpham = pdo_query($sql);
+      return $listsanpham;
+   }
    function load_ten_dm($cate_id) {
       if($cate_id > 0){
       $sql = "select * from category where id_cate=".$cate_id;
@@ -48,15 +52,15 @@
    }
 
    function loadone_sp($id){
-      $sql = "select * from products where id=".$id;
+      $sql = "select * from products inner join category on products.cate_id=category.id_cate where id=".$id;
       $listsp = pdo_query_one($sql);
    return $listsp;
    }
-   function update_sp($id,$name,$price,$hinh,$weight,$mota,$soluong,$id_dm){
+   function update_sp($id,$name,$price,$hinh,$mota,$soluong,$id_dm){
       if($hinh!="")
-         $sql="update products set name='".$name."', price='".$price."',image='".$hinh."',weight='".$weight."', content='".$mota."',amount='".$soluong."',cate_id='".$id_dm."' where id=".$id;
+         $sql="update products set name='".$name."', price='".$price."',image='".$hinh."', content='".$mota."',amount='".$soluong."',cate_id='".$id_dm."' where id=".$id;
       else
-      $sql="update products set name='".$name."', price='".$price."',weight='".$weight."', content='".$mota."',amount='".$soluong."',cate_id='".$id_dm."' where id=".$id;
+      $sql="update products set name='".$name."', price='".$price."', content='".$mota."',amount='".$soluong."',cate_id='".$id_dm."' where id=".$id;
       pdo_execute($sql);
    }
    function delete_sanpham($id){
