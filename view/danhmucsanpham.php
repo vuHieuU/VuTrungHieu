@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +17,7 @@
             margin: 0 auto;
             margin-top: 5px;
         }
+
         h1 {
             font-size: 45px;
         }
@@ -44,49 +44,55 @@
         <div class="food-menu">
             <button class="button_name"><a href="index.php?act=sanpham">Tất cả</a></button>
             <?php
-                $dsdm = loadall_dm();
-                foreach ($dsdm as $key => $value) {
+            $dsdm = loadall_dm();
+            foreach ($dsdm as $key => $value) {
             ?>
-                <button class="button_name"><a href="index.php?act=danhmucsanpham&madanhmuc=<?php echo $value['id_cate'] ?>"><?php echo $value['name_cate'] ?></a></button>
+                <button class="button_name"><a href="index.php?act=danhmucsanpham&madanhmuc=<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a></button>
             <?php
             }
             ?>
         </div>
 
-       
+
         <?php
-        
+
         ?>
-            <h2>Sản phẩm tìm kiếm được</h2>
-            <div class="food-list">
-                <?php
-                $dsproduct = loadAll_sanpham("",$madm);
-                //var_dump($dsproduct);
-                foreach ($dsproduct as $key => $value) {
+        <h2>Sản phẩm tìm kiếm được</h2>
+        <div class="food-list">
+            <?php
+            $dsproduct = loadAll_sanpham("", $madm);
+            //var_dump($dsproduct);
+            foreach ($dsproduct as $key => $value) {
+                $loadcart = "index.php?act=" . $id;
+            ?>
+                <div class="food-item">
+                    <a href="<?php echo $value['id'] ?>">
+                        <img src="../Images/sanpham/sanphamok/<?php echo $value['image'] ?>" alt="">
+                    </a>
 
-                ?>
-                    <div class="food-item">
-                        <a href="<?php echo $value['id'] ?>">
-                            <img src="../Images/sanpham/sanphamok/<?php echo $value['image'] ?>" alt="">
-                        </a>
-
-                        <span class="name"><a href="<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a></span><br>
-                        <span class="price"><a href="<?php echo $value['id'] ?>"><?php echo $value['price'] ?></a></span><br>
-                        <div class="product-box-btn">
-                            <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
-                        </div>
+                    <span class="name"><a href="<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a></span><br>
+                    <span class="price"><a href="<?php echo $value['id'] ?>"><?php echo $value['price'] ?></a></span><br>
+                    <div class="product-box-btn">
+                        <form method="POST" action="$loadcart">
+                            <input type="hidden" name="hinh" value="<?php echo $value["image"]; ?>">
+                            <input type="hidden" name="name" value="<?php echo $value["name"]; ?>" />
+                            <input type="hidden" name="gia" value="<?php echo $value["price"]; ?>" />
+                            <input type="number" name="soluong" min="1" max="10" value="1">
+                            <input id="submit" type="submit" name="addcart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />
+                        </form>
                     </div>
-                <?php
-
-                }
-                ?>
                 </div>
+            <?php
 
-            </div>
+            }
+            ?>
+        </div>
 
     </div>
-    
-   
+
+    </div>
+
+
 </body>
 
 </html>
