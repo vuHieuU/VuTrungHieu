@@ -13,9 +13,6 @@
 </head>
 
 <body>
-<?php
-include 'header.php';
-?>
 
     <div class="contacts">
 
@@ -49,7 +46,6 @@ include 'header.php';
             <i class="fa-sharp fa-solid fa-phone">+0965545200</i>
         </div>
     </div>
-<?php  include 'footer.php ';?>
 </body>
 
 </html>

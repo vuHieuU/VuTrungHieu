@@ -12,7 +12,8 @@
 
 <body>
     <?php
-    include "header.php"
+    include "header.php";
+    extract($onesp);
     ?>
     <div class="card-wrapper">
         <div class="card">
