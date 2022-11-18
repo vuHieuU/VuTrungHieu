@@ -51,7 +51,7 @@
    }
    }
 
-   function loadAll_product() {
+   function loadAll_product1() {
       $sql = "select * from products where 1 order by id desc limit 0,6"; 
       $listsanpham = pdo_query($sql);
       return $listsanpham;
