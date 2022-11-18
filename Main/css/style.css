@@ -441,6 +441,10 @@ img {
     border: none;
     color: #fff;
 }
+.intro-content button a{
+    color: #fff;
+    text-decoration: none;
+}
 
 /* Blog */
 .blog {
