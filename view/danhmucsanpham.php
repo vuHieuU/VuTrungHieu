@@ -45,10 +45,12 @@
             <button class="button_name"><a href="index.php?act=sanpham">Tất cả</a></button>
             <?php
             $dsdm = loadall_dm();
-            foreach ($dsdm as $key => $value) {
-            ?>
-                <button class="button_name"><a href="index.php?act=danhmucsanpham&madanhmuc=<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a></button>
-            <?php
+            foreach ($dsdm as $dm) {
+                extract($dm);
+                $link="index.php?act=danhmucsanpham&madanhmuc=".$id;
+                echo'
+                <button class="button_name"><a href="'.$link.'">'.$name_cate.'</a></button>
+                ';
             }
             ?>
         </div>
