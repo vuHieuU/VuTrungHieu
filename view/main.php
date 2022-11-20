@@ -125,7 +125,7 @@
         <li><b>Đa dạng lựa chọn</b> các sản phẩm lành mạnh, thuần tự nhiên – luôn có sẵn</li>
         <li><b>Giao hàng tận nhà</b> nhanh chóng & miễn phí trên toàn quốc – điều kiện áp dụng *</li>
       </ul>
-      <button>Khám Phá Ngay</button>
+      <button><a href="index.php?act=gioithieu">Khám Phá Ngay</a></button>
     </div>
   </div>
   <?php include "blog.php" ?>

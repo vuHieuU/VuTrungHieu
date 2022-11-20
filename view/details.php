@@ -12,7 +12,8 @@
 
 <body>
     <?php
-    include "header.php"
+    include "header.php";
+    extract($onesp);
     ?>
     <div class="card-wrapper">
         <div class="card">
@@ -85,11 +86,17 @@
                     <div class="purchase-info">
                         <input type="number" min="0" value="1">
                         <button type="button" class="btn">
-            Add to Cart <i class="fas fa-shopping-cart"></i>
-          </button>
+
                     </div>
-                    ';
-                        ?>
+                    ';?>
+                    <form method="POST" action="index.php?act=giohang">
+                                <input type="hidden" name="hinh" value="<?php echo $value["image"]; ?>">
+                                <input type="hidden" name="name" value="<?php echo $value["name"]; ?>" />
+                                <input type="hidden" name="gia" value="<?php echo $value["price"]; ?>" />
+                                <input type="number" name="soluong" min="1" max="10" value="1">
+                                <input id="submit" type="submit" name="addcart" value="Add to Cart" />
+                            </form>
+                        
                         <div class="social-links">
                             <p>Share At: </p>
                             <a href="#">

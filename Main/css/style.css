@@ -217,6 +217,7 @@
 }
 
 .product-category input[type=text] {
+    outline: none;
     width: 80%;
     margin-right: 4px;
     padding: 4px 4px;
@@ -258,6 +259,7 @@ img {
 
 /* Slideshow container */
 .slideshow-container {
+    /* height: 300px; */
     max-width: 80vw;
     position: relative;
     margin: auto;
@@ -438,6 +440,10 @@ img {
     background-color: var(--main-color);
     border: none;
     color: #fff;
+}
+.intro-content button a{
+    color: #fff;
+    text-decoration: none;
 }
 
 /* Blog */

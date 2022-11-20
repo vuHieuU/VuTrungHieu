@@ -18,7 +18,6 @@
             margin-top: 5px;
             /* opacity: .3; */
         }
-
     </style>
 </head>
 
@@ -27,7 +26,6 @@
     <?php include "header.php" ?>
 
     <div class="wrapper">
-        
         <div id="banner">
             <div class="text_banner">
                 <form action="" method="POST">
@@ -36,7 +34,7 @@
                 </form>
             </div>
         </div>
-        
+
         <!---Hiển thị danh mục -->
         <div class="food-menu">
             <button class="button_name"><i class="fa-solid fa-list-check"></i><a href="index.php?act=sanpham">Tất cả</a></button>
@@ -49,7 +47,7 @@
             }
             ?>
         </div>
-        
+
         <!--Sản phẩm tìm kiếm-->
         <?php
         if (isset($_POST['btn_search'])) {
@@ -61,15 +59,20 @@
             <div class="food-list">
                 <?php
                 foreach ($kqsearch as $key => $value) {
+                    $loadcart= "index.php?act=".$id;
                 ?>
                     <div class="food-item">
-                        <a href="<?php echo $value['id'] ?>">
-                            <img src="../Images/sanpham/sanphamok/<?php echo $value['image'] ?>" alt="">
-                        </a>
+                        <img src="../Images/sanpham/sanphamok/<?php echo $value['image'] ?>" alt="">
                         <span class="name"><a href="<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a></span><br>
                         <span class="price"><a href="<?php echo $value['id'] ?>"><?php echo $value['price'] ?></a></span><br>
                         <div class="product-box-btn">
-                            <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                            <form method="POST" action="$loadcart">
+                                <input type="hidden" name="hinh" value="<?php echo $value["image"]; ?>">
+                                <input type="hidden" name="name" value="<?php echo $value["name"]; ?>" />
+                                <input type="hidden" name="gia" value="<?php echo $value["price"]; ?>" />
+                                <input type="number" name="soluong" min="1" max="10" value="1">
+                                <input id="submit" type="submit" name="addcart" value="Add to Cart" />
+                            </form>
                         </div>
                     </div>
                 <?php
@@ -89,10 +92,16 @@
                             <span class="name"><a href="<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a></span>
                             <span class="price"><a href="<?php echo $value['id'] ?>"><?php echo $value['price'] ?></a></span>
                             <div class="product-box-btn">
-                                <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                                <form method="POST" action="/xampp/duan1-nhom2-web17320/view/thanhtoan.php?action=add&id=<?php echo $value["id"]; ?>">
+                                    <input type="hidden" name="hinh" value="<?php echo $value["image"]; ?>">
+                                    <input type="hidden" name="name" value="<?php echo $value["name"]; ?>" />
+                                    <input type="hidden" name="gia" value="<?php echo $value["price"]; ?>" />
+                                    <input type="number" name="soluong" min="1" max="10" value="1">
+                                    <input id="submit" type="submit" name="addcart" value="Add to Cart" />
+                                </form>
                             </div>
                         </div>
-                        
+
                 <?php
                     }
                 }
