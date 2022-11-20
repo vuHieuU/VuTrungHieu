@@ -192,7 +192,10 @@ include "header.php";
                      session_unset(); 
                      header("location: ../view");
                      break;
-                        
+                  case 'listbill';
+                  $listbill=loadall_bill(0); 
+                  include "listbill.php";
+                  break;     
             default:
                      ?><script>
                         var mau = document.getElementById("mau")
