@@ -53,14 +53,14 @@
 
     <!-- product category -->
     <div class="tintuc-right">
-    <div class="product-category1 mgb">
+    <div class="product-category1 mgb1">
               <h3>Tin nổi bật</h3>
               <ul>
-              <li><i class="fa-sharp fa-solid fa-chevron-right"></i></i><a href="#">Hot hot hot: Rau củ quả nhập từ hôm qua, hôm nay hết sạch còn cái nịt.</a></li>
-                <li><i class="fa-sharp fa-solid fa-chevron-right"></i></i><a href="#">Hot hot hot: Rau củ quả nhập từ hôm qua, hôm nay hết sạch còn cái nịt.</a></li>
-                <li><i class="fa-sharp fa-solid fa-chevron-right"></i></i><a href="#">Hot hot hot: Rau củ quả nhập từ hôm qua, hôm nay hết sạch còn cái nịt.</a></li>
-                <li><i class="fa-sharp fa-solid fa-chevron-right"></i></i><a href="#">Hot hot hot: Rau củ quả nhập từ hôm qua, hôm nay hết sạch còn cái nịt.</a></li>
-                <li><i class="fa-sharp fa-solid fa-chevron-right"></i></i><a href="#">Hot hot hot: Rau củ quả nhập từ hôm qua, hôm nay hết sạch còn cái nịt.</a></li>
+              <li><img src="../Images/gioithieu/gioithieu01.png" alt=""><a href="#">Hot hot hot: Rau củ quả nhập từ hôm qua...</a></li>
+              <li><img src="../Images/gioithieu/gioithieu01.png" alt=""><a href="#">Hot hot hot: Rau củ quả nhập từ hôm qua...</a></li>
+              <li><img src="../Images/gioithieu/gioithieu01.png" alt=""><a href="#">Hot hot hot: Rau củ quả nhập từ hôm qua...</a></li>
+              <li><img src="../Images/gioithieu/gioithieu01.png" alt=""><a href="#">Hot hot hot: Rau củ quả nhập từ hôm qua...</a></li>
+              
                 <li><i class="fa-solid fa-angles-right"></i><a style="font-weight: bold;" href="#">Xem Tất Cả</a></li>
                 <div class="search">
                   <input type="text" name="" id="" placeholder="Tìm kiếm bài viết liên quan...">
@@ -128,12 +128,12 @@
         </div>
 
         <div class="list-status-right">
-        <div class="product-category2 mgb">
+        <div class="product-category2 mgb1">
               <h3>Danh mục tin tức</h3>
               <ul>
-              <li><i class="fa-sharp fa-solid fa-chevron-right"></i></i><a href="#">Hot hot hot: Rau củ quả nhập từ hôm qua, hôm nay hết sạch còn cái nịt.</a></li>
-                <li><i class="fa-sharp fa-solid fa-chevron-right"></i></i><a href="#">Hot hot hot: Rau củ quả nhập từ hôm qua, hôm nay hết sạch còn cái nịt.</a></li>
-                <li><i class="fa-sharp fa-solid fa-chevron-right"></i></i><a href="#">Hot hot hot: Rau củ quả nhập từ hôm qua, hôm nay hết sạch còn cái nịt.</a></li>
+              <li><img src="../Images/gioithieu/gioithieu01.png" alt=""><a href="#">Hot hot hot: Rau củ quả nhập từ hôm qua...</a></li>
+              <li><img src="../Images/gioithieu/gioithieu01.png" alt=""><a href="#">Hot hot hot: Rau củ quả nhập từ hôm qua...</a></li>
+              <li><img src="../Images/gioithieu/gioithieu01.png" alt=""><a href="#">Hot hot hot: Rau củ quả nhập từ hôm qua...</a></li>
               </ul>
               <!-- Slideshow container -->
       
@@ -141,15 +141,27 @@
 
 <!-- Full-width images with number and caption text -->
 <div class="mySlides1 fade position-tintic">
-  <img src="../Images/sanpham/sanphamok/anhdoc3.jpg" style="width:100%">
+  <img class="mgb" src="../Images/sanpham/sanphamok/anhdoc3.jpg" style="width:100%">
+  <div class="name-sp">
+    <p>Táo Hàn Quốc</p>
+    <a href="">Mua ngay</a>
+  </div>
 </div>
 
 <div class="mySlides1 fade">
-  <img src="../Images/sanpham/sanphamok/anhdoc4.jpg" style="width:100%">
+  <img class="mgb" src="../Images/sanpham/sanphamok/anhdoc4.jpg" style="width:100%">
+  <div class="name-sp">
+    <p>Táo Hàn Quốc</p>
+    <a href="">Mua ngay</a>
+  </div>
 </div>
 
 <div class="mySlides1 fade">
-  <img src="../Images/sanpham/sanphamok/anhdoc5.jpg" style="width:100%">
+  <img class="mgb" src="../Images/sanpham/sanphamok/anhdoc5.jpg" style="width:100%">
+  <div class="name-sp">
+    <p>Táo Hàn Quốc</p>
+    <a href="">Mua ngay</a>
+  </div>
 </div>
 
 <!-- Next and previous buttons -->
