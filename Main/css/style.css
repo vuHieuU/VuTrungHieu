@@ -155,8 +155,9 @@
 .product-category h3 {
     margin-top: 4px;
     color: #fff;
-    padding: 8px 0px;
+    padding: 8px 4px;
     text-align: center;
+    font-size: 16px;
     background-color: var(--color-text);
     /* padding: unset; */
     border-radius: 16px;
@@ -457,8 +458,8 @@ img {
     overflow: hidden;
     height: auto;
     padding: 20px;
-    margin: 50px 0px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    /* margin: 50px 0px; */
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
 }
 
 .blog-box {
@@ -512,10 +513,10 @@ p {
 /* Sale */
 /* footer */
 .footer {
-    margin-top: 40px;
+    margin-top: 40px;   
     position: relative;
     opacity: .9;
-    padding: 0px 140px;
+    padding: 0px 80px;
     padding-top: 40px;
     background-color: black;
     display: grid;
