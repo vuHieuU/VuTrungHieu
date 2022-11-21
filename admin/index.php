@@ -171,13 +171,12 @@ include "header.php";
                      $listtk = loadall_tk();
                      include "taikhoan/list.php";
                      break;
-                  // case 'bl';
-                  //       $listsp = loadall_sp();
-                  //       $listdm = loadall_dm();
-                  //       include "binhluan/listsp.php";
-                  //       break;
-                  case 'bl':
-                        $listbl = loadall_bl();
+                  case 'bl';
+                        $listsp = loadall_sp();
+                        $listdm = loadall_dm();
+                        include "binhluan/listsp.php";
+                        break;
+                  case 'listbl':
                         include "binhluan/listbl.php";
                            break;
                   case 'xoabl':
