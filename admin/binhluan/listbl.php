@@ -24,10 +24,14 @@
                 </tr>
             </thead>
             <tbody>
+            <?php
+                            $product_id=$_REQUEST['id'];
+                            $listbl = load_bl($product_id);
+                    ?>
                 <?php
                 foreach ($listbl as $bl) {
                     extract($bl);
-                    $link = "index.php?act=xoabl&id=" . $id;
+                    $link = "index.php?act=xoabl&id=" .$id;
                     echo '
                             <tr>
                                     <td><input type="checkbox" name="" id=""></td>
