@@ -53,7 +53,8 @@
         if (isset($_POST['btn_search'])) {
             $keyword = $_POST['search'];
             $sqlsearch = "SELECT * FROM products WHERE name LIKE '%$keyword%'";
-
+            $timkiem = $_POST[$sqlsearch];
+            var_dump($timkiem);
         ?>
             <h1>Sản phẩm tìm kiếm được</h1>
             <div class="food-list">
@@ -61,8 +62,13 @@
                 foreach ($kqsearch as $key => $value) {
                     $loadcart= "index.php?act=".$id;
                 ?>
+                    <div class="product-box">
+                        <a href="<?php echo $value['id'] ?>">
+                            <img src="../Images/sanpham/sanphamok/<?php echo $value['image'] ?>" alt="">
+                        </a>
                     <div class="food-item">
                         <img src="../Images/sanpham/sanphamok/<?php echo $value['image'] ?>" alt="">
+
                         <span class="name"><a href="<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a></span><br>
                         <span class="price"><a href="<?php echo $value['id'] ?>"><?php echo $value['price'] ?></a></span><br>
                         <div class="product-box-btn">
@@ -83,31 +89,32 @@
                 <div class="food-list">
                     <?php
                     $allsp = loadAll_sanpham_home();
-                    foreach ($allsp as $key => $value) {
-                    ?>
-                        <div class="food-item product-box">
-                            <a href="<?php echo $value['id'] ?>">
-                                <img src="../Images/sanpham/sanphamok/<?php echo $value['image'] ?>" alt="">
-                            </a>
-                            <span class="name"><a href="<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a></span>
-                            <span class="price"><a href="<?php echo $value['id'] ?>"><?php echo $value['price'] ?></a></span>
-                            <div class="product-box-btn">
-                                <form method="POST" action="/xampp/duan1-nhom2-web17320/view/thanhtoan.php?action=add&id=<?php echo $value["id"]; ?>">
-                                    <input type="hidden" name="hinh" value="<?php echo $value["image"]; ?>">
-                                    <input type="hidden" name="name" value="<?php echo $value["name"]; ?>" />
-                                    <input type="hidden" name="gia" value="<?php echo $value["price"]; ?>" />
-                                    <input type="number" name="soluong" min="1" max="10" value="1">
-                                    <input id="submit" type="submit" name="addcart" value="Add to Cart" />
-                                </form>
+                    foreach ($sphome as $sp) {
+                        extract($sp);
+                        $link = "index.php?act=detail&id=".$id;
+                        $loadsp = "index.php?act=listsp&cate_id=" . $id_cate;
+                        $img = $img_path . $image;
+                        echo '
+                                <div class="product-box">
+                                <a href="' . $link . '">
+                                <img src="' . $img . '" alt="">
+                                </a>
+                                <a style="text-decoration: none;" href="' . $loadsp . '"><button>' . $name_cate . '</button></a>
+                                <a href="' . $link . '">
+                                <p class="name">' . $name . '</p>
+                                <p class="price">' . $price . 'đ <del>' . $amount . 'đ</del></p>
+                                </a>
+                                <div class="product-box-btn">
+                                  <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                                </div>
                             </div>
-                        </div>
-
-                <?php
+                          
+                            ';
                     }
-                }
-                ?>
+                    }
+                    ?>
                 </div>
-            </div>
+           
     </div>
 </body>
 

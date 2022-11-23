@@ -141,7 +141,7 @@
 
 .food-item {
 	width: 29%;
-	height: 450px;
+	height: 520px;
 	margin: 10px;
 	border-radius: 20px;
 	overflow: hidden;
@@ -186,14 +186,14 @@
 }
 
 .product_like {
-	padding-left: 20px;
+	padding-left: 35px;
 }
 
 .product_like h3 {
     color: #fff;
     background-color: #0f9d58;
     padding: 10px;
-    width: 54%;
+    width: 58%;
 }
 
 .product_like ul li {
@@ -209,7 +209,7 @@
 }
 
 .top_blog {
-    padding-top: 20px;
+    padding:20px 0 0  35px
 }
 
 .top_blog h3 {
@@ -265,4 +265,23 @@
 .iii>i {
 	color: red;
 	font-size: 70px;
+}
+
+/*Top 5*/
+.top {
+	display: flex;
+	border: 1px solid gray;
+	width: 58%;
+}
+
+.top>a {
+	text-decoration: none;
+	padding-top: 25px;
+	padding-left: 5px;
+	color: #333;
+	font-size: 14px;
+}
+
+.top>a:hover {
+	color: #0f9d58;
 }

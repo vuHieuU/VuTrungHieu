@@ -12,6 +12,12 @@
    return $listsp;
    }
 
+   function loadsp_home_top5(){
+      $sql="select * from products where 1 order by status desc limit 0,5";
+      $listsp = pdo_query($sql);
+      return $listsp;
+      }
+
    function insert_sanpham($name,$price,$hinh,$mota,$soluong,$id_dm){
       $sql = "insert into products(name,price,image,content,amount,cate_id) values('$name','$price','$hinh','$mota','$soluong','$id_dm')";
       pdo_execute($sql);
@@ -42,15 +48,19 @@
    }
    function load_ten_dm($cate_id) {
       if($cate_id > 0){
+         $sql = "select * from category where id_cate=".$cate_id;
+         $dm = pdo_query_one($sql);
+         extract($dm);
+         return $name_cate;
+      }else{
+         return "";
+      }
       $sql = "select * from category where id_cate=".$cate_id;
       $dm = pdo_query_one($sql);
       extract($dm);
       return $name_cate;
-   }else{
-      return "";
    }
-   }
-
+   
    function loadAll_product1() {
       $sql = "select * from products where 1 order by id desc limit 0,6"; 
       $listsanpham = pdo_query($sql);

@@ -58,6 +58,12 @@
                     <p>Đơn Hàng</p>
                 </div>
             </a>
+            <a href="index.php?act=listcontact">
+                <div class="box-left-content">
+                    <i class="fa-solid fa-comments"></i>
+                    <p>Liên hệ</p>
+                </div>
+            </a>
 
             <!-- user -->
             <p style="margin-bottom: 4px;">ADMIN</p>
