@@ -119,14 +119,91 @@
                 </div>
             </div>
             <!--Bình luận -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-                    <script>
-                            $(document).ready(function(){                       
-                                        $("#binhluan").load("comment.php", {product_id: <?=$id?>});
-                    });
-                    </script>
-            <div class="cmt" id="binhluan">
-            
+            <div class="cmt">
+                <h2>Đánh giá</h2>
+                <form action="" method="POST">
+                    <div class="formbold-mb-3">
+
+
+                        <div class="form-comment">
+                            <div class="soluong-comment">32 Comment</div>
+
+                            <div class="form-addcmt">
+                                <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
+                                <div class="chucnang-cmt">
+                                    <input style="outline: none;" class="add-comment" type="text" name="" id="" placeholder="Nhập bình luận...">
+                                    <input type="submit" value="Comment">
+                                </div>
+                            </div>
+
+
+
+                            <div class="ome-comment">
+                                <div class="nd-comment">
+                                    <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
+                                    <div class="name-comment">
+                                        <p>Phạm Anh Dũng xau trai</p>
+                                    </div>
+                                    <p class="nd">Bạn coder tên Phạm Hùng đẹp trai quá <3< /p>
+                                </div>
+
+                                <div class="like-comment">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <i class="fa-solid fa-thumbs-down mgl"></i>
+                                    <p class="traloi">Trả lời</p>
+                                </div>
+                            </div>
+
+
+                            <div class="one-comment">
+                                <div class="nd-comment">
+                                    <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
+                                    <div class="name-comment">
+                                        <p>Phạm Anh Dũng xau trai</p>
+                                    </div>
+                                    <p class="nd">Bạn coder tên Phạm Hùng đẹp trai quá <3< /p>
+                                </div>
+
+                                <div class="like-comment">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <i class="fa-solid fa-thumbs-down mgl"></i>
+                                    <p class="traloi">Trả lời</p>
+                                </div>
+                            </div>
+
+                            <div class="one-comment">
+                                <div class="nd-comment">
+                                    <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
+                                    <div class="name-comment">
+                                        <p>Phạm Anh Dũng xau trai</p>
+                                    </div>
+                                    <p class="nd">Bạn coder tên Phạm Hùng đẹp trai quá <3< /p>
+                                </div>
+
+                                <div class="like-comment">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <i class="fa-solid fa-thumbs-down mgl"></i>
+                                    <p class="traloi">Trả lời</p>
+                                </div>
+                            </div>
+
+                            <div class="one-comment">
+                                <div class="nd-comment">
+                                    <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
+                                    <div class="name-comment">
+                                        <p>Phạm Anh Dũng xau trai</p>
+                                    </div>
+                                    <p class="nd">Bạn coder tên Phạm Hùng đẹp trai quá <3< /p>
+                                </div>
+
+                                <div class="like-comment">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <i class="fa-solid fa-thumbs-down mgl"></i>
+                                    <p class="traloi">Trả lời</p>
+                                </div>
+                            </div>
+                        </div>
+                </form>
             </div>
 
             <!--Hiển thị bình luận-->

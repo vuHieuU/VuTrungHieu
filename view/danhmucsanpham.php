@@ -21,6 +21,10 @@
         h1 {
             font-size: 45px;
         }
+        .title {
+            text-align: center;
+            padding: 20px;
+        }
     </style>
 </head>
 
@@ -34,61 +38,59 @@
     <?php include "header.php" ?>
 
     <div class="wrapper">
-        <div id="banner">
+        <<div id="banner">
             <div class="text_banner">
-                <h1>Danh mục sản phẩm</h1>
+                
             </div>
-        </div>
+    </div>
 
-        <!---Hiển thị danh mục -->
-        <div class="food-menu">
-            <button class="button_name"><a href="index.php?act=sanpham">Tất cả</a></button>
-            <?php
-            $dsdm = loadall_dm();
-            foreach ($dsdm as $dm) {
-                extract($dm);
-                $link="index.php?act=danhmucsanpham&madanhmuc=".$id;
-                echo'
-                <button class="button_name"><a href="'.$link.'">'.$name_cate.'</a></button>
-                ';
-            }
-            ?>
-        </div>
-
-
+    <!---Hiển thị danh mục -->
+    <div class="food-menu">
+        <button class="button_name"><i class="fa-solid fa-list-check"></i><a href="index.php?act=sanpham">Tất cả</a></button>
         <?php
-
+        $dsdm = loadall_dm();
+        foreach ($dsdm as $key => $value) {
         ?>
-        <h2>Sản phẩm tìm kiếm được</h2>
-        <div class="food-list">
-            <?php
-            $dsproduct = loadAll_sanpham("", $madm);
-            //var_dump($dsproduct);
-            foreach ($dsproduct as $key => $value) {
-                $loadcart = "index.php?act=" . $id;
-            ?>
-                <div class="food-item">
-                    <a href="<?php echo $value['id'] ?>">
-                        <img src="../Images/sanpham/sanphamok/<?php echo $value['image'] ?>" alt="">
-                    </a>
+            <button class="button_name"><a href="index.php?act=danhmucsanpham&madanhmuc=<?php echo $value['id_cate'] ?>"><?php echo $value['name_cate'] ?></a></button>
+        <?php
+        }
+        ?>
+    </div>
 
-                    <span class="name"><a href="<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a></span><br>
-                    <span class="price"><a href="<?php echo $value['id'] ?>"><?php echo $value['price'] ?></a></span><br>
-                    <div class="product-box-btn">
-                        <form method="POST" action="$loadcart">
-                            <input type="hidden" name="hinh" value="<?php echo $value["image"]; ?>">
-                            <input type="hidden" name="name" value="<?php echo $value["name"]; ?>" />
-                            <input type="hidden" name="gia" value="<?php echo $value["price"]; ?>" />
-                            <input type="number" name="soluong" min="1" max="10" value="1">
-                            <input id="submit" type="submit" name="addcart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />
-                        </form>
-                    </div>
+
+    <?php
+
+
+    ?>
+    <h2 class="title">Sản phẩm tìm kiếm được</h2>
+    <div class="food-list">
+        <?php
+        $dsproduct = loadAll_sanpham("", $madm);
+        //var_dump($dsproduct);
+        foreach ($dsproduct as $sp) {
+            extract($sp);
+            $link = "index.php?act=detail&id=" . $id;
+            $loadsp = "index.php?act=listsp&cate_id=" . $id_cate;
+            $img = $img_path . $image;
+            //$loadcart = "index.php?act=" . $id;
+            echo '
+                <div class="product-box">
+                <a href="' . $link . '">
+                <img src="' . $img . '" alt="">
+                </a>
+                <a style="text-decoration: none;" href="' . $loadsp . '"><button>' . $name_cate . '</button></a>
+                <a href="' . $link . '">
+                <p class="name">' . $name . '</p>
+                <p class="price">' . $price . 'đ <del>' . $amount . 'đ</del></p>
+                </a>
+                <div class="product-box-btn">
+                  <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
                 </div>
-            <?php
+            </div>
+                ';
+        }
+        ?>
 
-            }
-            ?>
-        </div>
 
     </div>
 

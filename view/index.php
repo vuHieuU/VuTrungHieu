@@ -7,6 +7,7 @@
     include "../model/taikhoan.php";
     $sphome = loadsp_home();
     $listdm = loadall_dm();
+    
     session_start();
     include "header.php";
     include "global.php";

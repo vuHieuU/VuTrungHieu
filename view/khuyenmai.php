@@ -21,6 +21,7 @@
         h1 {
             padding: 10px;
         }
+
     </style>
 </head>
 
@@ -30,10 +31,7 @@
         <div id="banner">
             <div class="text_banner">
                 <h1>Giảm giá cực sốc</h1>
-                <form action="" method="POST">
-                    <input type="text" name="search" placeholder="Tìm kiếm sản phẩm ...">
-                    <button type="submit" name="btn_search" style="border: none;"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
+                
             </div>
         </div>
 
@@ -140,29 +138,37 @@
             <div class="food-list">
                 <?php
                 $allsp = loadAll_product();
-                foreach ($allsp as $key => $value) {
-
-                ?>
+                foreach ($sphome as $sp) {
+                    extract($sp);
+                    $link = "index.php?act=detail&id=" . $id;
+                    $loadsp = "index.php?act=listsp&cate_id=" . $id_cate;
+                    $img = $img_path . $image;
+                    echo '
                     <div class="food-item">
-                        <div class="sale">
+                        
+                       
+                            <div class="product-box">
+                            <div class="sale">
                             <div class="iii">
                                 <i width=" 40px" class="fas fa-bookmark"></i>
                             </div>
                             <p>10%</p>
                         </div>
-                        <a href="<?php echo $value['id'] ?>">
-                            <img src="../Images/sanpham/sanphamok/<?php echo $value['image'] ?>" alt="">
-                        </a>
-
-                        <span class="name"><a href="<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a></span><br>
-                        <span class="price"><a href="<?php echo $value['id'] ?>"><?php echo $value['price'] ?></a></span><br>
-                        <div class="product-box-btn">
-                            <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                            <a href="' . $link . '">
+                            <img src="' . $img . '" alt="">
+                            </a>
+                            <a style="text-decoration: none;" href="' . $loadsp . '"><button>' . $name_cate . '</button></a>
+                            <a href="' . $link . '">
+                            <p class="name">' . $name . '</p>
+                            <p class="price">' . $price . 'đ <del>' . $amount . 'đ</del></p>
+                            </a>
+                            <div class="product-box-btn">
+                              <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                            </div>
                         </div>
-
+                            
                     </div>
-                <?php
-
+                    ';
                 }
 
                 ?>
@@ -171,13 +177,33 @@
             <div class="boxright">
                 <div class="product_like">
                     <h3>Top 5 sản phẩm yêu thích</h3>
-                    <ul>
+                    <?php
+                     $dstop5 = loadsp_home_top5();
+                    foreach ($dstop5 as $sp) {
+                       
+                        extract($sp);
+                        $link = "index.php?act=detail&id=" . $id;
+                        $loadsp = "index.php?act=listsp&cate_id=" . $id_cate;
+                        $img = $img_path . $image;
+                        echo '
+                                <div class="top">
+                                    <img width="24%" src="' . $img . '" alt="">
+                                    <a href="'.$link.'">' . $name . '</a>
+                                </div>
+                            ';
+                    }
+                    ?>
+
+                    <!-- <ul>
+                         
                         <li><a href="">Đậu bắp</a></li>
                         <li><a href="">Củ cải trắng</a></li>
                         <li><a href="">Cần tây</a></li>
                         <li><a href="">Táo tàu</a></li>
                         <li><a href="">Ớt chuông</a></li>
-                    </ul>
+                    </ul> -->
+                    
+                    
                 </div>
                 <div class="top_blog">
                     <h3>Bài viết gần đây</h3>
