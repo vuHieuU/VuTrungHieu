@@ -21,6 +21,11 @@
 
                         <div class="form-comment">
                             <div class="soluong-comment">32 Comment</div>
+
+                            <?php
+                             if(isset($_SESSION['name'])){
+                              extract($_SESSION['name']);
+                            ?>
                             <form action="<?=$_SERVER['PHP_SELF'];?>" method="POST">
                             <div class="form-addcmt">
                                 <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
@@ -31,6 +36,23 @@
                                 </div>
                             </div>
                             </form>
+                            <?php
+                            }else{
+                             ?>
+                                   
+                            <div class="form-addcmt">
+                                <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
+                                <div class="chucnang-cmt">
+                                    <input type="hidden" name="product_id" value="<?=$product_id?>">
+                                    <input style="outline: none;" class="add-comment" type="text" name="content" placeholder="Nhập bình luận...">
+                                    <input type="submit" onclick="show()" value="Comment" name="gui">
+                                </div>
+                            </div>
+                        
+
+                             <?php
+                            }
+                            ?>
                             <?php
                                     if(isset($_POST['gui'])&&($_POST['gui'])){
                                         $content=$_POST['content'];
