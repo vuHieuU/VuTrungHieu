@@ -4,10 +4,10 @@
         pdo_execute($sql);
     }
     function load_bl($product_id){
-        $sql = "select * from comment where 1";
+        $sql = "select * from comment inner join user on comment.user_id=user.id where 1";
         if($product_id>0)
         $sql.=" and product_id='".$product_id."'";
-        $sql.=" order by id desc limit 0,10";
+        $sql.=" order by comment.id desc limit 0,10";
         $listbl=pdo_query($sql);
         return  $listbl;
        }

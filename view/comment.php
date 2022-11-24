@@ -50,7 +50,7 @@
                                 <div class="nd-comment">
                                     <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
                                     <div class="name-comment">
-                                        <p>'.$user_id.'</p>
+                                        <p>'.$name.'</p>
                                     </div>
                                     <p class="nd">'.$content.'</p>
                                 </div>

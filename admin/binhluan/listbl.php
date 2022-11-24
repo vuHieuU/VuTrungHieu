@@ -12,12 +12,11 @@
 <body>
 
 <h3 style="margin-top: 10px;">Danh Sách Bình Luận</h3>
-
         <table>
             <thead>
                 <tr>
                     <th></th>
-                    <th>Mã Bình Luận</th>
+                    <th>Người Bình Luận</th>
                     <th>Nội Dung</th>
                     <th>Mã Sản Phẩm</th>
                     <th></th>
@@ -27,15 +26,17 @@
             <?php
                             $product_id=$_REQUEST['id'];
                             $listbl = load_bl($product_id);
+                          
                     ?>
                 <?php
                 foreach ($listbl as $bl) {
                     extract($bl);
+                 
                     $link = "index.php?act=xoabl&id=" .$id;
                     echo '
                             <tr>
                                     <td><input type="checkbox" name="" id=""></td>
-                                    <td>'.$user_id.'</td>
+                                    <td>'.$name.'</td>
                                     <td>' . $content . '</td>
                                     <td>' . $product_id . '</td>
                                     <td style="text-align: center;">
