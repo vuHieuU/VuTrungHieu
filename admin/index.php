@@ -19,11 +19,13 @@ if (isset($_GET['act'])) {
          include "danhmuc/list.php";
          break;
       case 'adddm':
+     
          if (isset($_POST['them']) && ($_POST['them'])) {
             $tenloai = $_POST['name_cate'];
             insert_danhmuc($tenloai);
-            $listdm = loadall_dm();
+            $listdm = loadall_dm(); 
          }
+       
          include "danhmuc/add.php";
          break;
       case 'suadm':

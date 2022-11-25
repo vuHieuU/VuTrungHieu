@@ -26,13 +26,17 @@
             <?php
                             $product_id=$_REQUEST['id'];
                             $listbl = load_bl($product_id);
+                            $listbl_all=loadall_bl();
                           
                     ?>
                 <?php
-                foreach ($listbl as $bl) {
+                foreach ($listbl_all as $bl) {
                     extract($bl);
                  
                     $link = "index.php?act=xoabl&id=" .$id;
+                }
+                foreach( $listbl as $bl1){
+                    extract($bl1);
                     echo '
                             <tr>
                                     <td><input type="checkbox" name="" id=""></td>
@@ -51,7 +55,7 @@
             </tbody>
         </table>
         </form>
-        <input type="hidden" name="id" value="<?=$id?>">
+  
     </div>
     </div>
     <script>
