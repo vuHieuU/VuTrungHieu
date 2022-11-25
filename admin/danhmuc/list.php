@@ -63,11 +63,9 @@
                 var remove = confirm("Bạn có muốn xóa không?");
                 if(remove){ 
                     return true;
-                    console.log="oke"
-                }
-                else{
+                } else{
                     return false;
-                    console.log="khong"
+                  
                 }   
                 }
     </script>

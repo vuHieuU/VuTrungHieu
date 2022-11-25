@@ -45,7 +45,7 @@
                                     <td>' . $product_id . '</td>
                                     <td style="text-align: center;">
                                         <a style="text-decoration: none;" href="' . $link . '">
-                                            <input type="button" class="edit" value="Xóa">
+                                            <input onclick="Delete()" type="button" class="edit" value="Xóa">
                                         </a>
                                     </td>
                             </tr>   

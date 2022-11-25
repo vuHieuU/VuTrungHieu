@@ -78,7 +78,7 @@
                                 <input type="button" class="edit" value="Sửa">
                             </a>
                             <a style="text-decoration: none;" href="' . $xoasp . '">
-                                <input type="button" class="delete" value="Xóa">
+                                <input onclick="Delete()" type="button" class="delete" value="Xóa">
                             </a>
 
                         </td>
@@ -98,6 +98,19 @@
         </form>
     </div>
     </div>
+    <script>
+        function Delete(){
+                var remove = confirm("Bạn có muốn xóa không?");
+                if(remove){ 
+                    return true;
+                    console.log="oke"
+                }
+                else{
+                    return false;
+                    console.log="khong"
+                }   
+                }
+    </script>
 </body>
 
 </html>
