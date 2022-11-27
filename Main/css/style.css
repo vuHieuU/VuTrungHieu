@@ -697,7 +697,7 @@ p {
 
 .gach {
     border-top: 3px #86B70B solid;
-    width: 8.75em;
+    width: 140px;
     position: absolute;
     left: 11.25em;
 }
@@ -747,10 +747,13 @@ p {
 }
 
 .forgot {
-    margin-top: 20px;
+    margin-top: 10px;
     text-align: center;
     color: gray;
     text-decoration: none;
+    border: 0;
+    font-size: 16px;
+    background-color: white;
 }
 
 .forgot a:hover {
@@ -763,5 +766,40 @@ p {
     position: absolute;
     right: 15px;
 }
-
+.searchtk{
+    color: #86B70B;
+    text-align: center;
+}
+.forgot1{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    font-size: 16px;
+    width: 80%;
+    margin: 20px auto;
+}
+.forgot1 input{
+    
+    outline: 0;
+    font-size: 18px;
+    width: 100%;
+    margin-left: 30px;
+    border: 0;
+}
+.nuttk input{
+    border: none;
+    padding: 5px 20px;
+    position: relative;
+    left: 320px;
+}
+.timtk{
+    background-color: #86B70B;
+    color: white;
+}
+#timkiem{
+    position: absolute;
+    transition: 1s;
+    top: 20%;
+    transform: translateY(-300px);
+}
 /* ********* */

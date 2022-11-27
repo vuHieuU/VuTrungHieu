@@ -105,7 +105,7 @@
       </div>
        <!--  ********** -->
        <div class="nav" id="nav">
-            <div class="title">
+            <div class="title" id="title">
                 <input type="button" onclick="dangnhap1()" value="Đăng Nhập" id="iplg">|
                 <input type="button" value="Đăng Kí" onclick="dangki()" id="iprg">
                 <i class="fa-solid fa-x" onclick="out()"></i>
@@ -128,7 +128,7 @@
                     <input type="submit" value="Đăng Nhập" class="login" name="dangnhap">
                 </div>
                 <div class="forgot">
-                    <a href="" class="forgot">Quên mật khẩu ?</a>
+                    <button onclick="forgot()" class="forgot">Quên mật khẩu</button>
                 </div>
                 
             </form>
@@ -157,6 +157,19 @@
                     <input type="submit" id="ipdangki" value="Đăng Kí" class="login " name="dangki">
                 </div>
             </form>
+            <form action="" id="timkiem" class="">
+            <i class="fa-solid fa-x" onclick="out1()"></i>
+               <h2 class="searchtk">Tìm tài khoản của bạn ?</h2>
+                <p>Vui lòng nhập email hoặc số di động để tìm kiếm tài khoản của bạn.</p>
+                <div class="forgot1">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="text" class="" placeholder="Nhập Email hoặc số điện thoại di dộng">
+                </div>
+                <div class="nuttk">
+                    <input type="submit" class="timtk" value="Tìm kiếm">
+                    <input type="button" value="Hủy" onclick="unforgot()">
+                </div>
+            </form>
 </div>
         <script>
             var dangky = document.getElementById("dangki")
@@ -165,6 +178,65 @@
             var ipdk = document.getElementById("iprg")
             var iplg = document.getElementById("iplg")
             var nav = document.getElementById("nav")
+            var tk = document.getElementById("timkiem")
+            var title = document.getElementById("title")
+            function forgot(){
+                tk.style.transform="translateY(0px)"
+                tk.style.transition=".5s"
+                dangnhap.style.position="relative"
+                dangnhap.style.transform="translateY(600px)"
+                dangnhap.style.transition=".5s"
+                title.style.transform="translateY(500px)"
+                title.style.transition=".5s"
+                gach.style.transform="translateY(500px)"
+                gach.style.transition=".5s"
+                nav.style.transition="1s"
+                nav.style.height="230px"    
+            }
+            function out1(){
+                tk.style.transform="translateY(-300px)"
+                tk.style.transition=".5s"
+                title.style.transform="translateY(0px)"
+                title.style.transition=".5s"
+                gach.style.transform="translateY(0px)"
+                gach.style.transition=".5s"
+                nav.style.transform="translateY(-700px)"
+               ipdk.style.color="black"
+                ipdk.style.transition="1s"
+                iplg.style.color="#86B70B"
+                iplg.style.transition="1s"
+                dangnhap.style.position="relative"
+                dangky.style.position="absolute"
+                dangky.style.left="100%"
+                dangky.style.transform="translateY(-275px)"
+                dangky.style.transition="1s"
+                dangnhap.style.position="relative"
+                dangnhap.style.left="-0%"
+                dangnhap.style.transform="translateX(0px)"
+                dangky.style.transition="1s"
+                gach.style.left="195px"
+                gach.style.width="115px"
+                gach.style.transition="1s"
+                nav.style.transition="0.3s"
+                nav.style.height="360px"
+            }
+            function unforgot(){
+                tk.style.transform="translateY(-300px)"
+                tk.style.transition=".5s"
+                dangnhap.style.position="relative"
+                dangnhap.style.right="40%"
+                dangnhap.style.transform="translateX(210px)"
+                dangnhap.style.transform="translateY(-300px)"
+                dangnhap.style.left="-0%"
+                dangnhap.style.transform="translateX(0px)"
+                dangnhap.style.transition=".5s"
+                title.style.transform="translateY(0px)"
+                title.style.transition=".5s"
+                gach.style.transform="translateY(0px)"
+                gach.style.transition=".5s"
+                nav.style.transition="1s"
+                nav.style.height="360px"
+            }
             function dangki(){
                 // dangky.style.display="block"
                 // dangnhap.style.display="none"
@@ -222,8 +294,8 @@
                 dangnhap.style.left="-0%"
                 dangnhap.style.transform="translateX(0px)"
                 dangky.style.transition="1s"
-                gach.style.left="195px"
-                gach.style.width="115px"
+                gach.style.left="11.25em"
+                gach.style.width="140px"
                 gach.style.transition="1s"
                 nav.style.transition="1s"
                 nav.style.height="360px"
