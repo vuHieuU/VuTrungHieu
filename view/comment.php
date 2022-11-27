@@ -28,7 +28,7 @@
                             ?>
                             <form action="<?=$_SERVER['PHP_SELF'];?>" method="POST">
                             <div class="form-addcmt">
-                                <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
+                                <div class="anh"><img src="../Images/avatar/Avatar-Facebook-trắng.jpg" alt=""></div>
                                 <div class="chucnang-cmt">
                                     <input type="hidden" name="product_id" value="<?=$product_id?>">
                                     <input style="outline: none;" class="add-comment" type="text" name="content" id="" placeholder="Nhập bình luận...">
@@ -41,7 +41,7 @@
                              ?>
                                    
                             <div class="form-addcmt">
-                                <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
+                                <div class="anh"><img src="../Images/avatar/Avatar-Facebook-trắng.jpg" alt=""></div>
                                 <div class="chucnang-cmt">
                                     <input type="hidden" name="product_id" value="<?=$product_id?>">
                                     <input style="outline: none;" class="add-comment" type="text" name="content" placeholder="Nhập bình luận...">
@@ -70,7 +70,7 @@
                       
                             <div class="ome-comment">
                                 <div class="nd-comment">
-                                    <div class="anh"><img src="../Images/avatar/dungdeptrai.jpg" alt=""></div>
+                                    <div class="anh"><img src="../Images/avatar/Avatar-Facebook-trắng.jpg" alt=""></div>
                                     <div class="name-comment">
                                         <p>'.$name.'</p>
                                     </div>
