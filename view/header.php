@@ -157,20 +157,27 @@
                     <input type="submit" id="ipdangki" value="Đăng Kí" class="login " name="dangki">
                 </div>
             </form>
-            <form action="" id="timkiem" class="">
+            <form action="index.php?act=quenmk" method="POST" id="timkiem" class="">
             <i class="fa-solid fa-x" onclick="out1()"></i>
                <h2 class="searchtk">Tìm tài khoản của bạn ?</h2>
                 <p>Vui lòng nhập email hoặc số di động để tìm kiếm tài khoản của bạn.</p>
                 <div class="forgot1">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="user" required class="" placeholder="Nhập Tài khoản">
+                </div>
+                <div class="forgot1">
                     <i class="fa-solid fa-envelope"></i>
-                    <input type="text" class="" placeholder="Nhập Email hoặc số điện thoại di dộng">
+                    <input type="text" name="email" required class="" placeholder="Nhập Email">
                 </div>
                 <div class="nuttk">
-                    <input type="submit" class="timtk" value="Tìm kiếm">
+                    <input type="submit" class="timtk" name="send" value="Gửi">
                     <input type="button" value="Hủy" onclick="unforgot()">
                 </div>
+                
             </form>
+            
 </div>
+
         <script>
             var dangky = document.getElementById("dangki")
             var dangnhap = document.getElementById("dangnhap")
@@ -191,10 +198,10 @@
                 gach.style.transform="translateY(500px)"
                 gach.style.transition=".5s"
                 nav.style.transition="1s"
-                nav.style.height="230px"    
+                nav.style.height="340px"    
             }
             function out1(){
-                tk.style.transform="translateY(-300px)"
+                tk.style.transform="translateY(-400px)"
                 tk.style.transition=".5s"
                 title.style.transform="translateY(0px)"
                 title.style.transition=".5s"
@@ -221,7 +228,7 @@
                 nav.style.height="360px"
             }
             function unforgot(){
-                tk.style.transform="translateY(-300px)"
+                tk.style.transform="translateY(-400px)"
                 tk.style.transition=".5s"
                 dangnhap.style.position="relative"
                 dangnhap.style.right="40%"

@@ -17,4 +17,15 @@
         </script>
         <?php
     }
+    function khongtontai(){
+        ?><script>
+            alert("Tài khoản hoặc mật khẩu không tồn tại!!")
+        </script>
+        <?php
+    }
+    function tbpass($password){
+
+            echo"<script>alert('Mật khẩu của bạn là: $password')</script>";
+
+    }
 ?>

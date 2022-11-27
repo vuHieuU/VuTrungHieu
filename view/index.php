@@ -77,7 +77,20 @@
                     include "main.php";
                 }
                 break;
-
+            case 'quenmk':
+                if(isset($_POST['send'])){
+                    $user = $_POST['user'];
+                    $email = $_POST['email'];
+                    $checkpass=check_pass($user,$email);
+                    if(is_array($checkpass)){
+                        $password = $checkpass['password'];
+                        tbpass($password);
+                    }else{
+                        khongtontai();
+                    }
+                }
+                include "main.php";
+                break;
             
             case 'sanpham':
                 include "product.php";

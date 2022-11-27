@@ -30,4 +30,9 @@
       $sp=pdo_query_one($sql);
       return $sp;
     }
+    function check_pass($user,$email){
+        $sql = "select * from user where name='".$user."' and email ='".$email."'";
+        $sp = pdo_query_one($sql);
+        return $sp;
+    }
 ?>
