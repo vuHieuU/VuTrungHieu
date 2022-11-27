@@ -4,6 +4,7 @@
     session_start();
     $product_id = $_REQUEST['product_id'];
     $dsbl = load_bl($product_id);
+    $soluongbl = count($dsbl);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +21,7 @@
 
 
                         <div class="form-comment">
-                            <div class="soluong-comment">32 Comment</div>
+                            <div class="soluong-comment"><?=$soluongbl?> Comment</div>
 
                             <?php
                              if(isset($_SESSION['name'])){
