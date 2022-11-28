@@ -11,6 +11,10 @@
       <img src="../Images/slideshow/slideshow3.jpg" style="width:100%">
     </div>
   </div>
+  <div class="container-title">
+    <p>Trang Chủ/</p>
+    <p>Danh Mục: <b>Hoa Quả Tươi</b></p>
+  </div>
   <div style="text-align:center">
     <span class="dot"></span>
     <span class="dot"></span>

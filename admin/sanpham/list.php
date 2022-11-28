@@ -12,10 +12,8 @@
 <body>
     <div class="borderlist">
 
-    <h3 style="margin-top: 10px;">Danh Sách Sản Phẩm</h3>
-
-        <form class="search" action="index.php?act=listdm" method="POST">
-        <input type="text" name="kyw">
+        <h3 style="margin-top: 10px;">Danh Sách Sản Phẩm</h3>
+        <form action="#" class="searchS" method="POST">
             <select name="cate_id" id="">
                 <option value="0" selected>Tất cả</option>
                 <?php
@@ -24,17 +22,13 @@
                     echo '<option value="' . $id_cate . '">' . $name_cate . '</option>';
                 }
                 ?>
-                </select>
-                <input type="submit" name="listok">
-                
-                <!-- <input type="submit" name="listok"><i class="fa-solid fa-magnifying-glass"></i> -->
-            
-
+            </select>
+            <div class="searchS-text">
+                <input type="text" name="kyw" id="">
+                <button name="listok"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
         </form>
-
-      
         <style>
-
         </style>
         <form action="index.php?act=addsp" method="POST">
             <table>
@@ -99,17 +93,16 @@
     </div>
     </div>
     <script>
-        function Delete(){
-                var remove = confirm("Bạn có muốn xóa không?");
-                if(remove){ 
-                    return true;
-                    console.log="oke"
-                }
-                else{
-                    return false;
-                    console.log="khong"
-                }   
-                }
+        function Delete() {
+            var remove = confirm("Bạn có muốn xóa không?");
+            if (remove) {
+                return true;
+                console.log = "oke"
+            } else {
+                return false;
+                console.log = "khong"
+            }
+        }
     </script>
 </body>
 
