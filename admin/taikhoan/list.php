@@ -25,7 +25,7 @@
             </select>
             <div class="searchS-text">
                 <input type="text" name="kyw" id="">
-                <button name="listok"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input type="submit" name="listok">
             </div>
         </form>
 

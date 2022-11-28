@@ -12,21 +12,6 @@
 <body>
 
 <h3 style="margin-top: 10px;">Danh Sách Danh Mục</h3>
-<form action="#" class="searchS" method="POST">
-            <select name="cate_id" id="">
-                <option value="0" selected>Tất cả</option>
-                <?php
-                foreach ($listdm as $danhmuc) {
-                    extract($danhmuc);
-                    echo '<option value="' . $id_cate . '">' . $name_cate . '</option>';
-                }
-                ?>
-            </select>
-            <div class="searchS-text">
-                <input type="text" name="kyw" id="">
-                <button name="listok"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
-        </form>
         <table>
             <thead>
                 <tr>

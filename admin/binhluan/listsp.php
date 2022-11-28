@@ -13,7 +13,7 @@
     <div class="borderlist">
 
     <h3 style="margin-top: 10px;">Danh Sách Bình Luận</h3>
-    <form action="#" class="searchS" method="POST">
+    <form action="index.php?act=listblS" class="searchS" method="POST">
             <select name="cate_id" id="">
                 <option value="0" selected>Tất cả</option>
                 <?php
@@ -25,7 +25,7 @@
             </select>
             <div class="searchS-text">
                 <input type="text" name="kyw" id="">
-                <button name="listok"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input type="submit" name="listok">
             </div>
         </form>
         <style>

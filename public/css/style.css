@@ -51,7 +51,7 @@
     border: none;
 }
 
-.searchS-text button{
+.searchS-text input[type=submit]{
     padding: 3px;
     background-color: unset;
     border: none;
