@@ -13,13 +13,13 @@
     <div class="borderlist">
 
     <h3 style="margin-top: 10px;">Danh Sách Thành Viên</h3>
-    <form action="#" class="searchS" method="POST">
+    <form action="index.php?act=listStk" class="searchS" method="POST">
             <select name="cate_id" id="">
                 <option value="0" selected>Tất cả</option>
                 <?php
-                foreach ($listdm as $danhmuc) {
-                    extract($danhmuc);
-                    echo '<option value="' . $id_cate . '">' . $name_cate . '</option>';
+                foreach ($listtk as $tk) {
+                    extract($tk);
+                    echo '<option value="' . $id . '">' . $role . '</option>';
                 }
                 ?>
             </select>

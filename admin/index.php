@@ -128,6 +128,18 @@ if (isset($_GET['act'])) {
          $listsp = loadAll_sanpham($kyw, $iddm);
          include "sanpham/list.php";
          break;
+      case 'listSbl':
+         if (isset($_POST['listok']) && ($_POST['listok'])) {
+            $kyw = $_POST['kyw'];
+            $iddm = $_POST['cate_id'];
+         } else {
+            $kyw = "";
+            $iddm = 0;
+         }
+         $listdm = loadall_dm();
+         $listsp = loadAll_sanpham($kyw, $iddm);
+         include "binhluan/listsp.php";
+         break;
       case 'tk':
          $listtk = loadall_tk();
          include "taikhoan/list.php";
