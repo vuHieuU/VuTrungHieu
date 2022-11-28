@@ -37,19 +37,19 @@
                 }
                 foreach( $listbl as $bl1){
                     extract($bl1);
-                    echo '
+                    ?>
                             <tr>
                                     <td><input type="checkbox" name="" id=""></td>
-                                    <td>'.$name.'</td>
-                                    <td>' . $content . '</td>
-                                    <td>' . $product_id . '</td>
+                                    <td><?php echo $name ?></td>
+                                    <td><?php echo $content ?></td>
+                                    <td><?php echo $product_id ?></td>
                                     <td style="text-align: center;">
-                                        <a style="text-decoration: none;" href="' . $link . '">
-                                            <input onclick="Delete()" type="button" class="edit" value="Xóa">
+                                        <a style="text-decoration: none;" href="<?php echo $link ?>">
+                                            <input onclick="return confirm('Bạn có chắc chắn muốn xóa?')" type="button" class="edit" value="Xóa">
                                         </a>
                                     </td>
                             </tr>   
-                        ';
+                    <?php
                 }
                 ?>
             </tbody>
@@ -58,15 +58,6 @@
   
     </div>
     </div>
-    <script>
-        function Delete(){
-                var remove = confirm("Bạn có muốn xóa không?");
-                if (remove)
-                    return true;
-                else
-                    return false;
-                }
-    </script>
 </body>
 
 </html>

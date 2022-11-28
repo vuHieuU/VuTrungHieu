@@ -5,6 +5,9 @@
     include "../model/sanpham.php";
     include "../model/thongbao.php";
     include "../model/taikhoan.php";
+    include "../model/contact.php";
+    include "../model/binhluan.php";
+
     $sphome = loadsp_home();
     $listdm = loadall_dm();
     
@@ -77,6 +80,7 @@
                     include "main.php";
                 }
                 break;
+    // <<<<<<< Updatedupstream
             case 'quenmk':
                 if(isset($_POST['send'])){
                     $user = $_POST['user'];
@@ -92,6 +96,21 @@
                 include "main.php";
                 break;
             
+// =======
+
+            case 'sbcontact':
+                if(isset($_POST['sbcontact'])&&($_POST['sbcontact'])) {
+                    $user = $_POST['user'];
+                    $email = $_POST['email'];
+                    $title = $_POST['title'];
+                    $note = $_POST['note'];
+                    add_contact($user,$email,$title,$note);
+                    $thongbao = "Đã đăng kí thành công!";
+                }
+                include 'contact.php';
+                break;
+
+// >>>>>>> Stashed changes
             case 'sanpham':
                 include "product.php";
                 break;
