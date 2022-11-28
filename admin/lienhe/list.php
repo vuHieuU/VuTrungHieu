@@ -16,17 +16,16 @@
     <h3 style="margin-top: 10px;">Danh Sách liên hệ</h3>
 
 
-        <form action="index.php?act=addtk" method="POST">
+        <form action="" method="POST">
             <table>
                 <thead>
                     <tr>
+                        <th></th>
                         <th>id</th>
                         <th>Name</th>
                         <th>Email</th>
                         <th>Title</th>
                         <th>Note</th>
-                        <th>Sửa</th>
-                        <th>Xóa</th>
                         <th><i class="fa-solid fa-gear"></i></th>
                     </tr>
                 </thead>
@@ -35,26 +34,27 @@
                     
                     foreach ($listcontact as $contact) {
                         extract($contact);
-                        $suatk = "index.php?act=suatk&id=" . $id;
-                        $xoatk = "index.php?act=xoatk&id=" . $id;
-                        echo '
+                        $suatk = "index.php?act=suacontact&id=" . $id;
+                        $xoacontact = "index.php?act=xoacontact&id=" . $id;
+                       ?>
                                             <tr>
                                             <td><input type="checkbox" name="" id=""></td>
-                                            <td>' . $id . '</td>
-                                            <td>' . $name . '</td>
-                                            <td>' . $email . '</td>
-                                            <td>' . $title . '</td>
-                                            <td>' . $note . '</td>
+                                            <td><?php echo $id ?> </td>
+                                            <td><?php echo $name ?> </td>
+                                            <td><?php echo $email ?> </td>
+                                            <td><?php echo $title ?> </td>
+                                            <td><?php echo $note ?> </td>
                                             <td style="text-align: center;">
-                                                <a style="text-decoration: none;" href="' . $suatk . '">
+                                                <a style="text-decoration: none;" href="<?php echo $suatk ?>">
                                                     <input type="button" class="edit" value="Sửa">
                                                 </a>
-                                                <a style="text-decoration: none;" href="' . $xoatk . '">
-                                                    <input type="button" class="delete" value="Xóa">
+                                                <a style="text-decoration: none;" href="<?php echo $xoacontact ?>">
+                                                    <input onclick="return confirm('Bạn có chắc chắn muốn xóa nó không')" type="button" class="delete" value="Xóa">
                                                 </a>
                                             </td>
                                     </tr>  
-                                            ';
+                                            
+                    <?php
                     }
                     ?>
                 </tbody>
@@ -63,11 +63,11 @@
                 <input type="button" value="Chọn Tất Cả">
                 <input type="button" value="Bỏ Chọn Tất Cả">
                 <input type="button" value="Xóa Các Mục Đã Chọn">
-                <a href="index.php?act=addtk"><input type="button" value="Nhập Thêm"></a>
             </div>
         </form>
     </div>
     </div>
+   
 </body>
 
 </html>

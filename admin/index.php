@@ -211,12 +211,41 @@ if (isset($_GET['act'])) {
          include "listbill.php";
          break;
 
-      case 'listcontact';
+
+      case 'listcontact' :
          $listcontact = loadall_contact();
-         include "./lienhe/list.php";
+         include "lienhe/list.php";
+         break;
+      case 'xoacontact' :
+         if (isset($_GET['id']) && ($_GET['id'])) {
+            $id = $_GET['id'];
+            delete_contact($id);
+         }
+         $listcontact = loadall_contact();
+         include "lienhe/list.php";
          break;
 
-         
+      case 'suacontact' :
+         if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+            $id = $_GET['id'];
+            $contact = loadone_contact($id);
+         }
+         include 'lienhe/update.php';
+         break;
+      
+      case 'updatect' :
+         if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+            $id = $_POST['id'];
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $title = $_POST['title'];
+            $note = $_POST['note'];
+            update_contact($id,$name,$email,$title,$note);
+            $listcontact = loadall_contact();
+         }       
+         include "lienhe/list.php";
+         break;
+
       default:
 ?><script>
             var mau = document.getElementById("mau")

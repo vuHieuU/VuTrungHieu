@@ -27,23 +27,24 @@
                     extract($dm);
                     $suadm = "index.php?act=suadm&id=" . $id_cate;
                     $xoadm = "index.php?act=xoadm&id=" . $id_cate;
-                    echo '
+                   ?>
                             <tr>
                                     <td><input type="checkbox" name="" id=""></td>
-                                    <td>' . $id_cate .  '</td>
-                                    <td>' . $name_cate . '</td>
+                                    <td> <?php echo $id_cate ?></td>
+                                    <td><?php echo $name_cate ?></td>
                                     <td style="text-align: center;">
-                                        <a style="text-decoration: none;" href="' . $suadm . '">
+                                        <a style="text-decoration: none;" href="<?php echo $suadm ?>">
                                             <input type="button" class="edit" value="Sửa">
                                         </a>
-                                        <a style="text-decoration: none;" href="' . $xoadm . '" >
-                                            <input onclick="Delete()" type="button" class="delete" value="Xóa">
+                                        <a style="text-decoration: none;" href="<?php echo $xoadm ?>" >
+                                            <input onclick="return confirm('Bạn có chắc chắn muốn xóa không')" type="button" class="delete" value="Xóa">
                                             
                                         </a>
 
                                     </td>
                             </tr>   
-                        ';
+                        ;
+                <?php
                 }
                 ?>
             </tbody>
@@ -57,17 +58,6 @@
         </form>
     </div>
     </div>
-    <script>
-        function Delete(){
-                var remove = confirm("Bạn có muốn xóa không?");
-                if(remove){ 
-                    return true;
-                } else{
-                    return false;
-                  
-                }   
-                }
-    </script>
 </body>
 
 </html>

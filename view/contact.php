@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,11 +32,14 @@
 
                 <h1>Contact Us</h1>
                 <p>Sản phẩm chuẩn VietGap an toàn với người tiêu dùng có thắc mắc ,hay nhu cầu tìm hiểu thêm về sản phẩm xin vui lòng để lại thông tin liên hệ để được hỗ trợ nhanh nhất - Xin trân thành cảm ơn</p>
-                <input type="text" id="User" name="User" placeholder="Tên Của Bạn" required>
-                <input type="text" id="emails" name="email" placeholder="Email Của Bạn" required>
-                <input type="text" id="emails" name="email" placeholder="Tiêu đề" required>
-                <input type="text" id="emails" name="email" placeholder="Nội dung" required>
-                <input class="submit" type="button" onclick="myFunction()" value="Submit ">
+                <form action="index.php?act=sbcontact" method="POST" >
+                    <input type="text" name="user" placeholder="Tên Của Bạn" required>
+                    <input type="email"  name="email" placeholder="Email Của Bạn" required>
+                    <input type="text"  name="title" placeholder="Tiêu đề" required>
+                    <input type="text"  name="note" placeholder="Nội dung" required>
+                    <input type="submit" value="Submit " name="sbcontact">
+                </form>
+              
             </div>
 
         </div>

@@ -28,10 +28,7 @@
     <div class="wrapper">
         <div id="banner">
             <div class="text_banner">
-                <form action="" method="POST">
-                    <input type="text" name="search" placeholder="Tìm kiếm sản phẩm..">
-                    <button type="submit" name="btn_search" style="border: none;"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
+                
             </div>
         </div>
 
