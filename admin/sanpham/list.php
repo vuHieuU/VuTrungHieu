@@ -57,27 +57,28 @@
                     } else {
                         $image = "No photo";
                     }
-                    echo '
+                    ?>
                             <tr>
                             <td><input type="checkbox" name="" id=""></td>
-                            <td>' . $id . '</td>
-                            <td>' . $name . '</td>
-                            <td>' . $image . '</td>
-                            <td>' . $price . '</td>
-                            <td>' . $amount . '</td>
-                            <td>' . $content . '</td>
-                            <td>' . $name_cate . '</td>
+                            <td><?php echo $id ?></td>
+                            <td><?php echo $name  ?></td>
+                            <td><?php echo $image ?></td>
+                            <td><?php echo $price ?></td>
+                            <td><?php echo $amount ?></td>
+                            <td><?php echo $content ?></td>
+                            <td><?php echo $name_cate ?></td>
                             <td style="text-align: center;">
-                            <a style="text-decoration: none;" href="' . $suasp . '">
+                            <a style="text-decoration: none;" href="<?php echo $suasp ?>">
                                 <input type="button" class="edit" value="Sửa">
                             </a>
-                            <a style="text-decoration: none;" href="' . $xoasp . '">
-                                <input onclick="Delete()" type="button" class="delete" value="Xóa">
+                            <a style="text-decoration: none;" href="<?php echo $xoasp ?>">
+                                <input onclick="return confirm('Bạn có chắc chắn muốn xóa không')" type="button" class="delete" value="Xóa">
                             </a>
 
                         </td>
                     </tr>   
-                    ';
+                    
+                    <?php
                 }
 
                 ?>
@@ -92,6 +93,7 @@
         </form>
     </div>
     </div>
+<!-- <<<<<<< Updated upstream -->
     <script>
         function Delete() {
             var remove = confirm("Bạn có muốn xóa không?");
@@ -104,6 +106,8 @@
             }
         }
     </script>
+<!-- =======
+>>>>>>> Stashed changes -->
 </body>
 
 </html>
