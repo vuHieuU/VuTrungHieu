@@ -69,7 +69,7 @@
                     }
                     $sphome = loadall_sanpham($kyw,$cate_id);
                     $tendm = load_ten_dm($cate_id);
-                    include "main.php";
+                    include "sanpham.php";
                     break;
               case 'detail':
                 if(isset($_GET['id'])&&($_GET['id']>0)){

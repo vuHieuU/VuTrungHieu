@@ -35,12 +35,6 @@
                                 ';
                             }
                         ?>
-                      <!-- <a href="#">Rau Củ</a>
-                      <a href="#">Hoa Quả Tươi</a>
-                      <a href="#">Hoa Quả Sấy</a>
-                      <a href="#">Ô Mai</a>
-                      <a href="#">Hoa Quả Đông Lạnh</a>
-                      <a href="#">Thêm..</a> -->
                       </div>
                     </div>
               </li>

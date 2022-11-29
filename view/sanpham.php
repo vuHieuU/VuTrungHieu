@@ -13,7 +13,7 @@
   </div>
   <div class="container-title">
     <p>Trang Chủ/</p>
-    <p>Danh Mục: <b>Hoa Quả Tươi</b></p>
+    <p>Danh Mục: <b><?php echo $tendm ?></b></p>
   </div>
   <div style="text-align:center">
     <span class="dot"></span>
@@ -62,46 +62,36 @@
                     ';
         }
         ?>
+        <!-- <li><i class="fa-solid fa-carrot"></i><a href="">'.$name_cate.'</a><i class="fa-solid fa-circle-chevron-right"></i></li>
+                  <li><i class="fa-solid fa-carrot"></i><a href="">'.$name_cate.'</a><i class="fa-solid fa-circle-chevron-right"></i></li>
+                  <li><i class="fa-solid fa-carrot"></i><a href="">'.$name_cate.'</a><i class="fa-solid fa-circle-chevron-right"></i></li>
+                  <li><i class="fa-solid fa-carrot"></i><a href="">'.$name_cate.'</a><i class="fa-solid fa-circle-chevron-right"></i></li>
+                  <li><i class="fa-solid fa-carrot"></i><a href="">'.$name_cate.'</a><i class="fa-solid fa-circle-chevron-right"></i></li> -->
+
+
+        <form action="index.php?act=listsp" method="POST">
+          <div class="search">
+            <input type="text" name="kyw">
+            <button type="submit" name="timkiem"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </form>
       </ul>
       <div class="slide-category">
         <img src="../Images/banner/banner1.jpg" alt="">
       </div>
-      <form class="product-category-user">
-        <h3>Tài Khoản</h3>
-        <input type="text" placeholder="Tài khoản..">
-        <input type="text" placeholder="Mật khẩu..">
-        <input type="submit" value="Đăng Nhập">
-      </form>
-
-      <!-- <form class="product-category-user">
-        <h3>Xin Chào Laxus</h3>
-        <input type="submit" value="Đăng Nhập ADMIN">
-        <input type="submit" value="Giỏ Hàng">
-        <input type="submit" value="Thông Tin">
-        <input type="submit" value="Đăng Xuất">
-      </form>
-
-      <form class="product-category-user">
-        <h3>Xin Chào Laxus</h3>
-        <input type="submit" value="Giỏ Hàng">
-        <input type="submit" value="Thông Tin">
-        <input type="submit" value="Đăng Xuất">
-      </form> -->
     </div>
     <!-- product box -->
     <div class="product-main">
-      <div class="product-search">
-        <div class="container-title">
-          <p>Trang Chủ/</p>
-          <p>Danh Mục: <b>Hoa Quả Tươi</b></p>
-        
-        <form action="index.php?act=listsp" method="POST">
-          <div class="search">
-            <input type="text" placeholder="Bạn muốn tìm kiếm sản phẩm gì..?" name="kyw">
-            <button type="submit" name="timkiem"><i class="fa-solid fa-magnifying-glass"></i></button>
-          </div>
-        </form></div>
-      </div>
+
+      <!-- <div class="product-box">
+                    <img src="../Images/sanpham/bapcaitim.jpg" alt="">
+                    <button>Rau Xanh</button>
+                    <p class="name">Bắp cải tim Organic 500g</p>
+                    <p class="price">30.000đ <del>45.000đ</del></p>
+                    <div class="product-box-btn">
+                      <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                    </div> -->
+      <!-- </div> -->
       <?php
       foreach ($sphome as $sp) {
         extract($sp);
