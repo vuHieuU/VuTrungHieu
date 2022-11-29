@@ -83,3 +83,13 @@
       $sql = "delete from products where id=" .$id;
       pdo_execute($sql);
    }
+   function load_name_dm($cate_id){
+      if($cate_id>0){
+              $sql="select * from category where id=".$cate_id;
+              $dm=pdo_query_one($sql);
+              extract($dm);
+              return $name_cate;
+      }else{
+           return "";
+      }
+  }
