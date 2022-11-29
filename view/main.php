@@ -13,7 +13,7 @@
   </div>
   <div class="container-title">
     <p>Trang Chủ/</p>
-    <p>Danh Mục: <b>Hoa Quả Tươi</b></p>
+    <p>Danh Mục: <b></b></p>
   </div>
   <div style="text-align:center">
     <span class="dot"></span>
