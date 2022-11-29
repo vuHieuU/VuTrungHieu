@@ -252,16 +252,15 @@ img {
     margin-left: 20px;
     display: grid;
     grid-gap: 12px;
-    grid-template-areas: 'myArea myArea myArea myArea';
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .product-search {
     display: flex;
-    grid-area: myArea;
 }
 
 .product-search .search {
-    margin-left: 150px;
+    margin-left: 18vw;
     display: flex;
     width: 100%;
     border-radius: 4px;

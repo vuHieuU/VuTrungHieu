@@ -11,10 +11,17 @@
       <img src="../Images/slideshow/slideshow3.jpg" style="width:100%">
     </div>
   </div>
-  <div class="container-title">
-    <p>Trang Chủ/</p>
-    <p>Danh Mục: <b></b></p>
-  </div>
+  <div class="product-search">
+        <div class="container-title">
+          <p>Trang Chủ/</p>
+          <p>Danh Mục: <b>Hoa Quả Tươi</b></p>
+        <form action="index.php?act=listsp" method="POST">
+          <div class="search">
+            <input type="text" placeholder="Bạn muốn tìm kiếm sản phẩm gì..?" name="kyw">
+            <button type="submit" name="timkiem"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </form></div>
+      </div>
   <div style="text-align:center">
     <span class="dot"></span>
     <span class="dot"></span>
@@ -90,18 +97,6 @@
     </div>
     <!-- product box -->
     <div class="product-main">
-      <div class="product-search">
-        <div class="container-title">
-          <p>Trang Chủ/</p>
-          <p>Danh Mục: <b>Hoa Quả Tươi</b></p>
-        
-        <form action="index.php?act=listsp" method="POST">
-          <div class="search">
-            <input type="text" placeholder="Bạn muốn tìm kiếm sản phẩm gì..?" name="kyw">
-            <button type="submit" name="timkiem"><i class="fa-solid fa-magnifying-glass"></i></button>
-          </div>
-        </form></div>
-      </div>
       <?php
       foreach ($sphome as $sp) {
         extract($sp);
