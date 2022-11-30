@@ -22,14 +22,14 @@
                 if(isset($_POST['dangki'])&&($_POST['dangki'])){
                     $user = $_POST['user'];
                     $email = $_POST['email'];
-                    $status = $_POST['status'];
+                    $tel = $_POST['tel'];
                     $password_check = $_POST['password_check'];
                     $re_password = $_POST['re_password'];
                     if($password_check != $re_password){                  
                         saimk();
                     }else{
                         $pass = $password_check;
-                        dangki_taikhoan($user,$pass,$email,$status);
+                        dangki_taikhoan($user,$pass,$email,$tel);
                     }
                 }
                 include 'main.php';
@@ -103,9 +103,8 @@
                     $user = $_POST['user'];
                     $email = $_POST['email'];
                     $title = $_POST['title'];
-                    $note = $_POST['note'];
-                    add_contact($user,$email,$title,$note);
-                    $thongbao = "Đã đăng kí thành công!";
+                    $content = $_POST['content'];
+                    add_contact($user,$email,$title,$content);
                 }
                 include 'contact.php';
                 break;

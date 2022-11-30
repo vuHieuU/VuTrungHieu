@@ -38,7 +38,7 @@
                         <th>Tên Người Dùng</th>
                         <th>password</th>
                         <th>Email</th>
-                        <th>status</th>
+                        <th>Số điện thoại</th>
                         <th>Role</th>
                         <th><i class="fa-solid fa-gear"></i></th>
                     </tr>
@@ -56,7 +56,7 @@
                                             <td>' . $name . '</td>
                                             <td>' . $password . '</td>
                                             <td>' . $email . '</td>
-                                            <td>' . $status . '</td>
+                                            <td>' . $tel . '</td>
                                             <td>' . $role . '</td>
                                             <td style="text-align: center;">
                                                 <a style="text-decoration: none;" href="' . $suatk . '">

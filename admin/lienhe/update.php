@@ -22,7 +22,7 @@
             <tr>
                 <td>Name</td>
                 <td>
-                    <input type="name" value="<?=$name?>" name="name">
+                    <input type="text" value="<?=$user?>" name="user">
                 </td>
             </tr>
             <tr>
@@ -38,9 +38,9 @@
                 </td>
             </tr>
             <tr>
-                <td>Note</td>
+                <td>Content</td>
                 <td>
-                    <input type="text" name="note" value="<?=$note?>">
+                    <input type="text" name="content" value="<?=$content?>">
                 </td>
             </tr>
 

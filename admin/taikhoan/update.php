@@ -40,7 +40,7 @@
             <tr>
                 <td>Địa Chỉ</td>
                 <td>
-                    <input type="text" name="status" value="<?=$status?>">
+                    <input type="text" name="tel" value="<?=$tel?>">
                 </td>
             </tr>
             <tr>

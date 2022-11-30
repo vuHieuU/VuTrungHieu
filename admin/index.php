@@ -236,11 +236,11 @@ if (isset($_GET['act'])) {
       case 'updatect' :
          if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
             $id = $_POST['id'];
-            $name = $_POST['name'];
+            $user = $_POST['user'];
             $email = $_POST['email'];
             $title = $_POST['title'];
-            $note = $_POST['note'];
-            update_contact($id,$name,$email,$title,$note);
+            $content = $_POST['content'];
+            update_contact($id,$user,$email,$title,$content);
             $listcontact = loadall_contact();
          }       
          include "lienhe/list.php";

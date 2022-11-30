@@ -137,7 +137,7 @@
                 </div>
                 <div class="text">
                     <i class="fa-solid fa-phone"></i>
-                    <input type="text" id="phone" placeholder="Số điện thoại" required name="status" >
+                    <input type="text" id="phone" placeholder="Số điện thoại" required name="tel" >
                 </div>
                 <div class="text">
                     <i class="fa-solid fa-key"></i>

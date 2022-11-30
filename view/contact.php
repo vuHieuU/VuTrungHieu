@@ -36,7 +36,7 @@
                     <input type="text" name="user" placeholder="Tên Của Bạn" required>
                     <input type="email"  name="email" placeholder="Email Của Bạn" required>
                     <input type="text"  name="title" placeholder="Tiêu đề" required>
-                    <input type="text"  name="note" placeholder="Nội dung" required>
+                    <input type="text"  name="content" placeholder="Nội dung" required>
                     <input type="submit" value="Submit " name="sbcontact">
                 </form>
               

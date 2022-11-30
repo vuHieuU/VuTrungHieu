@@ -4,12 +4,12 @@
         $listtk = pdo_query($sql);
         return $listtk;
     }   
-    function insert_tk($user,$pass,$email,$status,$role){
-        $sql = "insert into user(name,password,email,status,role) values('$user','$pass','$email','$status','$role')";
+    function insert_tk($user,$pass,$email,$tel,$role){
+        $sql = "insert into user(name,password,email,tel,role) values('$user','$pass','$email','$tel','$role')";
         pdo_execute($sql);
     }
-    function dangki_taikhoan($user,$pass,$email,$status){
-        $sql = "insert into user(name,password,email,status) values('$user','$pass','$email','$status')";
+    function dangki_taikhoan($user,$pass,$email,$tel){
+        $sql = "insert into user(name,password,email,tel) values('$user','$pass','$email','$tel')";
         pdo_execute($sql);
     }
     function delete_tk($id){
@@ -21,8 +21,8 @@
         $tk = pdo_query_one($sql);
         return $tk;
     }   
-    function update_tk($id,$user,$pass,$email,$status,$role){
-        $sql = "update user set name='".$user."',password='".$pass."',email='".$email."',status='".$status."',role='".$role."' where id=".$id;
+    function update_tk($id,$user,$pass,$email,$tel,$role){
+        $sql = "update user set name='".$user."',password='".$pass."',email='".$email."',tel='".$tel."',role='".$role."' where id=".$id;
         pdo_execute($sql);
     }
     function check_user($name,$password){
