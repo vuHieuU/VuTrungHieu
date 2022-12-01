@@ -14,7 +14,7 @@
   <div class="product-search">
         <div class="container-title">
           <p>Trang Chủ/</p>
-          <p>Danh Mục: <b>Hoa Quả Tươi</b></p>
+          <p>Danh Mục: <b>Hoa Quả</b></p>
         <form action="index.php?act=listsp" method="POST">
           <div class="search">
             <input type="text" placeholder="Bạn muốn tìm kiếm sản phẩm gì..?" name="kyw">
