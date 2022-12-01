@@ -63,7 +63,7 @@
               
                 <li><i class="fa-solid fa-angles-right"></i><a style="font-weight: bold;" href="#">Xem Tất Cả</a></li>
                 <div class="search">
-                  <input type="text" name="" id="" placeholder="Tìm kiếm bài viết liên quan...">
+                  <input type="text1" name="" id="" placeholder="Tìm kiếm bài viết liên quan...">
                   <button><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
               </ul>
@@ -140,7 +140,7 @@
 <div class="slideshow-container">
 
 <!-- Full-width images with number and caption text -->
-<div class="mySlides1 fade position-tintic">
+<div class="mySlides111 fade position-tintic">
   <img class="mgb" src="../Images/sanpham/sanphamok/anhdoc3.jpg" style="width:100%">
   <div class="name-sp">
     <p>Táo Hàn Quốc</p>

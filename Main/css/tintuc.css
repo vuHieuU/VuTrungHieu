@@ -349,7 +349,7 @@
 }
 
 /* Caption text */
-.text {
+.text1 {
   color: #f2f2f2;
   font-size: 15px;
   padding: 8px 12px;
@@ -397,7 +397,7 @@
 
 /* Possition */
 .mySlides1{
-    position: relative;
+
 }
 
 .mySlides1 p{
