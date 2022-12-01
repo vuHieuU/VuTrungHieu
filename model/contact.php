@@ -4,7 +4,6 @@
         $listcontact = pdo_query($sql);
         return $listcontact;
     }
-
     function delete_contact($id) {
         $sql = "delete from contact where id=".$id;
         pdo_execute($sql);
