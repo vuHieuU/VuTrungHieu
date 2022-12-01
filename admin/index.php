@@ -7,7 +7,11 @@ include "../model/taikhoan.php";
 include "../model/binhluan.php";
 include "../model/thongbao.php";
 include "../model/contact.php";
+
+include "../model/blog.php";
+
 include "../model/cart.php";
+
 include "../view/global.php";
 include "header.php";
 
@@ -284,6 +288,27 @@ break;
          }       
          include "lienhe/list.php";
          break;
+      case 'blog':
+            $listblog = load_blog();
+            include "blog/list.php";
+            break;
+      case 'addblog':
+            if (isset($_POST['them']) && ($_POST['them'])) {
+               $title = $_POST['title'];
+               $content = $_POST['content'];
+               $img = $_FILES['img']['name'];
+               $target_dir = "../public/img";
+               $target_file = $target_dir . basename($_FILES['img']['name']);
+               if (move_uploaded_file($_FILES["img"]["tmp_name"], $target_file)) {
+                  //echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]['name'])). " has been upload."; 
+               } else {
+                  //echo "Sorry, there was an error uploading your file.";
+               }
+               insert_blog($title, $content, $img);
+            }
+            $listblog = load_blog();
+            include "blog/add.php";
+            break;
 
       default:
 ?><script>

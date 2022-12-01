@@ -8,6 +8,8 @@
     include "../model/contact.php";
     include "../model/cart.php";
     include "../model/binhluan.php";
+    include "../model/blog.php";
+    $listblog = loadblog_home();
 
 
 

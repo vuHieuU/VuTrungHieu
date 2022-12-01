@@ -58,6 +58,12 @@
                     <p>Đơn Hàng</p>
                 </div>
             </a>
+            <a href="index.php?act=blog">
+                <div class="box-left-content">
+                    <i class="fa-solid fa-dolly"></i>
+                    <p>Tin Tức</p>
+                </div>
+            </a>
             <a href="index.php?act=listcontact">
                 <div class="box-left-content">
                     <i class="fa-solid fa-comments"></i>
