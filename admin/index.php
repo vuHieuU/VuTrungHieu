@@ -7,6 +7,7 @@ include "../model/taikhoan.php";
 include "../model/binhluan.php";
 include "../model/thongbao.php";
 include "../model/contact.php";
+include "../model/cart.php";
 include "../view/global.php";
 include "header.php";
 
@@ -14,6 +15,45 @@ include "header.php";
 if (isset($_GET['act'])) {
    $act = $_GET['act'];
    switch ($act) {
+
+//listbill
+case 'listbill';
+if(isset($_POST['kyw'])&&($_POST[kyw]!="")){
+   $kyw=$_POST['kyw'];
+}else{
+   $kyw="";
+}
+$listbill=loadall_bill($kyw,0);
+include "bill/listbill.php";
+break;
+//dellistbill
+case 'dellistbill';
+if(isset($_GET['idbill'])){
+array_slice($_SESSION['listbill'],$_GET['idbill'],1);
+}else{
+    $_SESSION['listbill']=[];
+}
+header('location: index.php?act=viewcart');
+break;
+
+
+
+
+// bill/cart
+case 'addtocart';
+if(isset($_POST['addtocart'])&&($_POST['addtocart']!="")){
+$id = $_POST['id'];
+$name = $_POST['name'];
+$img = $_POST['img'];
+$price = $_POST['price'];
+$soluong=1;
+$ttien=$soluong * $price;
+$spadd=[$id,$name,$img,$price,$soluong,$ttien ];
+array_push($_SESSION['mycart'],$spadd);
+}
+include "cart/viewcart.php"; 
+break;
+
       case 'dm':
          $listdm = loadall_dm();
          include "danhmuc/list.php";
@@ -206,10 +246,10 @@ if (isset($_GET['act'])) {
          session_unset();
          header("location: ../view");
          break;
-      case 'listbill';
-         $listbill = loadall_bill(0);
-         include "listbill.php";
-         break;
+      // case 'listbill';
+      //    $listbill = loadall_bill(0);
+      //    include "listbill.php";
+      //    break;
 
 
       case 'listcontact' :
@@ -224,7 +264,6 @@ if (isset($_GET['act'])) {
          $listcontact = loadall_contact();
          include "lienhe/list.php";
          break;
-
       case 'suacontact' :
          if (isset($_GET['id']) && ($_GET['id'] > 0)) {
             $id = $_GET['id'];
@@ -248,17 +287,19 @@ if (isset($_GET['act'])) {
 
       default:
 ?><script>
-            var mau = document.getElementById("mau")
-            mau.style.transform = "translateY(0px)"
-            mau.style.transition = "0.2s"
-         </script>
+var mau = document.getElementById("mau")
+mau.style.transform = "translateY(0px)"
+mau.style.transition = "0.2s"
+</script>
 <?php
          include "home.php";
          break;
+         
    }
 }
 
 
 include "footer.php";
+
 
 ?>
