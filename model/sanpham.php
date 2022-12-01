@@ -5,7 +5,7 @@
    $listsp = pdo_query($sql);
    return $listsp;
    }
-
+ 
    function loadsp_home(){
    $sql="select * from products inner join category on products.cate_id=category.id_cate where 1 order by name desc limit 0,8";
    $listsp = pdo_query($sql);
