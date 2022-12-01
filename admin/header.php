@@ -52,7 +52,7 @@
                     <p>Bình Luận</p>
                 </div>
             </a>
-            <a href="index.html">
+            <a href="index.php?act=listbill">
                 <div class="box-left-content">
                     <i class="fa-solid fa-dolly"></i>
                     <p>Đơn Hàng</p>
