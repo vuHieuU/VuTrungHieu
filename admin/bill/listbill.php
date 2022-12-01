@@ -19,7 +19,7 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Mã đơm hàng </th>
+                <th>Mã đơn hàng </th>
                 <th>Tên khách hàng</th>
                 <th>Số lượng đơn hàng</th>
                 <th>Tình trạng đơn hàng</th>
