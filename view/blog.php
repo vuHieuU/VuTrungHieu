@@ -1,12 +1,18 @@
 <!-- Blog -->
 <!-- <h2 class="title">ABC</h2> -->
-<div class="blog">
+   <?php
+          foreach ($listblog as $bl) {
+            extract($bl);
+            $img = $img_path . $img;
+            echo '
+            <div class="blog">
+
   <div class="blog-left">
     <div class="blog-left-box">
       <div class="blog-left-box-img">
-        <img src="https://picsum.photos/900/900" alt="">
+        <img src="'.$img.'" alt="">
       </div>
-      <p><i class="fa-solid fa-newspaper"></i> Sản phẩm Oganic có lợi ích như thế nào đến lợi ích con người..</p>
+      <p><i class="fa-solid fa-newspaper"></i>'.$title.'</p>
       <button>Tìm Hiểu Thêm</button>
     </div>
     <div class="blog-left-box">
@@ -17,6 +23,7 @@
       <button>Tìm Hiểu Thêm</button>
     </div>
   </div>
+
   <div class="blog-right">
     <div class="blog-right-box">
       <p class="blog-right-box-title"><i class="fa-solid fa-newspaper"></i> Blog 03</p>
@@ -35,3 +42,6 @@
     </div>
   </div>
 </div>
+';
+          }
+   ?>

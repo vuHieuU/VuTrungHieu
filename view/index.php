@@ -7,6 +7,8 @@
     include "../model/taikhoan.php";
     include "../model/contact.php";
     include "../model/binhluan.php";
+    include "../model/blog.php";
+    $listblog = loadblog_home();
 
     $sphome = loadsp_home();
     $listdm = loadall_dm();
