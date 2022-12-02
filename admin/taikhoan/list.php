@@ -38,6 +38,7 @@
                         <th>Tên Người Dùng</th>
                         <th>password</th>
                         <th>Email</th>
+                        <th>Địa Chỉ</th>
                         <th>Số điện thoại</th>
                         <th>Role</th>
                         <th><i class="fa-solid fa-gear"></i></th>
@@ -56,6 +57,7 @@
                                             <td>' . $name . '</td>
                                             <td>' . $password . '</td>
                                             <td>' . $email . '</td>
+                                            <td>' . $address . '</td>
                                             <td>' . $tel . '</td>
                                             <td>' . $role . '</td>
                                             <td style="text-align: center;">

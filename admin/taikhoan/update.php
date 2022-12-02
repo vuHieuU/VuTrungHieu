@@ -40,6 +40,12 @@
             <tr>
                 <td>Địa Chỉ</td>
                 <td>
+                    <input type="text" name="address" value="<?=$address?>" />
+                </td>
+            </tr>
+            <tr>
+                <td>Số Điện Thoại</td>
+                <td>
                     <input type="text" name="tel" value="<?=$tel?>">
                 </td>
             </tr>

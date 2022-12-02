@@ -195,10 +195,11 @@ if (isset($_GET['act'])) {
             $user = $_POST['name'];
             $pass = $_POST['password'];
             $email = $_POST['email'];
-            $status = $_POST['status'];
+            $address = $_POST['address'];
+            $tel = $_POST['tel'];
             // $tel=$_POST['tel'];
             $role = $_POST['role'];
-            insert_tk($user, $pass, $email, $status, $role);
+            insert_tk($user, $pass, $emai,$addressl, $tel, $role);
             add_thanhcong();
             header("location:index.php?act=tk");
          }
@@ -225,10 +226,10 @@ if (isset($_GET['act'])) {
             $user = $_POST['name'];
             $pass = $_POST['password'];
             $email = $_POST['email'];
-            $status = $_POST['status'];
-            // $tel=$_POST['tel'];
+            $address = $_POST['address'];
+            $tel=$_POST['tel'];
             $role = $_POST['role'];
-            update_tk($id, $user, $pass, $email, $status, $role);
+            update_tk($id, $user, $pass, $email,$address, $tel, $role);
          }
          $listtk = loadall_tk();
          include "taikhoan/list.php";

@@ -60,6 +60,13 @@
                 <tr>
                     <td>Địa Chỉ</td>
                     <td>
+                        <input type="email" name="address" id="email"/>
+                        <span class="loi" id="email_error"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Số Điện Thoại</td>
+                    <td>
                         <input type="text" name="status" id="address">
                         <span class="loi" id="address_error"></span>
                     </td>
