@@ -7,10 +7,11 @@
     include "../model/taikhoan.php";
     include "../model/contact.php";
     include "../model/binhluan.php";
+    include "../model/blog.php";
 
     $sphome = loadsp_home();
     $listdm = loadall_dm();
-    
+    $listblog = loadblog_home();
     session_start();
     include "header.php";
     include "global.php";
