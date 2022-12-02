@@ -49,6 +49,7 @@
             <?php
                 if(isset($_SESSION['name'])){
                     extract($_SESSION['name']);
+                    $linkupdate = "index.php?act=updatetk&id=".$id;
                     ?>
                     <!-- <li>
                         Xin chào, <?=$name?>
@@ -79,10 +80,22 @@
                                 ';
                             }
                         ?>
+                        <input type="hidden" value="<?=$id?>">
                         <a href="index.php?act=giohang">Giỏ Hàng</a>
-                        <a href="#">Cập Nhật Tài Khoản</a>
+                        <a href="<?php echo $linkupdate ?>">Cập Nhật Tài Khoản</a>
                         <a href="index.php?act=logout">Thoát</a>
                     </div>
+                    <?php
+                        if($image == ""){
+                            ?>
+                                <img src="../Images/avatar/Avatar-Facebook-trắng.jpg" style="border-radius: 50%;" width="50px" alt="">
+                            <?php 
+                        }else{
+                            ?>
+                            <img src="../Images/avatar/<?php echo $image ?>" style="border-radius: 50%;" width="50px" alt="">
+                        <?php 
+                        }
+                    ?>
                     </div>
               <!-- </li> -->
                     <?php

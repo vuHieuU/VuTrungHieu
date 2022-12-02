@@ -25,6 +25,14 @@
         $sql = "update user set name='".$user."',password='".$pass."',email='".$email."',tel='".$tel."',role='".$role."' where id=".$id;
         pdo_execute($sql);
     }
+    function update_tk1($id,$name,$password,$email,$hinh,$tel,$role){
+        if($hinh !=""){
+        $sql = "update user set name='".$name."',password='".$password."',email='".$email."',image='".$hinh."',tel='".$tel."',role='".$role."' where id=".$id;
+        }else{
+            $sql = "update user set name='".$name."',password='".$password."',email='".$email."',tel='".$tel."',role='".$role."' where id=".$id;
+        }
+        pdo_execute($sql);
+    }
     function check_user($name,$password){
         $sql="select * from user where name='".$name."' AND password='".$password."'";
       $sp=pdo_query_one($sql);

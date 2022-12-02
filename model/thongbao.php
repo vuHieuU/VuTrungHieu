@@ -17,6 +17,12 @@
         </script>
         <?php
     }
+    function update_true(){
+        ?><script>
+        alert('Cập nhật thành công !!')
+    </script>
+    <?php
+    }
     function khongtontai(){
         ?><script>
             alert("Tài khoản hoặc mật khẩu không tồn tại!!")

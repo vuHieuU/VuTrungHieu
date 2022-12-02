@@ -71,6 +71,7 @@
 .dropdown {
     position: relative;
     display: inline-block;
+    justify-items: center;
 }
 
 .dropdown-content {
@@ -253,7 +254,6 @@ img {
     display: grid;
     grid-gap: 12px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
 }
 
 .product-search {
@@ -480,17 +480,6 @@ img {
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
     margin-bottom: 4px;
-    border-radius: 8px;
-}
-
-.blog-right-box:hover{
-    cursor: pointer;
-}
-
-.blog-right-box:hover a{
-    color: var(--color-text);
-    font-weight: bold;
-    border-bottom: 1px solid var(--main-color);
 }
 
 p.blog-mota{
