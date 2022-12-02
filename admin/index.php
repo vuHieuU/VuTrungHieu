@@ -21,42 +21,42 @@ if (isset($_GET['act'])) {
    switch ($act) {
 
 //listbill
-case 'listbill';
-if(isset($_POST['kyw'])&&($_POST[kyw]!="")){
-   $kyw=$_POST['kyw'];
-}else{
-   $kyw="";
-}
-$listbill=loadall_bill($kyw,0);
-include "bill/listbill.php";
-break;
-//dellistbill
-case 'dellistbill';
-if(isset($_GET['idbill'])){
-array_slice($_SESSION['listbill'],$_GET['idbill'],1);
-}else{
-    $_SESSION['listbill']=[];
-}
-header('location: index.php?act=viewcart');
-break;
+         case 'listbill';
+            if(isset($_POST['kyw'])&&($_POST[kyw]!="")){
+               $kyw=$_POST['kyw'];
+            }else{
+               $kyw="";
+            }
+            $listbill=loadall_bill($kyw,0);
+            include "bill/listbill.php";
+            break;
+            //dellistbill
+            case 'dellistbill';
+            if(isset($_GET['idbill'])){
+            array_slice($_SESSION['listbill'],$_GET['idbill'],1);
+            }else{
+               $_SESSION['listbill']=[];
+            }
+            header('location: index.php?act=viewcart');
+         break;
 
 
 
 
 // bill/cart
-case 'addtocart';
-if(isset($_POST['addtocart'])&&($_POST['addtocart']!="")){
-$id = $_POST['id'];
-$name = $_POST['name'];
-$img = $_POST['img'];
-$price = $_POST['price'];
-$soluong=1;
-$ttien=$soluong * $price;
-$spadd=[$id,$name,$img,$price,$soluong,$ttien ];
-array_push($_SESSION['mycart'],$spadd);
-}
-include "cart/viewcart.php"; 
-break;
+      case 'addtocart';
+            if(isset($_POST['addtocart'])&&($_POST['addtocart']!="")){
+            $id = $_POST['id'];
+            $name = $_POST['name'];
+            $img = $_POST['img'];
+            $price = $_POST['price'];
+            $soluong=1;
+            $ttien=$soluong * $price;
+            $spadd=[$id,$name,$img,$price,$soluong,$ttien ];
+            array_push($_SESSION['mycart'],$spadd);
+            }
+            include "cart/viewcart.php"; 
+         break;
 
       case 'dm':
          $listdm = loadall_dm();
@@ -67,9 +67,10 @@ break;
          if (isset($_POST['them']) && ($_POST['them'])) {
             $tenloai = $_POST['name_cate'];
             insert_danhmuc($tenloai);
-            $listdm = loadall_dm(); 
+            
+            header("location:index.php?act=dm");
+          
          }
-       
          include "danhmuc/add.php";
          break;
       case 'suadm':
@@ -119,6 +120,7 @@ break;
                //echo "Sorry, there was an error uploading your file.";
             }
             insert_sanpham($name, $price, $hinh, $mota, $soluong, $id_dm);
+            header("location:index.php?act=sp");
          }
          $listdm = loadall_dm();
          include "sanpham/add.php";
@@ -198,6 +200,7 @@ break;
             $role = $_POST['role'];
             insert_tk($user, $pass, $email, $status, $role);
             add_thanhcong();
+            header("location:index.php?act=tk");
          }
          include 'taikhoan/add.php';
          break;
@@ -305,6 +308,7 @@ break;
                   //echo "Sorry, there was an error uploading your file.";
                }
                insert_blog($title, $content, $img);
+               header("location:index.php?act=blog");
             }
             $listblog = load_blog();
             include "blog/add.php";

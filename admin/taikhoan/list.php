@@ -13,7 +13,7 @@
     <div class="borderlist">
 
     <h3 style="margin-top: 10px;">Danh Sách Thành Viên</h3>
-    <form action="index.php?act=listStk" class="searchS" method="POST">
+    <!-- <form action="index.php?act=listStk" class="searchS" method="POST">
             <select name="cate_id" id="">
                 <option value="0" selected>Tất cả</option>
                 <?php
@@ -27,7 +27,7 @@
                 <input type="text" name="kyw" id="">
                 <input type="submit" name="listok">
             </div>
-        </form>
+        </form> -->
 
         <form action="index.php?act=addtk" method="POST">
             <table>
