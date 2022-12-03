@@ -53,6 +53,34 @@
                 include 'header.php';
                 include 'main.php';
                 break;
+                case 'updatetk':
+                    if (isset($_GET['id'])) {
+                        $id = $_GET['id'];
+                        $loadtk = loadone_tk($id);
+                        include 'updatetk.php';
+                    }
+                    break;
+                case 'update':
+                    if(isset($_POST['update'])&&($_POST['update']>0)){
+                        $name = $_POST['name'];
+                        $id = $_POST['id'];
+                        $password = $_POST['password'];
+                        $email = $_POST['email'];
+                        $tel = $_POST['tel'];
+                        $address = $_POST['address'];
+                        $hinh = $_FILES['image']['name'];
+                        $target_dir = "../Images/avatar/";
+                        $target_file = $target_dir . basename($_FILES['image']['name']);
+                        if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+                           //echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]['name'])). " has been upload."; 
+                        } else {
+                           //echo "Sorry, there was an error uploading your file.";
+                        }
+                        update_tk1($id,$name,$password,$email,$hinh,$tel,$address,$role);
+                        update_true();
+                            }
+                            include 'main.php';
+                    break;
             case 'logout':
                 session_unset();
                 // header("Location: header.php");
@@ -111,30 +139,7 @@
                 }
                 include 'contact.php';
                 break;
-            case 'updatetk':
-                $loadtk = loadall_tk();
-                include 'updatetk.php';
-                break;
-            case 'update':
-                if(isset($_POST['update'])&&($_POST['update']>0)){
-                    $name = $_POST['name'];
-                    $id = $_POST['id'];
-                    $password = $_POST['password'];
-                    $email = $_POST['email'];
-                    $tel = $_POST['tel'];
-                    $hinh = $_FILES['image']['name'];
-                    $target_dir = "../Images/avatar/";
-                    $target_file = $target_dir . basename($_FILES['image']['name']);
-                    if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-                       //echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]['name'])). " has been upload."; 
-                    } else {
-                       //echo "Sorry, there was an error uploading your file.";
-                    }
-                    update_tk1($id,$name,$password,$email,$hinh,$tel,$role);
-                    update_true();
-                        }
-                        include 'main.php';
-                break;
+
             case 'addcart':
                     if(isset($_POST['addcart'])&&($_POST['addcart'])){
                         $id=$_POST['id'];

@@ -12,11 +12,14 @@
 </head>
 
 <body>
-    <?php
-        foreach($loadtk as $tk);
-        extract($tk);
-    ?>
+
     <form class="update_users" action="index.php?act=update" method="POST" enctype="multipart/form-data">
+    <?php
+    if(isset($loadtk)) {
+        extract($loadtk);
+    }
+        
+    ?>
         <h3><i class="fa-solid fa-fade fa-check-to-slot"></i> Cập Nhật Tài Khoản</h3>
         <div class="update_users_box">
             <div class="update_users_box-left-img">
@@ -35,6 +38,8 @@
                 <input type="text" name="name" class="input-user" value="<?=$name?>">
                 <p><i class="fa-solid fa-image"></i> Ảnh</p>
                 <input type="file" name="image" id="" class="input-user"> <br> 
+                <p><i class="fa-solid fa-image"></i> Địa chỉ</p>
+                <input type="text" name="address" id="" value="<?=$address?>" class="input-user"> <br> 
 
             </div>
             <div class="update_users_box-left">

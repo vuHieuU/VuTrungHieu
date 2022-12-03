@@ -84,6 +84,7 @@
                         <input type="hidden" value="<?=$id?>">
                         <a href="index.php?act=giohang">Giỏ Hàng</a>
                         <a href="<?php echo $linkmua?>">Đơn mua</a>
+                        <input type="hidden" name="id" value="<?php echo $id?>">
                         <a href="<?php echo $linkupdate ?>">Cập Nhật Tài Khoản</a>
                         <a href="index.php?act=logout">Thoát</a>
                     </div>
