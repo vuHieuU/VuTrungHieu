@@ -27,17 +27,17 @@ if (isset($_GET['act'])) {
             }else{
                $kyw="";
             }
-            $listbill=loadall_bill($kyw,0);
+            $listbill=loadall_bill($kyw,0); 
             include "bill/listbill.php";
             break;
             //dellistbill
-            case 'dellistbill';
-            if(isset($_GET['idbill'])){
-            array_slice($_SESSION['listbill'],$_GET['idbill'],1);
-            }else{
-               $_SESSION['listbill']=[];
-            }
-            header('location: index.php?act=viewcart');
+            case 'xoabill';
+            if(isset($_GET['id'])){
+               array_slice($_SESSION['mycart'],$_GET['id'],1);
+           }else{
+               $_SESSION['mycart']=[];
+           }
+            header('location: index.php?act=listbill');
          break;
 
 

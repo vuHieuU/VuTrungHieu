@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     include "../model/pdo.php";
     include "../model/danhmuc.php";
     include "../model/sanpham.php";
@@ -8,11 +8,13 @@
     include "../model/contact.php";
     include "../model/binhluan.php";
     include "../model/blog.php";
+    include "../model/cart.php";
 
     $sphome = loadsp_home();
     $listdm = loadall_dm();
     $listblog = loadblog_home();
-    session_start();
+    if(!isset($_SESSION['mycart']))  $_SESSION['mycart']=[];
+
     include "header.php";
     include "global.php";
 
@@ -133,6 +135,67 @@
                         }
                         include 'main.php';
                 break;
+            case 'addcart':
+                    if(isset($_POST['addcart'])&&($_POST['addcart'])){
+                        $id=$_POST['id'];
+                        $name=$_POST['name'];
+                        $image=$_POST['image'];
+                        $price=$_POST['price'];
+                        $soluong=1;
+                        $ttien=$soluong * $price;
+                             // tìm và so sánh sp trong giỏ hàng
+                             $i=0;
+                             $fg=0;
+                        if(isset($_SESSION['mycart'])&&(count($_SESSION['mycart'])>0)){
+                            foreach ($_SESSION['mycart'] as $sp) {
+                                if($sp[0]==$id){
+                                    // cập nhật mới số lượng
+                                    $soluong+=$sp[4];
+                                    $fg=1;
+                                     // cập nhật mới số lượng vào giỏ hàng
+                                     $_SESSION['mycart'][$i][4]=$soluong;
+                                     break;
+                                }
+                                $i++;
+                            }
+                        }
+                         if($fg==0){
+                        $spadd=[$id,$name,$image,$price,$soluong,$ttien];
+                        array_push($_SESSION['mycart'],$spadd);
+                         }
+                    }
+                    include "thanhtoan.php";
+                    break;
+            case 'deletecart':
+                    if(isset($_GET['id'])){
+                        array_splice($_SESSION['mycart'],$_GET['id'],1);
+                    }else{
+                        $_SESSION['mycart']=[];
+                    }
+                    include "thanhtoan.php";
+                    
+                break;
+            case'billconfirm':
+                    if(isset($_POST['thanhtoan'])&&($_POST['thanhtoan'])) {
+                        if(isset($_SESSION['name'])) $iduser = $_SESSION['name']['id'];
+                        else $id = 0;
+                        $name = $_POST['name'];
+                        $email = $_POST['email'];
+                        $address = $_POST['address'];
+                        $tel = $_POST['tel'];
+                        $pttt = $_POST['pttt'];
+                        $ngaydathang = date('h:i:sa d/m/Y');
+                        $tongdonhang = tongdonhang();
+    
+                        $idbill=  insert_bill($iduser,$name,$email,$address,$tel,$pttt,$ngaydathang,$tongdonhang);
+    
+                        foreach($_SESSION['mycart'] as $cart){
+                            insert_cart($_SESSION['name']['id'],$cart['0'],$cart['2'],$cart['1'],$cart['3'],$cart['4'],$cart['5'],$idbill);
+                        }
+                    }
+                    $bill = loadone_bill($idbill);
+                    include 'billconfirm.php';
+                    break;
 // >>>>>>> Stashed changes
             case 'sanpham':
                 include "product.php";
