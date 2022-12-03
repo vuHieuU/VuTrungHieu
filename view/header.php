@@ -50,6 +50,7 @@
                 if(isset($_SESSION['name'])){
                     extract($_SESSION['name']);
                     $linkupdate = "index.php?act=updatetk&id=".$id;
+                    $linkmua = "index.php?act=mybill&id=" . $id;
                     ?>
                     <!-- <li>
                         Xin chào, <?=$name?>
@@ -82,6 +83,7 @@
                         ?>
                         <input type="hidden" value="<?=$id?>">
                         <a href="index.php?act=giohang">Giỏ Hàng</a>
+                        <a href="<?php echo $linkmua?>">Đơn mua</a>
                         <a href="<?php echo $linkupdate ?>">Cập Nhật Tài Khoản</a>
                         <a href="index.php?act=logout">Thoát</a>
                     </div>

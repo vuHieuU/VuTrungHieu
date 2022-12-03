@@ -18,12 +18,8 @@
                     <th>Id</th>
                     <th>Mã đơn hàng </th>
                     <th>Tên khách hàng</th>
+                    <th>Tên mặt hàng</th>
                     <th>Địa Chỉ</th>
-                    <th>Số Điện Thoại</th>
-                    <th>Tổng Đơn hàng</th>
-                    <th>Trạng Thái</th>
-                    <th>pttt</th>
-                    <th>Ngày đặt hàng</th>
                     <th>Thao tác</th>
                 </tr>
             </thead>
@@ -33,19 +29,16 @@
                     extract($bill);
                     $status = get_ttdh($bill['bill_status']);
                     $pttt = get_pttt($bill['bill_pttt']);
-                    $suadm = "index.php?act=suabill&idbill=" . $id;
+                    $suadm = "index.php?act=chitietbill&id=" . $id;
                     $xoadm = "index.php?act=xoabill&id=" . $id;
                    ?>
                             <tr>
+                                
                                     <td><input type="checkbox" name="" id=""></td>
-                                    <td>VTH- <?php echo $id ?></td>
+                                    <td>PAD- <?php echo $id ?></td>
                                     <td><?php echo $bill_name ?></td>
+                                    <td><?php echo $name_hh ?></td>
                                     <td> <?php echo $bill_address ?></td>
-                                    <td><?php echo $bill_tel ?></td>
-                                    <td> <?php echo $total ?></td>
-                                    <td><?php echo $status ?></td>
-                                    <td><?php echo $pttt ?></td>
-                                    <td><?php echo $ngaydathang ?></td>
                                     <td style="text-align: center;">
                                         <a style="text-decoration: none;" href="<?php echo $suadm ?>">
                                             <input type="button" class="edit" value="Chi Tiết Đơn Hàng">

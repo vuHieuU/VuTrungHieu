@@ -30,8 +30,15 @@ if (isset($_GET['act'])) {
             $listbill=loadall_bill($kyw,0); 
             include "bill/listbill.php";
             break;
-            //dellistbill
-            case 'xoabill';
+      case 'chitietbill':
+         if(isset($_GET['id']) && ($_GET['id'] > 0)){
+            $id = $_GET['id'];
+            $bill = loadone_bill($id);
+         }
+         include 'bill/ccvbill.php';
+
+         break;
+            case 'xoabill';   
             if(isset($_GET['id'])){
                array_slice($_SESSION['mycart'],$_GET['id'],1);
            }else{
@@ -39,10 +46,6 @@ if (isset($_GET['act'])) {
            }
             header('location: index.php?act=listbill');
          break;
-
-
-
-
 // bill/cart
       case 'addtocart';
             if(isset($_POST['addtocart'])&&($_POST['addtocart']!="")){

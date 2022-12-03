@@ -50,26 +50,32 @@
                         extract($tk);
                         $suatk = "index.php?act=suatk&id=" . $id;
                         $xoatk = "index.php?act=xoatk&id=" . $id;
-                        echo '
+?>
                                             <tr>
                                             <td><input type="checkbox" name="" id=""></td>
-                                            <td>' . $id . '</td>
-                                            <td>' . $name . '</td>
-                                            <td>' . $password . '</td>
-                                            <td>' . $email . '</td>
-                                            <td>' . $address . '</td>
-                                            <td>' . $tel . '</td>
-                                            <td>' . $role . '</td>
+                                            <td><?php echo $id?></td>
+                                            <td><?php echo $name?></td>
+                                            <td><?php echo $password?></td>
+                                            <td><?php echo $email?></td>
+                                            <td><?php echo $address?></td>
+                                            <td><?php echo $tel?></td>
+                                            <td><?php
+                                                if($role == 0){
+                                                    echo("Người dùng");
+                                                }else if($role==1){
+                            echo ("Admin");
+                                                }
+                                            ?></td>
                                             <td style="text-align: center;">
-                                                <a style="text-decoration: none;" href="' . $suatk . '">
+                                                <a style="text-decoration: none;" href="<?php echo $suatk?>">
                                                     <input type="button" class="edit" value="Sửa">
                                                 </a>
-                                                <a style="text-decoration: none;" href="' . $xoatk . '">
+                                                <a style="text-decoration: none;" href="<?php echo $xoatk?>">
                                                     <input onclick="Delete()" type="button" class="delete" value="Xóa">
                                                 </a>
                                             </td>
                                     </tr>  
-                                            ';
+                                     <?php   ;
                     }
                     ?>
                 </tbody>

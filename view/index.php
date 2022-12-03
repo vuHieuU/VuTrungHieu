@@ -184,18 +184,29 @@
                         $address = $_POST['address'];
                         $tel = $_POST['tel'];
                         $pttt = $_POST['pttt'];
+                        $name_hh = $_POST['name_hh'];
+                        $soluong = $_POST['soluong_hh'];
                         $ngaydathang = date('h:i:sa d/m/Y');
                         $tongdonhang = tongdonhang();
     
-                        $idbill=  insert_bill($iduser,$name,$email,$address,$tel,$pttt,$ngaydathang,$tongdonhang);
+                        $idbill=  insert_bill($iduser,$name,$name_hh,$soluong,$email,$address,$tel,$pttt,$ngaydathang,$tongdonhang);
     
                         foreach($_SESSION['mycart'] as $cart){
                             insert_cart($_SESSION['name']['id'],$cart['0'],$cart['2'],$cart['1'],$cart['3'],$cart['4'],$cart['5'],$idbill);
                         }
+                        array_splice($_SESSION['mycart'],$_GET['id'],1);
                     }
                     $bill = loadone_bill($idbill);
-                    include 'billconfirm.php';
+                    
+                    include 'main.php';
                     break;
+            case 'mybill':
+                if(isset($_GET['id'])){
+                $id_user = $_GET['id'];
+                $loadbill = loadbill_user($id_user);
+                }
+            include 'cart/mybill.php';
+            break;
 // >>>>>>> Stashed changes
             case 'sanpham':
                 include "product.php";

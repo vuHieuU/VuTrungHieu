@@ -10,7 +10,7 @@
     }
 
     function add_contact($user,$email,$title,$content) {
-        $sql = "insert into contact(user,email,title,content) values ('$user','$email','$title','$content')";
+        $sql = "insert into contact(user,email,title,content) values('$user','$email','$title','$content')";
         pdo_execute($sql);
     }
 

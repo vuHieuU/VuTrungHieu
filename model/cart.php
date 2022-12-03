@@ -7,8 +7,8 @@ function tongdonhang(){
     }
     return $tong;
 }
-function insert_bill($iduser,$name,$email,$address,$tel,$pttt,$ngaydathang,$tongdonhang){
-    $sql = "insert into bill(id_user,bill_name,bill_email,bill_address,bill_tel,bill_pttt,ngaydathang,total) values ('$iduser','$name','$email','$address','$tel','$pttt','$ngaydathang','$tongdonhang')";
+function insert_bill($iduser,$name,$name_hh,$soluong,$email,$address,$tel,$pttt,$ngaydathang,$tongdonhang){
+    $sql = "insert into bill(id_user,bill_name,name_hh,soluong,bill_email,bill_address,bill_tel,bill_pttt,ngaydathang,total) values ('$iduser','$name','$name_hh','$soluong','$email','$address','$tel','$pttt','$ngaydathang','$tongdonhang')";
     return pdo_execute_lastInsertId($sql);
 }
 function insert_cart($iduser,$idpro,$img,$name,$price,$soluong,$thanhtien,$idbill){
@@ -35,6 +35,11 @@ $sql.="order by id desc";
 $listbill=pdo_query($sql);
 return $listbill;
 }
+function loadbill_user($id_user){
+    $sql = "select * from bill where id_user=".$id_user;
+    $bill = pdo_query($sql);
+    return $bill;
+}
 // function get_ttdh
 function get_ttdh($n){
     switch($n){
@@ -42,7 +47,7 @@ function get_ttdh($n){
         $tt="đơn hàng mơi";
         break;
         case '1';
-        $tt="đang sử lý";
+        $tt="đang xử lý";
         break;
         case '2';
         $tt="đang giao hàng";

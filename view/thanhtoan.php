@@ -85,19 +85,19 @@
                 <h3 class="cart-sum">Địa Chỉ Thanh Toán</h3>
                 <div class="diaChiGiaoHang-box">
                     <label for="">Tên</label>
-                    <input type="text" name="name" value="<?=$name?>" placeholder="Tên của bạn..">
+                    <input type="text" name="name" value="<?=$name?>" required placeholder="Tên của bạn..">
                 </div>
                 <div class="diaChiGiaoHang-box">
                     <label for="">Địa chỉ</label>
-                    <input type="text" name="address" value="<?=$address?>" placeholder="Địa chỉ của bạn..">
+                    <input type="text" required name="address" value="<?=$address?>" placeholder="Địa chỉ của bạn..">
                 </div>
                 <div class="diaChiGiaoHang-box">
                     <label for="">Email</label>
-                    <input type="text" name="email" value="<?=$email?>" placeholder="Email của bạn..">
+                    <input type="text" name="email" value="<?=$email?>" required placeholder="Email của bạn..">
                 </div>
                 <div class="diaChiGiaoHang-box">
                     <label for="">Số điện thoại</label>
-                    <input type="text" name="tel" value="<?=$tel?>" placeholder="Số điện thoại..">
+                    <input type="text" name="tel" value="<?=$tel?>" required placeholder="Số điện thoại..">
                 </div>
               
                 <div class="diaChiGiaoHang-box">
@@ -105,7 +105,7 @@
                     <input type="text" value="Nội thành: 1-2 ngày; Các tỉnh khác từ 3-5 ngày" disabled>
                 </div>
 
-                <button style="background-color: var(--main-color);">Cập Nhật</button>
+                <!-- <button style="background-color: var(--main-color);">Cập Nhật</button> -->
        
             <div class="money-sum">
               
@@ -118,6 +118,8 @@
                     <label style="opacity: .7;" for="momo">Momo( Đang phát triển)</label>
                     <h3 class="cart-sum sum">Tổng Tiền: <b> </b></h3>
                     <h3 class="cart-sum">Tổng tiền sau khi giảm giá: <b> </b></h3>
+                    <input type="hidden" name="name_hh" value="<?php echo $cart[1]?>">
+                    <input type="hidden" name="soluong_hh" value="<?php echo $cart[4]?>">
                    <input type="submit" name="thanhtoan" value="Thanh Toán">
               
             </div>
