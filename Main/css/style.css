@@ -342,31 +342,29 @@ img {
     font-style: italic;
 }
 
-.product-box-btn {
-    height: 60px;
-    display: flex;
-    margin-top: 4px;
-    bottom: 2px;
-}
 
 .product-box-btn i {
     font-size: 20px;
 }
 
-.product-box-btn button {
+ input[type=submit] {
     width: 100%;
-    margin: 5px 5px 10px 5px;
+    /* margin: 5px 5px 10px 5px; */
+    margin: 0 auto;
+
     border: none;
     background-color: var(--main-color);
     color: #fff;
     border-radius: 4px;
+    padding: 10px;
+    margin: 4px 0px;
 }
 
-.product-box-btn .add {
+ .add {
     color: #fff;
 }
 
-.product-box-btn:hover button {
+.product-box-btn :hover input[type=submit]{
     cursor: pointer;
 }
 

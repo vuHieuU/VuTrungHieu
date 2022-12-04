@@ -15,14 +15,17 @@
         <div class="cart-left">
             <h3 class="cart-title">Thanh Toán</h3>
             <table>
-                <tr>
-                    <th>Hình Ảnh</th>
-                    <th>Tên</th>
-                    <th>Giá</th>
-                    <th>Số Lượng</th>
-                    <th>Thành Tiền</th>
-                    <th>Lựa chọn</th>
-                </tr>
+                <thead>
+
+                    <tr>
+                        <th>Hình Ảnh</th>
+                        <th>Tên</th>
+                        <th>Giá</th>
+                        <th>Số Lượng</th>
+                        <th>Thành Tiền</th>
+                        <th>Lựa chọn</th>
+                    </tr>
+                </thead>
                 <?php
                           
                           $tong=0;

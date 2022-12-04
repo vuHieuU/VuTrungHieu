@@ -43,9 +43,23 @@ td, th {
     color: #000;
 }
 
-tr th{
-    background-color: var(--main-color);
+thead{
+    /* background-color: var(--color-main); */
+    color: #57750b;
+}
+
+table input[type=button]{
+    border: none;
+    padding: 10px;
+    background-color: #57750b;
+    width: 50px;
+    border-radius: 8px;
     color: #fff;
+}
+
+tr th{
+    /* background-color: var(--main-color); */
+    /* color: #fff; */
 }
   
   tr:nth-child(even) {

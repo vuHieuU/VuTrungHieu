@@ -73,12 +73,12 @@
       <div class="slide-category">
         <img src="../Images/banner/banner1.jpg" alt="">
       </div>
-      <form class="product-category-user">
+      <!-- <form class="product-category-user">
         <h3>Tài Khoản</h3>
         <input type="text" placeholder="Tài khoản..">
         <input type="text" placeholder="Mật khẩu..">
         <input type="submit" value="Đăng Nhập">
-      </form>
+      </form> -->
 
       <!-- <form class="product-category-user">
         <h3>Xin Chào Laxus</h3>

@@ -17,6 +17,7 @@
                 <th>Phương thức thanh toán</th>
                 <th>Ngày đặt</th>
                 <th>Trạng thái</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -51,11 +52,47 @@
                 echo ("Đơn hàng mới");
                     }
             ?></td>
+            <td><a href="cart/detail_bill.php">Chi Tiết</a></td>
             </tr>
+            
             <?php 
         }
         ?>
         </tbody>
     </table>
+    <style>
+        table{
+            width: 90vw;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        table tr,td, th{
+            padding: 8px;
+            max-width: 80px;
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        }
+
+
+        table thead{
+            background-color: green;
+            color: #fff;
+        }
+
+        table td{
+            text-decoration: none;
+            text-align: center;
+        }
+
+        table td a{
+            text-decoration: none;
+            /* font-weight: bold; */
+            padding: 8px;
+            opacity: .95;
+            background-color: green;
+            color: #fff;
+            border-radius: 8px;
+        }
+    </style>
 </body>
 </html>

@@ -11,7 +11,6 @@
 
 <body>
     <div class="detail_bill">
-        <h3 style="color: red; padding: 8px; text-align: center;">Đặt Hàng Thành Công ! Vui Lòng Kiểm Tra Lại Thông Tin</h3>
         <div class="deatail_bill_box">
             <h4 class="details_bill_box_title">Mã Người Đặt</h4>
             <p>Name</p>
@@ -64,8 +63,7 @@
                     </tr>
                 </tbody>
             </table>
-        <h3 style="color: red; padding: 8px; font-style: italic; text-align: right;">Cảm ơn quý khách !</h3>
-
+            <button>Trở Lại</button>
         </div>
 
     </div>
