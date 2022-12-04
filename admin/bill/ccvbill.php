@@ -78,13 +78,14 @@ if (is_array($bill)){
                 foreach ($allbill as $bi){
                     extract($bi);
                     $img = $img_path.$img;
+                    $ttien=$soluong * $price;
           echo '
                 <tr>
                     <td>PAD- '.$id.'</td>
                     <td><img style="width:80px; height:80px"; src="'.$img.'"></td>
                     <td>'.$name.'</td>
                     <td>'.$soluong.'</td>
-                    <td> <p style="color: black; font-weight:bold;">'.$thanhtien.'</p> </td>
+                    <td> <p style="color: black; font-weight:bold;">'.$ttien.'</p> </td>
                     <td><p style="color: red; font-weight: bold;">'.$status.'</p></td>
                 </tr>
                 ';

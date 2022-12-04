@@ -71,15 +71,15 @@
                     <span class="name"><a href="<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a></span><br>
                     <span class="price"><a
                             href="<?php echo $value['id'] ?>"><?php echo $value['price'] ?></a></span><br>
-                    <div class="product-box-btn">
-                        <form method="POST" action="$loadcart">
-                            <input type="hidden" name="hinh" value="<?php echo $value["image"]; ?>">
-                            <input type="hidden" name="name" value="<?php echo $value["name"]; ?>" />
-                            <input type="hidden" name="gia" value="<?php echo $value["price"]; ?>" />
-                            <input type="number" name="soluong" min="1" max="10" value="1">
-                            <input id="submit" type="submit" name="addcart" value="Add to Cart" />
-                        </form>
-                    </div>
+                            <div class="product-box-btn">
+                        <form action="index.php?act=addcart" method="POST">
+                        <input type="hidden" name="id" value="'.$id.'">
+                        <input type="hidden" name="image" value="'.$image.'">
+                        <input type="hidden" name="name" value="'.$name.'">
+                        <input type="hidden" name="price" value="'.$price.'"> 
+                            <input class="add" type="submit" name="addcart" value="Add to cart">
+                  </form>
+                </div>
                 </div>
                 <?php
                 }
@@ -107,8 +107,14 @@
                                 </a>
                                 </form>
                                 <div class="product-box-btn">
-                                <input type="submit" name="addtocart" value="Thêm vào giỏ hàng">
-                                </div>
+                                    <form action="index.php?act=addcart" method="POST">
+                                    <input type="hidden" name="id" value="'.$id.'">
+                                    <input type="hidden" name="image" value="'.$image.'">
+                                    <input type="hidden" name="name" value="'.$name.'">
+                                    <input type="hidden" name="price" value="'.$price.'"> 
+                                        <input class="add" type="submit" name="addcart" value="Add to cart">
+                                    </form>
+                                    </div>
                             </div>
                           
                             ';

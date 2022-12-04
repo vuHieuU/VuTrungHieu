@@ -84,7 +84,13 @@
                 <p class="price">' . $price . 'đ <del>' . $amount . 'đ</del></p>
                 </a>
                 <div class="product-box-btn">
-                  <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                <form action="index.php?act=addcart" method="POST">
+                  <input type="hidden" name="id" value="'.$id.'">
+                  <input type="hidden" name="image" value="'.$image.'">
+                  <input type="hidden" name="name" value="'.$name.'">
+                  <input type="hidden" name="price" value="'.$price.'"> 
+                     <input class="add" type="submit" name="addcart" value="Add to cart">
+                  </form>
                 </div>
             </div>
                 ';

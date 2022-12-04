@@ -94,7 +94,19 @@
                 }else{
                     ?>
                         <li><i class="fa-solid fa-user"></i><a onclick="show()" href="#"> Đăng Nhập</a></li>
-                        <li><i class="fa-solid fa-cart-shopping"></i><a href="thanhtoan.php"> Giỏ Hàng</a></li>
+                        <?php
+                            if(isset($_SESSION['name'])){
+                                extract($_SESSION['name']);
+                                ?>
+                                
+                                    <li><i class="fa-solid fa-cart-shopping"></i><a href="thanhtoan.php"> Giỏ Hàng</a></li>
+                            <?php
+                            }else{
+                                ?> 
+                                      <li><i class="fa-solid fa-cart-shopping"></i><a href="#" onclick="show()"> Giỏ Hàng</a></li> 
+                             <?php   
+                            }
+                        ?>
                     <?php
                     
                 }
