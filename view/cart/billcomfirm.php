@@ -1,3 +1,9 @@
+<?php
+if (is_array($bill)){
+    extract($bill);
+    $pttt = get_pttt($bill['bill_pttt']);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +20,7 @@
         <h3 style="color: red; padding: 8px; text-align: center;">Đặt Hàng Thành Công ! Vui Lòng Kiểm Tra Lại Thông Tin</h3>
         <div class="deatail_bill_box">
             <h4 class="details_bill_box_title">Mã Người Đặt</h4>
-            <p>Name</p>
+            <p>VTH-<?=$id?></p>
         </div>
         <div class="deatail_bill_box">
             <h4 class="details_bill_box_title">Thông Tin Đặt Hàng</h4>
@@ -22,23 +28,22 @@
                 <div class="box_left">
                     <p>Người Đặt Hàng</p>
                     <p>Địa Chỉ</p>
-                    <p>Email
-                    <p>
+                    <p>Email<p>
                     <p>Số Điện Thoại</p>
                     <p>Ngày Đặt Hàng</p>
                 </div>
                 <div class="box-right">
-                    <input type="text" value="#" disabled>
-                    <input type="text" value="#" disabled>
-                    <input type="text" value="#" disabled>
-                    <input type="text" value="#" disabled>
-                    <input type="text" value="#" disabled>
+                <input type="text" value="<?php echo $name ?>" disabled>
+                    <input type="text" value="<?php echo $address ?>" disabled>
+                    <input type="text" value="<?php echo $email ?>" disabled>
+                    <input type="text" value="<?php echo $tel ?>" disabled>
+                    <input type="text" value="<?php echo $ngaydathang ?>" disabled>
                 </div>
             </div>
         </div>
         <div class="deatail_bill_box">
             <h4 class="details_bill_box_title">Phương Thức Thanh Toán</h4>
-            <input type="text" value="Trả Khi Nhận Hàng" disabled style="border: none; outline: none;">
+            <input type="text" value="<?=$pttt?>" disabled style="border: none; outline: none;">
         </div>
         <div class="deatail_bill_box">
             <h4 class="details_bill_box_title">Sản Phẩm Đã Chọn</h4>
@@ -54,14 +59,27 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Test</td>
-                        <td>Test</td>
-                        <td>Test</td>
-                        <td>Test</td>
-                        <td>Test</td>
-                        <td>Test</td>
-                    </tr>
+                <?php
+
+foreach ($allbill as $bill) {
+  extract($bill);
+  $img = $img_path.$img;
+  $ttien=$soluong * $price;
+  $status = get_ttdh($idbill);
+  echo '
+  <tr>
+          <td>PAD-'.$id.'</td>
+          <td><img style="width:80px; height:80px"; src="'.$img.'"></td>
+          <td>'.$name.'</td>
+          <td>'.$soluong.'</td>
+          <td>'.$ttien.'</td>
+          <td><p style="color: red; font-weight: bold;">'.$status.'</p></td>
+  </tr>
+  ';
+}
+
+
+?>
                 </tbody>
             </table>
         <h3 style="color: red; padding: 8px; font-style: italic; text-align: right;">Cảm ơn quý khách !</h3>
@@ -74,7 +92,7 @@
             --main-color: #0f9d58;
             width: 70vw;
             border-radius: 12px;
-            margin: 0 auto;
+            margin: 40px auto 0 auto;
             padding: 10px 30px;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
             /* background-image: linear-gradient(to top,#355c7d, #6c5b7b, #c06c84); */
@@ -86,7 +104,9 @@
             min-height: 50px;
             /* padding: 0px 10px; */
         }
-
+        .deatail_bill_box p{
+            padding: 15px 0;
+        }
         .details_bill_box_title {
             background-color: var(--main-color);
             padding: 10px;

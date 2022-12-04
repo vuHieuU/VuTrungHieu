@@ -26,6 +26,7 @@
                      foreach($loadbill as $bill){
                      extract($bill);
                      $count = loadall_cart_count($bill['id']);
+                     $detail = "index.php?act=detail_bill&id=".$id;
                      ?>
 
             <td>PAD-<?php echo $id?></td>
@@ -52,7 +53,7 @@
                 echo ("Đơn hàng mới");
                     }
             ?></td>
-            <td><a href="cart/detail_bill.php">Chi Tiết</a></td>
+            <td><a href="<?php echo $detail ?>">Chi Tiết</a></td>
             </tr>
             
             <?php 

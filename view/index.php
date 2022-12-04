@@ -202,16 +202,26 @@
                         array_splice($_SESSION['mycart'],$_GET['id'],9);
                     }
                     $bill = loadone_bill($idbill);
-                    
-                    include 'main.php';
+                    $allbill =  loadall_cart($idbill);
+                    include 'cart/billcomfirm.php';
                     break;
             case 'mybill':
-                if(isset($_GET['id'])){
-                $id_user = $_GET['id'];
-                $loadbill = loadbill_user($id_user);
-                }
-            include 'cart/mybill.php';
-            break;
+                        if(isset($_GET['id'])){
+                        $id_user = $_GET['id'];
+                        $loadbill = loadbill_user($id_user);
+                        }
+                    include 'cart/mybill.php';
+                    break;
+            case 'detail_bill':
+                if(isset($_GET['id']) && ($_GET['id'] > 0)){
+                            $id = $_GET['id'];
+                            // $id_user = $_GET['id_user'];
+                            $bill = loadone_bill($id);
+                            $allbill =  loadall_cart($_GET['id']);
+                    // $user = loadbill_user($id_user);
+                 }
+                      include 'cart/detail_bill.php';
+                      break;
 // >>>>>>> Stashed changes
             case 'sanpham':
                 include "product.php";
