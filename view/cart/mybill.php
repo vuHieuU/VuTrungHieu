@@ -11,8 +11,8 @@
     <table border="1" style="margin-top:100px;">
         <thead>
             <tr>
-                <th>Tên mặt hàng</th>
-                <th>Số lượng</th>
+                <th>Mã đơn hàng</th>
+                <th>Số lượng mặt hàng</th>
                 <th>Địa chỉ</th>
                 <th>Phương thức thanh toán</th>
                 <th>Ngày đặt</th>
@@ -24,10 +24,11 @@
                 <?php
                      foreach($loadbill as $bill){
                      extract($bill);
+                     $count = loadall_cart_count($bill['id']);
                      ?>
 
-            <td><?php echo $name_hh?></td>
-            <td> <?php echo $soluong ?></td>
+            <td>PAD-<?php echo $id?></td>
+            <td> <?php echo $count ?></td>
             <td> <?php echo $bill_address ?></td>
             <td><?php 
                 if($bill_pttt==1){

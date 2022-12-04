@@ -35,7 +35,7 @@ if (isset($_GET['act'])) {
             $id = $_GET['id'];
             // $id_user = $_GET['id_user'];
             $bill = loadone_bill($id);
-            $bill1 = loadone_bill($id);
+            $allbill =  loadall_cart($_GET['id']);
             // $user = loadbill_user($id_user);
          }
          include 'bill/ccvbill.php';

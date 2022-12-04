@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<form class="diaChiGiaoHang" method="post" action="index.php?act=billconfirm">
+<form class="diaChiGiaoHang" method="POST" action="index.php?act=billconfirm">
     <div class="cart">
         <!-- <div class="cart-box"> -->
         <div class="cart-left">

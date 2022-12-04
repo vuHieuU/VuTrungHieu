@@ -19,8 +19,9 @@
                     <th>Id</th>
                     <th>Mã đơn hàng </th>
                     <th>Tên khách hàng</th>
-                    <th>Tên mặt hàng</th>
+                    <th>Số lượng đơn hàng</th>
                     <th>Địa Chỉ</th>
+                    <th>Tổng đơn hàng</th>
                     <th>Thao tác</th>
                 </tr>
             </thead>
@@ -30,6 +31,7 @@
                     extract($bill);
                     $status = get_ttdh($bill['bill_status']);
                     $pttt = get_pttt($bill['bill_pttt']);
+                    $count = loadall_cart_count($bill['id']);
                     $suadm = "index.php?act=chitietbill&id=" . $id;
                     $xoadm = "index.php?act=xoabill&id=" . $id;
                    ?>
@@ -38,8 +40,9 @@
                                     <td><input type="checkbox" name="" id=""></td>
                                     <td>PAD- <?php echo $id ?></td>
                                     <td><?php echo $bill_name ?></td>
-                                    <td><?php echo $name_hh ?></td>
+                                    <td><?php echo $count ?></td>
                                     <td> <?php echo $bill_address ?></td>
+                                    <td> <?php echo $total ?></td>
                                     <td style="text-align: center;">
                                         <a style="text-decoration: none;" href="<?php echo $suadm ?>">
                                             <input type="button" class="edit" value="Chi Tiết Đơn Hàng">

@@ -23,9 +23,14 @@ function loadone_bill($id){
  }
 //function loadall_cart_count
 function loadall_cart_count($idbill){
-    $sql="select * from bill where idbill ";
+    $sql="select * from cart where idbill=". $idbill;
     $bill=pdo_query($sql);
     return sizeof($bill);  
+}
+function loadall_cart($idbill){
+    $sql="select * from cart where idbill=". $idbill;
+    $allbill=pdo_query($sql);
+    return $allbill;  
 }
 function loadall_bill($kyw="",$iduser=0){
 $sql="select * from bill where 1 ";
@@ -44,7 +49,7 @@ function loadbill_user($id_user){
 function get_ttdh($n){
     switch($n){
         case '0';
-        $tt="đơn hàng mơi";
+        $tt="đơn hàng mới";
         break;
         case '1';
         $tt="đang xử lý";

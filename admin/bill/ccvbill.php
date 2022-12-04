@@ -1,6 +1,8 @@
 <?php
 if (is_array($bill)){
     extract($bill);
+    $status = get_ttdh($bill['bill_status']);
+    $pttt = get_pttt($bill['bill_pttt']);
 }
 ?>
 <!DOCTYPE html>
@@ -52,15 +54,7 @@ if (is_array($bill)){
         <thead><tr><th>Phương thức thanh toán</th></tr></thead>
         <tbody>
             <tr>
-            <td><p style="color: red; font-weight: bold;"><?php 
-                if($bill_pttt==1){
-                echo 'Thanh toán trực tiếp';
-                }else if($bill_pttt==2){
-                echo ('Thanh toán bằng thẻ');
-                }else if($bill_pttt==3){
-                echo ("Thanh toán");
-                }
-            ?></p></td>
+            <td><p style="color: red; font-weight: bold;"><?php echo $pttt ?></p></td>
             </tr>
         </tbody>
     </table>
@@ -77,29 +71,19 @@ if (is_array($bill)){
                     <th>Trạng thái</th>
                 </tr>
                 <?php
-                // foreach ($bill1 as $bi){
-                //     extract($bi);
-                ?>
+                foreach ($allbill as $bi){
+                    extract($bi);
+          echo '
                 <tr>
-                    <td>PAD- <?php echo $id ?></td>
-                    <td><?php echo $name_hh ?></td>
-                    <td><?php echo $soluong ?></td>
-                    <td><?php echo $ngaydathang ?></td>
-                    <td> <p style="color: black; font-weight:bold;"><?php echo $total ?></p> </td>
-                    <td><p style="color: red; font-weight: bold;"><?php
-                    if ($bill_status == 1) {
-                        echo 'Đơn hàng đang xử lý';
-                    } else if ($bill_status == 2) {
-                        echo ('Đang giao hàng');
-                    } else if ($bill_status == 3) {
-                        echo ("Đã giao hàng");
-                    } else {
-                        echo ("Đơn hàng mới");
-                    }
-                    ?></p></td>
+                    <td>PAD- '.$id.'</td>
+                    <td>'.$name.'</td>
+                    <td>'.$soluong.'</td>
+                    <td>'.$ngaydathang.'</td>
+                    <td> <p style="color: black; font-weight:bold;">'.$thanhtien.'</p> </td>
+                    <td><p style="color: red; font-weight: bold;">'.$status.'</p></td>
                 </tr>
-                <?php 
-            // }
+                ';
+            }
         ?>
             </thead>
         </tbody>
