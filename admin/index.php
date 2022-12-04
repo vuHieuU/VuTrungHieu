@@ -33,7 +33,9 @@ if (isset($_GET['act'])) {
       case 'chitietbill':
          if(isset($_GET['id']) && ($_GET['id'] > 0)){
             $id = $_GET['id'];
+            // $id_user = $_GET['id_user'];
             $bill = loadone_bill($id);
+            // $user = loadbill_user($id_user);
          }
          include 'bill/ccvbill.php';
 
