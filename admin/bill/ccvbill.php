@@ -76,25 +76,31 @@ if (is_array($bill)){
                     <th>Thành tiền</th>
                     <th>Trạng thái</th>
                 </tr>
+                <?php
+                // foreach ($bill1 as $bi){
+                //     extract($bi);
+                ?>
                 <tr>
-                    <td>PAD- <?php echo $id?></td>
-                    <td><?php echo $name_hh?></td>
-                    <td><?php echo $soluong?></td>
-                    <td><?php echo $ngaydathang?></td>
-                    <td> <p style="color: black; font-weight:bold;"><?php echo $total?></p> </td>
+                    <td>PAD- <?php echo $id ?></td>
+                    <td><?php echo $name_hh ?></td>
+                    <td><?php echo $soluong ?></td>
+                    <td><?php echo $ngaydathang ?></td>
+                    <td> <p style="color: black; font-weight:bold;"><?php echo $total ?></p> </td>
                     <td><p style="color: red; font-weight: bold;"><?php
-                        if($bill_status==1){
-                            echo 'Đơn hàng đang xử lý';
-                            }else if($bill_status==2){
-                            echo ('Đang giao hàng');
-                            }else if($bill_status==3){
-                            echo ("Đã giao hàng");
-                            }else{
+                    if ($bill_status == 1) {
+                        echo 'Đơn hàng đang xử lý';
+                    } else if ($bill_status == 2) {
+                        echo ('Đang giao hàng');
+                    } else if ($bill_status == 3) {
+                        echo ("Đã giao hàng");
+                    } else {
                         echo ("Đơn hàng mới");
-                            }
+                    }
                     ?></p></td>
-          
                 </tr>
+                <?php 
+            // }
+        ?>
             </thead>
         </tbody>
     </table>
