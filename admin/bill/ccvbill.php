@@ -48,6 +48,10 @@ if (is_array($bill)){
                 <th>Số điện thoại</th>
                 <td><?php echo $bill_tel?></td>
             </tr>
+            <tr>
+                <th>Ngày đặt hàng</th>
+                <td><?php echo $ngaydathang?></td>
+            </tr>
         </tbody>
     </table>
     <table>
@@ -64,21 +68,22 @@ if (is_array($bill)){
             <thead>
                 <tr>
                     <th>Mã mặt hàng</th>
+                    <th>ảnh mặt hàng</th>
                     <th>Tên mặt hàng</th>
                     <th>Số lượng</th>
-                    <th>Ngày đặt hàng</th>
                     <th>Thành tiền</th>
                     <th>Trạng thái</th>
                 </tr>
                 <?php
                 foreach ($allbill as $bi){
                     extract($bi);
+                    $img = $img_path.$img;
           echo '
                 <tr>
                     <td>PAD- '.$id.'</td>
+                    <td><img style="width:80px; height:80px"; src="'.$img.'"></td>
                     <td>'.$name.'</td>
                     <td>'.$soluong.'</td>
-                    <td>'.$ngaydathang.'</td>
                     <td> <p style="color: black; font-weight:bold;">'.$thanhtien.'</p> </td>
                     <td><p style="color: red; font-weight: bold;">'.$status.'</p></td>
                 </tr>

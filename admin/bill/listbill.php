@@ -20,7 +20,7 @@
                     <th>Mã đơn hàng </th>
                     <th>Tên khách hàng</th>
                     <th>Số lượng đơn hàng</th>
-                    <th>Địa Chỉ</th>
+                    <th>Thời gian</th>
                     <th>Tổng đơn hàng</th>
                     <th>Thao tác</th>
                 </tr>
@@ -41,7 +41,7 @@
                                     <td>PAD- <?php echo $id ?></td>
                                     <td><?php echo $bill_name ?></td>
                                     <td><?php echo $count ?></td>
-                                    <td> <?php echo $bill_address ?></td>
+                                    <td> <?php echo $ngaydathang ?></td>
                                     <td> <?php echo $total ?></td>
                                     <td style="text-align: center;">
                                         <a style="text-decoration: none;" href="<?php echo $suadm ?>">
