@@ -58,11 +58,12 @@ if (is_array($bill)){
                 </thead>
                 <tbody>
                    <?php
-
+                      $tong=0;
                       foreach ($allbill as $bill) {
                         extract($bill);
                         $img = $img_path.$img;
                         $ttien=$soluong * $price;
+                        $tong+=$ttien;
                         $status = get_ttdh($idbill);
                         echo '
                         <tr>
@@ -75,6 +76,16 @@ if (is_array($bill)){
                         </tr>
                         ';
                       }
+                      echo '
+                      <tr>
+                      <th>Tổng Tiền</th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th>'.$tong.'</th>
+                      <th></th>
+                     </tr>
+                      ';
 
 
                      ?>

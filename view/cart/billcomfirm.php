@@ -60,26 +60,37 @@ if (is_array($bill)){
                 </thead>
                 <tbody>
                 <?php
+                      $tong=0;
+                      foreach ($allbill as $bill) {
+                        extract($bill);
+                        $img = $img_path.$img;
+                        $ttien=$soluong * $price;
+                        $tong+=$ttien;
+                        $status = get_ttdh($idbill);
+                        echo '
+                        <tr>
+                                <td>PAD-'.$id.'</td>
+                                <td><img style="width:80px; height:80px"; src="'.$img.'"></td>
+                                <td>'.$name.'</td>
+                                <td>'.$soluong.'</td>
+                                <td>'.$ttien.'</td>
+                                <td><p style="color: red; font-weight: bold;">'.$status.'</p></td>
+                        </tr>
+                        ';
+                      }
+                      echo '
+                      <tr>
+                      <th>Tổng Tiền</th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th>'.$tong.'</th>
+                      <th></th>
+                     </tr>
+                      ';
 
-foreach ($allbill as $bill) {
-  extract($bill);
-  $img = $img_path.$img;
-  $ttien=$soluong * $price;
-  $status = get_ttdh($idbill);
-  echo '
-  <tr>
-          <td>PAD-'.$id.'</td>
-          <td><img style="width:80px; height:80px"; src="'.$img.'"></td>
-          <td>'.$name.'</td>
-          <td>'.$soluong.'</td>
-          <td>'.$ttien.'</td>
-          <td><p style="color: red; font-weight: bold;">'.$status.'</p></td>
-  </tr>
-  ';
-}
 
-
-?>
+                     ?>
                 </tbody>
             </table>
         <h3 style="color: red; padding: 8px; font-style: italic; text-align: right;">Cảm ơn quý khách !</h3>
