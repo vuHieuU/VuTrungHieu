@@ -22,6 +22,7 @@
                     <th>Số lượng đơn hàng</th>
                     <th>Thời gian</th>
                     <th>Tổng đơn hàng</th>
+                    <th>Trạng Thái</th>
                     <th>Thao tác</th>
                 </tr>
             </thead>
@@ -32,7 +33,7 @@
                     $status = get_ttdh($bill['bill_status']);
                     $pttt = get_pttt($bill['bill_pttt']);
                     $count = loadall_cart_count($bill['id']);
-                    $suadm = "index.php?act=chitietbill&id=" . $id;
+                    $detail = "index.php?act=chitietbill&id=" . $id;
                     $xoadm = "index.php?act=xoabill&id=" . $id;
                    ?>
                             <tr>
@@ -43,14 +44,16 @@
                                     <td><?php echo $count ?></td>
                                     <td> <?php echo $ngaydathang ?></td>
                                     <td> <?php echo $total ?></td>
+                                    <td> <?php echo $status ?></td>
                                     <td style="text-align: center;">
-                                        <a style="text-decoration: none;" href="<?php echo $suadm ?>">
+                                        <a style="text-decoration: none;" href="<?php echo $detail ?>">
                                             <input type="button" class="edit" value="Chi Tiết Đơn Hàng">
                                         </a>
                                         <a style="text-decoration: none;" href="<?php echo $xoadm ?>" >
                                             <input onclick="return confirm('Bạn có chắc chắn muốn xóa không')" type="button" class="delete" value="Xóa">
                                             
                                         </a>
+                                      
 
                                     </td>
                             </tr>   

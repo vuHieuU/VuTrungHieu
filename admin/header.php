@@ -21,7 +21,7 @@
                 <img src="../Images/logo/logo2.jpg" alt="">
             </div>
             <p style="margin-bottom: 4px;">Admin tools</p>
-            <a href="#">
+            <a href="index.php?act=thongke">
                 <div class="box-left-content" style="background-color: #339900; color: #fff;">
                     <i class="fa-solid fa-chart-simple fa-bounce"
                         style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; --fa-bounce-rebound: 0;"></i>

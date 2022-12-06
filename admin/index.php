@@ -39,16 +39,23 @@ if (isset($_GET['act'])) {
             // $user = loadbill_user($id_user);
          }
          include 'bill/ccvbill.php';
-
          break;
-            case 'xoabill';   
+      case 'xoabill';   
             if(isset($_GET['id'])){
                array_slice($_SESSION['mycart'],$_GET['id'],1);
-           }else{
+            }else{
                $_SESSION['mycart']=[];
-           }
+            }
             header('location: index.php?act=listbill');
-         break;
+                 break;
+      case 'update_status':
+             if(isset($_POST['bill_status'])){
+                $id = $_POST['id'];
+                $bill_status = $_POST['bill_status'];
+                update_status($id,$bill_status);
+             }
+             header('location: index.php?act=listbill');
+             break;
 // bill/cart
       case 'addtocart';
             if(isset($_POST['addtocart'])&&($_POST['addtocart']!="")){
@@ -320,6 +327,9 @@ if (isset($_GET['act'])) {
             $listblog = load_blog();
             include "blog/add.php";
             break;
+      case 'thongke':
+               include "thongke/thongke.php";
+               break;
 
       default:
 ?><script>

@@ -1,7 +1,6 @@
 <?php
 if (is_array($bill)){
     extract($bill);
-    $status = get_ttdh($bill['bill_status']);
     $pttt = get_pttt($bill['bill_pttt']);
 }
 ?>
@@ -52,6 +51,25 @@ if (is_array($bill)){
                 <th>Ngày đặt hàng</th>
                 <td><?php echo $ngaydathang?></td>
             </tr>
+            <tr>
+                <th>Trạng Thái</th>
+                <td><p style="color: red; font-weight: bold;">
+                <?php
+                if($bill_status==0){
+                    echo 'Chưa xử lí';
+                    }else if($bill_status==1){
+                    echo ('Đã xử lí');
+                    }else if($bill_status==2){
+                    echo ("Đang giao hàng");
+                    }else if($bill_status==3){
+                    echo ("Đã Hoàn thành");
+                    }else{
+                        echo "Chưa xử lí";
+                    }
+            ?>
+                   </p>
+               </td>
+            </tr>
         </tbody>
     </table>
     <table>
@@ -59,6 +77,37 @@ if (is_array($bill)){
         <tbody>
             <tr>
             <td><p style="color: red; font-weight: bold;"><?php echo $pttt ?></p></td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <thead><tr><th>Cập Nhật Trạng Thái</th></tr></thead>
+        <tbody>
+            <tr>
+            <td><p style="color: red; font-weight: bold;"> <form action="index.php?act=update_status" method="POST">
+                <input type="hidden" name="id" value="<?=$id?>">
+                      <select name="bill_status" id="">
+                      <option value="0">  <?php
+                        if($bill_status==0){
+                            echo 'Chưa xử lí';
+                            }else if($bill_status==1){
+                            echo ('Đã xử lí');
+                            }else if($bill_status==2){
+                            echo ("Đang giao hàng");
+                            }else if($bill_status==3){
+                            echo ("Đã Hoàn thành");
+                            }else{
+                                echo "Chưa xử lí";
+                            }
+                      ?></option>
+                          <option value="0">Chưa xử lí</option>
+                          <option value="1">Đã xử lí</option>
+                          <option value="2">Đang Giao Hàng</option>
+                          <option value="3">Đã Hoàn Thành</option>
+                      </select>
+                      <button type="submit">Cập Nhật</button>
+                </form>
+            </p></td>
             </tr>
         </tbody>
     </table>
@@ -72,7 +121,6 @@ if (is_array($bill)){
                     <th>Tên mặt hàng</th>
                     <th>Số lượng</th>
                     <th>Thành tiền</th>
-                    <th>Trạng thái</th>
                 </tr>
                 <?php
                 foreach ($allbill as $bi){
@@ -86,7 +134,7 @@ if (is_array($bill)){
                     <td>'.$name.'</td>
                     <td>'.$soluong.'</td>
                     <td> <p style="color: black; font-weight:bold;">'.$ttien.'</p> </td>
-                    <td><p style="color: red; font-weight: bold;">'.$status.'</p></td>
+                 
                 </tr>
                 ';
             }

@@ -30,6 +30,7 @@ if (is_array($bill)){
                     <p>Email<p>
                     <p>Số Điện Thoại</p>
                     <p>Ngày Đặt Hàng</p>
+                    <p>Trạng thái đơn hàng</p>
                 </div>
                 <div class="box-right">
                     <input type="text" value="<?php echo $name ?>" disabled>
@@ -37,6 +38,19 @@ if (is_array($bill)){
                     <input type="text" value="<?php echo $email ?>" disabled>
                     <input type="text" value="<?php echo $tel ?>" disabled>
                     <input type="text" value="<?php echo $ngaydathang ?>" disabled>
+                    <input type="text" value="<?php
+                if($bill_status==0){
+                    echo 'Chưa xử lí';
+                    }else if($bill_status==1){
+                    echo ('Đã xử lí');
+                    }else if($bill_status==2){
+                    echo ("Đang giao hàng");
+                    }else if($bill_status==3){
+                    echo ("Đã Hoàn thành");
+                    }else{
+                        echo "Chưa xử lí";
+                    }
+            ?>" disabled>
                 </div>
             </div>
         </div>
@@ -64,7 +78,6 @@ if (is_array($bill)){
                         $img = $img_path.$img;
                         $ttien=$soluong * $price;
                         $tong+=$ttien;
-                        $status = get_ttdh($idbill);
                         echo '
                         <tr>
                                 <td>PAD-'.$id.'</td>
@@ -72,7 +85,6 @@ if (is_array($bill)){
                                 <td>'.$name.'</td>
                                 <td>'.$soluong.'</td>
                                 <td>'.$ttien.'</td>
-                                <td><p style="color: red; font-weight: bold;">'.$status.'</p></td>
                         </tr>
                         ';
                       }

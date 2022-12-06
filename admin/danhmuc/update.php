@@ -21,7 +21,7 @@ if (is_array($dm)) {
             <tr>
                 <td>Mã Danh Mục</td>
                 <td>
-                    <input type="text" value="<?php echo $id_cate ?>" name="is" disabled />
+                    <input type="text" value="<?php echo $id_cate ?>" name="id" disabled />
                 </td>
             </tr>
             <tr>

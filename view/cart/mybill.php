@@ -43,16 +43,19 @@
             ?></td>
             <td> <?php echo $ngaydathang  ?></td>
             <td><?php
-                if($bill_status==1){
-                    echo 'Đơn hàng đang xử lý';
+                if($bill_status==0){
+                    echo 'Chưa xử lí';
+                    }else if($bill_status==1){
+                    echo ('Đã xử lí');
                     }else if($bill_status==2){
-                    echo ('Đang giao hàng');
+                    echo ("Đang giao hàng");
                     }else if($bill_status==3){
-                    echo ("Đã giao hàng");
+                    echo ("Đã Hoàn thành");
                     }else{
-                echo ("Đơn hàng mới");
+                        echo "Chưa xử lí";
                     }
-            ?></td>
+            ?>
+            </td>
             <td><a href="<?php echo $detail ?>">Chi Tiết</a></td>
             </tr>
             

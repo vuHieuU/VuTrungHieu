@@ -49,10 +49,10 @@ function loadbill_user($id_user){
 function get_ttdh($n){
     switch($n){
         case '0';
-        $tt="đơn hàng mới";
+        $tt="Chưa xử lí";
         break;
         case '1';
-        $tt="đang xử lý";
+        $tt="đã xử lý";
         break;
         case '2';
         $tt="đang giao hàng";
@@ -61,7 +61,7 @@ function get_ttdh($n){
         $tt="hoàn tất";
         break;
         default:
-        $tt="đơn hàng mới";
+        $tt="Chưa sử lí";
         break;
     }
     return $tt;
@@ -83,6 +83,8 @@ function get_pttt($n){
     }
     return $tt;
 }
-
-
+function update_status($id,$bill_status){
+    $sql = "update bill set bill_status='".$bill_status."' where id=". $id;
+    pdo_execute($sql);
+}
 ?>
