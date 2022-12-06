@@ -328,6 +328,10 @@ if (isset($_GET['act'])) {
             include "blog/add.php";
             break;
       case 'thongke':
+         $listsp = loadall_sp();
+         $listdm = loadall_dm();
+         $listtk = loadall_tk();
+         $listbill=loadall_bill(); 
                include "thongke/thongke.php";
                break;
 

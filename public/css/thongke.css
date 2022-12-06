@@ -1,0 +1,46 @@
+.statistical{
+    margin-top: 20px;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-gap: 15px;
+}
+.statistical .product{
+     background-color: #0D1732;
+     opacity: 0.95;
+     border-radius: 10px;
+     padding: 15px 0px 15px 25px;
+}
+.statistical .user{
+     background-color: #79AE80;
+     opacity: 0.95;
+     border-radius: 10px;
+     padding: 15px 0px 15px 25px;
+}
+.statistical .category{
+     background-color: #CBA52A;
+     opacity: 0.95;
+     border-radius: 10px;
+     padding: 15px 0px 15px 25px;
+}
+.statistical .bill{
+     background-color: #BD537B;
+     opacity: 0.95;
+     border-radius: 10px;
+     padding: 15px 0px 15px 25px;
+}
+.statistical label{
+    color: white;
+    font-size: 15px;
+}
+.statistical p{
+    color: white;
+    font-size: 30px;
+    padding: 10px 0 20px 0;
+}
+.statistical a{
+    color: white;
+    font-size: 15px;
+}
+.statistical i{
+    margin-left: 5px;
+}
