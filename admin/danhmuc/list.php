@@ -37,7 +37,7 @@
                                             <input type="button" class="edit" value="Sửa">
                                         </a>
                                         <a style="text-decoration: none;" href="<?php echo $xoadm ?>" >
-                                            <input onclick="return confirm('Bạn có chắc chắn muốn xóa không')" type="button" class="delete" value="Xóa">
+                                            <input onclick="return confirm('Bạn có chắc chắn muốn xóa không')" type="button" class="delete" value="Xóa❕">
                                             
                                         </a>
 

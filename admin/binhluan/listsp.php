@@ -24,8 +24,8 @@
                 ?>
             </select>
             <div class="searchS-text">
-                <input type="text" name="kyw" id="">
-                <input type="submit" name="listok">
+                <input type="text" name="kyw" id="" placeholder="Nhập sản phẩm cần tìm..">
+                <input type="submit" name="listok" value="🔍">
             </div>
         </form>
         <style>

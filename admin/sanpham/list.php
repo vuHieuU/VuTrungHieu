@@ -24,8 +24,8 @@
                 ?>
             </select>
             <div class="searchS-text">
-                <input type="text" name="kyw" id="">
-                <input type="submit" name="listok">
+                <input type="text" name="kyw" id="" placeholder="Nhập sản phẩm cần tìm..">
+                <input type="submit" name="listok" value="🔍">
             </div>
         </form>
         <style>
@@ -57,17 +57,17 @@
                     } else {
                         $image = "No photo";
                     }
-                    ?>
-                            <tr>
-                            <td><input type="checkbox" name="" id=""></td>
-                            <td><?php echo $id ?></td>
-                            <td><?php echo $name  ?></td>
-                            <td><?php echo $image ?></td>
-                            <td><?php echo $price ?></td>
-                            <td><?php echo $amount ?></td>
-                            <td><?php echo $content ?></td>
-                            <td><?php echo $name_cate ?></td>
-                            <td style="text-align: center;">
+                ?>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td><?php echo $id ?></td>
+                        <td><?php echo $name  ?></td>
+                        <td><?php echo $image ?></td>
+                        <td><?php echo $price ?></td>
+                        <td><?php echo $amount ?></td>
+                        <td class="content"><?php echo $content ?></td>
+                        <td><?php echo $name_cate ?></td>
+                        <td style="text-align: center;">
                             <a style="text-decoration: none;" href="<?php echo $suasp ?>">
                                 <input type="button" class="edit" value="Sửa">
                             </a>
@@ -76,9 +76,8 @@
                             </a>
 
                         </td>
-                    </tr>   
-                    
-                    <?php
+                    </tr>
+                <?php
                 }
 
                 ?>
@@ -93,7 +92,7 @@
         </form>
     </div>
     </div>
-<!-- <<<<<<< Updated upstream -->
+    <!-- <<<<<<< Updated upstream -->
     <script>
         function Delete() {
             var remove = confirm("Bạn có muốn xóa không?");
@@ -106,7 +105,7 @@
             }
         }
     </script>
-<!-- =======
+    <!-- =======
 >>>>>>> Stashed changes -->
 </body>
 

@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    --main-color: #0f9d58;
+    --main-color: #009933;
     --color-text: rgb(12, 70, 7);
     font-family: font;
 }
@@ -13,7 +13,7 @@
 }
 
 .container {
-    width: 85vw;
+    width: 1080px;
     margin: 3.25em auto;
 }
 
@@ -56,11 +56,14 @@
     line-height: 1.875em;
     text-decoration: none;
     color: #000;
+    transition: .2s all;
 }
 
-.header .menu>ul>li>a:hover {
-    border-bottom: 2px solid var(--main-color);
+.header .menu ul li a:hover {
+    /* color: green; */
 }
+
+
 
 .dropbtn {
     background-color: unset;
@@ -128,7 +131,7 @@
     display: flex;
     padding: 4px 16px;
     margin: .5em 0;
-    line-height: 30px;
+    line-height: 40px;
 }
 
 /* product category */
@@ -254,6 +257,7 @@ img {
     display: grid;
     grid-gap: 12px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 .product-search {
@@ -261,24 +265,26 @@ img {
 }
 
 .product-search .search {
-    margin-left: 18vw;
+    margin-left: 20vw;
     display: flex;
     width: 100%;
-    border-radius: 4px;
-    padding: 4px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    /* border-radius: 20px; */
+    /* padding: 4px; */
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+    border-bottom: 1px solid #000;
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
 }
 
 .product-search input[type=text] {
     border: none;
     outline: none;
-    width: 80%;
+    width: 90%;
     margin-right: 4px;
-    padding: 4px;
+    padding: 8px 12px;
 }
 
 .product-search button {
-    width: 20%;
+    width: 10%;
     background-color: unset;
     color: var(--color-text);
     border: none;
@@ -293,7 +299,7 @@ img {
     display: grid;
 }
 
-.product-box:hover {
+.product-box:hover{
     transform: scale(1.02, 1.02);
     cursor: pointer;
 }
@@ -498,11 +504,11 @@ p.blog-mota{
 /* Sale */
 /* footer */
 .footer {
-    margin-top: 40px;
+    /* margin-top: 40px; */
     position: relative;
     opacity: .9;
     padding: 0px 80px;
-    padding-top: 40px;
+    padding-top: 20px;
     background-color: black;
     display: grid;
     overflow: hidden;
@@ -552,10 +558,11 @@ p.blog-mota{
 }
 
 .address {
-    text-align: justify;
+    text-align: left;
 }
 
 .address p {
+    margin: 8px 0px;
     color: #fff;
 }
 
@@ -564,20 +571,45 @@ p.blog-mota{
 }
 
 .address ul li {
-    margin: 12px 0px;
+    /* margin: 12px 0px; */
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.address h3{
+    text-align: center;
+    /* background-color: #f1f1f1; */
+    /* color: #000; */
+    /* opacity: .85; */
+    border-radius: 8px;
+    padding: 8px;
 }
 
 .address ul li a {
     text-decoration: none;
     color: #fff;
+    font-size: 14px;
 }
+
+.address ul li:hover{
+    background-color: #f1f1f1;
+}
+
+.address ul li:hover a{
+    color: #000;
+}
+
 
 .address>input,
 .address>button {
     width: 100%;
+    outline: none;
     margin-bottom: 8px;
-    padding: 8px 4px;
+    padding: 8px 12px;
     border: none;
+    border-radius: 4px;
 }
 
 .address>button {
@@ -585,7 +617,7 @@ p.blog-mota{
     color: #fff;
 }
 
-.footer.contact i {
+.footer .contact i {
     font-size: 20px;
     margin: 20px 10px;
     color: #fff;
@@ -599,17 +631,19 @@ p.blog-mota{
 }
 
 #backTop {
+
     width: 50px;
     height: 50px;
     border-radius: 50%;
     color: #fff;
-    background-color: #91ad41;
+    background-color: var(--main-color);
     display: flex;
     justify-content: center;
     align-items: center;
     margin: -35px auto;
     cursor: pointer;
-    box-shadow: 0 0 10px #8fbe0b;
+    /* box-shadow: 0 0 10px #8fbe0b; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
     position: absolute;
     left: 103%;
     transform: translateX(-50%);
@@ -629,7 +663,7 @@ p.blog-mota{
 }
 
 #iplg {
-    color: #86B70B;
+    color: var(--main-color);
 }
 
 .flex input[type=submit] {
@@ -679,7 +713,7 @@ p.blog-mota{
 }
 
 .gach {
-    border-top: 3px #86B70B solid;
+    border-top: 3px var(--main-color) solid;
     width: 140px;
     position: absolute;
     left: 11.25em;
@@ -716,7 +750,7 @@ p.blog-mota{
 .login {
     margin-top: 20px;
     border: none;
-    background-color: #86B70B;
+    background-color: var(--main-color);
     color: white;
     padding: 10px 0;
     text-transform: uppercase;
@@ -740,7 +774,7 @@ p.blog-mota{
 }
 
 .forgot a:hover {
-    color: #86B70B;
+    color: var(--main-color);
 }
 
 .fa-x {
@@ -751,7 +785,7 @@ p.blog-mota{
 }
 
 .searchtk {
-    color: #86B70B;
+    color: var(--main-color);
     text-align: center;
 }
 
@@ -783,7 +817,7 @@ p.blog-mota{
 }
 
 .timtk {
-    background-color: #86B70B;
+    background-color: var(--main-color);
     color: white;
 }
 

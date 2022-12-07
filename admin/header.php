@@ -18,7 +18,7 @@
     <div class="container">
         <div class="box-left">
             <div class="box-left-img">
-                <img src="../Images/logo/logo2.jpg" alt="">
+                <a href="../view/index.php"><img src="../Images/logo/logo2.jpg" alt=""></a>
             </div>
             <p style="margin-bottom: 4px;">Admin tools</p>
             <a href="index.php?act=thongke">
@@ -60,7 +60,7 @@
             </a>
             <a href="index.php?act=blog">
                 <div class="box-left-content">
-                    <i class="fa-solid fa-dolly"></i>
+                <i class="fa-solid fa-newspaper"></i>
                     <p>Tin Tức</p>
                 </div>
             </a>

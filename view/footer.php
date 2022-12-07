@@ -1,4 +1,5 @@
-<!-- Footer -->
+
+.<!-- Footer -->
 
 </div>
   <div class="footer">
@@ -10,18 +11,18 @@
       <i class="fa-brands fa-google"></i>
     </div>
     <div class="footer-box address">
-    <h3 style="color: #fff;">CHÍNH SÁCH</h3>
+    <h3>CHÍNH SÁCH</h3>
         <ul>
           <li><a href="#">Hướng dẫn mua hàng</a></li>
           <li><a href="#">Hướng dẫn thanh toán</a></li>
           <li><a href="#">Hướng dẫn giao nhận</a></li>
           <li><a href="#">Điều khoản dịch vụ</a></li>
-          <li><a href="#">Chính sách nhận và hoàn trả hàng hóa</a></li>
+          <li><a href="#">Chính sách nhận và hoàn trả hàng</a></li>
           <li><a href="#">Giới thiệu về Trang trại G27</a></li>
         </ul>
     </div>
     <div class="footer-box address">
-    <h3 style="color: #fff;">HỖ TRỢ KHÁCH</h3> 
+    <h3>HỖ TRỢ KHÁCH</h3> 
       <ul>
         <li><a href="#">Hợp Tác</a></li>
         <li><a href="#">Đăng Kí Thành Viên</a></li>

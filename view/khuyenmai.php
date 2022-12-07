@@ -5,271 +5,126 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Main/css/khuyenmai.css">
+    <link rel="stylesheet" href="../Main/css/product.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Document</title>
     <style>
-        #banner {
-            background: url(../Images/banner/banner1.jpg);
-            width: 100%;
-            min-height: 430px;
-            background-size: cover;
-            margin: 0 auto;
-            margin-top: 5px;
-        }
-
-        h1 {
-            padding: 10px;
-        }
-
+    #banner {
+        background: url(../Images/Footer/variety-fresh-tasty-vegetables-dark.jpg);
+        width: 100%;
+        min-height: 200px;
+        background-size: cover;
+        margin: 0 auto;
+        margin-top: 5px;
+        /* opacity: .3; */
+    }
     </style>
 </head>
 
 <body>
 
+    <?php include "header.php" ?>
+
     <div class="wrapper">
         <div id="banner">
             <div class="text_banner">
-                <h1>Giảm giá cực sốc</h1>
-                
+
             </div>
         </div>
 
         <!---Hiển thị danh mục -->
         <div class="food-menu">
-            <button class="button_name"><a href="index.php?act=sanpham">Tất cả</a></button>
+            <button class="button_name"><i class="fa-solid fa-list-check"></i><a href="index.php?act=sanpham">Tất
+                    cả</a></button>
             <?php
             $dsdm = loadall_dm();
             foreach ($dsdm as $key => $value) {
             ?>
-                <button class="button_name"><a href="index.php?act=danhmucsanpham&madanhmuc=<?php echo $value['id_cate'] ?>"><?php echo $value['name_cate'] ?></a></button>
+            <button class="button_name"><i class="fa-solid fa-carrot"></i><a
+                    href="index.php?act=danhmucsanpham&madanhmuc=<?php echo $value['id_cate'] ?>"><?php echo $value['name_cate'] ?></a></button>
             <?php
             }
             ?>
         </div>
 
-
-        <!--********* HTML  *************-->
-        <!--Hiển thị giống bên danh mục-->
-        <!-- <div class="food-menu">
-            <button class="active" type-food="all">All food</button>
-            <button type-food="salad">Salad</button>
-            <button type-food="meat">Meat</button>
-            <button type-food="drinks">Vegetable</button>
-            <button type-food="dessert">fruit</button>
-        </div> -->
-
-        <!--Hiển thị trang sản phẩm-->
-        <!-- <div class="food-list">
-            <div class=" food-item" type-food="meat">
-                <img src="../Images/sanpham/bapcaitim.jpg" alt="">
-                <p class="name">Bắp cải tim Organic 500g</p>
-                <p class="price">30.000đ <del>45.000đ</del></p>
-                <div class="product-box-btn">
-                    <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
-                </div>
-            </div>
-            <div class=" food-item" type-food="dessert">
-                <img src="../Images/sanpham/bingoi.jpg" alt="">
-                <p class="name">Bắp cải tim Organic 500g</p>
-                <p class="price">30.000đ <del>45.000đ</del></p>
-                <div class="product-box-btn">
-                    <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
-                </div>
-            </div>
-            <div class=" food-item" type-food="salad">
-                <img src="../Images/sanpham/dualeo.jpg" alt="">
-                <p class="name">Bắp cải tim Organic 500g</p>
-                <p class="price">30.000đ <del>45.000đ</del></p>
-                <div class="product-box-btn">
-                    <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
-                </div>
-            </div>
-            <div class=" food-item" type-food="meat">
-                <img src="../Images/sanpham/raucantay.jpg" alt="">
-                <p class="name">Bắp cải tim Organic 500g</p>
-                <p class="price">30.000đ <del>45.000đ</del></p>
-                <div class="product-box-btn">
-                    <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
-                </div>
-            </div>
-            <div class=" food-item" type-food="salad">
-                <img src="../Images/sanpham/rauma.jpg" alt="">
-                <p class="name">Bắp cải tim Organic 500g</p>
-                <p class="price">30.000đ <del>45.000đ</del></p>
-                <div class="product-box-btn">
-                    <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
-                </div>
-            </div>
-            <div class=" food-item" type-food="drinks">
-                <img src="../Images/sanpham/bapchuoi.jpg" alt="">
-                <p class="name">Bắp cải tim Organic 500g</p>
-                <p class="price">30.000đ <del>45.000đ</del></p>
-                <div class="product-box-btn">
-                    <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
-                </div>
-            </div>
-            <div class=" food-item" type-food="dessert">
-                <img src="../Images/sanpham/táo.jpg" alt="">
-                <p class="name">Bắp cải tim Organic 500g</p>
-                <p class="price">30.000đ <del>45.000đ</del></p>
-                <div class="product-box-btn">
-                    <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
-                </div>
-            </div>
-            <div class=" food-item" type-food="drinks">
-                <img src="../Images/sanpham/cucaitrang.jpg" alt="">
-                <p class="name">Bắp cải tim Organic 500g</p>
-                <p class="price">30.000đ <del>45.000đ</del></p>
-                <div class="product-box-btn">
-                    <button class="add"><i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
-                </div>
-            </div>
-        </div> -->
-        <!--********* END HTML  *************-->
-
-
-        <!--Sản phẩm khuyễn mãi-->
+        <!--Sản phẩm tìm kiếm-->
         <?php
-
+        if (isset($_POST['btn_search'])) {
+            $keyword = $_POST['search'];
+            $sqlsearch = "SELECT * FROM products WHERE name LIKE '%$keyword%'";
+            $timkiem = $_POST[$sqlsearch];
+            var_dump($timkiem);
         ?>
-        <h1>Sản phẩm khuyễn mãi</h1>
-        <div class="khuyenmai">
-            <div class="food-list">
-                <?php
-                $allsp = loadAll_product();
-                foreach ($sphome as $sp) {
-                    extract($sp);
-                    $link = "index.php?act=detail&id=" . $id;
-                    $loadsp = "index.php?act=listsp&cate_id=" . $id_cate;
-                    $img = $img_path . $image;
-                    echo '
-                    <div class="food-item">
-                        
-                       
-                            <div class="product-box">
-                            <div class="sale">
-                            <div class="iii">
-                                <i width=" 40px" class="fas fa-bookmark"></i>
-                            </div>
-                            <p>10%</p>
-                        </div>
-                            <a href="' . $link . '">
-                            <img src="' . $img . '" alt="">
-                            </a>
-                            <a style="text-decoration: none;" href="' . $loadsp . '"><button>' . $name_cate . '</button></a>
-                            <a href="' . $link . '">
-                            <p class="name">' . $name . '</p>
-                            <p class="price">' . $price . 'đ <del>' . $amount . 'đ</del></p>
-                            </a>
-                            <div class="product-box-btn">
-                            <form action="index.php?act=addcart" method="POST">
-                              <input type="hidden" name="id" value="'.$id.'">
-                              <input type="hidden" name="image" value="'.$image.'">
-                              <input type="hidden" name="name" value="'.$name.'">
-                              <input type="hidden" name="price" value="'.$price.'"> 
-                                 <input class="add" type="submit" name="addcart" value="Add to cart">
-                              </form>
-                            </div>
-                        </div>
-                            
-                    </div>
-                    ';
-                }
-
+        <h1>Sản phẩm tìm kiếm được</h1>
+        <div class="food-list">
+            <?php
+                foreach ($kqsearch as $key => $value) {
+                    $loadcart= "index.php?act=".$id;
                 ?>
-            </div>
+            <div class="product-box">
+                <a href="<?php echo $value['id'] ?>">
+                    <img src="../Images/sanpham/sanphamok/<?php echo $value['image'] ?>" alt="">
+                </a>
+                <div class="food-item">
+                    <img src="../Images/sanpham/sanphamok/<?php echo $value['image'] ?>" alt="">
 
-            <div class="boxright">
-                <div class="product_like">
-                    <h3>Top 5 sản phẩm yêu thích</h3>
+                    <span class="name"><a href="<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a></span><br>
+                    <span class="price"><a
+                            href="<?php echo $value['id'] ?>"><?php echo $value['price'] ?></a></span><br>
+                            <div class="product-box-btn">
+                        <form action="index.php?act=addcart" method="POST">
+                        <input type="hidden" name="id" value="'.$id.'">
+                        <input type="hidden" name="image" value="'.$image.'">
+                        <input type="hidden" name="name" value="'.$name.'">
+                        <input type="hidden" name="price" value="'.$price.'"> 
+                            <input class="add" type="submit" name="addcart" value="Add to cart">
+                  </form>
+                </div>
+                </div>
+                <?php
+                }
+            } else {
+                ?>
+                <h1>Sản phẩm nổi bật</h1>
+                <div class="food-list">
                     <?php
-                     $dstop5 = loadsp_home_top5();
-                    foreach ($dstop5 as $sp) {
-                       
+                    $allsp = loadAll_sanpham_home();
+                    foreach ($sphome as $sp) {
                         extract($sp);
-                        $link = "index.php?act=detail&id=" . $id;
+                        $link = "index.php?act=detail&id=".$id;
                         $loadsp = "index.php?act=listsp&cate_id=" . $id_cate;
                         $img = $img_path . $image;
                         echo '
-                                <div class="top">
-                                    <img width="24%" src="' . $img . '" alt="">
-                                    <a href="'.$link.'">' . $name . '</a>
-                                </div>
+                                <div class="product-box">
+                                <a href="' . $link . '">
+                                <img src="' . $img . '" alt="">
+                                </a>
+                                <a style="text-decoration: none;" href="' . $loadsp . '"><button>' . $name_cate . '</button></a>
+                                <a href="' . $link . '">
+                                <form action= "index.php?act=addtocart" method="post">
+                                <p class="name">' . $name . '</p>
+                                <p class="price">' . $price . 'đ <del>' . $amount . 'đ</del></p>
+                                </a>
+                                </form>
+                                <div class="product-box-btn">
+                                    <form action="index.php?act=addcart" method="POST">
+                                    <input type="hidden" name="id" value="'.$id.'">
+                                    <input type="hidden" name="image" value="'.$image.'">
+                                    <input type="hidden" name="name" value="'.$name.'">
+                                    <input type="hidden" name="price" value="'.$price.'"> 
+                                        <input class="add" type="submit" name="addcart" value="Add to cart">
+                                    </form>
+                                    </div>
+                            </div>
+                          
                             ';
                     }
+                    }
                     ?>
-
-                    <!-- <ul>
-                         
-                        <li><a href="">Đậu bắp</a></li>
-                        <li><a href="">Củ cải trắng</a></li>
-                        <li><a href="">Cần tây</a></li>
-                        <li><a href="">Táo tàu</a></li>
-                        <li><a href="">Ớt chuông</a></li>
-                    </ul> -->
-                    
-                    
                 </div>
-                <div class="top_blog">
-                    <h3>Bài viết gần đây</h3>
-                    <div class="blog_anh">
-                        <img width="25%" src="../Images/sanpham/sanphamok/bido.png" alt="">
-                        <div class="blog_content">
-                            <span>19/11/2020 &emsp; <i class="far fa-comment-alt"></i> 3</span>
-                            <p>Toàn năng cũng không kiểm soát được các văn bản mù quáng</p>
-                        </div>
-                    </div>
-                    <div class="blog_anh1">
-                        <img width="25%" src="../Images/sanpham/sanphamok/catim.png" alt="">
-                        <div class="blog_content">
-                            <span>19/11/2020 &emsp; <i class="far fa-comment-alt"></i> 3</span>
-                            <p>Toàn năng cũng không kiểm soát được các văn bản mù quáng</p>
-                        </div>
-                    </div>
-                    <div class="blog_anh2">
-                        <img width="25%" src="../Images/sanpham/sanphamok/daubap.png" alt="">
-                        <div class="blog_content">
-                            <span>19/11/2020 &emsp; <i class="far fa-comment-alt"></i> 3</span>
-                            <p>Toàn năng cũng không kiểm soát được các văn bản mù quáng</p>
-                        </div>
-                    </div>
-                    <div class="blog_anh3">
-                        <img width="25%" src="../Images/sanpham/sanphamok/rauma.png" alt="">
-                        <div class="blog_content">
-                            <span>19/11/2020 &emsp; <i class="far fa-comment-alt"></i> 3</span>
-                            <p>Toàn năng cũng không kiểm soát được các văn bản mù quáng</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-    </div>
-
-    </div>
-    <!-- <script>
-        const foodBtns = document.querySelectorAll('.food-menu button')
-        const foodList = document.querySelectorAll('.food-item')
-
-        foodBtns.forEach((btn) => {
-            btn.addEventListener('click', (e) => {
-                const type = e.target.getAttribute('type-food')
-
-                // remove and set active fpr button
-                document.querySelector('.food-menu button.active')
-                    .classList.remove('active')
-                e.target.classList.add('active')
-
-                // filter elements
-                foodList.forEach((item) => {
-                    if (type == 'all' || item.getAttribute('type-food') == type)
-                        item.classList.remove('hide')
-                    else item.classList.add('hide')
-                })
-            })
-        })
-    </script> -->
+            </div>  
+    
 </body>
 
 </html>

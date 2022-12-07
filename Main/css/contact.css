@@ -7,7 +7,7 @@
 /* contact */
 
 .contacts {
-    width: 1400px;
+    width: 85vw;
     margin: 0 auto;
     margin-top: 150px;
 }
@@ -34,14 +34,18 @@ p {
 .contact-detail {
     display: flex;
     height: 450px;
+    /* width: 50%; */
 }
-
+/* contact-ggmap */
+.contact-ggmap{
+    width: 50%;
+}
 
 /* contact-right */
 
 .contact-right {
     display: grid;
-    width: 500px;
+    width: 50%;
     margin-left: 3pc;
 }
 

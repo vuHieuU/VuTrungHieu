@@ -45,12 +45,12 @@
                                     <td> <?php echo $ngaydathang ?></td>
                                     <td> <?php echo $total ?></td>
                                     <td> <?php echo $status ?></td>
-                                    <td style="text-align: center;">
-                                        <a style="text-decoration: none;" href="<?php echo $detail ?>">
-                                            <input type="button" class="edit" value="Chi Tiết Đơn Hàng">
+                                    <td style="text-align: center; display: flex;">
+                                        <a style="text-decoration: none; margin: 4px;" href="<?php echo $detail ?>">
+                                            <input type="button" class="edit" value="Chi Tiết 📃">
                                         </a>
-                                        <a style="text-decoration: none;" href="<?php echo $xoadm ?>" >
-                                            <input onclick="return confirm('Bạn có chắc chắn muốn xóa không')" type="button" class="delete" value="Xóa">
+                                        <a style="text-decoration: none; margin: 4px;" href="<?php echo $xoadm ?>" >
+                                            <input onclick="return confirm('Bạn có chắc chắn muốn xóa không')" type="button" class="delete" value="Xóa❕">
                                             
                                         </a>
                                       

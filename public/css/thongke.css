@@ -39,8 +39,13 @@
 }
 .statistical a{
     color: white;
+    line-height: 20px;
     font-size: 15px;
 }
 .statistical i{
     margin-left: 5px;
+}
+
+.statistical a:hover{
+    border-bottom: 2px solid #fff;
 }

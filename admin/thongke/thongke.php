@@ -42,7 +42,7 @@
             </div>
         </div>
         <div class="">
-             <p> thống kê tổng doanh thu bán hàng</p>
+             <p style="margin: 10px 0px;"> Thống kê tổng doanh thu bán hàng</p>
         </div>
 </body>
 </html>
