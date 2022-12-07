@@ -1,8 +1,8 @@
 <?php
 
 
-function loadall_sp($soluong){
-   $sql = "select * from products inner join category on products.cate_id=category.id_cate order by id limit $soluong,4";
+function loadall_sp(){
+   $sql = "select * from products inner join category on products.cate_id=category.id_cate order by id ";
   $listsp = pdo_query($sql);
   return $listsp;
   }

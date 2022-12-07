@@ -112,16 +112,7 @@ if (isset($_GET['act'])) {
          include 'danhmuc/list.php';
          break;
       case 'sp':
-         if(isset($_GET['idpage'])){
-            // if($_GET['idpage']==0){
-            //    $soluong = 0;
-            // }else
-            $soluong = $_GET['idpage'] * 4;
-         }else{
-            $soluong = 0;
-         }
-         $listsp = loadall_sp($soluong);
-         $soluong1 = loadall_sp1();
+         $listsp = loadall_sp();
          $listdm = loadall_dm();
          include "sanpham/list.php";
          break;
@@ -173,16 +164,7 @@ if (isset($_GET['act'])) {
             }
             update_sp($id, $name, $price, $hinh, $mota, $soluong, $id_dm);
          }
-         if(isset($_GET['idpage'])){
-            // if($_GET['idpage']==0){
-            //    $soluong = 0;
-            // }else
-            $soluong = $_GET['idpage'] * 4;
-         }else{
-            $soluong = 0;
-         }
-         $listsp = loadall_sp($soluong);
-         $soluong1 = loadall_sp1();
+         $listsp = loadall_sp();
          include "sanpham/list.php";
          break;
       case 'xoasp':
@@ -190,16 +172,7 @@ if (isset($_GET['act'])) {
             $id = $_GET['id'];
             delete_sanpham($id);
          }
-         if(isset($_GET['idpage'])){
-            // if($_GET['idpage']==0){
-            //    $soluong = 0;
-            // }else
-            $soluong = $_GET['idpage'] * 4;
-         }else{
-            $soluong = 0;
-         }
-         $listsp = loadall_sp($soluong);
-         $soluong1 = loadall_sp1();
+         $listsp = loadall_sp();
          include "sanpham/list.php";
          break;
       case 'listdm':
@@ -275,7 +248,7 @@ if (isset($_GET['act'])) {
          include "taikhoan/list.php";
          break;
       case 'bl';
-         $listsp = loadall_sp_all();
+         $listsp = loadall_sp();
          $listdm = loadall_dm();
          include "binhluan/listsp.php";
          break;
@@ -355,7 +328,7 @@ if (isset($_GET['act'])) {
             include "blog/add.php";
             break;
       case 'thongke':
-         $listsp = loadall_sp_all();
+         $listsp = loadall_sp();
          $listdm = loadall_dm();
          $listtk = loadall_tk();
          $listbill=loadall_bill(); 
