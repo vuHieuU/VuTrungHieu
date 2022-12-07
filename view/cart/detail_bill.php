@@ -68,7 +68,6 @@ if (is_array($bill)){
                         <th>Tên Sản Phẩm</th>
                         <th>Số Lượng</th>
                         <th>Thành Tiền</th>
-                        <th>Trạng Thái</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -96,7 +95,6 @@ if (is_array($bill)){
                       <th></th>
                       <th></th>
                       <th>'.$tong.'</th>
-                      <th></th>
                      </tr>
                       ';
 

@@ -61,7 +61,7 @@ function get_ttdh($n){
         $tt="hoàn tất";
         break;
         default:
-        $tt="Chưa sử lí";
+        $tt="Chưa xử lí";
         break;
     }
     return $tt;

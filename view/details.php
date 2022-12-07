@@ -119,6 +119,41 @@
                     </div>
                 </div>
             </div>
+            <!-- sản phaame cùng loại -->
+            <div class="sanphamcungloai">
+               <h2>Sản Phẩm Cùng Loại</h2>
+            </div>
+            <div class="product-main-cungloai">
+      <?php
+      foreach ($spcungloai as $spcungloai) {
+        extract($spcungloai);
+        $link = "index.php?act=detail&id=" . $id;
+        $loadsp = "index.php?act=listsp&cate_id=" . $id_cate;
+        $img = $img_path . $image;
+        echo '
+                <div class="product-box">
+                <a href="' . $link . '">
+                <img src="' . $img . '" alt="">
+                </a>
+                <a style="text-decoration: none;" href="' . $loadsp . '"><button>' . $name_cate . '</button></a>
+                <a href="' . $link . '">
+                <p class="name">' . $name . '</p>
+                <p class="price">' . $price . 'đ <del>' . $amount . 'đ</del></p>
+                </a>
+                <div class="product-box-btn">
+                <form action="index.php?act=addcart" method="POST">
+                  <input type="hidden" name="id" value="'.$id.'">
+                  <input type="hidden" name="image" value="'.$image.'">
+                  <input type="hidden" name="name" value="'.$name.'">
+                  <input type="hidden" name="price" value="'.$price.'"> 
+                     <input class="add" type="submit" name="addcart" value="Add to cart">
+                  </form>
+                </div>
+            </div>
+                ';
+      }
+      ?>
+    </div>
             <!--Bình luận -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
                     <script>

@@ -106,6 +106,7 @@
                 if(isset($_GET['id'])&&($_GET['id']>0)){
                     $onesp=loadone_sp($_GET['id']);
                     extract($onesp);
+                    $spcungloai = loadall_sp_cungloai($cate_id);
                     include "details.php";
                 }else{
                     include "main.php";

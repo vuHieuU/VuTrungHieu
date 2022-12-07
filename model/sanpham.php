@@ -103,3 +103,8 @@ function loadall_sp(){
            return "";
       }
   }
+  function loadall_sp_cungloai($cate_id){
+   $sql = "select * from products inner join category on products.cate_id=category.id_cate where cate_id=" .$cate_id;
+  $listsp = pdo_query($sql);
+  return $listsp;
+  }
