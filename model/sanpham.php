@@ -1,11 +1,21 @@
 <?php
 
-   function loadall_sp(){
-    $sql = "select * from products inner join category on products.cate_id=category.id_cate";
-   $listsp = pdo_query($sql);
-   return $listsp;
-   }
- 
+
+function loadall_sp($soluong){
+   $sql = "select * from products inner join category on products.cate_id=category.id_cate order by id limit $soluong,4";
+  $listsp = pdo_query($sql);
+  return $listsp;
+  }
+  function loadall_sp_all(){
+     $sql = "select * from products inner join category on products.cate_id=category.id_cate order by id";
+    $listsp = pdo_query($sql);
+    return $listsp;
+    }
+  function loadall_sp1(){
+     $sql = "select * from products inner join category on products.cate_id=category.id_cate";
+    $listsp = pdo_query($sql);
+    return $listsp;
+    }
    function loadsp_home(){
    $sql="select * from products inner join category on products.cate_id=category.id_cate where 1 order by name desc limit 0,8";
    $listsp = pdo_query($sql);

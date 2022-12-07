@@ -19,12 +19,6 @@
     <form action="index.php?act=addsp" method="POST" class="formadd" enctype="multipart/form-data" onsubmit="return validate();">
         <table class="add">
             <tr>
-                <td>Mã Sản Phẩm</td>
-                <td>
-                    <input type="text" disabled />
-                </td>
-            </tr>
-            <tr>
                 <td>Tên Sản Phẩm</td>
                 <td>
                     <input type="text" value="" name="name" id="name" />

@@ -82,7 +82,16 @@
 
                 ?>
             </table>
-
+            <?php
+                $z = ceil(count($soluong1)/4);
+                for($i=0;$i<round($z);$i++){
+                    $n = $i + 1;
+                    ?>
+                    <input type="hidden" name="idpage" value="<?php echo $n?>">
+                    <a href="index.php?act=sp&idpage=<?php echo $i?>"><?php echo $n?></a>
+                    <?php
+                }
+                ?>
             <div class="table-btn">
                 <input type="button" value="Chọn Tất Cả">
                 <input type="button" value="Bỏ Chọn Tất Cả">

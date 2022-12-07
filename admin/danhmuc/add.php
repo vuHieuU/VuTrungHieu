@@ -17,12 +17,6 @@
     <form method="POST" class="formadd" action="index.php?act=adddm" onsubmit="return validate();">
         <table class="add">
             <tr>
-                <td>Mã Danh Mục</td>
-                <td>
-                    <input type="text" value="" disabled />
-                </td>
-            </tr>
-            <tr>
                 <td>Tên Danh Mục</td>
                 <td>
                     <input type="text" value="" name="name_cate" id="namedm">
