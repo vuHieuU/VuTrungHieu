@@ -28,7 +28,7 @@ if (is_array($bill)){
                 <div class="box_left">
                     <p>Người Đặt Hàng</p>
                     <p>Địa Chỉ</p>
-                    <p>Email<p>
+                    <p>Email</p>
                     <p>Số Điện Thoại</p>
                     <p>Ngày Đặt Hàng</p>
                 </div>
@@ -46,7 +46,7 @@ if (is_array($bill)){
             <input type="text" value="<?=$pttt?>" disabled style="border: none; outline: none;">
         </div>
         <div class="deatail_bill_box">
-            <h4 class="details_bill_box_title">Sản Phẩm Đã Chọn</h4>
+            <!-- <h4 class="details_bill_box_title">Sản Phẩm Đã Chọn</h4> -->
             <table>
                 <thead>
                     <tr>
@@ -103,7 +103,7 @@ if (is_array($bill)){
             --main-color: #0f9d58;
             width: 70vw;
             border-radius: 12px;
-            margin: 40px auto 0 auto;
+            margin: 80px auto 0 auto;
             padding: 10px 30px;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
             /* background-image: linear-gradient(to top,#355c7d, #6c5b7b, #c06c84); */
@@ -112,17 +112,20 @@ if (is_array($bill)){
         }
 
         .deatail_bill_box {
-            min-height: 50px;
+            min-height: 100px;
             /* padding: 0px 10px; */
         }
-        .deatail_bill_box p{
-            padding: 15px 0;
-        }
+         .deatail_bill_box p{
+            padding: 15px 0px;
+         }
         .details_bill_box_title {
             background-color: var(--main-color);
             padding: 10px;
             border-radius: 10px;
             color: #fff;
+        }
+        .deatail_bill_box input[type=text]{
+            padding: 15px 0;
         }
 
         .details_bill_box_buy {
@@ -131,6 +134,11 @@ if (is_array($bill)){
 
         .details_bill_box_buy .box_left {
             width: 40%;
+            
+        }
+
+        .details_bill_box_buy .box_left p{
+            line-height: 30px;
         }
 
         .details_bill_box_buy .box-right {
@@ -148,6 +156,7 @@ if (is_array($bill)){
         .deatail_bill_box table {
             /* width: 80vw; */
             /* margin: 0 auto; */
+ 
             width: 100%;
             border-collapse: collapse;
             border: 1px solid var(--main-color);

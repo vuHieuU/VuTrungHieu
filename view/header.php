@@ -39,7 +39,7 @@
                     </div>
               </li>
               <li><a href="index.php?act=tintuc">Tin Tức</a></li>
-              <li><a href="index.php?act=khuyenmai">Khuyến Mãi</a></li>
+              <!-- <li><a href="index.php?act=khuyenmai">Khuyến Mãi</a></li> -->
               <li><a href="index.php?act=contact">Liên hệ</a></li>
           </ul>
       </div>

@@ -1,0 +1,88 @@
+.detail_bill {
+    --main-color: #0f9d58;
+    width: 70vw;
+    border-radius: 12px;
+    margin: 80px auto 0 auto;
+    padding: 10px 30px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    /* background-image: linear-gradient(to top,#355c7d, #6c5b7b, #c06c84); */
+    /* background-image: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99); */
+    /* color: #fff; */
+}
+
+.deatail_bill_box {
+    min-height: 100px;
+    /* padding: 0px 10px; */
+}
+ .deatail_bill_box p{
+    padding: 15px 0px;
+ }
+.details_bill_box_title {
+    background-color: var(--main-color);
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+}
+.deatail_bill_box input[type=text]{
+    padding: 15px 0;
+}
+
+.details_bill_box_buy {
+    display: flex;
+}
+
+.details_bill_box_buy .box_left {
+    width: 40%;
+    
+}
+
+.details_bill_box_buy .box_left p{
+    line-height: 30px;
+}
+
+.details_bill_box_buy .box-right {
+    display: grid;
+    width: 60%;
+}
+
+.details_bill_box_buy .box-right input[type=text] {
+    margin: 4px 0px;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.deatail_bill_box table {
+    /* width: 80vw; */
+    /* margin: 0 auto; */
+
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--main-color);
+    text-align: center;
+}
+
+.deatail_bill_box table thead {
+    background-color: var(--main-color);
+    padding: 10px;
+    color: #fff;
+}
+
+.deatail_bill_box table td,
+th,
+tr {
+    min-width: 80px;
+    /* color: var(--main-color); */
+    padding: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+button {
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--main-color);
+    color: #fff;
+    min-width: 100px;
+    margin: 8px;
+}

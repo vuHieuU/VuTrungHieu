@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../Main/css/details.css">
 </head>
 <body>
-<h2>Đánh giá</h2>
+<h2 style="margin: 8px 0px; padding: 20px;">Đánh giá</h2>
                     <div class="formbold-mb-3">
 
 
@@ -68,25 +68,74 @@
                          foreach($dsbl as $bl){
                             extract($bl);
                        echo '
-                      
-                            <div class="ome-comment">
-                                <div class="nd-comment">
-                                    <div class="anh"><img src="../Images/avatar/Avatar-Facebook-trắng.jpg" alt=""></div>
-                                    <div class="name-comment">
-                                        <p>'.$name.'</p>
-                                    </div>
-                                    <p class="nd">'.$content.'</p>
-                                </div>
-
-                                <div class="like-comment">
-                                    <i class="fa-solid fa-thumbs-up"></i>
-                                    <i class="fa-solid fa-thumbs-down mgl"></i>
-                                    <p class="traloi">Trả lời</p>
-                                </div>
-                            </div>';
+                       <div class="comment">
+                       <div class="comment-main">
+                           <div class="comment-img">
+                               <img src="https://picsum.photos/50/50" alt="">
+                           </div>
+                       </div>
+                       <div class="comment-content">
+                           <p class="comment-name">'.$name.' <i class="time-comment">20/11</i></p>
+                           <p class="nd-comment">'.$content.'</p>
+                       </div>
+                   </div>
+                            ';
                          }
                             ?>
                         </div>
+                        <style>
+                             .comment{
+                                width: 100%;
+                                min-height: 80px;
+                                display: flex;
+                                margin: 10px 0px;
+                                border-bottom: 1px solid #F0F0F0;
+                             }
+
+                             .comment .comment-main{
+                                width: 5%;
+                                /* overflow: hidden; */
+                                /* border-radius: 50%; */
+                                /* text-align: center; */
+                                /* display: grid; */
+                            }
+                            .comment-main .comment-img{
+                                border-radius: 50%;
+                                overflow: hidden;
+                                /* width: 100%; */
+                                /* margin: 0 auto; */
+                                /* height: 80%; */
+                            }
+                            .comment-main .comment-img img{
+                                /* border-radius: 50%; */
+                                width: 100%;
+                                height: 100%;
+                             }
+
+                             .comment .comment-content{
+                                width: 90%;
+                                margin-left: 20px;
+                             }
+
+                             .comment-content h4{
+                                padding: 4px 0px;
+                             }
+
+                             .comment-content .time-comment{
+                                font-size: 12px;
+                                /* float: right; */
+                                opacity: .9;
+                             }
+
+                             .comment-content p.nd-comment{
+                                /* background-color: #000; */
+                                min-height: 30px;
+                                padding: 4px;
+                                text-align: justify;
+                             }
+                             
+
+                        </style>
 </body>
 </html>
              

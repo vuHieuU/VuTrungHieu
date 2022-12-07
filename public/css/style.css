@@ -247,3 +247,17 @@ i.fa-circle-arrow-right {
     border-top: .5px solid rgba(0, 0, 0, 0.08);
     margin-top: 20px;
 }
+
+select{
+    outline: none;
+    height: 30px;
+    border: none;
+}
+
+form button[type=submit]{
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #339900;
+    color: #fff;
+}

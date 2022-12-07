@@ -24,17 +24,18 @@ if (is_array($bill)){
         <div class="deatail_bill_box">
             <h4 class="details_bill_box_title">Thông Tin Đặt Hàng</h4>
             <div class="details_bill_box_buy">
+                
                 <div class="box_left">
                     <p>Người Đặt Hàng</p>
                     <p>Địa Chỉ</p>
-                    <p>Email<p>
+                    <p>Email</p>
                     <p>Số Điện Thoại</p>
                     <p>Ngày Đặt Hàng</p>
                     <p>Trạng thái đơn hàng</p>
                 </div>
                 <div class="box-right">
                     <input type="text" value="<?php echo $name ?>" disabled>
-                    <input type="text" value="<?php echo $address ?>" disabled>
+                    <input type="text" value="<?php echo $bill_address ?>" disabled>
                     <input type="text" value="<?php echo $email ?>" disabled>
                     <input type="text" value="<?php echo $tel ?>" disabled>
                     <input type="text" value="<?php echo $ngaydathang ?>" disabled>
@@ -123,7 +124,7 @@ if (is_array($bill)){
         }
 
         .deatail_bill_box {
-            min-height: 50px;
+            min-height: 100px;
             /* padding: 0px 10px; */
         }
          .deatail_bill_box p{
@@ -145,6 +146,11 @@ if (is_array($bill)){
 
         .details_bill_box_buy .box_left {
             width: 40%;
+            
+        }
+
+        .details_bill_box_buy .box_left p{
+            line-height: 30px;
         }
 
         .details_bill_box_buy .box-right {

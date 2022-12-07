@@ -84,7 +84,8 @@ if (is_array($bill)){
         <thead><tr><th>Cập Nhật Trạng Thái</th></tr></thead>
         <tbody>
             <tr>
-            <td><p style="color: red; font-weight: bold;"> <form action="index.php?act=update_status" method="POST">
+            <td><p style="color: red; font-weight: bold;"> 
+            <form action="index.php?act=update_status" method="POST">
                 <input type="hidden" name="id" value="<?=$id?>">
                       <select name="bill_status" id="">
                       <option value="0">  <?php
@@ -109,6 +110,9 @@ if (is_array($bill)){
                 </form>
             </p></td>
             </tr>
+            <style>
+                
+            </style>
         </tbody>
     </table>
     <table>
