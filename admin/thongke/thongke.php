@@ -42,7 +42,13 @@
             </div>
         </div>
         <div class="">
-             <p style="margin: 10px 0px;"> Thống kê tổng doanh thu bán hàng</p>
+             <p style="margin: 20px 0px; font-size:18px"> Thống kê tổng doanh thu bán hàng : <strong style="color:red;"> <?php   
+             foreach ($sumtotal as $tol) {
+             extract($tol);
+             echo $tol['doanhthu'];
+             } 
+             ?>VNĐ </strong>
+              </p>
         </div>
 </body>
 </html>

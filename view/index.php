@@ -192,7 +192,7 @@
                         $pttt = $_POST['pttt'];
                         $name_hh = $_POST['name_hh'];
                         $soluong = $_POST['soluong_hh'];
-                        $ngaydathang = date('h:i:sa d/m/Y');
+                        $ngaydathang =  $_POST['date'];
                         $tongdonhang = tongdonhang();
     
                         $idbill=  insert_bill($iduser,$name,$name_hh,$soluong,$email,$address,$tel,$pttt,$ngaydathang,$tongdonhang);

@@ -7,6 +7,7 @@ include "../model/taikhoan.php";
 include "../model/binhluan.php";
 include "../model/thongbao.php";
 include "../model/contact.php";
+include "../model/thongke.php";
 
 include "../model/blog.php";
 
@@ -332,6 +333,7 @@ if (isset($_GET['act'])) {
          $listdm = loadall_dm();
          $listtk = loadall_tk();
          $listbill=loadall_bill(); 
+         $sumtotal = sumtotal();
                include "thongke/thongke.php";
                break;
 

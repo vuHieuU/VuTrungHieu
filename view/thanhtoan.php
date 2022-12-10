@@ -123,6 +123,7 @@
                     <h3 class="cart-sum">Tổng tiền sau khi giảm giá: <b> </b></h3>
                     <input type="hidden" name="name_hh" value="<?php echo $cart[1]?>">
                     <input type="hidden" name="soluong_hh" value="<?php echo $cart[4]?>">
+                    <input type="text" name="date" value="<?php $date = date('Y-m-d H:i:s'); echo $date ?>" hidden>
                    <input type="submit" name="thanhtoan" value="Thanh Toán">
               
             </div>
