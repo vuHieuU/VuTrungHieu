@@ -34,7 +34,6 @@
                     $pttt = get_pttt($bill['bill_pttt']);
                     $count = loadall_cart_count($bill['id']);
                     $detail = "index.php?act=chitietbill&id=" . $id;
-                    $xoadm = "index.php?act=xoabill&id=" . $id;
                    ?>
                             <tr>
                                 
@@ -49,12 +48,6 @@
                                         <a style="text-decoration: none; margin: 4px;" href="<?php echo $detail ?>">
                                             <input type="button" class="edit" value="Chi Tiết 📃">
                                         </a>
-                                        <a style="text-decoration: none; margin: 4px;" href="<?php echo $xoadm ?>" >
-                                            <input onclick="return confirm('Bạn có chắc chắn muốn xóa không')" type="button" class="delete" value="Xóa❕">
-                                            
-                                        </a>
-                                      
-
                                     </td>
                             </tr>   
                         

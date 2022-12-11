@@ -17,6 +17,8 @@
                 <tr>
                     <th></th>
                     <th>Người Bình Luận</th>
+                    <th>Ngày Bình Luận</th>
+                    <th>Người Bình Luận</th>
                     <th>Nội Dung</th>
                     <th>Mã Sản Phẩm</th>
                     <th></th>
@@ -41,6 +43,7 @@
                             <tr>
                                     <td><input type="checkbox" name="" id=""></td>
                                     <td><?php echo $name ?></td>
+                                    <td><?php echo $ngaybinhluan ?></td>
                                     <td><?php echo $content ?></td>
                                     <td><?php echo $product_id ?></td>
                                     <td style="text-align: center;">
