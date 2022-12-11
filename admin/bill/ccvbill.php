@@ -56,15 +56,17 @@ if (is_array($bill)){
                 <td><p style="color: red; font-weight: bold;">
                 <?php
                 if($bill_status==0){
-                    echo 'Chưa xử lí';
+                      echo 'Chưa xử lí';
                     }else if($bill_status==1){
-                    echo ('Đã xử lí');
+                      echo ('Đã xử lí');
                     }else if($bill_status==2){
-                    echo ("Đang giao hàng");
+                      echo ("Đang giao hàng");
                     }else if($bill_status==3){
-                    echo ("Đã Hoàn thành");
+                      echo ("Đã Hoàn thành");
+                    }else if($bill_status==4){
+                      echo ("đơn đã bị hủy");
                     }else{
-                        echo "Chưa xử lí";
+                       echo "Chưa xử lí";
                     }
             ?>
                    </p>
@@ -90,21 +92,24 @@ if (is_array($bill)){
                       <select name="bill_status" id="">
                       <option value="0">  <?php
                         if($bill_status==0){
-                            echo 'Chưa xử lí';
+                              echo 'Chưa xử lí';
                             }else if($bill_status==1){
-                            echo ('Đã xử lí');
+                              echo ('Đã xử lí');
                             }else if($bill_status==2){
-                            echo ("Đang giao hàng");
+                              echo ("Đang giao hàng");
                             }else if($bill_status==3){
-                            echo ("Đã Hoàn thành");
+                              echo ("Đã Hoàn thành");
+                            }else if($bill_status==4){
+                              echo "đơn đã bị hủy";
                             }else{
-                                echo "Chưa xử lí";
+                              echo "Chưa xử lí";
                             }
                       ?></option>
                           <option value="0">Chưa xử lí</option>
                           <option value="1">Đã xử lí</option>
                           <option value="2">Đang Giao Hàng</option>
                           <option value="3">Đã Hoàn Thành</option>
+                          <option value="4">hủy đơn</option>
                       </select>
                       <button type="submit">Cập Nhật</button>
                 </form>

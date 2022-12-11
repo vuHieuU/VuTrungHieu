@@ -33,6 +33,7 @@
                                 <div class="chucnang-cmt">
                                     <input type="hidden" name="product_id" value="<?=$product_id?>">
                                     <input style="outline: none;" class="add-comment" type="text" name="content" id="" placeholder="Nhập bình luận...">
+                                    <input type="text" name="ngaybinhluan" value="<?php $date = date('Y-m-d H:i:s'); echo $date ?>" hidden>
                                     <input type="submit" value="Comment" name="gui">
                                 </div>
                             </div>
@@ -59,7 +60,8 @@
                                         $content=$_POST['content'];
                                         $product_id=$_POST['product_id'];
                                         $user_id=$_SESSION['name']['id'];
-                                        insert_binhluan($content,$product_id,$user_id);
+                                        $ngaybinhluan=$_POST['ngaybinhluan'];
+                                        insert_binhluan($content,$product_id,$user_id,$ngaybinhluan);
                                         header("location: ".$_SERVER['HTTP_REFERER']);
                                       }   
                             ?>
@@ -75,7 +77,7 @@
                            </div>
                        </div>
                        <div class="comment-content">
-                           <p class="comment-name">'.$name.' <i class="time-comment">20/11</i></p>
+                           <p class="comment-name">'.$name.' <i class="time-comment">'.$ngaybinhluan.'</i></p>
                            <p class="nd-comment">'.$content.'</p>
                        </div>
                    </div>

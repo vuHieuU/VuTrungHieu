@@ -58,7 +58,10 @@ function get_ttdh($n){
         $tt="đang giao hàng";
         break;
         case '3';
-        $tt="hoàn tất";
+        $tt="Đã Hoàn thành";
+        break;
+        case '4';
+        $tt="đơn đã bị hủy";
         break;
         default:
         $tt="Chưa xử lí";

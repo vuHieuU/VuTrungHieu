@@ -1,7 +1,7 @@
 <?php
-    function insert_binhluan($content,$product_id,$user_id){
-        $sql = "insert into comment(content,product_id,user_id) values ('$content','$product_id','$user_id')";
-        pdo_execute($sql);
+    function insert_binhluan($content,$product_id,$user_id,$ngaybinhluan){
+        $sql = "insert into comment(content,product_id,user_id,ngaybinhluan) values ('$content','$product_id','$user_id','$ngaybinhluan')";
+        return pdo_execute($sql);
     }
     function load_bl($product_id){
         $sql = "select * from comment inner join user on user.id=comment.user_id where 1";
