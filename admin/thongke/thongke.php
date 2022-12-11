@@ -50,5 +50,110 @@
              ?>VNĐ </strong>
               </p>
         </div>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<figure class="highcharts-figure">
+  <div id="container"></div>
+  <p class="highcharts-description">
+    Biểu đồ thống kê
+  </p>
+</figure>
+
+  <?php 
+ 
+     echo "<br>";
+      $max_date = 10;
+      $arr = [];
+      $today = date('d');
+      if($today < $max_date){
+        $get_day_last_month = $max_date - $today;
+        $last_month = date('m', strtotime("-1 month"));
+        $last_month_date = date('y-m-d', strtotime("-1 month"));
+        $max_day_last_month = (new DateTime($last_month_date))->format('t');
+        $start_day_last_month = $max_day_last_month - $get_day_last_month;
+        
+            for($i= $start_day_last_month; $i<=$max_day_last_month; $i++){
+              $key = $i . '-' . $last_month;
+                $arr[$key] = 0;
+            }
+            $start_date_this_month = 1;
+      } else {
+        $start_date_this_month = $today - $max_date;
+      }
+      $this_month = date('m');
+
+      for($i = $start_date_this_month; $i<=$today; $i++){
+        $key = $i . '-' . $this_month;
+          $arr[$key] = 0;
+      }
+    
+        foreach ($thongke as $list) {
+         $arr[$list['day']] = (float)$list['doanhthu'];
+        
+      }
+        // echo json_encode($arr);
+      $arrX = array_Keys($arr);
+     
+      $arrY = array_values($arr);
+     
+  ?>
+  <script>
+ Highcharts.chart('container', {
+
+title: {
+  text: '  Biểu đồ thống kê'
+},
+
+yAxis: {
+  title: {
+    text: 'VNĐ'
+  }
+},
+
+xAxis: {
+  categories: <?php echo json_encode($arrX) ?>
+  
+},
+
+legend: {
+  layout: 'vertical',
+  align: 'right',
+  verticalAlign: 'middle'
+},
+
+plotOptions: {
+  series: {
+    label: {
+      connectorAllowed: false
+    }
+  }
+},
+
+series: [{
+  name: 'Doanh Thu',
+  data: <?php echo json_encode($arrY) ?>
+}],
+
+responsive: {
+  rules: [{
+    condition: {
+      maxWidth: 500
+    },
+    chartOptions: {
+      legend: {
+        layout: 'horizontal',
+        align: 'center',
+        verticalAlign: 'bottom'
+      }
+    }
+  }]
+}
+
+});
+</script>
 </body>
 </html>

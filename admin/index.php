@@ -334,6 +334,7 @@ if (isset($_GET['act'])) {
          $listtk = loadall_tk();
          $listbill=loadall_bill(); 
          $sumtotal = sumtotal();
+         $thongke = thongke();
                include "thongke/thongke.php";
                break;
 
