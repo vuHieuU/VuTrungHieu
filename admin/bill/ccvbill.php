@@ -64,7 +64,7 @@ if (is_array($bill)){
                     }else if($bill_status==3){
                       echo ("Đã Hoàn thành");
                     }else if($bill_status==4){
-                      echo ("đơn đã bị hủy");
+                      echo ("Đơn đã bị hủy");
                     }else{
                        echo "Chưa xử lí";
                     }
@@ -100,7 +100,7 @@ if (is_array($bill)){
                             }else if($bill_status==3){
                               echo ("Đã Hoàn thành");
                             }else if($bill_status==4){
-                              echo "đơn đã bị hủy";
+                              echo "Đơn đã bị hủy";
                             }else{
                               echo "Chưa xử lí";
                             }

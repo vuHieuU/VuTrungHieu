@@ -61,7 +61,7 @@ function get_ttdh($n){
         $tt="Đã Hoàn thành";
         break;
         case '4';
-        $tt="đơn đã bị hủy";
+        $tt="Đơn đã bị hủy";
         break;
         default:
         $tt="Chưa xử lí";

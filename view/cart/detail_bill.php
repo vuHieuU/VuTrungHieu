@@ -42,15 +42,17 @@ if (is_array($bill)){
                     <input type="text" value="<?php
                 if($bill_status==0){
                     echo 'Chưa xử lí';
-                    }else if($bill_status==1){
+                  }else if($bill_status==1){
                     echo ('Đã xử lí');
-                    }else if($bill_status==2){
+                  }else if($bill_status==2){
                     echo ("Đang giao hàng");
-                    }else if($bill_status==3){
+                  }else if($bill_status==3){
                     echo ("Đã Hoàn thành");
-                    }else{
-                        echo "Chưa xử lí";
-                    }
+                  }else if($bill_status==4){
+                    echo "Đơn đã bị hủy";
+                  }else{
+                    echo "Chưa xử lí";
+                  }
             ?>" disabled>
                 </div>
             </div>
